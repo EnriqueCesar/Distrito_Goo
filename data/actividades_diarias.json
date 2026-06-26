@@ -3,6 +3,7 @@
     "ID": 1,
     "Actividad": "Verificación Espresso y Calidad del Café",
     "Descripción": "Valida ambas verificaciones, registra resultados y comparte comentarios en cada turno.",
+    "Link /Imagen": "Imagen",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Calidad",
@@ -14,6 +15,7 @@
     "ID": 2,
     "Actividad": "RSA Checklist",
     "Descripción": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas.",
+    "Link /Imagen": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Seguridad Alimentaria",
@@ -25,6 +27,7 @@
     "ID": 3,
     "Actividad": "Store Walk",
     "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
+    "Link /Imagen": "Imagen",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Experiencia",
@@ -35,12 +38,25 @@
   {
     "ID": 4,
     "Actividad": "Protocolo de Apertura",
-    "Descripción": "Antes de las 8:00 a.m., el SS de apertura deberá validar cobertura, producto, equipos, riesgos operativos y compartir evidencias (Merch, Showcase, Grab & Go y Dulcería). Comunica novedades relevantes y cualquier situación crítica para asegurar una apertura en tiempo y forma.",
+    "Descripción": "Antes de las 8:00 a.m., valida cobertura, producto, equipos, riesgos operativos y comparte evidencias clave.",
+    "Link /Imagen": "https://wa.me/message/ENKDSAHYHIGAN1",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Operación",
     "Icono": "🌅",
     "Color": "Azul",
+    "Visible": "TRUE"
+  },
+  {
+    "ID": 5,
+    "Actividad": "10 Pasos SS",
+    "Descripción": "Revisa los 10 pasos para un turno exitoso: comunicación, cobertura, capacitación, stock, metas, store walk y Duty Roster.",
+    "Link /Imagen": "Imagen",
+    "Frecuencia": "Diario",
+    "Prioridad": 2,
+    "Categoría": "Operación",
+    "Icono": "✅",
+    "Color": "Verde",
     "Visible": "TRUE"
   }
 ]
