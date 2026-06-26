@@ -3,7 +3,7 @@
     "Día": "Lunes",
     "Estación": "Food",
     "Categoría": "Limpieza",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Pisos",
     "Icono": "🧹",
     "Crítico": "FALSE"
@@ -12,7 +12,7 @@
     "Día": "Lunes",
     "Estación": "Food",
     "Categoría": "Limpieza",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Horno",
     "Icono": "🔥",
     "Crítico": "FALSE"
@@ -21,7 +21,7 @@
     "Día": "Lunes",
     "Estación": "Food",
     "Categoría": "Limpieza",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Showcase",
     "Icono": "🥐",
     "Crítico": "FALSE"
@@ -30,7 +30,7 @@
     "Día": "Lunes",
     "Estación": "Food",
     "Categoría": "Producto",
-    "Orden": "4",
+    "Orden": 4,
     "Actividad": "Caducidades",
     "Icono": "📅",
     "Crítico": "TRUE"
@@ -39,7 +39,7 @@
     "Día": "Lunes",
     "Estación": "Food",
     "Categoría": "Producto",
-    "Orden": "5",
+    "Orden": 5,
     "Actividad": "Grab & Go",
     "Icono": "🥪",
     "Crítico": "TRUE"
@@ -48,7 +48,7 @@
     "Día": "Lunes",
     "Estación": "Food",
     "Categoría": "Refrigeración",
-    "Orden": "6",
+    "Orden": 6,
     "Actividad": "Temperaturas",
     "Icono": "❄️",
     "Crítico": "TRUE"
@@ -57,7 +57,7 @@
     "Día": "Martes",
     "Estación": "PIC",
     "Categoría": "Seguridad",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Productos Químicos",
     "Icono": "🧴",
     "Crítico": "TRUE"
@@ -66,7 +66,7 @@
     "Día": "Martes",
     "Estación": "PIC",
     "Categoría": "Seguridad",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Sanitizante",
     "Icono": "🫧",
     "Crítico": "TRUE"
@@ -75,7 +75,7 @@
     "Día": "Martes",
     "Estación": "PIC",
     "Categoría": "Seguridad",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Lavado de Manos",
     "Icono": "🖐️",
     "Crítico": "TRUE"
@@ -84,7 +84,7 @@
     "Día": "Martes",
     "Estación": "PIC",
     "Categoría": "Seguridad",
-    "Orden": "4",
+    "Orden": 4,
     "Actividad": "Documentación",
     "Icono": "📋",
     "Crítico": "TRUE"
@@ -93,7 +93,7 @@
     "Día": "Martes",
     "Estación": "PIC",
     "Categoría": "Seguridad",
-    "Orden": "5",
+    "Orden": 5,
     "Actividad": "Control de Plagas",
     "Icono": "🐭",
     "Crítico": "TRUE"
@@ -102,7 +102,7 @@
     "Día": "Martes",
     "Estación": "PIC",
     "Categoría": "Seguridad",
-    "Orden": "6",
+    "Orden": 6,
     "Actividad": "Salud Partners",
     "Icono": "❤️",
     "Crítico": "TRUE"
@@ -111,7 +111,7 @@
     "Día": "Martes",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "7",
+    "Orden": 7,
     "Actividad": "Lobby",
     "Icono": "🪑",
     "Crítico": "FALSE"
@@ -120,7 +120,7 @@
     "Día": "Martes",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "8",
+    "Orden": 8,
     "Actividad": "Sanitarios",
     "Icono": "🚻",
     "Crítico": "TRUE"
@@ -129,7 +129,7 @@
     "Día": "Martes",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "9",
+    "Orden": 9,
     "Actividad": "Condiment Bar",
     "Icono": "🥛",
     "Crítico": "FALSE"
@@ -138,7 +138,7 @@
     "Día": "Martes",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "10",
+    "Orden": 10,
     "Actividad": "Exterior",
     "Icono": "🌳",
     "Crítico": "FALSE"
@@ -147,7 +147,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Limpieza",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Almacenaje",
     "Icono": "📦",
     "Crítico": "FALSE"
@@ -156,7 +156,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Equipos",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Máquina de Hielo",
     "Icono": "🧊",
     "Crítico": "TRUE"
@@ -165,7 +165,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Limpieza",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Lavado de Platos",
     "Icono": "🍽️",
     "Crítico": "FALSE"
@@ -174,7 +174,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Equipos",
-    "Orden": "4",
+    "Orden": 4,
     "Actividad": "Sanitizadora",
     "Icono": "🫧",
     "Crítico": "TRUE"
@@ -183,7 +183,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Seguridad",
-    "Orden": "5",
+    "Orden": 5,
     "Actividad": "Cubo Key",
     "Icono": "🪣",
     "Crítico": "FALSE"
@@ -192,7 +192,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Refrigeración",
-    "Orden": "6",
+    "Orden": 6,
     "Actividad": "Refrigeradores",
     "Icono": "❄️",
     "Crítico": "TRUE"
@@ -201,7 +201,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Refrigeración",
-    "Orden": "7",
+    "Orden": 7,
     "Actividad": "Congeladores",
     "Icono": "🧊",
     "Crítico": "TRUE"
@@ -210,7 +210,7 @@
     "Día": "Miércoles",
     "Estación": "BOH",
     "Categoría": "Partners",
-    "Orden": "8",
+    "Orden": 8,
     "Actividad": "Hábitos Partners",
     "Icono": "👥",
     "Crítico": "FALSE"
@@ -219,7 +219,7 @@
     "Día": "Jueves",
     "Estación": "Espresso",
     "Categoría": "Barra",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Barra Espresso",
     "Icono": "☕",
     "Crítico": "TRUE"
@@ -228,7 +228,7 @@
     "Día": "Jueves",
     "Estación": "Espresso",
     "Categoría": "Refrigeración",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Refrigerador Espresso",
     "Icono": "❄️",
     "Crítico": "TRUE"
@@ -237,7 +237,7 @@
     "Día": "Jueves",
     "Estación": "Espresso",
     "Categoría": "Producto",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Alimentos",
     "Icono": "🥐",
     "Crítico": "FALSE"
@@ -246,7 +246,7 @@
     "Día": "Jueves",
     "Estación": "Espresso",
     "Categoría": "Limpieza",
-    "Orden": "4",
+    "Orden": 4,
     "Actividad": "Toallas Sanitización",
     "Icono": "🧽",
     "Crítico": "FALSE"
@@ -255,7 +255,7 @@
     "Día": "Jueves",
     "Estación": "Espresso",
     "Categoría": "Limpieza",
-    "Orden": "5",
+    "Orden": 5,
     "Actividad": "Piso, Paredes y Techo",
     "Icono": "🧹",
     "Crítico": "FALSE"
@@ -264,7 +264,7 @@
     "Día": "Viernes",
     "Estación": "Food",
     "Categoría": "Limpieza",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Pisos",
     "Icono": "🧹",
     "Crítico": "FALSE"
@@ -273,7 +273,7 @@
     "Día": "Viernes",
     "Estación": "Food",
     "Categoría": "Limpieza",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Horno",
     "Icono": "🔥",
     "Crítico": "FALSE"
@@ -282,7 +282,7 @@
     "Día": "Viernes",
     "Estación": "Food",
     "Categoría": "Limpieza",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Showcase",
     "Icono": "🥐",
     "Crítico": "FALSE"
@@ -291,7 +291,7 @@
     "Día": "Viernes",
     "Estación": "Food",
     "Categoría": "Producto",
-    "Orden": "4",
+    "Orden": 4,
     "Actividad": "Caducidades",
     "Icono": "📅",
     "Crítico": "TRUE"
@@ -300,7 +300,7 @@
     "Día": "Viernes",
     "Estación": "Food",
     "Categoría": "Producto",
-    "Orden": "5",
+    "Orden": 5,
     "Actividad": "Grab & Go",
     "Icono": "🥪",
     "Crítico": "TRUE"
@@ -309,7 +309,7 @@
     "Día": "Viernes",
     "Estación": "Food",
     "Categoría": "Refrigeración",
-    "Orden": "6",
+    "Orden": 6,
     "Actividad": "Temperaturas",
     "Icono": "❄️",
     "Crítico": "TRUE"
@@ -318,7 +318,7 @@
     "Día": "Sábado",
     "Estación": "BOH",
     "Categoría": "Equipos",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Máquina de Hielo",
     "Icono": "🧊",
     "Crítico": "TRUE"
@@ -327,7 +327,7 @@
     "Día": "Sábado",
     "Estación": "BOH",
     "Categoría": "Equipos",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Sanitizadora",
     "Icono": "🫧",
     "Crítico": "TRUE"
@@ -336,7 +336,7 @@
     "Día": "Sábado",
     "Estación": "Espresso",
     "Categoría": "Barra",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Espresso",
     "Icono": "☕",
     "Crítico": "TRUE"
@@ -345,7 +345,7 @@
     "Día": "Domingo",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "1",
+    "Orden": 1,
     "Actividad": "Exterior",
     "Icono": "🌳",
     "Crítico": "FALSE"
@@ -354,7 +354,7 @@
     "Día": "Domingo",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "2",
+    "Orden": 2,
     "Actividad": "Terraza",
     "Icono": "🌿",
     "Crítico": "FALSE"
@@ -363,7 +363,7 @@
     "Día": "Domingo",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "3",
+    "Orden": 3,
     "Actividad": "Entrada",
     "Icono": "🚪",
     "Crítico": "FALSE"
@@ -372,7 +372,7 @@
     "Día": "Domingo",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "4",
+    "Orden": 4,
     "Actividad": "Lobby",
     "Icono": "🪑",
     "Crítico": "FALSE"
@@ -381,7 +381,7 @@
     "Día": "Domingo",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "5",
+    "Orden": 5,
     "Actividad": "Sanitarios",
     "Icono": "🚻",
     "Crítico": "TRUE"
@@ -390,7 +390,7 @@
     "Día": "Domingo",
     "Estación": "Lobby",
     "Categoría": "Experiencia",
-    "Orden": "6",
+    "Orden": 6,
     "Actividad": "Condiment Bar",
     "Icono": "🥛",
     "Crítico": "FALSE"
@@ -399,7 +399,7 @@
     "Día": "Domingo",
     "Estación": "DT",
     "Categoría": "Drive Thru",
-    "Orden": "7",
+    "Orden": 7,
     "Actividad": "Drive Thru Exterior",
     "Icono": "🚗",
     "Crítico": "FALSE"
