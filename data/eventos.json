@@ -1,13 +1,6 @@
 [
   {
     "Fecha Inicio": "2026-06-23",
-    "Fecha Fin": "2026-06-25",
-    "Actividad": "💰 Ingreso Gastos",
-    "Contexto / Recordatorio": "Urgente ingresar gastos por cambio de plataforma.",
-    "Imagen": "💰"
-  },
-  {
-    "Fecha Inicio": "2026-06-23",
     "Fecha Fin": "2026-06-30",
     "Actividad": "🧹 Limpieza Backs",
     "Contexto / Recordatorio": "Enfoque en limpieza, acomodo Max&Min y Lay Out.",
@@ -28,7 +21,7 @@
     "Imagen": "💳"
   },
   {
-    "Fecha Inicio": "2026-07-11",
+    "Fecha Inicio": "2026-06-26",
     "Fecha Fin": "2026-07-11",
     "Actividad": "🏆 Barista Champion Regional",
     "Contexto / Recordatorio": "¡Apoyemos a Hugo! ¡Mucho éxito!",
@@ -201,5 +194,145 @@
     "Actividad": "📖 Mujeres que Inspiran - Entre Páginas",
     "Contexto / Recordatorio": "Club de lectura y aprendizaje compartido.",
     "Imagen": "📖"
+  },
+  {
+    "Fecha Inicio": "2026-07-01",
+    "Fecha Fin": "2026-07-05",
+    "Actividad": "🛡 AutoICA",
+    "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+    "Imagen": "🛡"
+  },
+  {
+    "Fecha Inicio": "2026-08-01",
+    "Fecha Fin": "2026-08-05",
+    "Actividad": "🛡 AutoICA",
+    "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+    "Imagen": "🛡"
+  },
+  {
+    "Fecha Inicio": "2026-09-01",
+    "Fecha Fin": "2026-09-05",
+    "Actividad": "🛡 AutoICA",
+    "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+    "Imagen": "🛡"
+  },
+  {
+    "Fecha Inicio": "2026-10-01",
+    "Fecha Fin": "2026-10-05",
+    "Actividad": "🛡 AutoICA",
+    "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+    "Imagen": "🛡"
+  },
+  {
+    "Fecha Inicio": "2026-11-01",
+    "Fecha Fin": "2026-11-05",
+    "Actividad": "🛡 AutoICA",
+    "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+    "Imagen": "🛡"
+  },
+  {
+    "Fecha Inicio": "2026-12-01",
+    "Fecha Fin": "2026-12-05",
+    "Actividad": "🛡 AutoICA",
+    "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+    "Imagen": "🛡"
+  },
+  {
+    "Fecha Inicio": "2026-06-30",
+    "Fecha Fin": "2026-07-01",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de junio.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-07-15",
+    "Fecha Fin": "2026-07-16",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de julio.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-08-02",
+    "Fecha Fin": "2026-08-03",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de julio.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-08-16",
+    "Fecha Fin": "2026-08-17",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de agosto.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-08-31",
+    "Fecha Fin": "2026-09-01",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de agosto.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-09-16",
+    "Fecha Fin": "2026-09-17",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de septiembre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-09-30",
+    "Fecha Fin": "2026-10-01",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de septiembre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-10-15",
+    "Fecha Fin": "2026-10-16",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de octubre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-11-02",
+    "Fecha Fin": "2026-11-03",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de octubre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-11-16",
+    "Fecha Fin": "2026-11-17",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de noviembre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-11-30",
+    "Fecha Fin": "2026-12-01",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de noviembre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-12-15",
+    "Fecha Fin": "2026-12-16",
+    "Actividad": "📅 Corte de Nómina",
+    "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de diciembre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-07-01",
+    "Fecha Fin": "2026-07-10",
+    "Actividad": "💳 Inventario TPV y Pin Pads Q3",
+    "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
+    "Imagen": "💳"
+  },
+  {
+    "Fecha Inicio": "2026-10-01",
+    "Fecha Fin": "2026-10-10",
+    "Actividad": "💳 Inventario TPV y Pin Pads Q4",
+    "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
+    "Imagen": "💳"
   }
 ]

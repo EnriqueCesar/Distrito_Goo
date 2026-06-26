@@ -15,7 +15,7 @@
   },
   {
     "Actividad": "Comunicado Semanal",
-    "Descripción": "Valida la información de comunicados y novedades operativas.",
+    "Descripción": "https://capacitacion.alsea.net/course/view.php?id=29227",
     "Frecuencia": "Viernes",
     "Icono": "📢",
     "Color": "Naranja"
@@ -67,6 +67,34 @@
     "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
     "Frecuencia": "Domingo",
     "Icono": "📤",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "Green ApronReview\nAnalisis 4 Estandares",
+    "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
+    "Frecuencia": "Lunes Antes de 4:00 pm",
+    "Icono": "🚀",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "KPI_Sem",
+    "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
+    "Frecuencia": "Lunes Antes de 09:30 am",
+    "Icono": "🚀",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "Gastos",
+    "Descripción": "https://enev.login.us2.oraclecloud.com/",
+    "Frecuencia": "Lunes",
+    "Icono": "🚀",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "Workvivo\nPublicacion",
+    "Descripción": "https://alsea.workvivo.us/login",
+    "Frecuencia": "Lunes",
+    "Icono": "🚀",
     "Color": "Azul"
   }
 ]

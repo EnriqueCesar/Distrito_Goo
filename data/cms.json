@@ -121,7 +121,7 @@
   ],
   "tbw": [
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX107402",
       "NOMBRE": "PAULINA  ZANATTA CASTRO",
       "CeCo": 38862,
@@ -140,7 +140,7 @@
       "Avance": 0.8
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108026",
       "NOMBRE": "STEPHANY  REYES MOLINA",
       "CeCo": 38456,
@@ -159,7 +159,7 @@
       "Avance": 0.8
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108169",
       "NOMBRE": "ABRAHAM EFREN MIRANDA BALLESTEROS",
       "CeCo": 38339,
@@ -178,7 +178,7 @@
       "Avance": 0.2
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108276",
       "NOMBRE": "MARIA FERNANDA ESTEVEZ QUINTANAR",
       "CeCo": 38604,
@@ -197,7 +197,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108416",
       "NOMBRE": "GERARDO GUILLERMO VEGA LOPEZ",
       "CeCo": 38339,
@@ -216,7 +216,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108476",
       "NOMBRE": "ROBERTO ANTONIO AMADOR RUIZ",
       "CeCo": 38333,
@@ -235,7 +235,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108511",
       "NOMBRE": "FERNANDO JULIAN FLORES REYES",
       "CeCo": 38368,
@@ -254,7 +254,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108726",
       "NOMBRE": "ANGEL ZAHAMI PEREZ VALDEZ",
       "CeCo": 38333,
@@ -273,7 +273,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX108967",
       "NOMBRE": "LUIS PAULO ROJAS SOLIS",
       "CeCo": 38333,
@@ -292,7 +292,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX109197",
       "NOMBRE": "ANGELA LILIAN VARGAS ESCOTO",
       "CeCo": 38339,
@@ -311,7 +311,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX109309",
       "NOMBRE": "JOSE  QUEZADA HUITRON",
       "CeCo": 38368,
@@ -330,7 +330,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX109619",
       "NOMBRE": "ANA LUISA RAMIREZ DIAZ",
       "CeCo": 38333,
@@ -349,7 +349,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX109725",
       "NOMBRE": "LUZ MARIANA CHAVEZ CORONA",
       "CeCo": 38401,
@@ -368,7 +368,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX109957",
       "NOMBRE": "JONATHAN URIEL GONZALEZ SALAZAR",
       "CeCo": 38368,
@@ -387,7 +387,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX109960",
       "NOMBRE": "DANIELA  SERRANO URIBE",
       "CeCo": 38368,
@@ -406,7 +406,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX110138",
       "NOMBRE": "SAMANTA  GARCIA HERNANDEZ",
       "CeCo": 43193,
@@ -425,7 +425,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX110145",
       "NOMBRE": "MARCELA PATRICIA GALICIA MORALES",
       "CeCo": 38339,
@@ -444,7 +444,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX110146",
       "NOMBRE": "YAEL  ALVA BUSTAMANTE",
       "CeCo": 38339,
@@ -463,7 +463,7 @@
       "Avance": 0
     },
     {
-      "Corte": 46188,
+      "Corte": "2026-06-15",
       "SBX": "SBX110164",
       "NOMBRE": "CHRISTOPHER OMAR SAENZ RIVAS",
       "CeCo": 38604,
@@ -506,13 +506,6 @@
     },
     {
       "Categoria": "App",
-      "Icono": "🛡️",
-      "Nombre": "RSA_Checklist",
-      "URL": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
-      "Notas": "Realiza diario antes de las 10:00 y envía evidencia de correcciones."
-    },
-    {
-      "Categoria": "App",
       "Icono": "🎯",
       "Nombre": "Foco_2026",
       "URL": "https://enriquecesar.github.io/Foco2026/",
@@ -547,6 +540,13 @@
       "Notas": "Consulta indicadores históricos, ajusta tu plan y enfoca acciones en resultados."
     },
     {
+      "Categoria": "App",
+      "Icono": "🔎",
+      "Nombre": "Code Brew",
+      "URL": "https://enriquecesar.github.io/Distrito_GO/",
+      "Notas": "Buscador interactivo para artículos de mercancía."
+    },
+    {
       "Categoria": "Capacitacion",
       "Icono": "🎓",
       "Nombre": "Attensi",
@@ -566,6 +566,34 @@
       "Nombre": "UBITS",
       "URL": "https://login.ubitslearning.com/login",
       "Notas": "Accede a Ubits, completa cursos pendientes y mantén actualizado tu Kardex."
+    },
+    {
+      "Categoria": "Incidentes",
+      "Icono": "✅",
+      "Nombre": "Seg_Operativo",
+      "URL": "https://grupovips.sharepoint.com/:l:/s/Portafolio_EnriqueCsar/JAA2HzEpCI5oTJ5oUhxtQ0XKAUxur9rEcR3U23rXLoqa6N8?nav=MDFiNTg4ZjktYTEzNC00ZWZlLThlOTQtYjZiYjBlYzVjZGFk",
+      "Notas": "Completa encuestas de seguimiento y escala oportunamente temas relevantes con tu DM."
+    },
+    {
+      "Categoria": "Incidentes",
+      "Icono": "🛠️",
+      "Nombre": "Mesa de servicio",
+      "URL": "https://mds.alsea.com.mx/user/profile/public/id/140",
+      "Notas": "Levanta tickets de soporte; informa a tu DM y escala casos críticos."
+    },
+    {
+      "Categoria": "Incidentes",
+      "Icono": "🚨",
+      "Nombre": "Retain",
+      "URL": "https://alseamxres.retain.es//entrada.php",
+      "Notas": "Reporta incidencias mediante ticket; informa a tu DM y escala casos de seguimiento especial."
+    },
+    {
+      "Categoria": "Incidentes",
+      "Icono": "🔐",
+      "Nombre": "Okta",
+      "URL": "https://auth-als.okta.com/login/default",
+      "Notas": "Reporta incidencias de sistemas, equipos o cualquier requerimiento operativo."
     },
     {
       "Categoria": "Informativa",
@@ -603,39 +631,11 @@
       "Notas": "Acceso directo al reporte compartido de KPIs de la Región Centro Norte."
     },
     {
-      "Categoria": "Link_Portafolio",
-      "Icono": "✅",
-      "Nombre": "Seg_Operativo",
-      "URL": "https://grupovips.sharepoint.com/:l:/s/Portafolio_EnriqueCsar/JAA2HzEpCI5oTJ5oUhxtQ0XKAUxur9rEcR3U23rXLoqa6N8?nav=MDFiNTg4ZjktYTEzNC00ZWZlLThlOTQtYjZiYjBlYzVjZGFk",
-      "Notas": "Completa encuestas de seguimiento y escala oportunamente temas relevantes con tu DM."
-    },
-    {
-      "Categoria": "Link_Portafolio",
-      "Icono": "📈",
-      "Nombre": "KPI Semanal Distrito Kike",
-      "URL": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
-      "Notas": "Todos los lunes antes de las 09:00 a.m. comparte y valida tus KPIs."
-    },
-    {
-      "Categoria": "Link_Portafolio",
-      "Icono": "🍃",
-      "Nombre": "GreenApronReview",
-      "URL": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
-      "Notas": "Ritual de Resultados: enfócate en los 4 estándares clave todos los lunes antes de las 02:00 p.m."
-    },
-    {
       "Categoria": "Trabajo",
       "Icono": "🐸",
       "Nombre": "Dash_Frogmi",
       "URL": "https://neo.frogmi.com/alsea-mexico/dashboard/gallery",
       "Notas": "Revisa los System Check realizados, hallazgos y seguimiento general de Frogmi."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "💳",
-      "Nombre": "Gastos",
-      "URL": "https://enev.login.us2.oraclecloud.com/",
-      "Notas": "Todos los lunes revisa y valida los gastos correspondientes a la semana anterior."
     },
     {
       "Categoria": "Trabajo",
@@ -646,24 +646,10 @@
     },
     {
       "Categoria": "Trabajo",
-      "Icono": "📣",
-      "Nombre": "Workvivo",
-      "URL": "https://alsea.workvivo.us/login",
-      "Notas": "Comparte tu publicación semanal todos los lunes."
-    },
-    {
-      "Categoria": "Trabajo",
       "Icono": "🧃",
       "Nombre": "Promoplanner",
       "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
       "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "🛠️",
-      "Nombre": "Mesa de servicio",
-      "URL": "https://mds.alsea.com.mx/user/profile/public/id/140",
-      "Notas": "Levanta tickets de soporte; informa a tu DM y escala casos críticos."
     },
     {
       "Categoria": "Trabajo",
@@ -678,13 +664,6 @@
       "Nombre": "HME",
       "URL": "https://hmecloud.com/?pg=Login",
       "Notas": "Consulta y analiza los tiempos operativos de tiendas Drive Thru."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "🚨",
-      "Nombre": "Retain",
-      "URL": "https://alseamxres.retain.es//entrada.php",
-      "Notas": "Reporta incidencias mediante ticket; informa a tu DM y escala casos de seguimiento especial."
     },
     {
       "Categoria": "Trabajo",
@@ -720,13 +699,6 @@
       "Nombre": "Design Gallery",
       "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
       "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "🔐",
-      "Nombre": "Okta",
-      "URL": "https://auth-als.okta.com/login/default",
-      "Notas": "Reporta incidencias de sistemas, equipos o cualquier requerimiento operativo."
     },
     {
       "Categoria": "Trabajo",
@@ -769,218 +741,344 @@
       "Nombre": "Celular DM",
       "URL": "https://wa.me/message/ENKDSAHYHIGAN1",
       "Notas": "Comunicación directa diaria para apertura, riesgos, evidencias, operación y escalamiento crítico."
-    },
-    {
-      "Categoria": "App",
-      "Icono": "🔎",
-      "Nombre": "Code Brew",
-      "URL": "https://enriquecesar.github.io/Distrito_GO/",
-      "Notas": "Buscador interactivo para artículos de mercancía."
     }
   ],
   "eventos": [
     {
-      "Fecha Inicio": 46196,
-      "Fecha Fin": 46198,
-      "Actividad": "💰 Ingreso Gastos",
-      "Contexto / Recordatorio": "Urgente ingresar gastos por cambio de plataforma.",
-      "Imagen": "💰"
-    },
-    {
-      "Fecha Inicio": 46196,
-      "Fecha Fin": 46203,
+      "Fecha Inicio": "2026-06-23",
+      "Fecha Fin": "2026-06-30",
       "Actividad": "🧹 Limpieza Backs",
       "Contexto / Recordatorio": "Enfoque en limpieza, acomodo Max&Min y Lay Out.",
       "Imagen": "🧹"
     },
     {
-      "Fecha Inicio": 46204,
-      "Fecha Fin": 46234,
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-31",
       "Actividad": "🎓 Recertificación Shift Supervisor",
       "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas aprox.).",
       "Imagen": "🎓"
     },
     {
-      "Fecha Inicio": 46204,
-      "Fecha Fin": 46213,
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-10",
       "Actividad": "💳 Inventario Pin Pad y TPV Q3",
       "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
       "Imagen": "💳"
     },
     {
-      "Fecha Inicio": 46214,
-      "Fecha Fin": 46214,
+      "Fecha Inicio": "2026-06-26",
+      "Fecha Fin": "2026-07-11",
       "Actividad": "🏆 Barista Champion Regional",
       "Contexto / Recordatorio": "¡Apoyemos a Hugo! ¡Mucho éxito!",
       "Imagen": "🏆"
     },
     {
-      "Fecha Inicio": 46216,
-      "Fecha Fin": 46222,
+      "Fecha Inicio": "2026-07-13",
+      "Fecha Fin": "2026-07-19",
       "Actividad": "✅ Validación Summer Attensi",
       "Contexto / Recordatorio": "Validación de conocimientos Summer antes del lanzamiento.",
       "Imagen": "✅"
     },
     {
-      "Fecha Inicio": 46216,
-      "Fecha Fin": 46234,
+      "Fecha Inicio": "2026-07-13",
+      "Fecha Fin": "2026-07-31",
       "Actividad": "👥 Best Talent - Cascada RD y DM",
       "Contexto / Recordatorio": "Sesiones de revisión y proyección de talento.",
       "Imagen": "👥"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "☀️ Campaña Summer 2026",
       "Contexto / Recordatorio": "Inicio de campaña Summer; ejecución de bebidas, food, retail y promociones.",
       "Imagen": "☀️"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🥥 Coconut Ube Platform",
       "Contexto / Recordatorio": "Lanzamiento de Coconut Ube Latte y Frappuccino.",
       "Imagen": "🥥"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "☕ Aerocano",
       "Contexto / Recordatorio": "Nueva plataforma de Espresso aireado.",
       "Imagen": "☕"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "💪 Protein Lattes",
       "Contexto / Recordatorio": "Nueva línea de bebidas con proteína.",
       "Imagen": "💪"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🥤 Strato Frappuccino",
       "Contexto / Recordatorio": "Nueva plataforma Frappuccino con Cold Foam.",
       "Imagen": "🥤"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🥪 Nueva Focaccia",
       "Contexto / Recordatorio": "Innovación Food. Revisar producción y disponibilidad.",
       "Imagen": "🥪"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🍩 Dona Ube",
       "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
       "Imagen": "🍩"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🦄 Cake Pop Unicorn",
       "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
       "Imagen": "🦄"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🍰 Cheesecake Brulée de Limón",
       "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
       "Imagen": "🍰"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🥭 Mango Enchilado",
       "Contexto / Recordatorio": "Innovación Retail Attach para incrementar ticket.",
       "Imagen": "🥭"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🧀 Snack Box",
       "Contexto / Recordatorio": "Nueva opción Retail Lobby.",
       "Imagen": "🧀"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46264,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🌍 Kati Kati Blend",
       "Contexto / Recordatorio": "Café de temporada para Retail y Coffee Experience.",
       "Imagen": "🌍"
     },
     {
-      "Fecha Inicio": 46223,
-      "Fecha Fin": 46250,
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-16",
       "Actividad": "⭐ Starbucks Rewards Summer",
       "Contexto / Recordatorio": "Promociones diferenciadas por día en Starbucks Rewards.",
       "Imagen": "⭐"
     },
     {
-      "Fecha Inicio": 46231,
-      "Fecha Fin": 46231,
+      "Fecha Inicio": "2026-07-28",
+      "Fecha Fin": "2026-07-28",
       "Actividad": "📚 Mujeres que Inspiran - Club de Lectura",
       "Contexto / Recordatorio": "Sesión de desarrollo y reflexión.",
       "Imagen": "📚"
     },
     {
-      "Fecha Inicio": 46237,
-      "Fecha Fin": 46265,
+      "Fecha Inicio": "2026-08-03",
+      "Fecha Fin": "2026-08-31",
       "Actividad": "🌟 Best Talent - Cascada DM - SM",
       "Contexto / Recordatorio": "Inicio de calibraciones y desarrollo DM-SM.",
       "Imagen": "🌟"
     },
     {
-      "Fecha Inicio": 46237,
-      "Fecha Fin": 46243,
+      "Fecha Inicio": "2026-08-03",
+      "Fecha Fin": "2026-08-09",
       "Actividad": "⬆️ Upsize sin costo adicional",
       "Contexto / Recordatorio": "Promoción para impulsar ADTs.",
       "Imagen": "⬆️"
     },
     {
-      "Fecha Inicio": 46247,
-      "Fecha Fin": 46247,
+      "Fecha Inicio": "2026-08-13",
+      "Fecha Fin": "2026-08-13",
       "Actividad": "🎥 Coffee Webinar",
       "Contexto / Recordatorio": "Sesión virtual para Coffee Masters.",
       "Imagen": "🎥"
     },
     {
-      "Fecha Inicio": 46251,
-      "Fecha Fin": 46257,
+      "Fecha Inicio": "2026-08-17",
+      "Fecha Fin": "2026-08-23",
       "Actividad": "☕ Seminario de Café",
       "Contexto / Recordatorio": "Ejecución del Seminario para Coffee Masters.",
       "Imagen": "☕"
     },
     {
-      "Fecha Inicio": 46259,
-      "Fecha Fin": 46259,
+      "Fecha Inicio": "2026-08-25",
+      "Fecha Fin": "2026-08-25",
       "Actividad": "🚀 Mujeres que Inspiran - Abriendo Camino",
       "Contexto / Recordatorio": "Sesión de capacitación formal.",
       "Imagen": "🚀"
     },
     {
-      "Fecha Inicio": 46294,
-      "Fecha Fin": 46294,
+      "Fecha Inicio": "2026-09-29",
+      "Fecha Fin": "2026-09-29",
       "Actividad": "🎤 Mujeres que Inspiran - Voces que Inspiran",
       "Contexto / Recordatorio": "Conversaciones con líderes y desarrollo profesional.",
       "Imagen": "🎤"
     },
     {
-      "Fecha Inicio": 46296,
-      "Fecha Fin": 46305,
+      "Fecha Inicio": "2026-10-01",
+      "Fecha Fin": "2026-10-10",
       "Actividad": "💳 Inventario Pin Pad y TPV Q4",
       "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
       "Imagen": "💳"
     },
     {
-      "Fecha Inicio": 46322,
-      "Fecha Fin": 46322,
+      "Fecha Inicio": "2026-10-27",
+      "Fecha Fin": "2026-10-27",
       "Actividad": "📖 Mujeres que Inspiran - Entre Páginas",
       "Contexto / Recordatorio": "Club de lectura y aprendizaje compartido.",
       "Imagen": "📖"
+    },
+    {
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-08-01",
+      "Fecha Fin": "2026-08-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-09-01",
+      "Fecha Fin": "2026-09-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-10-01",
+      "Fecha Fin": "2026-10-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-11-01",
+      "Fecha Fin": "2026-11-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-12-01",
+      "Fecha Fin": "2026-12-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-06-30",
+      "Fecha Fin": "2026-07-01",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de junio.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-07-15",
+      "Fecha Fin": "2026-07-16",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de julio.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-08-02",
+      "Fecha Fin": "2026-08-03",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de julio.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-08-16",
+      "Fecha Fin": "2026-08-17",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de agosto.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-08-31",
+      "Fecha Fin": "2026-09-01",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de agosto.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-09-16",
+      "Fecha Fin": "2026-09-17",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de septiembre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-09-30",
+      "Fecha Fin": "2026-10-01",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de septiembre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-10-15",
+      "Fecha Fin": "2026-10-16",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de octubre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-11-02",
+      "Fecha Fin": "2026-11-03",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de octubre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-11-16",
+      "Fecha Fin": "2026-11-17",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de noviembre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-11-30",
+      "Fecha Fin": "2026-12-01",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de noviembre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-12-15",
+      "Fecha Fin": "2026-12-16",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de diciembre.",
+      "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-10",
+      "Actividad": "💳 Inventario TPV y Pin Pads Q3",
+      "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
+      "Imagen": "💳"
+    },
+    {
+      "Fecha Inicio": "2026-10-01",
+      "Fecha Fin": "2026-10-10",
+      "Actividad": "💳 Inventario TPV y Pin Pads Q4",
+      "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
+      "Imagen": "💳"
     }
   ],
   "actividades_semanales": [
@@ -1000,7 +1098,7 @@
     },
     {
       "Actividad": "Comunicado Semanal",
-      "Descripción": "Valida la información de comunicados y novedades operativas.",
+      "Descripción": "https://capacitacion.alsea.net/course/view.php?id=29227",
       "Frecuencia": "Viernes",
       "Icono": "📢",
       "Color": "Naranja"
@@ -1053,6 +1151,34 @@
       "Frecuencia": "Domingo",
       "Icono": "📤",
       "Color": "Azul"
+    },
+    {
+      "Actividad": "Green ApronReview\nAnalisis 4 Estandares",
+      "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
+      "Frecuencia": "Lunes Antes de 4:00 pm",
+      "Icono": "🚀",
+      "Color": "Azul"
+    },
+    {
+      "Actividad": "KPI_Sem",
+      "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
+      "Frecuencia": "Lunes Antes de 09:30 am",
+      "Icono": "🚀",
+      "Color": "Azul"
+    },
+    {
+      "Actividad": "Gastos",
+      "Descripción": "https://enev.login.us2.oraclecloud.com/",
+      "Frecuencia": "Lunes",
+      "Icono": "🚀",
+      "Color": "Azul"
+    },
+    {
+      "Actividad": "Workvivo\nPublicacion",
+      "Descripción": "https://alsea.workvivo.us/login",
+      "Frecuencia": "Lunes",
+      "Icono": "🚀",
+      "Color": "Azul"
     }
   ],
   "actividades_diarias": [
@@ -1060,17 +1186,19 @@
       "ID": 1,
       "Actividad": "Verificación Espresso y Calidad del Café",
       "Descripción": "Valida ambas verificaciones, registra resultados y comparte comentarios en cada turno.",
+      "Link /Imagen": "espresso.png",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Calidad",
       "Icono": "☕",
-      "Color": "Café",
+      "Color": "Marrón",
       "Visible": "TRUE"
     },
     {
       "ID": 2,
       "Actividad": "RSA Checklist",
       "Descripción": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas.",
+      "Link /Imagen": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Seguridad Alimentaria",
@@ -1082,10 +1210,11 @@
       "ID": 3,
       "Actividad": "Store Walk",
       "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
+      "Link /Imagen": "storewalk.png",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Experiencia",
-      "Icono": "👣",
+      "Icono": "🚶",
       "Color": "Verde",
       "Visible": "TRUE"
     },
@@ -1093,11 +1222,36 @@
       "ID": 4,
       "Actividad": "Protocolo de Apertura",
       "Descripción": "Antes de las 8:00 a.m., el SS de apertura deberá validar cobertura, producto, equipos, riesgos operativos y compartir evidencias (Merch, Showcase, Grab & Go y Dulcería). Comunica novedades relevantes y cualquier situación crítica para asegurar una apertura en tiempo y forma.",
+      "Link /Imagen": "https://wa.me/message/ENKDSAHYHIGAN1",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
       "Icono": "🌅",
       "Color": "Azul",
+      "Visible": "TRUE"
+    },
+    {
+      "ID": 5,
+      "Actividad": "10 Pasos para un Turno Exitoso",
+      "Descripción": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación.",
+      "Link /Imagen": "10-pasos-turno.png",
+      "Frecuencia": "Diario",
+      "Prioridad": 2,
+      "Categoría": "Liderazgo",
+      "Icono": "🔟",
+      "Color": "Naranja",
+      "Visible": "TRUE"
+    },
+    {
+      "ID": 6,
+      "Actividad": "Menu Core",
+      "Descripción": "Revisa disponibilidad de productos, horarios y estatus operativo antes del inicio del turno.",
+      "Link /Imagen": "http://consulta.delivery.alsea.net/",
+      "Frecuencia": "Diario",
+      "Prioridad": 2,
+      "Categoría": "Operación",
+      "Icono": "📋",
+      "Color": "Morado",
       "Visible": "TRUE"
     }
   ],

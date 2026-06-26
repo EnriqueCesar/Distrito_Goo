@@ -14,42 +14,58 @@ function greeting() {
 }
 
 function normalizeDay(value) { return normalize(value || '').replace(/\s+/g, ''); }
+function todayRows(){
+  const dayKey = normalizeDay(todayName());
+  return (CMS.semanales || []).filter(x => {
+    const f = normalizeDay(first(x, ['Frecuencia', 'Día', 'Dia']));
+    return f === dayKey || f.includes(dayKey);
+  });
+}
+function weeklyFocusRows(){ return todayRows().filter(x => String(first(x,['Actividad'])).trim()); }
 
 function wfmSmart() {
   const now = new Date();
   const dow = now.getDay();
-  const map = {
-    1: { action: 'Revisar pronóstico', detail:'Ajusta volumen de la semana que se planifica a 15 días.', icon: '📈', owner: 'SM / ASM', status: 'Lunes WFM' },
-    2: { action: 'Carga inicial de horarios', detail:'Construye la primera versión de horarios.', icon: '📅', owner: 'SM / ASM', status: 'Martes WFM' },
-    3: { action: 'Cargar disponibilidades', detail:'Actualiza vacaciones, permisos y restricciones.', icon: '📥', owner: 'SM / ASM', status: 'Miércoles WFM' },
-    4: { action: 'Ajustar horarios Kronos', detail:'Revisa horarios generados y agrega Non-Coverage.', icon: '🛠️', owner: 'SM', status: 'Jueves WFM' },
-    5: { action: 'Revisión DM', detail:'El DM revisa horarios y comunica observaciones.', icon: '🔎', owner: 'DM', status: 'Viernes WFM' },
-    6: { action: 'Correcciones finales', detail:'Deja horarios listos para publicación.', icon: '🧩', owner: 'SM', status: 'Sábado WFM' },
-    0: { action: 'Publicar en Humanet', detail:'Publica horarios antes del cierre del día.', icon: '🚀', owner: 'SM', status: 'Domingo WFM' }
-  };
-  const next = map[dow];
+  const dayKey = normalizeDay(todayName(now));
+  const row = (CMS.semanales || []).find(x => normalize(first(x,['Actividad'])) === 'wfm' && normalizeDay(first(x,['Frecuencia'])) === dayKey);
+  const fallback = {
+    1: { Actividad: 'WFM', Descripción:'Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.', Icono:'📈', Frecuencia:'Lunes' },
+    2: { Actividad: 'WFM', Descripción:'Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.', Icono:'📅', Frecuencia:'Martes' },
+    3: { Actividad: 'WFM', Descripción:'Actualiza disponibilidades, vacaciones, permisos y restricciones de partners.', Icono:'👥', Frecuencia:'Miércoles' },
+    4: { Actividad: 'WFM', Descripción:'Revisa horarios generados por Kronos y agrega Non-Coverage.', Icono:'⚙️', Frecuencia:'Jueves' },
+    5: { Actividad: 'WFM', Descripción:'El DM revisa horarios y comunica observaciones o ajustes requeridos.', Icono:'✅', Frecuencia:'Viernes' },
+    6: { Actividad: 'WFM', Descripción:'Realiza correcciones finales y deja horarios listos para publicar.', Icono:'🚀', Frecuencia:'Sábado' },
+    0: { Actividad: 'WFM', Descripción:'Verifica que los horarios publicados sean correctos y listos para iniciar la semana.', Icono:'📤', Frecuencia:'Domingo' }
+  }[dow];
+  const picked = row || fallback;
   const offset = dow === 0 ? 8 : 15;
   const target = new Date(now); target.setDate(now.getDate() + offset);
-  return { ...next, range: currentWeekRange(target) };
+  return {
+    action: first(picked,['Actividad']) || 'WFM',
+    detail: first(picked,['Descripción','Descripcion']) || '',
+    icon: first(picked,['Icono']) || '📅',
+    color: first(picked,['Color']) || 'Azul',
+    status: first(picked,['Frecuencia']) || todayName(now),
+    range: currentWeekRange(target)
+  };
 }
 
 function renderToday() {
   const day = todayName();
-  const dayKey = normalizeDay(day);
-  const sems = (CMS.semanales || []).filter(x => normalizeDay(first(x, ['Frecuencia', 'Día', 'Dia'])).includes(dayKey) || normalizeDay(first(x, ['Frecuencia', 'Día', 'Dia'])) === dayKey);
-  const sem = sems.find(x => first(x,['Actividad']) !== 'WFM') || sems[0];
   const wfm = wfmSmart();
+  const focus = weeklyFocusRows().filter(x => normalize(first(x,['Actividad'])) !== 'wfm').slice(0,2);
+  const focusCard = focus[0] ? focus.map(x => `<article class="focus-pill" ${/^https?:/i.test(first(x,['Descripción','Descripcion'])) ? `data-link="${esc(first(x,['Descripción','Descripcion']))}"` : ''}><span>${esc(first(x,['Icono'])||'✨')}</span><div><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Frecuencia'])||day)}</small></div></article>`).join('') : `<article class="focus-pill"><span>✨</span><div><strong>Mejora continua</strong><small>Revisa eventos y checks clave</small></div></article>`;
   const cards = [
     dutyCard(CMS),
-    `<article class="card wfm-card" data-open="wfm"><span class="icon">${esc(wfm.icon)}</span><h3>${esc(wfm.action)}</h3><p>${esc(wfm.detail)}<br><strong>Semana objetivo:</strong> ${esc(wfm.range)}</p><span class="badge">${esc(wfm.status)}</span></article>`,
-    `<article class="card"><span class="icon">${esc(first(sem || {}, ['Icono']) || '🎯')}</span><h3>${esc(first(sem || {}, ['Actividad']) || 'Mejora continua')}</h3><p>${esc(first(sem || {}, ['Descripción', 'Descripcion']) || 'Revisa checks, eventos y herramientas clave del día.')}</p><span class="badge">${esc(day)}</span></article>`
+    `<article class="card wfm-card event-style" data-open="wfm"><span class="icon">${esc(wfm.icon)}</span><div><small class="kicker">Foco WFM · ${esc(day)}</small><h3>${esc(wfm.action)}</h3><p>${esc(wfm.detail)}</p><span class="badge">Semana ${esc(wfm.range)}</span></div></article>`,
+    `<article class="card focus-card"><span class="icon">🌟</span><div><small class="kicker">Foco de hoy</small><h3>Actividades del día</h3><div class="focus-pills">${focusCard}</div></div></article>`
   ];
   $('#todayCards').innerHTML = cards.join('');
 }
 
 function imageForActivity(name){
   const n=normalize(name);
-  if(n.includes('espresso')||n.includes('cafe')) return 'assets/photos/verificacion-cafe-espresso.png';
+  if(n.includes('espresso')||n.includes('cafe')||n.includes('calidad')) return 'assets/photos/verificacion-cafe-espresso.png';
   if(n.includes('store walk')) return 'assets/photos/store-walk.png';
   if(n.includes('10 pasos')) return 'assets/photos/10-pasos-turno.png';
   return '';
@@ -60,10 +76,11 @@ function renderDaily() {
     .filter(x => String(first(x, ['Visible'])).toUpperCase() !== 'FALSE')
     .sort((a, b) => (+first(a, ['Prioridad']) || 9) - (+first(b, ['Prioridad']) || 9));
   $('#dailyChecks').innerHTML = items.map(x => {
-    const img = imageForActivity(first(x,['Actividad']));
+    const act = first(x,['Actividad']);
+    const img = imageForActivity(act);
     const link = first(x,['Link /Imagen','Link','URL']);
     const open = img ? `data-image="${esc(img)}"` : (link && link !== 'Imagen' ? `data-link="${esc(link)}"` : '');
-    return `<article class="visual-check" ${open}><div class="visual-icon">${esc(first(x,['Icono'])||'✅')}</div><div><h3>${esc(first(x,['Actividad']))}</h3><p>${esc(first(x,['Descripción','Descripcion']))}</p><span class="badge">${esc(first(x,['Categoría','Categoria'])||'Diario')}</span></div></article>`;
+    return `<article class="visual-check visual-tile" ${open}><div class="visual-icon">${esc(first(x,['Icono'])||'✅')}</div><div><h3>${esc(act)}</h3><p>${esc(first(x,['Descripción','Descripcion']))}</p><span class="badge">${esc(first(x,['Categoría','Categoria'])||'Diario')}</span></div>${img?`<img src="${esc(img)}" alt="${esc(act)}" loading="lazy"/>`:''}</article>`;
   }).join('') || '<p class="muted">Sin checks activos.</p>';
 }
 
@@ -79,7 +96,7 @@ function renderCelebrations(){
 
 function showWFM() {
   const smart = wfmSmart();
-  openModal(`<span class="eyebrow">WFM de hoy</span><h2>${esc(smart.icon)} ${esc(smart.action)}</h2><div class="callout"><strong>Qué hacer hoy:</strong> ${esc(smart.detail)}<br><strong>Semana objetivo:</strong> ${esc(smart.range)}<br><strong>Responsable:</strong> ${esc(smart.owner)}</div><p class="muted">La regla completa vive en el CMS y sólo se usa para calcular la alerta diaria.</p>`);
+  openModal(`<span class="eyebrow">Foco WFM de hoy</span><h2>${esc(smart.icon)} ${esc(smart.action)}</h2><div class="callout"><strong>${esc(todayName())}:</strong> ${esc(smart.detail)}<br><strong>Semana objetivo:</strong> ${esc(smart.range)}</div><div class="mini-note">La alerta cambia automáticamente según el día de la semana.</div>`);
 }
 
 function bind() {
@@ -99,7 +116,7 @@ function bind() {
 async function init() {
   CMS = await loadCMS();
   $('#todayLabel').textContent = formatDateMX(new Date());
-  $('#greeting').textContent = `${greeting()}, Enrique`;
+  $('#greeting').textContent = `${greeting()}, Partner`;
   renderToday(); renderDaily(); renderEvents(CMS); renderCelebrations(); renderTalent(CMS); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
   let deferredPrompt;

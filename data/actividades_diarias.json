@@ -3,12 +3,12 @@
     "ID": 1,
     "Actividad": "Verificación Espresso y Calidad del Café",
     "Descripción": "Valida ambas verificaciones, registra resultados y comparte comentarios en cada turno.",
-    "Link /Imagen": "Imagen",
+    "Link /Imagen": "espresso.png",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Calidad",
     "Icono": "☕",
-    "Color": "Café",
+    "Color": "Marrón",
     "Visible": "TRUE"
   },
   {
@@ -27,18 +27,18 @@
     "ID": 3,
     "Actividad": "Store Walk",
     "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
-    "Link /Imagen": "Imagen",
+    "Link /Imagen": "storewalk.png",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Experiencia",
-    "Icono": "👣",
+    "Icono": "🚶",
     "Color": "Verde",
     "Visible": "TRUE"
   },
   {
     "ID": 4,
     "Actividad": "Protocolo de Apertura",
-    "Descripción": "Antes de las 8:00 a.m., valida cobertura, producto, equipos, riesgos operativos y comparte evidencias clave.",
+    "Descripción": "Antes de las 8:00 a.m., el SS de apertura deberá validar cobertura, producto, equipos, riesgos operativos y compartir evidencias (Merch, Showcase, Grab & Go y Dulcería). Comunica novedades relevantes y cualquier situación crítica para asegurar una apertura en tiempo y forma.",
     "Link /Imagen": "https://wa.me/message/ENKDSAHYHIGAN1",
     "Frecuencia": "Diario",
     "Prioridad": 1,
@@ -49,14 +49,26 @@
   },
   {
     "ID": 5,
-    "Actividad": "10 Pasos SS",
-    "Descripción": "Revisa los 10 pasos para un turno exitoso: comunicación, cobertura, capacitación, stock, metas, store walk y Duty Roster.",
-    "Link /Imagen": "Imagen",
+    "Actividad": "10 Pasos para un Turno Exitoso",
+    "Descripción": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación.",
+    "Link /Imagen": "10-pasos-turno.png",
+    "Frecuencia": "Diario",
+    "Prioridad": 2,
+    "Categoría": "Liderazgo",
+    "Icono": "🔟",
+    "Color": "Naranja",
+    "Visible": "TRUE"
+  },
+  {
+    "ID": 6,
+    "Actividad": "Menu Core",
+    "Descripción": "Revisa disponibilidad de productos, horarios y estatus operativo antes del inicio del turno.",
+    "Link /Imagen": "http://consulta.delivery.alsea.net/",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Operación",
-    "Icono": "✅",
-    "Color": "Verde",
+    "Icono": "📋",
+    "Color": "Morado",
     "Visible": "TRUE"
   }
 ]

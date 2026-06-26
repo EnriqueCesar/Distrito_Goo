@@ -22,13 +22,6 @@
   },
   {
     "Categoria": "App",
-    "Icono": "🛡️",
-    "Nombre": "RSA_Checklist",
-    "URL": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
-    "Notas": "Realiza diario antes de las 10:00 y envía evidencia de correcciones."
-  },
-  {
-    "Categoria": "App",
     "Icono": "🎯",
     "Nombre": "Foco_2026",
     "URL": "https://enriquecesar.github.io/Foco2026/",
@@ -63,6 +56,13 @@
     "Notas": "Consulta indicadores históricos, ajusta tu plan y enfoca acciones en resultados."
   },
   {
+    "Categoria": "App",
+    "Icono": "🔎",
+    "Nombre": "Code Brew",
+    "URL": "https://enriquecesar.github.io/Distrito_GO/",
+    "Notas": "Buscador interactivo para artículos de mercancía."
+  },
+  {
     "Categoria": "Capacitacion",
     "Icono": "🎓",
     "Nombre": "Attensi",
@@ -82,6 +82,34 @@
     "Nombre": "UBITS",
     "URL": "https://login.ubitslearning.com/login",
     "Notas": "Accede a Ubits, completa cursos pendientes y mantén actualizado tu Kardex."
+  },
+  {
+    "Categoria": "Incidentes",
+    "Icono": "✅",
+    "Nombre": "Seg_Operativo",
+    "URL": "https://grupovips.sharepoint.com/:l:/s/Portafolio_EnriqueCsar/JAA2HzEpCI5oTJ5oUhxtQ0XKAUxur9rEcR3U23rXLoqa6N8?nav=MDFiNTg4ZjktYTEzNC00ZWZlLThlOTQtYjZiYjBlYzVjZGFk",
+    "Notas": "Completa encuestas de seguimiento y escala oportunamente temas relevantes con tu DM."
+  },
+  {
+    "Categoria": "Incidentes",
+    "Icono": "🛠️",
+    "Nombre": "Mesa de servicio",
+    "URL": "https://mds.alsea.com.mx/user/profile/public/id/140",
+    "Notas": "Levanta tickets de soporte; informa a tu DM y escala casos críticos."
+  },
+  {
+    "Categoria": "Incidentes",
+    "Icono": "🚨",
+    "Nombre": "Retain",
+    "URL": "https://alseamxres.retain.es//entrada.php",
+    "Notas": "Reporta incidencias mediante ticket; informa a tu DM y escala casos de seguimiento especial."
+  },
+  {
+    "Categoria": "Incidentes",
+    "Icono": "🔐",
+    "Nombre": "Okta",
+    "URL": "https://auth-als.okta.com/login/default",
+    "Notas": "Reporta incidencias de sistemas, equipos o cualquier requerimiento operativo."
   },
   {
     "Categoria": "Informativa",
@@ -119,39 +147,11 @@
     "Notas": "Acceso directo al reporte compartido de KPIs de la Región Centro Norte."
   },
   {
-    "Categoria": "Link_Portafolio",
-    "Icono": "✅",
-    "Nombre": "Seg_Operativo",
-    "URL": "https://grupovips.sharepoint.com/:l:/s/Portafolio_EnriqueCsar/JAA2HzEpCI5oTJ5oUhxtQ0XKAUxur9rEcR3U23rXLoqa6N8?nav=MDFiNTg4ZjktYTEzNC00ZWZlLThlOTQtYjZiYjBlYzVjZGFk",
-    "Notas": "Completa encuestas de seguimiento y escala oportunamente temas relevantes con tu DM."
-  },
-  {
-    "Categoria": "Link_Portafolio",
-    "Icono": "📈",
-    "Nombre": "KPI Semanal Distrito Kike",
-    "URL": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
-    "Notas": "Todos los lunes antes de las 09:00 a.m. comparte y valida tus KPIs."
-  },
-  {
-    "Categoria": "Link_Portafolio",
-    "Icono": "🍃",
-    "Nombre": "GreenApronReview",
-    "URL": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
-    "Notas": "Ritual de Resultados: enfócate en los 4 estándares clave todos los lunes antes de las 02:00 p.m."
-  },
-  {
     "Categoria": "Trabajo",
     "Icono": "🐸",
     "Nombre": "Dash_Frogmi",
     "URL": "https://neo.frogmi.com/alsea-mexico/dashboard/gallery",
     "Notas": "Revisa los System Check realizados, hallazgos y seguimiento general de Frogmi."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "💳",
-    "Nombre": "Gastos",
-    "URL": "https://enev.login.us2.oraclecloud.com/",
-    "Notas": "Todos los lunes revisa y valida los gastos correspondientes a la semana anterior."
   },
   {
     "Categoria": "Trabajo",
@@ -162,24 +162,10 @@
   },
   {
     "Categoria": "Trabajo",
-    "Icono": "📣",
-    "Nombre": "Workvivo",
-    "URL": "https://alsea.workvivo.us/login",
-    "Notas": "Comparte tu publicación semanal todos los lunes."
-  },
-  {
-    "Categoria": "Trabajo",
     "Icono": "🧃",
     "Nombre": "Promoplanner",
     "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
     "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "🛠️",
-    "Nombre": "Mesa de servicio",
-    "URL": "https://mds.alsea.com.mx/user/profile/public/id/140",
-    "Notas": "Levanta tickets de soporte; informa a tu DM y escala casos críticos."
   },
   {
     "Categoria": "Trabajo",
@@ -194,13 +180,6 @@
     "Nombre": "HME",
     "URL": "https://hmecloud.com/?pg=Login",
     "Notas": "Consulta y analiza los tiempos operativos de tiendas Drive Thru."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "🚨",
-    "Nombre": "Retain",
-    "URL": "https://alseamxres.retain.es//entrada.php",
-    "Notas": "Reporta incidencias mediante ticket; informa a tu DM y escala casos de seguimiento especial."
   },
   {
     "Categoria": "Trabajo",
@@ -236,13 +215,6 @@
     "Nombre": "Design Gallery",
     "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
     "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "🔐",
-    "Nombre": "Okta",
-    "URL": "https://auth-als.okta.com/login/default",
-    "Notas": "Reporta incidencias de sistemas, equipos o cualquier requerimiento operativo."
   },
   {
     "Categoria": "Trabajo",
@@ -285,12 +257,5 @@
     "Nombre": "Celular DM",
     "URL": "https://wa.me/message/ENKDSAHYHIGAN1",
     "Notas": "Comunicación directa diaria para apertura, riesgos, evidencias, operación y escalamiento crítico."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "🔎",
-    "Nombre": "Code Brew",
-    "URL": "https://enriquecesar.github.io/Distrito_GO/",
-    "Notas": "Buscador interactivo para artículos de mercancía."
   }
 ]
