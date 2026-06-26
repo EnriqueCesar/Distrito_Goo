@@ -1,0 +1,72 @@
+[
+  {
+    "Actividad": "WFM",
+    "Descripción": "Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.",
+    "Frecuencia": "Lunes",
+    "Icono": "📈",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "Starbucks College | Ubits",
+    "Descripción": "Valida el avance de cursos en Ubits.",
+    "Frecuencia": "Martes",
+    "Icono": "🎓",
+    "Color": "Morado"
+  },
+  {
+    "Actividad": "Comunicado Semanal",
+    "Descripción": "Valida la información de comunicados y novedades operativas.",
+    "Frecuencia": "Viernes",
+    "Icono": "📢",
+    "Color": "Naranja"
+  },
+  {
+    "Actividad": "Coffee Tuesday",
+    "Descripción": "Participa con los clientes en degustaciones y genera una experiencia memorable.",
+    "Frecuencia": "Martes",
+    "Icono": "☕",
+    "Color": "Verde"
+  },
+  {
+    "Actividad": "WFM",
+    "Descripción": "Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.",
+    "Frecuencia": "Martes",
+    "Icono": "📅",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "WFM",
+    "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners. Kronos generará automáticamente el pronóstico y horarios.",
+    "Frecuencia": "Miércoles",
+    "Icono": "👥",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "WFM",
+    "Descripción": "Revisa los horarios generados por Kronos, realiza ajustes operativos y agrega actividades Non-Coverage.",
+    "Frecuencia": "Jueves",
+    "Icono": "⚙️",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "WFM",
+    "Descripción": "El DM revisa los horarios y comunica observaciones o ajustes requeridos.",
+    "Frecuencia": "Viernes",
+    "Icono": "✅",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "WFM",
+    "Descripción": "Realiza correcciones finales y publica los horarios en Humanet antes del domingo.",
+    "Frecuencia": "Sábado",
+    "Icono": "🚀",
+    "Color": "Azul"
+  },
+  {
+    "Actividad": "WFM",
+    "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
+    "Frecuencia": "Domingo",
+    "Icono": "📤",
+    "Color": "Azul"
+  }
+]

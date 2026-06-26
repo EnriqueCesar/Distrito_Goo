@@ -1,0 +1,58 @@
+[
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Icono": "🍰",
+    "Color": "Naranja",
+    "Orden": "1",
+    "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC + Lobby",
+    "Icono": "🛡️",
+    "Color": "Rojo",
+    "Orden": "2",
+    "Enfoque": "Cumplimiento, limpieza y experiencia del cliente."
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Icono": "📦",
+    "Color": "Azul",
+    "Orden": "3",
+    "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH."
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Icono": "☕",
+    "Color": "Café",
+    "Orden": "4",
+    "Enfoque": "Calidad de bebidas, limpieza y ejecución de barra."
+  },
+  {
+    "Día": "Viernes",
+    "Estación": "Food",
+    "Icono": "🍰",
+    "Color": "Naranja",
+    "Orden": "5",
+    "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food."
+  },
+  {
+    "Día": "Sábado",
+    "Estación": "BOH + Espresso",
+    "Icono": "📦☕",
+    "Color": "Azul",
+    "Orden": "6",
+    "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa."
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby + DT",
+    "Icono": "💚",
+    "Color": "Verde",
+    "Orden": "7",
+    "Enfoque": "Experiencia del cliente y apariencia general de la tienda."
+  }
+]

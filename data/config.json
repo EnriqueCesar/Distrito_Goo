@@ -1,0 +1,12 @@
+{
+  "project": "DistritoGoo",
+  "version": "5.0 NextGen",
+  "owner": "Enrique César Flores",
+  "tagline": "Prioriza, ejecuta y mejora cada día.",
+  "updated": "2026-06-26",
+  "theme": {
+    "green": "#006241",
+    "dark": "#1e3932",
+    "cream": "#f7f3ea"
+  }
+}

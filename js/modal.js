@@ -1,0 +1,1 @@
+import {$} from './utils.js';const modal=$('#modal'), content=$('#modalContent');$('#modalClose').addEventListener('click',()=>modal.close());export function openModal(html){content.innerHTML=html;modal.showModal()}

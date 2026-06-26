@@ -1,0 +1,296 @@
+[
+  {
+    "Categoria": "App",
+    "Icono": "📋",
+    "Nombre": "PBT Web 2.0",
+    "URL": "https://enriquecesar.github.io/pbt2.0_web/",
+    "Notas": "Consulta tu plan en tiempo real y mantén actualizado tu tablero de trabajo."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🧩",
+    "Nombre": "LayOut",
+    "URL": "https://enriquecesar.github.io/layout/",
+    "Notas": "Utiliza esta herramienta para diseñar, ajustar y validar layouts operativos."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🗺️",
+    "Nombre": "CN Connect",
+    "URL": "https://enriquecesar.github.io/CentroNorteConnect/",
+    "Notas": "Conoce la Región Centro Norte, sus resultados y principales iniciativas."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🛡️",
+    "Nombre": "RSA_Checklist",
+    "URL": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
+    "Notas": "Realiza diario antes de las 10:00 y envía evidencia de correcciones."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🎯",
+    "Nombre": "Foco_2026",
+    "URL": "https://enriquecesar.github.io/Foco2026/",
+    "Notas": "Da seguimiento semanal a compromisos, avances y planes de acción."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "📦",
+    "Nombre": "Max&Min",
+    "URL": "https://enriquecesar.github.io/Max-Min/",
+    "Notas": "Herramienta clave para control de costo; ajusta estaciones y áreas según el uso real."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🧾",
+    "Nombre": "PBT_Planes",
+    "URL": "https://enriquecesar.github.io/pbt_motor_exact/",
+    "Notas": "Anticipa, consulta e imprime planes del Q considerando WeekPart, DayPart y número de Partners."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "💚",
+    "Nombre": "Partner_Hub",
+    "URL": "https://enriquecesar.github.io/Partner_Hub/",
+    "Notas": "Conoce mejor a tu equipo y consulta aniversarios y cumpleaños."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🏪",
+    "Nombre": "Perfil Tienda",
+    "URL": "https://enriquecesar.github.io/Perfil_Tienda_DM/",
+    "Notas": "Consulta indicadores históricos, ajusta tu plan y enfoca acciones en resultados."
+  },
+  {
+    "Categoria": "Capacitacion",
+    "Icono": "🎓",
+    "Nombre": "Attensi",
+    "URL": "https://manager.attensi.com/starbucks_mexico/home",
+    "Notas": "Consulta el avance de capacitación de tu equipo y da seguimiento a pendientes."
+  },
+  {
+    "Categoria": "Capacitacion",
+    "Icono": "☕",
+    "Nombre": "Smartcup",
+    "URL": "https://capacitacion.alsea.net/login/index.php",
+    "Notas": "Plataforma complementaria para capacitación y desarrollo."
+  },
+  {
+    "Categoria": "Capacitacion",
+    "Icono": "📚",
+    "Nombre": "UBITS",
+    "URL": "https://login.ubitslearning.com/login",
+    "Notas": "Accede a Ubits, completa cursos pendientes y mantén actualizado tu Kardex."
+  },
+  {
+    "Categoria": "Informativa",
+    "Icono": "🧾",
+    "Nombre": "Recibo de Nómina",
+    "URL": "https://alsea.tureciboelectronico.com/TuRecibo_Alsea/Login.aspx",
+    "Notas": "Consulta recibos, información y movimientos relacionados con tu nómina."
+  },
+  {
+    "Categoria": "Informativa",
+    "Icono": "🤝",
+    "Nombre": "Va por mi cuenta",
+    "URL": "https://extranet.alsea.net/ex/vxmc/index.aspx?e=timeout",
+    "Notas": "Gestiona y registra donaciones del programa VaXCuenta."
+  },
+  {
+    "Categoria": "Informativa",
+    "Icono": "🏦",
+    "Nombre": "Login - Sura",
+    "URL": "https://rk.suraim.com.mx/RkWebSite/Account/Login",
+    "Notas": "Consulta información relacionada con tu Caja de Ahorro."
+  },
+  {
+    "Categoria": "Informativa",
+    "Icono": "🩺",
+    "Nombre": "Beneflex | SGMM",
+    "URL": "https://www.beneflex.com.mx/MisOpcionales/ie/ieMisDatos.aspx",
+    "Notas": "Consulta información y cobertura de tu Seguro de Gastos Médicos Mayores."
+  },
+  {
+    "Categoria": "Link_Portafolio",
+    "Icono": "📊",
+    "Nombre": "KPIs Centro Norte 2026 - Editable.xlsx",
+    "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/jorge_alcantar_starbucks_com_mx/IQAyMdoeH7jwQYP-P2bwGeJ5AVvxUPM7UZ6huFsOlWyK5_w?e=lNlhEj",
+    "Notas": "Acceso directo al reporte compartido de KPIs de la Región Centro Norte."
+  },
+  {
+    "Categoria": "Link_Portafolio",
+    "Icono": "✅",
+    "Nombre": "Seg_Operativo",
+    "URL": "https://grupovips.sharepoint.com/:l:/s/Portafolio_EnriqueCsar/JAA2HzEpCI5oTJ5oUhxtQ0XKAUxur9rEcR3U23rXLoqa6N8?nav=MDFiNTg4ZjktYTEzNC00ZWZlLThlOTQtYjZiYjBlYzVjZGFk",
+    "Notas": "Completa encuestas de seguimiento y escala oportunamente temas relevantes con tu DM."
+  },
+  {
+    "Categoria": "Link_Portafolio",
+    "Icono": "📈",
+    "Nombre": "KPI Semanal Distrito Kike",
+    "URL": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
+    "Notas": "Todos los lunes antes de las 09:00 a.m. comparte y valida tus KPIs."
+  },
+  {
+    "Categoria": "Link_Portafolio",
+    "Icono": "🍃",
+    "Nombre": "GreenApronReview",
+    "URL": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
+    "Notas": "Ritual de Resultados: enfócate en los 4 estándares clave todos los lunes antes de las 02:00 p.m."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🐸",
+    "Nombre": "Dash_Frogmi",
+    "URL": "https://neo.frogmi.com/alsea-mexico/dashboard/gallery",
+    "Notas": "Revisa los System Check realizados, hallazgos y seguimiento general de Frogmi."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "💳",
+    "Nombre": "Gastos",
+    "URL": "https://enev.login.us2.oraclecloud.com/",
+    "Notas": "Todos los lunes revisa y valida los gastos correspondientes a la semana anterior."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "👥",
+    "Nombre": "HCM",
+    "URL": "https://ejlw.login.us2.oraclecloud.com/",
+    "Notas": "Alerta automática un día antes de cada corte de nómina."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "📣",
+    "Nombre": "Workvivo",
+    "URL": "https://alsea.workvivo.us/login",
+    "Notas": "Comparte tu publicación semanal todos los lunes."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🧃",
+    "Nombre": "Promoplanner",
+    "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
+    "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🛠️",
+    "Nombre": "Mesa de servicio",
+    "URL": "https://mds.alsea.com.mx/user/profile/public/id/140",
+    "Notas": "Levanta tickets de soporte; informa a tu DM y escala casos críticos."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🌱",
+    "Nombre": "PDS",
+    "URL": "https://starbucks-pds.bw-globalsolutions.com/?mainMenu=v_desarrollo",
+    "Notas": "Herramienta de desarrollo para conversaciones, coaching y liderazgo."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "⏱️",
+    "Nombre": "HME",
+    "URL": "https://hmecloud.com/?pg=Login",
+    "Notas": "Consulta y analiza los tiempos operativos de tiendas Drive Thru."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🚨",
+    "Nombre": "Retain",
+    "URL": "https://alseamxres.retain.es//entrada.php",
+    "Notas": "Reporta incidencias mediante ticket; informa a tu DM y escala casos de seguimiento especial."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🏢",
+    "Nombre": "WOE",
+    "URL": "https://centro.operaciones.alsea.net/Login",
+    "Notas": "Acceso centralizado a múltiples plataformas y herramientas operativas."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "📌",
+    "Nombre": "META",
+    "URL": "https://meta.alsea.net/meta/login#/login",
+    "Notas": "Herramienta para SM: revisa indicadores, desempeño y seguimiento de tu cédula."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🎟️",
+    "Nombre": "Consulta Ticket",
+    "URL": "http://consulta.delivery.alsea.net/",
+    "Notas": "Valida diariamente disponibilidad de producto y correcta asignación de horarios."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🧪",
+    "Nombre": "ICA",
+    "URL": "https://ica-stage.bw-globalsolutions.com/Login.php",
+    "Notas": "Del 1 al 4 de cada mes recuerda realizar y subir tu AutoICA."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🎨",
+    "Nombre": "Design Gallery",
+    "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
+    "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🔐",
+    "Nombre": "Okta",
+    "URL": "https://auth-als.okta.com/login/default",
+    "Notas": "Reporta incidencias de sistemas, equipos o cualquier requerimiento operativo."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "💰",
+    "Nombre": "Edenred | Gastos",
+    "URL": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal",
+    "Notas": "Revisa y da seguimiento a pagos y reembolsos."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🎵",
+    "Nombre": "Harmony",
+    "URL": "https://harmony.moodmedia.com/wpn/enter-mobile-key",
+    "Notas": "Revisa y valida la programación musical de Harmony."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "🎶",
+    "Nombre": "Network - Música",
+    "URL": "https://player.apps.playnetwork.com/player/dashboard",
+    "Notas": "Consulta y valida la programación musical de Network."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "⭐",
+    "Nombre": "Login | Qualtrics",
+    "URL": "https://xmalsea.qualtrics.com/login",
+    "Notas": "Monitorea indicadores y resultados de Experiencia del Cliente."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "☁️",
+    "Nombre": "Nube_Portafolio",
+    "URL": "https://grupovips-my.sharepoint.com/:f:/g/personal/enrique_cesar_starbucks_com_mx/IgB7AeWMyb-lCLeDz-62fSxeAc9aT-RQWkczz9aclI6E5Gc?e=t1LFaZ",
+    "Notas": "Accede a reportes e información estratégica para una mejor toma de decisiones."
+  },
+  {
+    "Categoria": "Trabajo",
+    "Icono": "📲",
+    "Nombre": "Celular DM",
+    "URL": "https://wa.me/message/ENKDSAHYHIGAN1",
+    "Notas": "Comunicación directa diaria para apertura, riesgos, evidencias, operación y escalamiento crítico."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "🔎",
+    "Nombre": "Code Brew",
+    "URL": "https://enriquecesar.github.io/Distrito_GO/",
+    "Notas": "Buscador interactivo para artículos de mercancía."
+  }
+]

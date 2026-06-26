@@ -1,0 +1,5 @@
+[
+  {
+    "Regla WFM": "REGLA GENERAL\nSi hoy es miércoles:\n➡️ Cargas disponibilidades de la semana que inicia 15 días después.\nSi hoy es jueves:\n➡️ Ajustas los horarios de esa misma semana.\nSi hoy es viernes:\n➡️ El DM revisa esa misma semana.\nSi hoy es domingo:\n➡️ Publicas esa misma semana.\nEjemplo:\nMiércoles 24 de junio → Disponibilidades para semana 6 al 12 de julio.\nJueves 25 de junio → Ajustes para semana 6 al 12 de julio.\nViernes 26 de junio → Revisión DM semana 6 al 12 de julio.\nDomingo 28 de junio → Publicación semana 6 al 12 de julio.\nMiércoles 1 de julio → Disponibilidades para semana 13 al 19 de julio.\nJueves 2 de julio → Ajustes para semana 13 al 19 de julio.\nViernes 3 de julio → Revisión DM semana 13 al 19 de julio.\nDomingo 5 de julio → Publicación semana 13 al 19 de julio."
+  }
+]
