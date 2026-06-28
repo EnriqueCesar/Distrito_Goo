@@ -76,8 +76,20 @@ function routineCarousel(){
   return `<div class="routine-strip">${items.map(x=>`<article class="routine-chip" ${imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']))?`data-image="${esc(imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']))}"`:''}><span>${esc(first(x,['Icono'])||'☕')}</span><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Categoría','Categoria'])||'Rutina')}</small></article>`).join('')}</div>`;
 }
 function imageForActivity(name, explicit=''){
-  const e=String(explicit||'');
-  if(e && !/^https?:/i.test(e)) return `assets/photos/${e.replace(/^assets\/photos\//,'')}`;
+  const e = String(explicit || '').trim();
+  const aliases = {
+    'espresso.png': 'verificacion-cafe-espresso.png',
+    'cafe.png': 'verificacion-cafe-espresso.png',
+    'storewalk.png': 'store-walk.png',
+    'store-walk.png': 'store-walk.png',
+    'rutina_apertura.jpeg': 'Rutina_apertura.jpeg',
+    'rutina_apertura.jpg': 'Rutina_apertura.jpeg',
+    'rutina_apertura.png': 'Rutina_apertura.jpeg'
+  };
+  if(e && !/^https?:/i.test(e)) {
+    const clean = e.replace(/^assets\/photos\//,'');
+    return `assets/photos/${aliases[clean.toLowerCase()] || clean}`;
+  }
   const n=normalize(name);
   if(n.includes('protocolo')||n.includes('apertura')) return 'assets/photos/Rutina_apertura.jpeg';
   if(n.includes('espresso')||n.includes('cafe')||n.includes('calidad')) return 'assets/photos/verificacion-cafe-espresso.png';
