@@ -1,7 +1,7 @@
 {
   "wfm": [
     {
-      "Regla WFM": "REGLA GENERAL\nSi hoy es miércoles:\n➡️ Cargas disponibilidades de la semana que inicia 15 días después.\nSi hoy es jueves:\n➡️ Ajustas los horarios de esa misma semana.\nSi hoy es viernes:\n➡️ El DM revisa esa misma semana.\nSi hoy es domingo:\n➡️ Publicas esa misma semana.\nEjemplo:\nMiércoles 24 de junio → Disponibilidades para semana 6 al 12 de julio.\nJueves 25 de junio → Ajustes para semana 6 al 12 de julio.\nViernes 26 de junio → Revisión DM semana 6 al 12 de julio.\nDomingo 28 de junio → Publicación semana 6 al 12 de julio.\nMiércoles 1 de julio → Disponibilidades para semana 13 al 19 de julio.\nJueves 2 de julio → Ajustes para semana 13 al 19 de julio.\nViernes 3 de julio → Revisión DM semana 13 al 19 de julio.\nDomingo 5 de julio → Publicación semana 13 al 19 de julio."
+      "Regla WFM": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
     }
   ],
   "bt": [
@@ -543,8 +543,22 @@
       "Categoria": "App",
       "Icono": "🔎",
       "Nombre": "Code Brew",
-      "URL": "https://enriquecesar.github.io/Distrito_GO/",
+      "URL": "https://enriquecesar.github.io/CodeBrew_Merch/",
       "Notas": "Buscador interactivo para artículos de mercancía."
+    },
+    {
+      "Categoria": "Campaña",
+      "Icono": "🧃",
+      "Nombre": "Promoplanner",
+      "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
+      "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
+    },
+    {
+      "Categoria": "Campaña",
+      "Icono": "🎨",
+      "Nombre": "Design Gallery",
+      "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
+      "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
     },
     {
       "Categoria": "Capacitacion",
@@ -566,6 +580,20 @@
       "Nombre": "UBITS",
       "URL": "https://login.ubitslearning.com/login",
       "Notas": "Accede a Ubits, completa cursos pendientes y mantén actualizado tu Kardex."
+    },
+    {
+      "Categoria": "Desarrollo",
+      "Icono": "🌱",
+      "Nombre": "PDS",
+      "URL": "https://starbucks-pds.bw-globalsolutions.com/?mainMenu=v_desarrollo",
+      "Notas": "Herramienta de desarrollo para conversaciones, coaching y liderazgo."
+    },
+    {
+      "Categoria": "Desarrollo",
+      "Icono": "📌",
+      "Nombre": "META",
+      "URL": "https://meta.alsea.net/meta/login#/login",
+      "Notas": "Herramienta para SM: revisa indicadores, desempeño y seguimiento de tu cédula."
     },
     {
       "Categoria": "Incidentes",
@@ -624,7 +652,7 @@
       "Notas": "Consulta información y cobertura de tu Seguro de Gastos Médicos Mayores."
     },
     {
-      "Categoria": "Link_Portafolio",
+      "Categoria": "Trabajo",
       "Icono": "📊",
       "Nombre": "KPIs Centro Norte 2026 - Editable.xlsx",
       "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/jorge_alcantar_starbucks_com_mx/IQAyMdoeH7jwQYP-P2bwGeJ5AVvxUPM7UZ6huFsOlWyK5_w?e=lNlhEj",
@@ -646,20 +674,6 @@
     },
     {
       "Categoria": "Trabajo",
-      "Icono": "🧃",
-      "Nombre": "Promoplanner",
-      "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
-      "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "🌱",
-      "Nombre": "PDS",
-      "URL": "https://starbucks-pds.bw-globalsolutions.com/?mainMenu=v_desarrollo",
-      "Notas": "Herramienta de desarrollo para conversaciones, coaching y liderazgo."
-    },
-    {
-      "Categoria": "Trabajo",
       "Icono": "⏱️",
       "Nombre": "HME",
       "URL": "https://hmecloud.com/?pg=Login",
@@ -674,38 +688,10 @@
     },
     {
       "Categoria": "Trabajo",
-      "Icono": "📌",
-      "Nombre": "META",
-      "URL": "https://meta.alsea.net/meta/login#/login",
-      "Notas": "Herramienta para SM: revisa indicadores, desempeño y seguimiento de tu cédula."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "🎟️",
-      "Nombre": "Consulta Ticket",
-      "URL": "http://consulta.delivery.alsea.net/",
-      "Notas": "Valida diariamente disponibilidad de producto y correcta asignación de horarios."
-    },
-    {
-      "Categoria": "Trabajo",
       "Icono": "🧪",
       "Nombre": "ICA",
       "URL": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "Notas": "Del 1 al 4 de cada mes recuerda realizar y subir tu AutoICA."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "🎨",
-      "Nombre": "Design Gallery",
-      "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
-      "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
-    },
-    {
-      "Categoria": "Trabajo",
-      "Icono": "💰",
-      "Nombre": "Edenred | Gastos",
-      "URL": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal",
-      "Notas": "Revisa y da seguimiento a pagos y reembolsos."
     },
     {
       "Categoria": "Trabajo",
@@ -752,6 +738,20 @@
       "Imagen": "🧹"
     },
     {
+      "Fecha Inicio": "2026-06-26",
+      "Fecha Fin": "2026-07-11",
+      "Actividad": "🏆 Barista Champion Regional",
+      "Contexto / Recordatorio": "¡Apoyemos a Hugo! ¡Mucho éxito!",
+      "Imagen": "🏆"
+    },
+    {
+      "Fecha Inicio": "2026-06-30",
+      "Fecha Fin": "2026-07-01",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de junio.",
+      "Imagen": "📅"
+    },
+    {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-31",
       "Actividad": "🎓 Recertificación Shift Supervisor",
@@ -766,11 +766,18 @@
       "Imagen": "💳"
     },
     {
-      "Fecha Inicio": "2026-06-26",
-      "Fecha Fin": "2026-07-11",
-      "Actividad": "🏆 Barista Champion Regional",
-      "Contexto / Recordatorio": "¡Apoyemos a Hugo! ¡Mucho éxito!",
-      "Imagen": "🏆"
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-10",
+      "Actividad": "💳 Inventario TPV y Pin Pads Q3",
+      "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
+      "Imagen": "💳"
     },
     {
       "Fecha Inicio": "2026-07-13",
@@ -785,6 +792,13 @@
       "Actividad": "👥 Best Talent - Cascada RD y DM",
       "Contexto / Recordatorio": "Sesiones de revisión y proyección de talento.",
       "Imagen": "👥"
+    },
+    {
+      "Fecha Inicio": "2026-07-15",
+      "Fecha Fin": "2026-07-16",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de julio.",
+      "Imagen": "📅"
     },
     {
       "Fecha Inicio": "2026-07-20",
@@ -885,6 +899,20 @@
       "Imagen": "📚"
     },
     {
+      "Fecha Inicio": "2026-08-01",
+      "Fecha Fin": "2026-08-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-08-02",
+      "Fecha Fin": "2026-08-03",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de julio.",
+      "Imagen": "📅"
+    },
+    {
       "Fecha Inicio": "2026-08-03",
       "Fecha Fin": "2026-08-31",
       "Actividad": "🌟 Best Talent - Cascada DM - SM",
@@ -906,6 +934,13 @@
       "Imagen": "🎥"
     },
     {
+      "Fecha Inicio": "2026-08-16",
+      "Fecha Fin": "2026-08-17",
+      "Actividad": "📅 Corte de Nómina",
+      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de agosto.",
+      "Imagen": "📅"
+    },
+    {
       "Fecha Inicio": "2026-08-17",
       "Fecha Fin": "2026-08-23",
       "Actividad": "☕ Seminario de Café",
@@ -920,102 +955,18 @@
       "Imagen": "🚀"
     },
     {
-      "Fecha Inicio": "2026-09-29",
-      "Fecha Fin": "2026-09-29",
-      "Actividad": "🎤 Mujeres que Inspiran - Voces que Inspiran",
-      "Contexto / Recordatorio": "Conversaciones con líderes y desarrollo profesional.",
-      "Imagen": "🎤"
-    },
-    {
-      "Fecha Inicio": "2026-10-01",
-      "Fecha Fin": "2026-10-10",
-      "Actividad": "💳 Inventario Pin Pad y TPV Q4",
-      "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
-      "Imagen": "💳"
-    },
-    {
-      "Fecha Inicio": "2026-10-27",
-      "Fecha Fin": "2026-10-27",
-      "Actividad": "📖 Mujeres que Inspiran - Entre Páginas",
-      "Contexto / Recordatorio": "Club de lectura y aprendizaje compartido.",
-      "Imagen": "📖"
-    },
-    {
-      "Fecha Inicio": "2026-07-01",
-      "Fecha Fin": "2026-07-05",
-      "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡"
-    },
-    {
-      "Fecha Inicio": "2026-08-01",
-      "Fecha Fin": "2026-08-05",
-      "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡"
-    },
-    {
-      "Fecha Inicio": "2026-09-01",
-      "Fecha Fin": "2026-09-05",
-      "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡"
-    },
-    {
-      "Fecha Inicio": "2026-10-01",
-      "Fecha Fin": "2026-10-05",
-      "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡"
-    },
-    {
-      "Fecha Inicio": "2026-11-01",
-      "Fecha Fin": "2026-11-05",
-      "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡"
-    },
-    {
-      "Fecha Inicio": "2026-12-01",
-      "Fecha Fin": "2026-12-05",
-      "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡"
-    },
-    {
-      "Fecha Inicio": "2026-06-30",
-      "Fecha Fin": "2026-07-01",
-      "Actividad": "📅 Corte de Nómina",
-      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de junio.",
-      "Imagen": "📅"
-    },
-    {
-      "Fecha Inicio": "2026-07-15",
-      "Fecha Fin": "2026-07-16",
-      "Actividad": "📅 Corte de Nómina",
-      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de julio.",
-      "Imagen": "📅"
-    },
-    {
-      "Fecha Inicio": "2026-08-02",
-      "Fecha Fin": "2026-08-03",
-      "Actividad": "📅 Corte de Nómina",
-      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de julio.",
-      "Imagen": "📅"
-    },
-    {
-      "Fecha Inicio": "2026-08-16",
-      "Fecha Fin": "2026-08-17",
-      "Actividad": "📅 Corte de Nómina",
-      "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de agosto.",
-      "Imagen": "📅"
-    },
-    {
       "Fecha Inicio": "2026-08-31",
       "Fecha Fin": "2026-09-01",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de agosto.",
       "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-09-01",
+      "Fecha Fin": "2026-09-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡"
     },
     {
       "Fecha Inicio": "2026-09-16",
@@ -1025,6 +976,13 @@
       "Imagen": "📅"
     },
     {
+      "Fecha Inicio": "2026-09-29",
+      "Fecha Fin": "2026-09-29",
+      "Actividad": "🎤 Mujeres que Inspiran - Voces que Inspiran",
+      "Contexto / Recordatorio": "Conversaciones con líderes y desarrollo profesional.",
+      "Imagen": "🎤"
+    },
+    {
       "Fecha Inicio": "2026-09-30",
       "Fecha Fin": "2026-10-01",
       "Actividad": "📅 Corte de Nómina",
@@ -1032,11 +990,46 @@
       "Imagen": "📅"
     },
     {
+      "Fecha Inicio": "2026-10-01",
+      "Fecha Fin": "2026-10-10",
+      "Actividad": "💳 Inventario Pin Pad y TPV Q4",
+      "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
+      "Imagen": "💳"
+    },
+    {
+      "Fecha Inicio": "2026-10-01",
+      "Fecha Fin": "2026-10-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡"
+    },
+    {
+      "Fecha Inicio": "2026-10-01",
+      "Fecha Fin": "2026-10-10",
+      "Actividad": "💳 Inventario TPV y Pin Pads Q4",
+      "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
+      "Imagen": "💳"
+    },
+    {
       "Fecha Inicio": "2026-10-15",
       "Fecha Fin": "2026-10-16",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de octubre.",
       "Imagen": "📅"
+    },
+    {
+      "Fecha Inicio": "2026-10-27",
+      "Fecha Fin": "2026-10-27",
+      "Actividad": "📖 Mujeres que Inspiran - Entre Páginas",
+      "Contexto / Recordatorio": "Club de lectura y aprendizaje compartido.",
+      "Imagen": "📖"
+    },
+    {
+      "Fecha Inicio": "2026-11-01",
+      "Fecha Fin": "2026-11-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡"
     },
     {
       "Fecha Inicio": "2026-11-02",
@@ -1060,128 +1053,173 @@
       "Imagen": "📅"
     },
     {
+      "Fecha Inicio": "2026-12-01",
+      "Fecha Fin": "2026-12-05",
+      "Actividad": "🛡 AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡"
+    },
+    {
       "Fecha Inicio": "2026-12-15",
       "Fecha Fin": "2026-12-16",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de diciembre.",
       "Imagen": "📅"
-    },
-    {
-      "Fecha Inicio": "2026-07-01",
-      "Fecha Fin": "2026-07-10",
-      "Actividad": "💳 Inventario TPV y Pin Pads Q3",
-      "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
-      "Imagen": "💳"
-    },
-    {
-      "Fecha Inicio": "2026-10-01",
-      "Fecha Fin": "2026-10-10",
-      "Actividad": "💳 Inventario TPV y Pin Pads Q4",
-      "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
-      "Imagen": "💳"
     }
   ],
-  "actividades_semanales": [
+  "semanales": [
     {
-      "Actividad": "WFM",
+      "ID": 1,
+      "Actividad": "WFM - Pronóstico",
       "Descripción": "Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.",
-      "Frecuencia": "Lunes",
+      "Día": "Lunes",
+      "Hora / Corte": null,
       "Icono": "📈",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     },
     {
-      "Actividad": "Starbucks College | Ubits",
+      "ID": 2,
+      "Actividad": "Green Apron Review",
+      "Descripción": "Analiza los 4 estándares y registra el resultado.",
+      "Día": "Lunes",
+      "Hora / Corte": "Antes de 4:00 pm",
+      "Icono": "🚀",
+      "Color": "Azul",
+      "Link": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl"
+    },
+    {
+      "ID": 3,
+      "Actividad": "KPI Semanal",
+      "Descripción": "Captura y envía los KPI semanales.",
+      "Día": "Lunes",
+      "Hora / Corte": "Antes de 09:30 am",
+      "Icono": "📊",
+      "Color": "Azul",
+      "Link": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl"
+    },
+    {
+      "ID": 4,
+      "Actividad": "Gastos Oracle",
+      "Descripción": "Registra y valida gastos pendientes.",
+      "Día": "Lunes",
+      "Hora / Corte": null,
+      "Icono": "💳",
+      "Color": "Azul",
+      "Link": "https://enev.login.us2.oraclecloud.com/"
+    },
+    {
+      "ID": 5,
+      "Actividad": "Pago Gastos",
+      "Descripción": "Da seguimiento al pago de gastos.",
+      "Día": "Lunes",
+      "Hora / Corte": null,
+      "Icono": "💰",
+      "Color": "Azul",
+      "Link": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal"
+    },
+    {
+      "ID": 6,
+      "Actividad": "Workvivo",
+      "Descripción": "Realiza la publicación semanal en Workvivo.",
+      "Día": "Lunes",
+      "Hora / Corte": null,
+      "Icono": "📱",
+      "Color": "Azul",
+      "Link": "https://alsea.workvivo.us/login"
+    },
+    {
+      "ID": 7,
+      "Actividad": "Starbucks College",
       "Descripción": "Valida el avance de cursos en Ubits.",
-      "Frecuencia": "Martes",
+      "Día": "Martes",
+      "Hora / Corte": null,
       "Icono": "🎓",
-      "Color": "Morado"
+      "Color": "Morado",
+      "Link": null
     },
     {
-      "Actividad": "Comunicado Semanal",
-      "Descripción": "https://capacitacion.alsea.net/course/view.php?id=29227",
-      "Frecuencia": "Viernes",
-      "Icono": "📢",
-      "Color": "Naranja"
-    },
-    {
+      "ID": 8,
       "Actividad": "Coffee Tuesday",
       "Descripción": "Participa con los clientes en degustaciones y genera una experiencia memorable.",
-      "Frecuencia": "Martes",
+      "Día": "Martes",
+      "Hora / Corte": null,
       "Icono": "☕",
-      "Color": "Verde"
+      "Color": "Verde",
+      "Link": null
     },
     {
-      "Actividad": "WFM",
+      "ID": 9,
+      "Actividad": "WFM - Carga Inicial",
       "Descripción": "Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.",
-      "Frecuencia": "Martes",
+      "Día": "Martes",
+      "Hora / Corte": null,
       "Icono": "📅",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     },
     {
-      "Actividad": "WFM",
+      "ID": 10,
+      "Actividad": "WFM - Disponibilidades",
       "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners. Kronos generará automáticamente el pronóstico y horarios.",
-      "Frecuencia": "Miércoles",
+      "Día": "Miércoles",
+      "Hora / Corte": "",
       "Icono": "👥",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     },
     {
-      "Actividad": "WFM",
+      "ID": 11,
+      "Actividad": "WFM - Ajustes",
       "Descripción": "Revisa los horarios generados por Kronos, realiza ajustes operativos y agrega actividades Non-Coverage.",
-      "Frecuencia": "Jueves",
+      "Día": "Jueves",
+      "Hora / Corte": null,
       "Icono": "⚙️",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     },
     {
-      "Actividad": "WFM",
+      "ID": 12,
+      "Actividad": "Comunicado Semanal",
+      "Descripción": "Revisa el comunicado semanal y comparte los puntos relevantes con el equipo.",
+      "Día": "Viernes",
+      "Hora / Corte": null,
+      "Icono": "📢",
+      "Color": "Naranja",
+      "Link": "https://capacitacion.alsea.net/course/view.php?id=29227"
+    },
+    {
+      "ID": 13,
+      "Actividad": "WFM - Revisión DM",
       "Descripción": "El DM revisa los horarios y comunica observaciones o ajustes requeridos.",
-      "Frecuencia": "Viernes",
+      "Día": "Viernes",
+      "Hora / Corte": null,
       "Icono": "✅",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     },
     {
-      "Actividad": "WFM",
-      "Descripción": "Realiza correcciones finales y publica los horarios en Humanet antes del domingo.",
-      "Frecuencia": "Sábado",
+      "ID": 14,
+      "Actividad": "WFM - Publicación",
+      "Descripción": "Realiza las correcciones finales y publica los horarios en Humanet antes del domingo.",
+      "Día": "Sábado",
+      "Hora / Corte": null,
       "Icono": "🚀",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     },
     {
-      "Actividad": "WFM",
+      "ID": 15,
+      "Actividad": "WFM - Validación Final",
       "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
-      "Frecuencia": "Domingo",
+      "Día": "Domingo",
+      "Hora / Corte": null,
       "Icono": "📤",
-      "Color": "Azul"
-    },
-    {
-      "Actividad": "Green ApronReview\nAnalisis 4 Estandares",
-      "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
-      "Frecuencia": "Lunes Antes de 4:00 pm",
-      "Icono": "🚀",
-      "Color": "Azul"
-    },
-    {
-      "Actividad": "KPI_Sem",
-      "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
-      "Frecuencia": "Lunes Antes de 09:30 am",
-      "Icono": "🚀",
-      "Color": "Azul"
-    },
-    {
-      "Actividad": "Gastos",
-      "Descripción": "https://enev.login.us2.oraclecloud.com/",
-      "Frecuencia": "Lunes",
-      "Icono": "🚀",
-      "Color": "Azul"
-    },
-    {
-      "Actividad": "Workvivo\nPublicacion",
-      "Descripción": "https://alsea.workvivo.us/login",
-      "Frecuencia": "Lunes",
-      "Icono": "🚀",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": null
     }
   ],
-  "actividades_diarias": [
+  "diarias": [
     {
       "ID": 1,
       "Actividad": "Verificación Espresso y Calidad del Café",
@@ -1221,8 +1259,8 @@
     {
       "ID": 4,
       "Actividad": "Protocolo de Apertura",
-      "Descripción": "Antes de las 8:00 a.m., el SS de apertura deberá validar cobertura, producto, equipos, riesgos operativos y compartir evidencias (Merch, Showcase, Grab & Go y Dulcería). Comunica novedades relevantes y cualquier situación crítica para asegurar una apertura en tiempo y forma.",
-      "Link /Imagen": "https://wa.me/message/ENKDSAHYHIGAN1",
+      "Descripción": "Todos los dias antes de 09:00 am envia Reporte al equipo de Excelencia\nSOLO NOTIFICA INCIDENTES\n> Cobertura de Partner \n> Disponibilidad de Producto\n> Estatus Operativo (Funcionamiento equipos)\n> Riesgo para Venta\n",
+      "Link /Imagen": "Rutina_apertura.jpeg",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
@@ -1255,78 +1293,78 @@
       "Visible": "TRUE"
     }
   ],
-  "duty_roster": [
+  "dutyRoster": [
     {
-      "Día": "Lunes",
-      "Estación": "Food",
-      "Icono": "🍰",
-      "Color": "Naranja",
       "Orden": 1,
+      "Día": "Lunes",
+      "Estaciones": "Food, Show Case",
+      "Imágenes": "lunes_food.png, lunes_showcase.png",
+      "Color": "Naranja",
       "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
     },
     {
-      "Día": "Martes",
-      "Estación": "PIC + Lobby",
-      "Icono": "🛡️",
-      "Color": "Rojo",
       "Orden": 2,
-      "Enfoque": "Cumplimiento, limpieza y experiencia del cliente."
+      "Día": "Martes",
+      "Estaciones": "PIC, Lobby",
+      "Imágenes": "martes_pic.png, martes_lobby.png",
+      "Color": "Rojo / Verde",
+      "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente."
     },
     {
-      "Día": "Miércoles",
-      "Estación": "BOH",
-      "Icono": "📦",
-      "Color": "Azul",
       "Orden": 3,
+      "Día": "Miércoles",
+      "Estaciones": "BOH",
+      "Imágenes": "miercoles_boh.png",
+      "Color": "Azul",
       "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH."
     },
     {
-      "Día": "Jueves",
-      "Estación": "Espresso",
-      "Icono": "☕",
-      "Color": "Café",
       "Orden": 4,
-      "Enfoque": "Calidad de bebidas, limpieza y ejecución de barra."
+      "Día": "Jueves",
+      "Estaciones": "Espresso, Lobby",
+      "Imágenes": "jueves_espresso.png, jueves_lobby.png",
+      "Color": "Café / Verde",
+      "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente."
     },
     {
-      "Día": "Viernes",
-      "Estación": "Food",
-      "Icono": "🍰",
-      "Color": "Naranja",
       "Orden": 5,
+      "Día": "Viernes",
+      "Estaciones": "Café Filtrado",
+      "Imágenes": "viernes_cafe_filtrado.png",
+      "Color": "Naranja",
       "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food."
     },
     {
-      "Día": "Sábado",
-      "Estación": "BOH + Espresso",
-      "Icono": "📦☕",
-      "Color": "Azul",
       "Orden": 6,
+      "Día": "Sábado",
+      "Estaciones": "CBS",
+      "Imágenes": "sabado_cbs.png",
+      "Color": "Azul",
       "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa."
     },
     {
-      "Día": "Domingo",
-      "Estación": "Lobby + DT",
-      "Icono": "💚",
-      "Color": "Verde",
       "Orden": 7,
+      "Día": "Domingo",
+      "Estaciones": "Lobby, Drive Thru",
+      "Imágenes": "domingo_lobby.png, domingo_drive_thru.png",
+      "Color": "Verde",
       "Enfoque": "Experiencia del cliente y apariencia general de la tienda."
     }
   ],
-  "duty_detail": [
+  "dutyDetail": [
     {
       "Día": "Lunes",
       "Estación": "Food",
       "Categoría": "Limpieza",
       "Orden": 1,
-      "Actividad": "Pisos",
+      "Actividad": "Pisos y drenajes",
       "Icono": "🧹",
       "Crítico": "FALSE"
     },
     {
       "Día": "Lunes",
       "Estación": "Food",
-      "Categoría": "Limpieza",
+      "Categoría": "Equipos",
       "Orden": 2,
       "Actividad": "Horno",
       "Icono": "🔥",
@@ -1335,9 +1373,9 @@
     {
       "Día": "Lunes",
       "Estación": "Food",
-      "Categoría": "Limpieza",
+      "Categoría": "Show Case",
       "Orden": 3,
-      "Actividad": "Showcase",
+      "Actividad": "Show Case",
       "Icono": "🥐",
       "Crítico": "FALSE"
     },
@@ -1355,7 +1393,7 @@
       "Estación": "Food",
       "Categoría": "Producto",
       "Orden": 5,
-      "Actividad": "Grab & Go",
+      "Actividad": "Grab & Go (<7°C)",
       "Icono": "🥪",
       "Crítico": "TRUE"
     },
@@ -1369,6 +1407,33 @@
       "Crítico": "TRUE"
     },
     {
+      "Día": "Lunes",
+      "Estación": "Show Case",
+      "Categoría": "Presentación",
+      "Orden": 7,
+      "Actividad": "Mercadotecnia y Rótulos",
+      "Icono": "🏷️",
+      "Crítico": "FALSE"
+    },
+    {
+      "Día": "Lunes",
+      "Estación": "Show Case",
+      "Categoría": "Seguridad",
+      "Orden": 8,
+      "Actividad": "Alérgenos",
+      "Icono": "⚠️",
+      "Crítico": "TRUE"
+    },
+    {
+      "Día": "Lunes",
+      "Estación": "Show Case",
+      "Categoría": "Limpieza",
+      "Orden": 9,
+      "Actividad": "Ventilas y Cristales",
+      "Icono": "✨",
+      "Crítico": "FALSE"
+    },
+    {
       "Día": "Martes",
       "Estación": "PIC",
       "Categoría": "Seguridad",
@@ -1380,9 +1445,9 @@
     {
       "Día": "Martes",
       "Estación": "PIC",
-      "Categoría": "Seguridad",
+      "Categoría": "Sanitización",
       "Orden": 2,
-      "Actividad": "Sanitizante",
+      "Actividad": "Sanitizante (200-300 ppm)",
       "Icono": "🫧",
       "Crítico": "TRUE"
     },
@@ -1398,9 +1463,9 @@
     {
       "Día": "Martes",
       "Estación": "PIC",
-      "Categoría": "Seguridad",
+      "Categoría": "Documentación",
       "Orden": 4,
-      "Actividad": "Documentación",
+      "Actividad": "Duty Roster y Registros",
       "Icono": "📋",
       "Crítico": "TRUE"
     },
@@ -1416,9 +1481,18 @@
     {
       "Día": "Martes",
       "Estación": "PIC",
-      "Categoría": "Seguridad",
+      "Categoría": "Producto",
       "Orden": 6,
-      "Actividad": "Salud Partners",
+      "Actividad": "Caducidades y Temperaturas",
+      "Icono": "🌡️",
+      "Crítico": "TRUE"
+    },
+    {
+      "Día": "Martes",
+      "Estación": "PIC",
+      "Categoría": "Partners",
+      "Orden": 7,
+      "Actividad": "Salud e Higiene",
       "Icono": "❤️",
       "Crítico": "TRUE"
     },
@@ -1426,7 +1500,7 @@
       "Día": "Martes",
       "Estación": "Lobby",
       "Categoría": "Experiencia",
-      "Orden": 7,
+      "Orden": 8,
       "Actividad": "Lobby",
       "Icono": "🪑",
       "Crítico": "FALSE"
@@ -1435,7 +1509,7 @@
       "Día": "Martes",
       "Estación": "Lobby",
       "Categoría": "Experiencia",
-      "Orden": 8,
+      "Orden": 9,
       "Actividad": "Sanitarios",
       "Icono": "🚻",
       "Crítico": "TRUE"
@@ -1444,7 +1518,7 @@
       "Día": "Martes",
       "Estación": "Lobby",
       "Categoría": "Experiencia",
-      "Orden": 9,
+      "Orden": 10,
       "Actividad": "Condiment Bar",
       "Icono": "🥛",
       "Crítico": "FALSE"
@@ -1452,16 +1526,16 @@
     {
       "Día": "Martes",
       "Estación": "Lobby",
-      "Categoría": "Experiencia",
-      "Orden": 10,
-      "Actividad": "Exterior",
+      "Categoría": "Exterior",
+      "Orden": 11,
+      "Actividad": "Terraza y Acceso",
       "Icono": "🌳",
       "Crítico": "FALSE"
     },
     {
       "Día": "Miércoles",
       "Estación": "BOH",
-      "Categoría": "Limpieza",
+      "Categoría": "Almacenaje",
       "Orden": 1,
       "Actividad": "Almacenaje",
       "Icono": "📦",
@@ -1479,7 +1553,7 @@
     {
       "Día": "Miércoles",
       "Estación": "BOH",
-      "Categoría": "Limpieza",
+      "Categoría": "Lavado",
       "Orden": 3,
       "Actividad": "Lavado de Platos",
       "Icono": "🍽️",
@@ -1497,7 +1571,7 @@
     {
       "Día": "Miércoles",
       "Estación": "BOH",
-      "Categoría": "Seguridad",
+      "Categoría": "Limpieza",
       "Orden": 5,
       "Actividad": "Cubo Key",
       "Icono": "🪣",
@@ -1535,7 +1609,7 @@
       "Estación": "Espresso",
       "Categoría": "Barra",
       "Orden": 1,
-      "Actividad": "Barra Espresso",
+      "Actividad": "Barra Espresso / Mastrena",
       "Icono": "☕",
       "Crítico": "TRUE"
     },
@@ -1553,16 +1627,25 @@
       "Estación": "Espresso",
       "Categoría": "Producto",
       "Orden": 3,
-      "Actividad": "Alimentos",
-      "Icono": "🥐",
+      "Actividad": "Jarras y Leches",
+      "Icono": "🥛",
+      "Crítico": "TRUE"
+    },
+    {
+      "Día": "Jueves",
+      "Estación": "Espresso",
+      "Categoría": "Producto",
+      "Orden": 4,
+      "Actividad": "Jarabes y Toppings",
+      "Icono": "🍯",
       "Crítico": "FALSE"
     },
     {
       "Día": "Jueves",
       "Estación": "Espresso",
       "Categoría": "Limpieza",
-      "Orden": 4,
-      "Actividad": "Toallas Sanitización",
+      "Orden": 5,
+      "Actividad": "Toallas Sanitizantes",
       "Icono": "🧽",
       "Crítico": "FALSE"
     },
@@ -1570,91 +1653,136 @@
       "Día": "Jueves",
       "Estación": "Espresso",
       "Categoría": "Limpieza",
-      "Orden": 5,
+      "Orden": 6,
       "Actividad": "Piso, Paredes y Techo",
       "Icono": "🧹",
       "Crítico": "FALSE"
     },
     {
+      "Día": "Jueves",
+      "Estación": "Lobby",
+      "Categoría": "Experiencia",
+      "Orden": 7,
+      "Actividad": "Lobby",
+      "Icono": "🪑",
+      "Crítico": "FALSE"
+    },
+    {
+      "Día": "Jueves",
+      "Estación": "Lobby",
+      "Categoría": "Experiencia",
+      "Orden": 8,
+      "Actividad": "Sanitarios",
+      "Icono": "🚻",
+      "Crítico": "TRUE"
+    },
+    {
+      "Día": "Jueves",
+      "Estación": "Lobby",
+      "Categoría": "Experiencia",
+      "Orden": 9,
+      "Actividad": "Condiment Bar",
+      "Icono": "🥛",
+      "Crítico": "FALSE"
+    },
+    {
+      "Día": "Jueves",
+      "Estación": "Lobby",
+      "Categoría": "Exterior",
+      "Orden": 10,
+      "Actividad": "Drive Thru y Terraza",
+      "Icono": "🚗",
+      "Crítico": "FALSE"
+    },
+    {
       "Día": "Viernes",
-      "Estación": "Food",
-      "Categoría": "Limpieza",
+      "Estación": "Café Filtrado",
+      "Categoría": "Equipo",
       "Orden": 1,
-      "Actividad": "Pisos",
-      "Icono": "🧹",
-      "Crítico": "FALSE"
+      "Actividad": "Bunn / Clover",
+      "Icono": "☕",
+      "Crítico": "TRUE"
     },
     {
       "Día": "Viernes",
-      "Estación": "Food",
-      "Categoría": "Limpieza",
+      "Estación": "Café Filtrado",
+      "Categoría": "Café",
       "Orden": 2,
-      "Actividad": "Horno",
-      "Icono": "🔥",
-      "Crítico": "FALSE"
+      "Actividad": "Café y Molienda",
+      "Icono": "🌱",
+      "Crítico": "TRUE"
     },
     {
       "Día": "Viernes",
-      "Estación": "Food",
-      "Categoría": "Limpieza",
-      "Orden": 3,
-      "Actividad": "Showcase",
-      "Icono": "🥐",
-      "Crítico": "FALSE"
-    },
-    {
-      "Día": "Viernes",
-      "Estación": "Food",
+      "Estación": "Café Filtrado",
       "Categoría": "Producto",
-      "Orden": 4,
+      "Orden": 3,
       "Actividad": "Caducidades",
       "Icono": "📅",
       "Crítico": "TRUE"
     },
     {
       "Día": "Viernes",
-      "Estación": "Food",
-      "Categoría": "Producto",
-      "Orden": 5,
-      "Actividad": "Grab & Go",
-      "Icono": "🥪",
-      "Crítico": "TRUE"
+      "Estación": "Café Filtrado",
+      "Categoría": "Limpieza",
+      "Orden": 4,
+      "Actividad": "Smallwares",
+      "Icono": "🧼",
+      "Crítico": "FALSE"
     },
     {
       "Día": "Viernes",
-      "Estación": "Food",
-      "Categoría": "Refrigeración",
-      "Orden": 6,
-      "Actividad": "Temperaturas",
-      "Icono": "❄️",
+      "Estación": "Café Filtrado",
+      "Categoría": "Limpieza",
+      "Orden": 5,
+      "Actividad": "Barra Posterior",
+      "Icono": "🧹",
+      "Crítico": "FALSE"
+    },
+    {
+      "Día": "Sábado",
+      "Estación": "CBS",
+      "Categoría": "Equipos",
+      "Orden": 1,
+      "Actividad": "Licuadoras",
+      "Icono": "🥤",
       "Crítico": "TRUE"
     },
     {
       "Día": "Sábado",
-      "Estación": "BOH",
+      "Estación": "CBS",
       "Categoría": "Equipos",
-      "Orden": 1,
+      "Orden": 2,
       "Actividad": "Máquina de Hielo",
       "Icono": "🧊",
       "Crítico": "TRUE"
     },
     {
       "Día": "Sábado",
-      "Estación": "BOH",
-      "Categoría": "Equipos",
-      "Orden": 2,
-      "Actividad": "Sanitizadora",
-      "Icono": "🫧",
+      "Estación": "CBS",
+      "Categoría": "Producto",
+      "Orden": 3,
+      "Actividad": "Bases y Toppings",
+      "Icono": "🍓",
       "Crítico": "TRUE"
     },
     {
       "Día": "Sábado",
-      "Estación": "Espresso",
-      "Categoría": "Barra",
-      "Orden": 3,
-      "Actividad": "Espresso",
-      "Icono": "☕",
+      "Estación": "CBS",
+      "Categoría": "Refrigeración",
+      "Orden": 4,
+      "Actividad": "Temperaturas",
+      "Icono": "❄️",
       "Crítico": "TRUE"
+    },
+    {
+      "Día": "Sábado",
+      "Estación": "CBS",
+      "Categoría": "Limpieza",
+      "Orden": 5,
+      "Actividad": "Barra CBS",
+      "Icono": "🧽",
+      "Crítico": "FALSE"
     },
     {
       "Día": "Domingo",
@@ -1712,15 +1840,33 @@
     },
     {
       "Día": "Domingo",
-      "Estación": "DT",
+      "Estación": "Drive Thru",
       "Categoría": "Drive Thru",
       "Orden": 7,
-      "Actividad": "Drive Thru Exterior",
+      "Actividad": "Menús y Bocina",
+      "Icono": "📢",
+      "Crítico": "FALSE"
+    },
+    {
+      "Día": "Domingo",
+      "Estación": "Drive Thru",
+      "Categoría": "Drive Thru",
+      "Orden": 8,
+      "Actividad": "Ventanilla",
       "Icono": "🚗",
+      "Crítico": "FALSE"
+    },
+    {
+      "Día": "Domingo",
+      "Estación": "Drive Thru",
+      "Categoría": "Drive Thru",
+      "Orden": 9,
+      "Actividad": "Presentación Exterior",
+      "Icono": "🌟",
       "Crítico": "FALSE"
     }
   ],
-  "checklist_apertura": [
+  "apertura": [
     {
       "Actividad": "Protocolo_Apertura",
       "Orden": 1,

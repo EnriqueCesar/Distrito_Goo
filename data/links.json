@@ -59,8 +59,22 @@
     "Categoria": "App",
     "Icono": "🔎",
     "Nombre": "Code Brew",
-    "URL": "https://enriquecesar.github.io/Distrito_GO/",
+    "URL": "https://enriquecesar.github.io/CodeBrew_Merch/",
     "Notas": "Buscador interactivo para artículos de mercancía."
+  },
+  {
+    "Categoria": "Campaña",
+    "Icono": "🧃",
+    "Nombre": "Promoplanner",
+    "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
+    "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
+  },
+  {
+    "Categoria": "Campaña",
+    "Icono": "🎨",
+    "Nombre": "Design Gallery",
+    "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
+    "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
   },
   {
     "Categoria": "Capacitacion",
@@ -82,6 +96,20 @@
     "Nombre": "UBITS",
     "URL": "https://login.ubitslearning.com/login",
     "Notas": "Accede a Ubits, completa cursos pendientes y mantén actualizado tu Kardex."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "🌱",
+    "Nombre": "PDS",
+    "URL": "https://starbucks-pds.bw-globalsolutions.com/?mainMenu=v_desarrollo",
+    "Notas": "Herramienta de desarrollo para conversaciones, coaching y liderazgo."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "📌",
+    "Nombre": "META",
+    "URL": "https://meta.alsea.net/meta/login#/login",
+    "Notas": "Herramienta para SM: revisa indicadores, desempeño y seguimiento de tu cédula."
   },
   {
     "Categoria": "Incidentes",
@@ -140,7 +168,7 @@
     "Notas": "Consulta información y cobertura de tu Seguro de Gastos Médicos Mayores."
   },
   {
-    "Categoria": "Link_Portafolio",
+    "Categoria": "Trabajo",
     "Icono": "📊",
     "Nombre": "KPIs Centro Norte 2026 - Editable.xlsx",
     "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/jorge_alcantar_starbucks_com_mx/IQAyMdoeH7jwQYP-P2bwGeJ5AVvxUPM7UZ6huFsOlWyK5_w?e=lNlhEj",
@@ -162,20 +190,6 @@
   },
   {
     "Categoria": "Trabajo",
-    "Icono": "🧃",
-    "Nombre": "Promoplanner",
-    "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
-    "Notas": "Consulta campañas vigentes, materiales y comunicados operativos."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "🌱",
-    "Nombre": "PDS",
-    "URL": "https://starbucks-pds.bw-globalsolutions.com/?mainMenu=v_desarrollo",
-    "Notas": "Herramienta de desarrollo para conversaciones, coaching y liderazgo."
-  },
-  {
-    "Categoria": "Trabajo",
     "Icono": "⏱️",
     "Nombre": "HME",
     "URL": "https://hmecloud.com/?pg=Login",
@@ -190,38 +204,10 @@
   },
   {
     "Categoria": "Trabajo",
-    "Icono": "📌",
-    "Nombre": "META",
-    "URL": "https://meta.alsea.net/meta/login#/login",
-    "Notas": "Herramienta para SM: revisa indicadores, desempeño y seguimiento de tu cédula."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "🎟️",
-    "Nombre": "Consulta Ticket",
-    "URL": "http://consulta.delivery.alsea.net/",
-    "Notas": "Valida diariamente disponibilidad de producto y correcta asignación de horarios."
-  },
-  {
-    "Categoria": "Trabajo",
     "Icono": "🧪",
     "Nombre": "ICA",
     "URL": "https://ica-stage.bw-globalsolutions.com/Login.php",
     "Notas": "Del 1 al 4 de cada mes recuerda realizar y subir tu AutoICA."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "🎨",
-    "Nombre": "Design Gallery",
-    "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
-    "Notas": "Accede a materiales POP, comunicación visual y recursos de campaña."
-  },
-  {
-    "Categoria": "Trabajo",
-    "Icono": "💰",
-    "Nombre": "Edenred | Gastos",
-    "URL": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal",
-    "Notas": "Revisa y da seguimiento a pagos y reembolsos."
   },
   {
     "Categoria": "Trabajo",

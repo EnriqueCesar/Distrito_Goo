@@ -1,100 +1,152 @@
 [
   {
-    "Actividad": "WFM",
+    "ID": 1,
+    "Actividad": "WFM - Pronóstico",
     "Descripción": "Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.",
-    "Frecuencia": "Lunes",
+    "Día": "Lunes",
+    "Hora / Corte": null,
     "Icono": "📈",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   },
   {
-    "Actividad": "Starbucks College | Ubits",
+    "ID": 2,
+    "Actividad": "Green Apron Review",
+    "Descripción": "Analiza los 4 estándares y registra el resultado.",
+    "Día": "Lunes",
+    "Hora / Corte": "Antes de 4:00 pm",
+    "Icono": "🚀",
+    "Color": "Azul",
+    "Link": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl"
+  },
+  {
+    "ID": 3,
+    "Actividad": "KPI Semanal",
+    "Descripción": "Captura y envía los KPI semanales.",
+    "Día": "Lunes",
+    "Hora / Corte": "Antes de 09:30 am",
+    "Icono": "📊",
+    "Color": "Azul",
+    "Link": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl"
+  },
+  {
+    "ID": 4,
+    "Actividad": "Gastos Oracle",
+    "Descripción": "Registra y valida gastos pendientes.",
+    "Día": "Lunes",
+    "Hora / Corte": null,
+    "Icono": "💳",
+    "Color": "Azul",
+    "Link": "https://enev.login.us2.oraclecloud.com/"
+  },
+  {
+    "ID": 5,
+    "Actividad": "Pago Gastos",
+    "Descripción": "Da seguimiento al pago de gastos.",
+    "Día": "Lunes",
+    "Hora / Corte": null,
+    "Icono": "💰",
+    "Color": "Azul",
+    "Link": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal"
+  },
+  {
+    "ID": 6,
+    "Actividad": "Workvivo",
+    "Descripción": "Realiza la publicación semanal en Workvivo.",
+    "Día": "Lunes",
+    "Hora / Corte": null,
+    "Icono": "📱",
+    "Color": "Azul",
+    "Link": "https://alsea.workvivo.us/login"
+  },
+  {
+    "ID": 7,
+    "Actividad": "Starbucks College",
     "Descripción": "Valida el avance de cursos en Ubits.",
-    "Frecuencia": "Martes",
+    "Día": "Martes",
+    "Hora / Corte": null,
     "Icono": "🎓",
-    "Color": "Morado"
+    "Color": "Morado",
+    "Link": null
   },
   {
-    "Actividad": "Comunicado Semanal",
-    "Descripción": "https://capacitacion.alsea.net/course/view.php?id=29227",
-    "Frecuencia": "Viernes",
-    "Icono": "📢",
-    "Color": "Naranja"
-  },
-  {
+    "ID": 8,
     "Actividad": "Coffee Tuesday",
     "Descripción": "Participa con los clientes en degustaciones y genera una experiencia memorable.",
-    "Frecuencia": "Martes",
+    "Día": "Martes",
+    "Hora / Corte": null,
     "Icono": "☕",
-    "Color": "Verde"
+    "Color": "Verde",
+    "Link": null
   },
   {
-    "Actividad": "WFM",
+    "ID": 9,
+    "Actividad": "WFM - Carga Inicial",
     "Descripción": "Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.",
-    "Frecuencia": "Martes",
+    "Día": "Martes",
+    "Hora / Corte": null,
     "Icono": "📅",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   },
   {
-    "Actividad": "WFM",
+    "ID": 10,
+    "Actividad": "WFM - Disponibilidades",
     "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners. Kronos generará automáticamente el pronóstico y horarios.",
-    "Frecuencia": "Miércoles",
+    "Día": "Miércoles",
+    "Hora / Corte": "",
     "Icono": "👥",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   },
   {
-    "Actividad": "WFM",
+    "ID": 11,
+    "Actividad": "WFM - Ajustes",
     "Descripción": "Revisa los horarios generados por Kronos, realiza ajustes operativos y agrega actividades Non-Coverage.",
-    "Frecuencia": "Jueves",
+    "Día": "Jueves",
+    "Hora / Corte": null,
     "Icono": "⚙️",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   },
   {
-    "Actividad": "WFM",
+    "ID": 12,
+    "Actividad": "Comunicado Semanal",
+    "Descripción": "Revisa el comunicado semanal y comparte los puntos relevantes con el equipo.",
+    "Día": "Viernes",
+    "Hora / Corte": null,
+    "Icono": "📢",
+    "Color": "Naranja",
+    "Link": "https://capacitacion.alsea.net/course/view.php?id=29227"
+  },
+  {
+    "ID": 13,
+    "Actividad": "WFM - Revisión DM",
     "Descripción": "El DM revisa los horarios y comunica observaciones o ajustes requeridos.",
-    "Frecuencia": "Viernes",
+    "Día": "Viernes",
+    "Hora / Corte": null,
     "Icono": "✅",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   },
   {
-    "Actividad": "WFM",
-    "Descripción": "Realiza correcciones finales y publica los horarios en Humanet antes del domingo.",
-    "Frecuencia": "Sábado",
+    "ID": 14,
+    "Actividad": "WFM - Publicación",
+    "Descripción": "Realiza las correcciones finales y publica los horarios en Humanet antes del domingo.",
+    "Día": "Sábado",
+    "Hora / Corte": null,
     "Icono": "🚀",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   },
   {
-    "Actividad": "WFM",
+    "ID": 15,
+    "Actividad": "WFM - Validación Final",
     "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
-    "Frecuencia": "Domingo",
+    "Día": "Domingo",
+    "Hora / Corte": null,
     "Icono": "📤",
-    "Color": "Azul"
-  },
-  {
-    "Actividad": "Green ApronReview\nAnalisis 4 Estandares",
-    "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM0ZTOVBKQ1dLMUgwVkVHNTJXWDQ0MktCSS4u&route=shorturl",
-    "Frecuencia": "Lunes Antes de 4:00 pm",
-    "Icono": "🚀",
-    "Color": "Azul"
-  },
-  {
-    "Actividad": "KPI_Sem",
-    "Descripción": "https://forms.office.com/pages/responsepage.aspx?id=zETMD2hYl0iYHnsE951h2GyhcEMyHFZHoew1o1ZEZ_JUM1lTU0c0Tko1N1ZZU0VKMllXWDhNVjFDRS4u&route=shorturl",
-    "Frecuencia": "Lunes Antes de 09:30 am",
-    "Icono": "🚀",
-    "Color": "Azul"
-  },
-  {
-    "Actividad": "Gastos",
-    "Descripción": "https://enev.login.us2.oraclecloud.com/",
-    "Frecuencia": "Lunes",
-    "Icono": "🚀",
-    "Color": "Azul"
-  },
-  {
-    "Actividad": "Workvivo\nPublicacion",
-    "Descripción": "https://alsea.workvivo.us/login",
-    "Frecuencia": "Lunes",
-    "Icono": "🚀",
-    "Color": "Azul"
+    "Color": "Azul",
+    "Link": null
   }
 ]
