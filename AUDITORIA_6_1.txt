@@ -1,0 +1,8 @@
+Auditoría Distrito GO 6.1
+
+- Eliminadas carpetas e imágenes duplicadas del Duty Roster.
+- Lunes queda como una sola imagen: Food + Show Case, porque el checklist visual ya contiene ambas partes.
+- Se conserva únicamente assets/duty/premium como fuente oficial de imágenes Duty.
+- Corregido modal de Eventos con apertura directa y fallback para navegador.
+- Duty Detail queda separado del visual para no quitar protagonismo a la imagen.
+- Service Worker actualizado a dgo-v6-1 para limpiar caché anterior.
