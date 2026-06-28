@@ -1,7 +1,7 @@
 import { esc, first, normalize } from './utils.js';
 let current='';
-const order = ['App','Trabajo','Incidentes','Capacitacion','Capacitación','Link_Portafolio','Informativa'];
-const icons = {App:'🚀',Trabajo:'🧰',Incidentes:'🛠️',Capacitacion:'🎓','Capacitación':'🎓',Link_Portafolio:'📊',Informativa:'💚'};
+const order = ['App','Trabajo','Campaña','Capacitacion','Capacitación','Incidentes','Informativa','Desarrollo'];
+const icons = {App:'🚀',Trabajo:'🧰',Campaña:'🧃',Incidentes:'🛠️',Capacitacion:'🎓','Capacitación':'🎓',Informativa:'💚',Desarrollo:'🌱'};
 export function renderTabs(cms){
  const cats=[...new Set((cms.links||[]).map(x=>first(x,['Categoria','Categoría'])).filter(Boolean))]
   .sort((a,b)=>(order.indexOf(a)<0?99:order.indexOf(a))-(order.indexOf(b)<0?99:order.indexOf(b)) || a.localeCompare(b));
@@ -9,7 +9,7 @@ export function renderTabs(cms){
  document.getElementById('tabs').innerHTML=cats.map(c=>`<button class="tab ${c===current?'active':''}" data-cat="${esc(c)}"><span>${icons[c]||'🔗'}</span>${esc(labelCat(c))}</button>`).join('');
  document.getElementById('tabs').onclick=e=>{const b=e.target.closest('.tab'); if(!b)return; current=b.dataset.cat; renderTabs(cms); renderApps(cms, document.getElementById('searchInput').value);};
 }
-function labelCat(c){return ({App:'Apps',Trabajo:'Trabajo',Incidentes:'Soporte',Link_Portafolio:'Portafolio',Informativa:'Info',Capacitacion:'Capacitación','Capacitación':'Capacitación'})[c]||c}
+function labelCat(c){return ({App:'Apps',Trabajo:'Trabajo',Campaña:'Campañas',Incidentes:'Incidentes',Informativa:'Informativos',Capacitacion:'Capacitación','Capacitación':'Capacitación',Desarrollo:'Desarrollo'})[c]||c}
 export function renderApps(cms,q=''){
  const term=normalize(q);
  let rows=(cms.links||[]).filter(x=>!current||first(x,['Categoria','Categoría'])===current);

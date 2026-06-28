@@ -19,12 +19,24 @@ export function toDate(v, end=false){
   if(end)d.setHours(23,59,59,999); else d.setHours(0,0,0,0);
   return d;
 }
-export function currentWeekRange(date) {
+export function weekBounds(date) {
   const d = new Date(date); d.setHours(0,0,0,0);
   const monday = new Date(d); const diff = (d.getDay() + 6) % 7; monday.setDate(d.getDate() - diff);
   const sunday = new Date(monday); sunday.setDate(monday.getDate() + 6);
-  const fmt = x => x.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
-  return `${fmt(monday)} al ${fmt(sunday)}`;
+  return {monday,sunday};
 }
+export function isoWeek(date){
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const day = d.getUTCDay() || 7; d.setUTCDate(d.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+}
+export function weekMeta(date){
+  const {monday,sunday}=weekBounds(date);
+  const fmt = x => x.toLocaleDateString('es-MX', { day: '2-digit', month: 'short' }).replace('.','');
+  const fmtLong = x => x.toLocaleDateString('es-MX', { day: '2-digit', month: 'long' });
+  return {monday,sunday,week:isoWeek(monday),range:`${fmtLong(monday)} al ${fmtLong(sunday)}`,shortRange:`${fmt(monday)} → ${fmt(sunday)}`};
+}
+export function currentWeekRange(date) { return weekMeta(date).range; }
 export function sameMonthDay(a,b=new Date()){ const d=toDate(a); return d.getDate()===b.getDate() && d.getMonth()===b.getMonth(); }
 export function shortName(full=''){ const parts=String(full).trim().split(/\s+/).filter(Boolean); return parts.slice(0,2).join(' '); }
