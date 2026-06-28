@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#006241" />
-  <title>DistritoGoo</title>
+  <title>Distrito GO</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
@@ -18,24 +18,33 @@
   <div id="app" class="app-shell">
     <header class="hero" id="hero">
       <nav class="topbar">
-        <div class="brand"><img src="assets/logo/logo.svg" alt="DistritoGoo"/><div><span>Asistente Operativo Diario</span><strong>DistritoGoo</strong></div></div>
+        <div class="brand"><img src="assets/logo/logo.svg" alt="Distrito GO"/><div><span>Centro Operativo Diario</span><strong>Distrito GO</strong></div></div>
         <button id="installBtn" class="ghost hidden">Instalar</button>
       </nav>
       <section class="hero-grid">
         <div class="hero-copy">
           <p class="eyebrow" id="todayLabel">Hoy</p>
           <h1 id="greeting">Buenos días, Partner</h1>
-          <p class="subcopy">Una guía cálida para priorizar, ejecutar y mejorar cada día.</p>
+          <p class="subcopy">Prioriza la operación, consulta tus herramientas y actúa con claridad.</p>
           <div class="hero-actions">
-            <button class="primary-action" data-open="wfm">Ver foco de hoy</button>
-            <button class="ghost" data-scroll="apps">Buscar herramienta</button>
+            <button class="primary-action" data-scroll="apps">Buscar herramienta</button>
+            <button class="ghost" data-open="events">Ver eventos</button>
           </div>
         </div>
-        <div class="hero-photo"><img src="assets/photos/kike-dm.jpeg" alt="Comunicación directa" loading="lazy" onerror="this.parentElement.classList.add('no-photo')"/></div>
+        <a class="dm-card" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contactar a mi DM">
+          <div class="dm-badge">Gerente de Distrito</div>
+          <div class="dm-photo"><img src="assets/photos/kike-dm.jpeg" alt="DM Enrique César Flores" loading="lazy" onerror="this.parentElement.classList.add('no-photo')"/></div>
+          <div class="dm-copy"><strong>🚨 Contactar a mi DM</strong><small>Emergencia Operativa</small></div>
+        </a>
       </section>
     </header>
 
     <main>
+      <section class="section panel dashboard-panel">
+        <div class="section-title"><div><span>Dashboard</span><h2>Centro de Operaciones Diario</h2></div></div>
+        <div class="dashboard-grid" id="dashboardCards"></div>
+      </section>
+
       <section class="section panel priority-panel">
         <div class="section-title"><div><span>Mi día operativo</span><h2>Prioridades de hoy</h2></div></div>
         <div class="priority-grid" id="todayCards"></div>
@@ -48,6 +57,7 @@
         </div>
         <div class="panel warm-panel">
           <div class="section-title"><div><span>Hoy / próximos</span><h2>Eventos importantes</h2></div></div>
+          <div class="filter-row" id="eventFiltersMini"></div>
           <div id="events" class="event-list"></div>
         </div>
       </section>
