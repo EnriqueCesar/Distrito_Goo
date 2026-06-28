@@ -1,42 +1,23 @@
-# Distrito GO 6.4 Producción
+# Distrito GO 6.5 Producción
 
-Versión enfocada en operación diaria, actualización limpia por CMS y GitHub Pages.
+Versión corregida para GitHub Pages.
 
-## Para actualizar información
+## Qué se corrigió
+- Error de sintaxis en `js/app.js` que detenía la carga de Mi Día Operativo, Eventos y Herramientas.
+- CMS regenerado desde `Distrito_Go_CMS(17).xlsx` hacia archivos JSON en `/data`.
+- Versionado actualizado a `v=6.5.0` para forzar actualización en navegador.
+- Service Worker actualizado a `distrito-go-v6-5-0` y con estrategia `no-store`.
+- Sin archivos `.txt` de auditoría.
 
-1. Edita el Excel `Distrito_Go_CMS.xlsx`.
-2. Convierte las hojas a JSON dentro de `/data`.
-3. Sube a GitHub reemplazando archivos existentes.
-4. Espera 1–3 minutos a GitHub Pages.
-5. En Chrome usa `Ctrl + Shift + R` o DevTools > Application > Clear site data si aún ves versión anterior.
+## Cómo actualizar a futuro
+1. Edita el Excel CMS.
+2. Convierte cada pestaña a su JSON correspondiente dentro de `/data`.
+3. Sube el proyecto completo a GitHub.
+4. Cambia la versión en `index.html`, `js/app.js` y `sw.js` cuando haya cambios importantes.
 
-## Hojas CMS conectadas
-
-- `Links` → `data/links.json`
-- `Eventos` → `data/eventos.json`
-- `Actividades_Semanales` → `data/actividades_semanales.json`
-- `Actividades_Diaria` → `data/actividades_diarias.json`
-- `Duty_Roster` → `data/duty_roster.json`
-- `Duty_Detail` → `data/duty_detail.json`
-- `BT` → `data/bt.json`
-- `SS` → `data/ss.json`
-- `TBW` → `data/tbw.json`
-- `Checklist_Apertura` → `data/checklist_apertura.json`
-
-## Importante
-
-GitHub Pages no lee directamente archivos `.xlsx`. La app consume archivos `.json` en `/data`.
-Por eso, cuando cambies el Excel, también debes regenerar y subir los JSON.
-
-## Estructura recomendada
-
-- `index.html`
-- `/css`
-- `/js`
-- `/data`
-- `/assets`
-- `manifest.json`
-- `sw.js`
-- `README.md`
-
-No son necesarios archivos `.txt` de auditoría o notas.
+## Archivos clave
+- `index.html`: estructura principal.
+- `js/app.js`: render principal.
+- `js/cms.js`: rutas de JSON.
+- `/data`: información editable del CMS.
+- `sw.js`: control de caché.

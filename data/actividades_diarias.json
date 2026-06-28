@@ -38,7 +38,7 @@
   {
     "ID": 4,
     "Actividad": "Protocolo de Apertura",
-    "Descripción": "Todos los dias antes de 09:00 am envia Reporte al equipo de Excelencia\nSOLO NOTIFICA INCIDENTES\n> Cobertura de Partner \n> Disponibilidad de Producto\n> Estatus Operativo (Funcionamiento equipos)\n> Riesgo para Venta",
+    "Descripción": "Todos los dias antes de 09:00 am envia Reporte al equipo de Excelencia\nSOLO NOTIFICA INCIDENTES\n> Cobertura de Partner \n> Disponibilidad de Producto\n> Estatus Operativo (Funcionamiento equipos)\n> Riesgo para Venta\n",
     "Link /Imagen": "Rutina_apertura.jpeg",
     "Frecuencia": "Diario",
     "Prioridad": 1,

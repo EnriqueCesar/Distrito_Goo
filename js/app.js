@@ -72,8 +72,16 @@ function eventDigest(){
   return `<div class="digest-list">${rows.map(x=>`<button class="digest-row" data-open="events"><span>${esc(first(x.e,['Imagen','Icono'])||'📅')}</span><strong>${esc(first(x.e,['Actividad']))}</strong><small>${x.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} → ${x.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}</small></button>`).join('') || '<p class="muted">Sin eventos vigentes.</p>'}</div>`;
 }
 function routineCarousel(){
-  const items = (CMS.diarias || []).filter(x => String(first(x, ['Visible'])).toUpperCase() !== 'FALSE').sort((a,b)=>(+first(a,['Prioridad'])||9)-(+first(b,['Prioridad'])||9)).slice(0,4);
-  return `<div class="routine-strip">${items.map(x=>`<article class="routine-chip" ${imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']))?`data-image="${esc(imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']))}"`:''}><span>${esc(first(x,['Icono'])||'☕')}</span><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Categoría','Categoria'])||'Rutina')}</small></article>`).join('')}</div>`;
+  const items = (CMS.diarias || [])
+    .filter(x => String(first(x, ['Visible'])).toUpperCase() !== 'FALSE')
+    .sort((a,b)=>(+first(a,['Prioridad'])||9)-(+first(b,['Prioridad'])||9))
+    .slice(0,4);
+  const cards = items.map(x => {
+    const img = imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']));
+    const imgAttr = img ? ` data-image="${esc(img)}"` : '';
+    return `<article class="routine-chip"${imgAttr}><span>${esc(first(x,['Icono'])||'☕')}</span><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Categoría','Categoria'])||'Rutina')}</small></article>`;
+  }).join('');
+  return `<div class="routine-strip">${cards || '<p class="muted">Sin rutinas activas.</p>'}</div>`;
 }
 function imageForActivity(name, explicit=''){
   const e = String(explicit || '').trim();
@@ -133,7 +141,7 @@ async function init() {
   renderToday(); renderEvents(CMS); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=6.4.1').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=6.5.0').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });
