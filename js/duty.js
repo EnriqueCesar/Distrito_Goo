@@ -9,13 +9,18 @@ export function dutyItems(cms){
   const d=todayDuty(cms);
   const stations=splitList(first(d,['Estaciones','Estación','Estacion']));
   const imgs=splitList(first(d,['Imágenes','Imagenes','Imagen','Image']));
-  return stations.map((s,i)=>({station:s,img:imgs[i]||imgs[0]||'',color:first(d,['Color'])||'Verde'}));
+  // Si solo existe una imagen, esa imagen representa todas las estaciones del día.
+  // Esto evita duplicados visuales como Food + Show Case en lunes.
+  if(imgs.length<=1){
+    return [{station:stations.join(' + ') || first(d,['Estaciones','Estación','Estacion']) || 'Duty',img:imgs[0]||'',color:first(d,['Color'])||'Verde'}];
+  }
+  return stations.map((st,i)=>({station:st,img:imgs[i]||imgs[0]||'',color:first(d,['Color'])||'Verde'}));
 }
 export function dutyCard(cms){const d=todayDuty(cms);const items=dutyItems(cms);const icon=items.length>1?'☕':'✅';const est=first(d,['Estaciones','Estación','Estacion'])||'Duty';return `<article class="card duty-today" data-open="duty"><span class="icon">${esc(icon)}</span><div><small class="kicker">Duty Roster · ${todayName()}</small><h3>${esc(est)}</h3><p>${esc(first(d,['Enfoque','Enfoque Principal'])||'Checklist del día')}</p><span class="badge">${items.length} imagen${items.length===1?'':'es'}</span></div></article>`}
 function detailRows(cms, station=''){
   const day=todayName();
   const rows=(cms.dutyDetail||[]).filter(x=>normalize(first(x,['Día','Dia']))===normalize(day));
-  return station ? rows.filter(x=>normalize(first(x,['Estación','Estacion'])).includes(normalize(station)) || normalize(station).includes(normalize(first(x,['Estación','Estacion'])))) : rows;
+  return station ? rows.filter(x=>{ const rowStation=normalize(first(x,['Estación','Estacion'])); const selected=normalize(station); return selected.includes(rowStation) || rowStation.includes(selected); }) : rows;
 }
 function miniSummary(cms, station){
   const rows=detailRows(cms, station).sort((a,b)=>(+first(a,['Orden'])||0)-(+first(b,['Orden'])||0)).slice(0,4);

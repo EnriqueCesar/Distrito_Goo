@@ -1,4 +1,5 @@
 import { esc, first, toDate, normalize } from './utils.js';
+import { openModal } from './modal.js';
 
 const monthNames = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 let state = { month:'Todos', type:'Todos' };
@@ -87,15 +88,13 @@ export function renderEventsModal(cms){
   const months=['Todos',...new Set(rows.map(x=>monthNames[x.start.getMonth()]))];
   const types=['Todos','AutoICA','Campañas','Nómina','Capacitación','Coffee','Inventarios','Talent','Otros'];
   const html=`<span class="eyebrow">Agenda completa</span><h2>📌 Eventos y recordatorios</h2><div class="filter-row modal-filters"><select class="filter-select" id="modalEventMonth">${months.map(m=>`<option ${m===state.month?'selected':''}>${esc(m)}</option>`).join('')}</select><select class="filter-select" id="modalEventType">${types.map(t=>`<option ${t===state.type?'selected':''}>${esc(t)}</option>`).join('')}</select></div><div id="modalEventsList" class="event-list full-events"></div>`;
-  import('./modal.js').then(({openModal})=>{
-    openModal(html);
-    const paint=()=>{
-      state.month=document.getElementById('modalEventMonth').value; state.type=document.getElementById('modalEventType').value;
-      document.getElementById('modalEventsList').innerHTML=filteredRows(cms).map(x=>eventCard(x,today)).join('') || '<p class="muted">Sin eventos con ese filtro.</p>';
-      renderEvents(cms);
-    };
-    document.getElementById('modalEventMonth').onchange=paint;
-    document.getElementById('modalEventType').onchange=paint;
-    paint();
-  });
+  openModal(html);
+  const paint=()=>{
+    state.month=document.getElementById('modalEventMonth').value; state.type=document.getElementById('modalEventType').value;
+    document.getElementById('modalEventsList').innerHTML=filteredRows(cms).map(x=>eventCard(x,today)).join('') || '<p class="muted">Sin eventos con ese filtro.</p>';
+    renderEvents(cms);
+  };
+  document.getElementById('modalEventMonth').onchange=paint;
+  document.getElementById('modalEventType').onchange=paint;
+  paint();
 }
