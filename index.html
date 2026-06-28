@@ -21,38 +21,48 @@
         <div class="brand"><img src="assets/logo/logo.svg" alt="Distrito GO"/><div><span>Centro Operativo Diario</span><strong>Distrito GO</strong></div></div>
         <button id="installBtn" class="ghost hidden">Instalar</button>
       </nav>
-      <section class="hero-grid clean-home">
+      <section class="hero-grid">
         <div class="hero-copy">
           <p class="eyebrow" id="todayLabel">Hoy</p>
           <h1 id="greeting">Buenos días, Partner</h1>
-          <p class="subcopy">Prioriza el día, encuentra herramientas y ejecuta sin ruido operativo.</p>
+          <p class="subcopy">Prioriza lo importante de hoy, consulta tus herramientas y actúa con claridad.</p>
           <div class="hero-actions">
-            <button class="primary-action" data-scroll="daySection">Mi Día Operativo</button>
-            <button class="ghost" data-scroll="appsSection">Buscar herramienta</button>
+            <button class="primary-action" data-scroll="apps">Buscar herramienta</button>
           </div>
         </div>
         <a class="dm-card" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contactar a mi DM">
           <div class="dm-badge">Gerente de Distrito</div>
           <div class="dm-photo"><img src="assets/photos/kike-dm.jpeg" alt="DM Enrique César Flores" loading="lazy" onerror="this.parentElement.classList.add('no-photo')"/></div>
-          <div class="dm-copy"><strong>🚨 WhatsApp Emergencia</strong><small>Contacto operativo directo</small></div>
+          <div class="dm-copy"><strong>🚨 Contactar a mi DM</strong><small>Emergencia Operativa</small></div>
         </a>
       </section>
     </header>
 
     <main>
-      <section class="section panel priority-panel" id="daySection">
-        <div class="section-title"><div><span>Mi día operativo</span><h2>Solo prioridades de hoy</h2></div></div>
-        <div class="priority-stack" id="todayCards"></div>
+      <section class="section panel priority-panel">
+        <div class="section-title"><div><span>Mi día operativo</span><h2>Prioridades de hoy</h2></div></div>
+        <div class="priority-grid" id="todayCards"></div>
       </section>
 
-      <section class="section panel events-panel" id="eventsSection">
-        <div class="section-title"><div><span>Eventos</span><h2>Agenda por vigencia CMS</h2></div></div>
-        <div class="filter-row" id="eventFiltersMini"></div>
-        <div id="events" class="event-list"></div>
+      <section class="section panel duty-panel" id="dutySection">
+        <div class="section-title"><div><span>Duty Roster</span><h2>Checklist visual del día</h2></div></div>
+        <div id="dutyPreview"></div>
+      </section>
+
+      <section class="section two-col">
+        <div class="panel warm-panel">
+          <div class="section-title"><div><span>Rutinas</span><h2>Rutina operativa</h2></div></div>
+          <div id="dailyChecks" class="visual-checks carousel-checks"></div>
+        </div>
+        <div class="panel warm-panel">
+          <div class="section-title"><div><span>Eventos</span><h2>Agenda y recordatorios</h2></div></div>
+          <div class="filter-row" id="eventFiltersMini"></div>
+          <div id="events" class="event-list"></div>
+        </div>
       </section>
 
       <section class="section panel" id="appsSection">
-        <div class="section-title"><div><span>Herramientas</span><h2>Buscador operativo</h2></div></div>
+        <div class="section-title"><div><span>Herramientas</span><h2>Accesos rápidos</h2></div></div>
         <div class="searchbar"><input id="searchInput" type="search" placeholder="Buscar app, reporte, actividad o herramienta…"/><button id="clearSearch" class="ghost">Limpiar</button></div>
         <div id="tabs" class="tabs"></div>
         <div id="appsGrid" class="apps-grid"></div>

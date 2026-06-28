@@ -1,7 +1,7 @@
 import { loadCMS } from './cms.js';
 import { $, esc, todayName, first, normalize, formatDateMX, weekMeta } from './utils.js';
-import { dutyCard, showDuty } from './duty.js';
-import { renderEvents, renderEventsModal, currentEvents, payrollCritical } from './events.js';
+import { dutyCard, showDuty, renderDutyPreview } from './duty.js';
+import { renderEvents, renderEventsModal, priorityEvents, payrollPriority, autoICAPriority } from './events.js';
 import { renderTabs, renderApps } from './apps.js';
 import { openModal } from './modal.js';
 
@@ -22,7 +22,8 @@ function nextWfmActivity(currentDow){
   const map={1:2,2:3,3:4,4:5,5:6,6:0,0:1};
   const nextDow=map[currentDow];
   const names={0:'Domingo',1:'Lunes',2:'Martes',3:'Miércoles',4:'Jueves',5:'Viernes',6:'Sábado'};
-  return wfmRows().find(x=>normalizeDay(dayOf(x))===normalizeDay(names[nextDow])) || {Icono:'➡️',Actividad:names[nextDow],Descripción:'Siguiente paso WFM.'};
+  const row=wfmRows().find(x=>normalizeDay(dayOf(x))===normalizeDay(names[nextDow]));
+  return row || {Icono:'➡️',Actividad:names[nextDow],Descripción:'Siguiente paso WFM.'};
 }
 function wfmSmart() {
   const now = new Date();
@@ -30,13 +31,13 @@ function wfmSmart() {
   const dayKey = normalizeDay(todayName(now));
   const row = wfmRows().find(x => normalizeDay(dayOf(x)) === dayKey);
   const fallback = {
-    1: { Actividad: 'WFM - Pronóstico', Descripción:'Revisar pronóstico.', Icono:'📈', Día:'Lunes' },
-    2: { Actividad: 'WFM - Carga Inicial', Descripción:'Carga inicial de horarios.', Icono:'📅', Día:'Martes' },
-    3: { Actividad: 'WFM - Disponibilidades', Descripción:'Actualizar disponibilidades.', Icono:'👥', Día:'Miércoles' },
-    4: { Actividad: 'WFM - Ajustes', Descripción:'Ajustar horarios generados.', Icono:'⚙️', Día:'Jueves' },
-    5: { Actividad: 'WFM - Revisión DM', Descripción:'Revisión y observaciones DM.', Icono:'✅', Día:'Viernes' },
-    6: { Actividad: 'WFM - Publicación', Descripción:'Correcciones finales.', Icono:'🚀', Día:'Sábado' },
-    0: { Actividad: 'WFM - Validación Final', Descripción:'Validar horarios publicados.', Icono:'📤', Día:'Domingo' }
+    1: { Actividad: 'WFM - Pronóstico', Descripción:'Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.', Icono:'📈', Día:'Lunes' },
+    2: { Actividad: 'WFM - Carga Inicial', Descripción:'Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.', Icono:'📅', Día:'Martes' },
+    3: { Actividad: 'WFM - Disponibilidades', Descripción:'Actualiza disponibilidades, vacaciones, permisos y restricciones de partners.', Icono:'👥', Día:'Miércoles' },
+    4: { Actividad: 'WFM - Ajustes', Descripción:'Revisa horarios generados por Kronos y agrega Non-Coverage.', Icono:'⚙️', Día:'Jueves' },
+    5: { Actividad: 'WFM - Revisión DM', Descripción:'El DM revisa horarios y comunica observaciones.', Icono:'✅', Día:'Viernes' },
+    6: { Actividad: 'WFM - Publicación', Descripción:'Realiza correcciones finales.', Icono:'🚀', Día:'Sábado' },
+    0: { Actividad: 'WFM - Validación Final', Descripción:'Verifica que los horarios publicados sean correctos.', Icono:'📤', Día:'Domingo' }
   }[dow];
   const picked = row || fallback;
   const target = new Date(now); target.setDate(now.getDate() + 15);
@@ -46,49 +47,42 @@ function wfmSmart() {
     action: first(picked,['Actividad']) || 'WFM',
     detail: first(picked,['Descripción','Descripcion']) || '',
     icon: first(picked,['Icono']) || '📅',
-    day: first(picked,['Día','Dia','Frecuencia']) || todayName(now),
+    color: first(picked,['Color']) || 'Azul',
     nextAction: first(next,['Actividad']) || 'Siguiente paso',
     nextIcon: first(next,['Icono']) || '➡️',
     meta
   };
 }
-function autoICAAlert(){
-  const now = new Date();
-  if(now.getDate() < 1 || now.getDate() > 5) return '';
-  const row = currentEvents(CMS).find(x=>normalize(first(x.e,['Actividad'])).includes('autoica'));
-  return `<article class="priority-card critical" ${row?'data-open="events"':''}><span>🛡</span><div><small>AutoICA · Día ${now.getDate()} de 5</small><strong>Validar evidencias y cerrar hallazgos</strong><em>${row?esc(first(row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0]):'Visible del día 1 al 5 de cada mes.'}</em></div></article>`;
+function priorityCard({icon,title,meta,text,level='normal',open='',link=''}){
+  return `<article class="card priority-card ${esc(level)}" ${open?`data-open="${esc(open)}"`:''} ${link?`data-link="${esc(link)}"`:''}>
+    <span class="icon">${esc(icon)}</span><div><small class="kicker">${esc(meta||'Prioridad')}</small><h3>${esc(title)}</h3><p>${esc(text||'')}</p></div>
+  </article>`;
 }
-function criticalAlerts(){
-  const payroll = payrollCritical(CMS);
+function renderToday() {
+  const wfm = wfmSmart();
   const cards=[];
-  if(payroll){
-    cards.push(`<article class="priority-card urgent" data-open="events"><span>${payroll.kind==='tomorrow'?'⏰':'🚨'}</span><div><small>Corte de Nómina</small><strong>${payroll.kind==='tomorrow'?'Mañana hay corte':'Hoy hasta las 09:00 AM'}</strong><em>${esc(first(payroll.row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']))}</em></div></article>`);
-  }
-  const ica = autoICAAlert(); if(ica) cards.push(ica);
-  return cards.join('') || `<article class="priority-card ok"><span>✅</span><div><small>Alertas críticas</small><strong>Sin alertas críticas activas</strong><em>Nómina y AutoICA aparecerán únicamente cuando correspondan.</em></div></article>`;
-}
-function eventDigest(){
-  const rows=currentEvents(CMS).filter(x=>!normalize(first(x.e,['Actividad'])).includes('corte de nomina')).slice(0,3);
-  return `<div class="digest-list">${rows.map(x=>`<button class="digest-row" data-open="events"><span>${esc(first(x.e,['Imagen','Icono'])||'📅')}</span><strong>${esc(first(x.e,['Actividad']))}</strong><small>${x.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} → ${x.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}</small></button>`).join('') || '<p class="muted">Sin eventos vigentes.</p>'}</div>`;
-}
-function routineCarousel(){
-  const items = (CMS.diarias || []).filter(x => String(first(x, ['Visible'])).toUpperCase() !== 'FALSE').sort((a,b)=>(+first(a,['Prioridad'])||9)-(+first(b,['Prioridad'])||9)).slice(0,4);
-  return `<div class="routine-strip">${items.map(x=>`<article class="routine-chip" ${imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']))?`data-image="${esc(imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']))}"`:''}><span>${esc(first(x,['Icono'])||'☕')}</span><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Categoría','Categoria'])||'Rutina')}</small></article>`).join('')}</div>`;
+  const payroll=payrollPriority(CMS);
+  if(payroll) cards.push(priorityCard(payroll));
+  const autoica=autoICAPriority(CMS);
+  if(autoica) cards.push(priorityCard(autoica));
+  priorityEvents(CMS,2).forEach(x=>cards.push(priorityCard({
+    icon:first(x.e,['Imagen','Icono'])||'📌',
+    title:first(x.e,['Actividad']),
+    meta:x.start<=new Date()&&new Date()<=x.end?'Evento vigente':'Evento',
+    text:first(x.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']),
+    open:'events'
+  })));
+  cards.push(`<article class="card wfm-card event-style" data-open="wfm"><span class="icon">${esc(wfm.icon)}</span><div><small class="kicker">WFM · Semana ${esc(wfm.meta.week)}</small><h3>${esc(wfm.action.replace('WFM - ',''))}</h3><p>${esc(wfm.meta.shortRange)}</p><span class="badge">Siguiente: ${esc(wfm.nextAction.replace('WFM - ',''))}</span></div></article>`);
+  cards.push(dutyCard(CMS));
+  const focus = todayRows().filter(x => !normalize(first(x,['Actividad'])).startsWith('wfm')).slice(0,1);
+  focus.forEach(x=>cards.push(priorityCard({icon:first(x,['Icono'])||'✨',title:first(x,['Actividad']),meta:first(x,['Hora / Corte'])||todayName(),text:first(x,['Descripción','Descripcion']),link:first(x,['Link','URL'])})));
+  $('#todayCards').innerHTML = cards.join('') || '<p class="muted">Sin prioridades críticas para hoy.</p>';
 }
 function imageForActivity(name, explicit=''){
-  const e = String(explicit || '').trim();
-  const aliases = {
-    'espresso.png': 'verificacion-cafe-espresso.png',
-    'cafe.png': 'verificacion-cafe-espresso.png',
-    'storewalk.png': 'store-walk.png',
-    'store-walk.png': 'store-walk.png',
-    'rutina_apertura.jpeg': 'Rutina_apertura.jpeg',
-    'rutina_apertura.jpg': 'Rutina_apertura.jpeg',
-    'rutina_apertura.png': 'Rutina_apertura.jpeg'
-  };
-  if(e && !/^https?:/i.test(e)) {
-    const clean = e.replace(/^assets\/photos\//,'');
-    return `assets/photos/${aliases[clean.toLowerCase()] || clean}`;
+  const e=String(explicit||'');
+  if(e && !/^https?:/i.test(e)){
+    const clean=e.replace(/^assets\/photos\//,'');
+    return `assets/photos/${clean}`;
   }
   const n=normalize(name);
   if(n.includes('protocolo')||n.includes('apertura')) return 'assets/photos/Rutina_apertura.jpeg';
@@ -97,20 +91,26 @@ function imageForActivity(name, explicit=''){
   if(n.includes('10 pasos')) return 'assets/photos/10-pasos-turno.png';
   return '';
 }
-function renderToday() {
-  const wfm = wfmSmart();
-  $('#todayCards').innerHTML = `
-    <section class="priority-block"><h3>🚨 Alertas críticas</h3>${criticalAlerts()}</section>
-    <section class="priority-block"><h3>📅 Eventos vigentes</h3>${eventDigest()}</section>
-    <section class="priority-block two-mini">
-      <article class="priority-card wfm-card" data-open="wfm"><span>${esc(wfm.icon)}</span><div><small>WFM · Semana ${esc(wfm.meta.week)}</small><strong>${esc(wfm.action)}</strong><em>${esc(wfm.meta.shortRange)} · Siguiente: ${esc(wfm.nextAction)}</em></div></article>
-      ${dutyCard(CMS)}
-    </section>
-    <section class="priority-block"><h3>☕ Rutina del día</h3>${routineCarousel()}</section>`;
+function renderDaily() {
+  const items = (CMS.diarias || [])
+    .filter(x => String(first(x, ['Visible'])).toUpperCase() !== 'FALSE')
+    .sort((a, b) => (+first(a, ['Prioridad']) || 9) - (+first(b, ['Prioridad']) || 9));
+  if(!items.length){ $('#dailyChecks').innerHTML='<p class="muted">Sin rutinas activas.</p>'; return; }
+  let idx=0;
+  const paint=()=>{
+    const x=items[idx];
+    const act = first(x,['Actividad']);
+    const link = first(x,['Link /Imagen','Link','URL']);
+    const img = imageForActivity(act, link);
+    const open = img ? `data-image="${esc(img)}"` : (link && /^https?:/i.test(link) ? `data-link="${esc(link)}"` : '');
+    $('#dailyChecks').innerHTML = `<div class="routine-carousel"><button class="carousel-btn inline" data-routine-prev>‹</button><article class="visual-check visual-tile" ${open}><div class="visual-icon">${esc(first(x,['Icono'])||'✅')}</div><div><h3>${esc(act)}</h3><p>${esc(first(x,['Categoría','Categoria'])||'Rutina diaria')}</p><span class="badge">${idx+1} de ${items.length}</span></div>${img?`<img src="${esc(img)}" alt="${esc(act)}" loading="lazy"/>`:''}</article><button class="carousel-btn inline" data-routine-next>›</button></div>`;
+  };
+  paint();
+  $('#dailyChecks').onclick=e=>{ if(e.target.closest('[data-routine-prev]')){idx=(idx-1+items.length)%items.length; paint();} if(e.target.closest('[data-routine-next]')){idx=(idx+1)%items.length; paint();} };
 }
 function showWFM() {
   const smart = wfmSmart();
-  openModal(`<span class="eyebrow">WFM Inteligente</span><h2>${esc(smart.icon)} ${esc(smart.action)}</h2><div class="wfm-clean"><div><small>Semana</small><strong>${esc(smart.meta.week)}</strong></div><div><small>Fecha</small><strong>${esc(smart.meta.shortRange)}</strong></div><div><small>Actividad</small><strong>${esc(smart.action.replace(/^WFM\s*-\s*/i,''))}</strong></div><div><small>Siguiente</small><strong>${esc(smart.nextAction)}</strong></div></div>`);
+  openModal(`<span class="eyebrow">WFM</span><h2>📈 Semana ${esc(smart.meta.week)}</h2><div class="wfm-simple"><div><small>Semana en planeación</small><strong>${esc(smart.meta.shortRange)}</strong></div><div><small>Actividad</small><strong>${esc(smart.icon)} ${esc(smart.action.replace('WFM - ',''))}</strong><p>${esc(smart.detail)}</p></div><div><small>Siguiente</small><strong>${esc(smart.nextIcon)} ${esc(smart.nextAction.replace('WFM - ',''))}</strong></div></div>`);
 }
 function bind() {
   document.body.addEventListener('click', e => {
@@ -121,7 +121,7 @@ function bind() {
     if (o.dataset.open === 'events') renderEventsModal(CMS);
     if (o.dataset.image) openModal(`<img class="modal-img" src="${esc(o.dataset.image)}" alt="Guía visual" loading="lazy">`);
     if (o.dataset.link) window.open(o.dataset.link,'_blank','noopener');
-    if (o.dataset.scroll) document.getElementById(o.dataset.scroll)?.scrollIntoView({behavior:'smooth'});
+    if (o.dataset.scroll === 'apps') document.getElementById('appsSection').scrollIntoView({behavior:'smooth'});
   });
   $('#searchInput').addEventListener('input', e => renderApps(CMS, e.target.value));
   $('#clearSearch').addEventListener('click', () => { $('#searchInput').value = ''; renderApps(CMS, ''); });
@@ -130,7 +130,13 @@ async function init() {
   CMS = await loadCMS();
   $('#todayLabel').textContent = formatDateMX(new Date());
   $('#greeting').textContent = `${greeting()}, Partner`;
-  renderToday(); renderEvents(CMS); renderTabs(CMS); renderApps(CMS); bind();
+  renderToday();
+  renderDutyPreview(CMS);
+  renderDaily();
+  renderEvents(CMS);
+  renderTabs(CMS);
+  renderApps(CMS);
+  bind();
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });
