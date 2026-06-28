@@ -4,10 +4,8 @@
     "Actividad": "WFM - Pronóstico",
     "Descripción": "Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.",
     "Día": "Lunes",
-    "Hora / Corte": null,
     "Icono": "📈",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   },
   {
     "ID": 2,
@@ -34,7 +32,6 @@
     "Actividad": "Gastos Oracle",
     "Descripción": "Registra y valida gastos pendientes.",
     "Día": "Lunes",
-    "Hora / Corte": null,
     "Icono": "💳",
     "Color": "Azul",
     "Link": "https://enev.login.us2.oraclecloud.com/"
@@ -44,7 +41,6 @@
     "Actividad": "Pago Gastos",
     "Descripción": "Da seguimiento al pago de gastos.",
     "Día": "Lunes",
-    "Hora / Corte": null,
     "Icono": "💰",
     "Color": "Azul",
     "Link": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal"
@@ -54,7 +50,6 @@
     "Actividad": "Workvivo",
     "Descripción": "Realiza la publicación semanal en Workvivo.",
     "Día": "Lunes",
-    "Hora / Corte": null,
     "Icono": "📱",
     "Color": "Azul",
     "Link": "https://alsea.workvivo.us/login"
@@ -64,57 +59,47 @@
     "Actividad": "Starbucks College",
     "Descripción": "Valida el avance de cursos en Ubits.",
     "Día": "Martes",
-    "Hora / Corte": null,
     "Icono": "🎓",
-    "Color": "Morado",
-    "Link": null
+    "Color": "Morado"
   },
   {
     "ID": 8,
     "Actividad": "Coffee Tuesday",
     "Descripción": "Participa con los clientes en degustaciones y genera una experiencia memorable.",
     "Día": "Martes",
-    "Hora / Corte": null,
     "Icono": "☕",
-    "Color": "Verde",
-    "Link": null
+    "Color": "Verde"
   },
   {
     "ID": 9,
     "Actividad": "WFM - Carga Inicial",
     "Descripción": "Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.",
     "Día": "Martes",
-    "Hora / Corte": null,
     "Icono": "📅",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   },
   {
     "ID": 10,
     "Actividad": "WFM - Disponibilidades",
-    "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners. Kronos generará automáticamente el pronóstico y horarios.",
-    "Día": "Miércoles",
-    "Hora / Corte": "",
+    "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners.",
+    "Día": "Kronos generará automáticamente el pronóstico y horarios.",
+    "Hora / Corte": "Miércoles",
     "Icono": "👥",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   },
   {
     "ID": 11,
     "Actividad": "WFM - Ajustes",
     "Descripción": "Revisa los horarios generados por Kronos, realiza ajustes operativos y agrega actividades Non-Coverage.",
     "Día": "Jueves",
-    "Hora / Corte": null,
     "Icono": "⚙️",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   },
   {
     "ID": 12,
     "Actividad": "Comunicado Semanal",
     "Descripción": "Revisa el comunicado semanal y comparte los puntos relevantes con el equipo.",
     "Día": "Viernes",
-    "Hora / Corte": null,
     "Icono": "📢",
     "Color": "Naranja",
     "Link": "https://capacitacion.alsea.net/course/view.php?id=29227"
@@ -124,29 +109,23 @@
     "Actividad": "WFM - Revisión DM",
     "Descripción": "El DM revisa los horarios y comunica observaciones o ajustes requeridos.",
     "Día": "Viernes",
-    "Hora / Corte": null,
     "Icono": "✅",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   },
   {
     "ID": 14,
     "Actividad": "WFM - Publicación",
     "Descripción": "Realiza las correcciones finales y publica los horarios en Humanet antes del domingo.",
     "Día": "Sábado",
-    "Hora / Corte": null,
     "Icono": "🚀",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   },
   {
     "ID": 15,
     "Actividad": "WFM - Validación Final",
     "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
     "Día": "Domingo",
-    "Hora / Corte": null,
     "Icono": "📤",
-    "Color": "Azul",
-    "Link": null
+    "Color": "Azul"
   }
 ]

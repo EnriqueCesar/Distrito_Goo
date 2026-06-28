@@ -1,41 +1,42 @@
-# Distrito GO 6.3 Producción
+# Distrito GO 6.4 Producción
 
-Versión limpia para GitHub Pages.
+Versión enfocada en operación diaria, actualización limpia por CMS y GitHub Pages.
 
-## Qué subir
-Sube únicamente estas carpetas y archivos:
+## Para actualizar información
+
+1. Edita el Excel `Distrito_Go_CMS.xlsx`.
+2. Convierte las hojas a JSON dentro de `/data`.
+3. Sube a GitHub reemplazando archivos existentes.
+4. Espera 1–3 minutos a GitHub Pages.
+5. En Chrome usa `Ctrl + Shift + R` o DevTools > Application > Clear site data si aún ves versión anterior.
+
+## Hojas CMS conectadas
+
+- `Links` → `data/links.json`
+- `Eventos` → `data/eventos.json`
+- `Actividades_Semanales` → `data/actividades_semanales.json`
+- `Actividades_Diaria` → `data/actividades_diarias.json`
+- `Duty_Roster` → `data/duty_roster.json`
+- `Duty_Detail` → `data/duty_detail.json`
+- `BT` → `data/bt.json`
+- `SS` → `data/ss.json`
+- `TBW` → `data/tbw.json`
+- `Checklist_Apertura` → `data/checklist_apertura.json`
+
+## Importante
+
+GitHub Pages no lee directamente archivos `.xlsx`. La app consume archivos `.json` en `/data`.
+Por eso, cuando cambies el Excel, también debes regenerar y subir los JSON.
+
+## Estructura recomendada
 
 - `index.html`
+- `/css`
+- `/js`
+- `/data`
+- `/assets`
 - `manifest.json`
 - `sw.js`
-- `css/`
-- `js/`
-- `data/`
-- `assets/`
 - `README.md`
 
-No es necesario subir archivos `.txt` de auditoría o notas.
-
-## Dónde actualizar información
-
-| Necesidad | Archivo |
-|---|---|
-| Eventos, nómina, AutoICA, campañas | `data/eventos.json` |
-| Herramientas / links | `data/links.json` |
-| WFM y actividades semanales | `data/actividades_semanales.json` |
-| Rutinas diarias | `data/actividades_diarias.json` |
-| Duty por día e imágenes | `data/duty_roster.json` |
-| Resumen operativo Duty | `data/duty_detail.json` |
-
-## Reglas de mantenimiento
-
-1. No duplicar módulos en Home. Home solo presenta saludo, DM y accesos.
-2. Mi Día Operativo concentra alertas, eventos vigentes, WFM, rutina y Duty.
-3. Las fechas se controlan desde el CMS; no cambiar fechas en el código.
-4. Para agregar una imagen Duty, colocarla en `assets/duty/premium/` y referenciar el nombre exacto en `data/duty_roster.json`.
-5. Para actualizar datos, cambiar únicamente archivos dentro de `data/`.
-6. Después de subir cambios a GitHub, actualizar la página con Ctrl + F5 si el navegador conserva caché.
-
-## Caché
-
-Los JSON se cargan con estrategia Network First para que los cambios del CMS aparezcan sin esperar una nueva versión de la app.
+No son necesarios archivos `.txt` de auditoría o notas.
