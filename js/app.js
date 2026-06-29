@@ -1,7 +1,7 @@
 import { loadCMS } from './cms.js';
 import { $, esc, todayName, first, normalize, formatDateMX, weekMeta, toDate } from './utils.js';
 import { dutyCard, showDuty } from './duty.js';
-import { renderEvents, renderEventsModal, currentEvents, payrollCritical } from './events.js';
+import { renderEvents, renderEventsModal, currentEvents, currentInfo, payrollCritical, eventUrl } from './events.js';
 import { renderTabs, renderApps } from './apps.js';
 import { openModal } from './modal.js';
 
@@ -61,17 +61,17 @@ function wfmSmart() {
   };
 }
 function autoICAAlert(){
-  const now = new Date();
-  if(now.getDate() < 1 || now.getDate() > 5) return '';
   const row = currentEvents(CMS).find(x=>normalize(first(x.e,['Actividad'])).includes('autoica'));
-  const link = 'https://ica-stage.bw-globalsolutions.com/Login.php';
-  return `<article class="priority-card critical" data-link="${link}"><span>🛡</span><div><small>AutoICA · Día ${now.getDate()} de 5</small><strong>Validar evidencias y cerrar hallazgos</strong><em>${row?esc(first(row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0]):'Visible del día 1 al 5 de cada mes.'} · Toca para revisar</em></div></article>`;
+  if(!row) return '';
+  const link = eventUrl(row.e) || 'https://ica-stage.bw-globalsolutions.com/Login.php';
+  return `<article class="priority-card critical" data-link="${esc(link)}"><span>🛡</span><div><small>AutoICA · Vigente hasta ${row.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}</small><strong>Validar evidencias y cerrar hallazgos</strong><em>${esc(first(row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0])} · Toca para revisar</em></div></article>`;
 }
 function criticalAlerts(){
   const payroll = payrollCritical(CMS);
   const cards=[];
   if(payroll){
-    cards.push(`<article class="priority-card urgent" data-open="events"><span>${payroll.kind==='tomorrow'?'⏰':'🚨'}</span><div><small>Corte de Nómina</small><strong>${payroll.kind==='tomorrow'?'Mañana hay corte':'Hoy hasta las 09:00 AM'}</strong><em>${esc(first(payroll.row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']))}</em></div></article>`);
+    const link = eventUrl(payroll.row.e);
+    cards.push(`<article class="priority-card urgent" ${link?`data-link="${esc(link)}"`:'data-open="events"'}><span>${payroll.kind==='today'?'🚨':'📅'}</span><div><small>Corte de Nómina</small><strong>${payroll.kind==='today'?'Hoy hasta las 09:00 AM':'Corte activo'}</strong><em>${esc(first(payroll.row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']))}</em></div></article>`);
   }
   const ica = autoICAAlert(); if(ica) cards.push(ica);
   return cards.join('') || `<article class="priority-card ok"><span>✅</span><div><small>Alertas críticas</small><strong>Sin alertas críticas activas</strong><em>Nómina y AutoICA aparecerán únicamente cuando correspondan.</em></div></article>`;
@@ -85,7 +85,7 @@ function eventLink(e){
   return m ? m[0].trim() : '';
 }
 function eventDigest(){
-  const rows=currentEvents(CMS).filter(x=>{const n=normalize(first(x.e,['Actividad'])); return !n.includes('corte de nomina') && !n.includes('precios_maquila');}).slice(0,3);
+  const rows=currentEvents(CMS).filter(x=>{const n=normalize(first(x.e,['Actividad'])); return !n.includes('corte de nomina') && !n.includes('precios_maquila');}).slice(0,5);
   return `<div class="digest-list">${rows.map(x=>{
     const url=eventLink(x.e); const img=first(x.e,['ImagenDetalle','Imagen Detalle','Foto','ImagenArchivo']);
     const attr = url ? `data-link="${esc(url)}"` : (img ? `data-image="assets/photos/${esc(img)}"` : '');
@@ -166,7 +166,7 @@ function renderCelebrations(){
 
 
 function infoBlock(){
-  const rows=currentEvents(CMS).filter(x=>normalize(first(x.e,['Actividad'])).includes('precios_maquila'));
+  const rows=currentInfo(CMS).filter(x=>normalize(first(x.e,['Actividad'])).includes('precios_maquila'));
   if(!rows.length) return '';
   return `<section class="priority-block info-block"><h3>ℹ️ Informativo</h3>${rows.map(x=>{
     const img=first(x.e,['ImagenDetalle','Imagen Detalle']);
@@ -212,7 +212,7 @@ async function init() {
   renderToday(); renderEvents(CMS); renderCelebrations(); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=6.6.2').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=7.0.0').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });

@@ -379,14 +379,14 @@
     "Contexto / Recordatorio": "Envio Pagos 2 de Julio antes de 10:00 am \nhttps://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
     "Imagen": "📅",
     "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
-    "Link": "Abrir SharePoint de pagos especiales"
+    "Link": "Abrir archivo Pagos Especiales"
   },
   {
-    "Fecha Inicio": "2026-04-01",
+    "Fecha Inicio": "2026-04-26",
     "Fecha Fin": "2026-12-31",
-    "Actividad": "📌 Precios_Maquila",
-    "Contexto / Recordatorio": "Precios por caja y por unidad. Última actualización Abril_26.",
-    "Imagen": "📌",
+    "Actividad": "Precios_Maquila",
+    "Contexto / Recordatorio": "Última Actualización Abril_26",
+    "Imagen": "ℹ️",
     "ImagenDetalle": "maquila_abril.png",
     "Tipo": "Informativo"
   }

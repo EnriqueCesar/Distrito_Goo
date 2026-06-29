@@ -1,6 +1,6 @@
 [
   {
-    "Orden": "1",
+    "Orden": 1,
     "Día": "Lunes",
     "Estaciones": "Food",
     "Imágenes": "lunes_food.png",
@@ -8,7 +8,7 @@
     "Enfoque": "Food: seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
   },
   {
-    "Orden": "2",
+    "Orden": 2,
     "Día": "Martes",
     "Estaciones": "PIC, Lobby",
     "Imágenes": "martes_pic.png, martes_lobby.png",
@@ -16,7 +16,7 @@
     "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente."
   },
   {
-    "Orden": "3",
+    "Orden": 3,
     "Día": "Miércoles",
     "Estaciones": "BOH",
     "Imágenes": "miercoles_boh.png",
@@ -24,7 +24,7 @@
     "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH."
   },
   {
-    "Orden": "4",
+    "Orden": 4,
     "Día": "Jueves",
     "Estaciones": "Espresso, Lobby",
     "Imágenes": "jueves_espresso.png, jueves_lobby.png",
@@ -32,7 +32,7 @@
     "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente."
   },
   {
-    "Orden": "5",
+    "Orden": 5,
     "Día": "Viernes",
     "Estaciones": "Café Filtrado",
     "Imágenes": "viernes_cafe_filtrado.png",
@@ -40,7 +40,7 @@
     "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food."
   },
   {
-    "Orden": "6",
+    "Orden": 6,
     "Día": "Sábado",
     "Estaciones": "CBS",
     "Imágenes": "sabado_cbs.png",
@@ -48,7 +48,7 @@
     "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa."
   },
   {
-    "Orden": "7",
+    "Orden": 7,
     "Día": "Domingo",
     "Estaciones": "Lobby, Drive Thru",
     "Imágenes": "domingo_lobby.png, domingo_drive_thru.png",
