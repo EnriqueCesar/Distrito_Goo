@@ -8,7 +8,9 @@ export const files = {
   bt: 'data/bt.json',
   ss: 'data/ss.json',
   tbw: 'data/tbw.json',
-  checklistApertura: 'data/checklist_apertura.json'
+  checklistApertura: 'data/checklist_apertura.json',
+  birthdays: 'data/birthdays.json',
+  anniversaries: 'data/anniversaries.json'
 };
 
 export async function loadCMS() {

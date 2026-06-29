@@ -9,11 +9,11 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
-  <link rel="stylesheet" href="css/base.css?v=6.5.0" />
-  <link rel="stylesheet" href="css/layout.css?v=6.5.0" />
-  <link rel="stylesheet" href="css/cards.css?v=6.5.0" />
-  <link rel="stylesheet" href="css/modal.css?v=6.5.0" />
-  <link rel="stylesheet" href="css/responsive.css?v=6.5.0" />
+  <link rel="stylesheet" href="css/base.css?v=6.6.0" />
+  <link rel="stylesheet" href="css/layout.css?v=6.6.0" />
+  <link rel="stylesheet" href="css/cards.css?v=6.6.0" />
+  <link rel="stylesheet" href="css/modal.css?v=6.6.0" />
+  <link rel="stylesheet" href="css/responsive.css?v=6.6.0" />
 </head>
 <body>
   <div id="app" class="app-shell">
@@ -47,9 +47,14 @@
       </section>
 
       <section class="section panel events-panel" id="eventsSection">
-        <div class="section-title"><div><span>Eventos</span><h2>Agenda por vigencia CMS</h2></div></div>
+        <div class="section-title"><div><span>Eventos</span><h2>Agenda</h2></div></div>
         <div class="filter-row" id="eventFiltersMini"></div>
         <div id="events" class="event-list"></div>
+      </section>
+
+      <section class="section panel celebration-panel" id="celebrationsSection">
+        <div class="section-title"><div><span>Partners</span><h2>Cumpleaños y aniversarios de hoy</h2></div></div>
+        <div id="celebrations" class="celebration-list"></div>
       </section>
 
       <section class="section panel" id="appsSection">
@@ -62,6 +67,6 @@
   </div>
 
   <dialog id="modal" class="modal"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></dialog>
-  <script type="module" src="js/app.js?v=6.5.0"></script>
+  <script type="module" src="js/app.js?v=6.6.0"></script>
 </body>
 </html>

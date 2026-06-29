@@ -1,5 +1,5 @@
 import { loadCMS } from './cms.js';
-import { $, esc, todayName, first, normalize, formatDateMX, weekMeta } from './utils.js';
+import { $, esc, todayName, first, normalize, formatDateMX, weekMeta, toDate } from './utils.js';
 import { dutyCard, showDuty } from './duty.js';
 import { renderEvents, renderEventsModal, currentEvents, payrollCritical } from './events.js';
 import { renderTabs, renderApps } from './apps.js';
@@ -12,7 +12,15 @@ function greeting() {
   return h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
 }
 function normalizeDay(value) { return normalize(value || '').replace(/\s+/g, ''); }
-function dayOf(row){ return first(row, ['Día','Dia','Frecuencia']); }
+function dayOf(row){
+  const d = first(row, ['Día','Dia','Frecuencia']);
+  if(/lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo/i.test(String(d))) return d;
+  const h = first(row, ['Hora / Corte','Hora','Corte']);
+  if(/lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado|domingo/i.test(String(h))) return h;
+  return d;
+}
+function linkOf(row){ return first(row, ['Link','URL','Url','Link /Imagen']); }
+function isHttp(v){ return /^https?:\/\//i.test(String(v||'').trim()); }
 function todayRows(){
   const dayKey = normalizeDay(todayName());
   return (CMS.semanales || []).filter(x => normalizeDay(dayOf(x)) === dayKey || normalizeDay(dayOf(x)).includes(dayKey));
@@ -56,7 +64,8 @@ function autoICAAlert(){
   const now = new Date();
   if(now.getDate() < 1 || now.getDate() > 5) return '';
   const row = currentEvents(CMS).find(x=>normalize(first(x.e,['Actividad'])).includes('autoica'));
-  return `<article class="priority-card critical" ${row?'data-open="events"':''}><span>🛡</span><div><small>AutoICA · Día ${now.getDate()} de 5</small><strong>Validar evidencias y cerrar hallazgos</strong><em>${row?esc(first(row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0]):'Visible del día 1 al 5 de cada mes.'}</em></div></article>`;
+  const link = 'https://ica-stage.bw-globalsolutions.com/Login.php';
+  return `<article class="priority-card critical" data-link="${link}"><span>🛡</span><div><small>AutoICA · Día ${now.getDate()} de 5</small><strong>Validar evidencias y cerrar hallazgos</strong><em>${row?esc(first(row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0]):'Visible del día 1 al 5 de cada mes.'} · Toca para revisar</em></div></article>`;
 }
 function criticalAlerts(){
   const payroll = payrollCritical(CMS);
@@ -74,12 +83,13 @@ function eventDigest(){
 function routineCarousel(){
   const items = (CMS.diarias || [])
     .filter(x => String(first(x, ['Visible'])).toUpperCase() !== 'FALSE')
-    .sort((a,b)=>(+first(a,['Prioridad'])||9)-(+first(b,['Prioridad'])||9))
-    .slice(0,4);
+    .sort((a,b)=>(+first(a,['Prioridad'])||9)-(+first(b,['Prioridad'])||9) || (+first(a,['ID'])||99)-(+first(b,['ID'])||99));
   const cards = items.map(x => {
-    const img = imageForActivity(first(x,['Actividad']), first(x,['Link /Imagen','Link','URL']));
-    const imgAttr = img ? ` data-image="${esc(img)}"` : '';
-    return `<article class="routine-chip"${imgAttr}><span>${esc(first(x,['Icono'])||'☕')}</span><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Categoría','Categoria'])||'Rutina')}</small></article>`;
+    const raw = first(x,['Link /Imagen','Link','URL']);
+    const img = imageForActivity(first(x,['Actividad']), raw);
+    const link = isHttp(raw) ? raw : '';
+    const attrs = `${img ? ` data-image="${esc(img)}"` : ''}${link ? ` data-link="${esc(link)}"` : ''}`;
+    return `<article class="routine-chip"${attrs}><span>${esc(first(x,['Icono'])||'☕')}</span><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Categoría','Categoria'])||'Rutina')}</small></article>`;
   }).join('');
   return `<div class="routine-strip">${cards || '<p class="muted">Sin rutinas activas.</p>'}</div>`;
 }
@@ -105,11 +115,39 @@ function imageForActivity(name, explicit=''){
   if(n.includes('10 pasos')) return 'assets/photos/10-pasos-turno.png';
   return '';
 }
+
+function weeklyTodayBlock(){
+  const rows = todayRows().filter(x => !normalize(first(x,['Actividad'])).startsWith('wfm'));
+  if(!rows.length) return `<section class="priority-block"><h3>📌 Actividades semanales</h3><p class="muted">Sin actividades semanales configuradas para hoy.</p></section>`;
+  return `<section class="priority-block"><h3>📌 Actividades semanales de hoy</h3><div class="weekly-grid">${rows.map(x=>{
+    const link = linkOf(x);
+    return `<article class="weekly-card" ${isHttp(link)?`data-link="${esc(link)}"`:''}><span>${esc(first(x,['Icono'])||'📌')}</span><div><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Hora / Corte'])||todayName())}</small><em>${esc(first(x,['Descripción','Descripcion']))}</em></div></article>`;
+  }).join('')}</div></section>`;
+}
+function yearsSince(dateValue, now=new Date()){
+  const d=toDate(dateValue); if(!d || d.getFullYear()<1901) return '';
+  let y=now.getFullYear()-d.getFullYear();
+  const m=now.getMonth()-d.getMonth(); if(m<0 || (m===0 && now.getDate()<d.getDate())) y--;
+  return Math.max(0,y);
+}
+function sameMonthDayLocal(dateValue, now=new Date()){
+  const d=toDate(dateValue); return d.getDate()===now.getDate() && d.getMonth()===now.getMonth();
+}
+function renderCelebrations(){
+  const root = document.getElementById('celebrations'); if(!root) return;
+  const now=new Date();
+  const b=(CMS.birthdays||[]).filter(x=>sameMonthDayLocal(first(x,['F_NAC','F.NAC']), now));
+  const a=(CMS.anniversaries||[]).filter(x=>sameMonthDayLocal(first(x,['F_INGRESO','F_INGRESO']), now));
+  const card=(x,type)=>`<article class="celebration-card"><span>${type==='b'?'🎂':'🎉'}</span><div><strong>${esc(first(x,['NOMBRE','Nombre']))}</strong><small>${esc(first(x,['TIENDA','NOM_CCOSTO'])||'Tienda')}</small><em>${type==='b'?'Cumpleaños de hoy':`${yearsSince(first(x,['F_INGRESO']),now)} años en Starbucks`}</em></div></article>`;
+  root.innerHTML = [...b.map(x=>card(x,'b')),...a.map(x=>card(x,'a'))].join('') || '<p class="muted">Hoy no hay cumpleaños ni aniversarios activos en el portafolio.</p>';
+}
+
 function renderToday() {
   const wfm = wfmSmart();
   $('#todayCards').innerHTML = `
     <section class="priority-block"><h3>🚨 Alertas críticas</h3>${criticalAlerts()}</section>
     <section class="priority-block"><h3>📅 Eventos vigentes</h3>${eventDigest()}</section>
+    ${weeklyTodayBlock()}
     <section class="priority-block two-mini">
       <article class="priority-card wfm-card" data-open="wfm"><span>${esc(wfm.icon)}</span><div><small>WFM · Semana ${esc(wfm.meta.week)}</small><strong>${esc(wfm.action)}</strong><em>${esc(wfm.meta.shortRange)} · Siguiente: ${esc(wfm.nextAction)}</em></div></article>
       ${dutyCard(CMS)}
@@ -138,10 +176,10 @@ async function init() {
   CMS = await loadCMS();
   $('#todayLabel').textContent = formatDateMX(new Date());
   $('#greeting').textContent = `${greeting()}, Partner`;
-  renderToday(); renderEvents(CMS); renderTabs(CMS); renderApps(CMS); bind();
+  renderToday(); renderEvents(CMS); renderCelebrations(); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=6.5.0').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=6.6.0').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });

@@ -8,6 +8,7 @@ const summerTerms = ['ube','aerocano','protein','strato','focaccia','dona','unic
 export function eventType(e){
   const txt = normalize(`${first(e,['Actividad'])} ${first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion'])}`);
   if(txt.includes('autoica') || txt.includes('ica')) return 'AutoICA';
+  if(txt.includes('pagos especiales') || txt.includes('qna')) return 'Nómina';
   if(txt.includes('corte de nomina') || txt.includes('nomina')) return 'Nómina';
   if(txt.includes('campana') || txt.includes('summer') || txt.includes('platform') || txt.includes('rewards') || txt.includes('promocion')) return 'Campañas';
   if(txt.includes('attensi') || txt.includes('recertificacion') || txt.includes('webinar') || txt.includes('seminario') || txt.includes('mujeres')) return 'Capacitación';

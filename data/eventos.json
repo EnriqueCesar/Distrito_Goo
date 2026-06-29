@@ -11,7 +11,8 @@
     "Fecha Fin": "2026-07-11",
     "Actividad": "🏆 Barista Champion Regional",
     "Contexto / Recordatorio": "¡Apoyemos a Hugo! ¡Mucho éxito!",
-    "Imagen": "🏆"
+    "Imagen": "🏆",
+    "ImagenDetalle": "hugo-barista-champion.jpeg"
   },
   {
     "Fecha Inicio": "2026-06-30",
@@ -333,6 +334,13 @@
     "Fecha Fin": "2026-12-16",
     "Actividad": "📅 Corte de Nómina",
     "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de diciembre.",
+    "Imagen": "📅"
+  },
+  {
+    "Fecha Inicio": "2026-06-29",
+    "Fecha Fin": "2026-07-02",
+    "Actividad": "Pagos Especiales 1 Qna_Julio",
+    "Contexto / Recordatorio": "Envio Pagos 2 de Julio antes de 10:00 am \nhttps://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
     "Imagen": "📅"
   }
 ]
