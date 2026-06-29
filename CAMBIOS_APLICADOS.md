@@ -1,13 +1,12 @@
-# Cambios aplicados — Distrito GO 6.6
+# Cambios aplicados · v6.6.2
 
-- RSA Checklist ahora abre: https://enriquecesar.github.io/checklist-rsa-semaforo/
-- Rutina del día muestra todas las rutinas visibles, incluyendo `10-pasos-turno.png`.
-- Evento Barista Champion incluye botón para visualizar `hugo-barista-champion.jpeg`.
-- Título de eventos cambiado a `Agenda`.
-- Links muestran descripción breve e intuitiva en cada tarjeta.
-- Actividades semanales se refuerzan por día actual; lunes muestra KPI Semanal y Green Apron Review.
-- AutoICA tiene link directo a revisión: https://ica-stage.bw-globalsolutions.com/Login.php
-- Evento de Pagos Especiales 1 Qna Julio queda vigente según CMS y con link de SharePoint.
-- Se agregó apartado de Cumpleaños y Aniversarios de hoy desde `Query(11).xlsx`.
-- JSON del proyecto fue actualizado desde `Distrito_Go_CMS(18).xlsx`, respetando fechas de inicio y fin.
-- Cache y assets actualizados a versión `6.6.0`.
+- Pagos Especiales 1 Qna_Julio abre directo el SharePoint indicado.
+- Corte de Nómina abre directo Oracle HCM.
+- Limpieza Backs queda solo informativo; ya no fuerza apertura de Eventos desde el resumen.
+- Barista Champion Regional muestra `hugo-barista-champion.jpeg`.
+- Cumpleaños y aniversarios muestran la semana actual de lunes a domingo.
+- Se agregó bloque informativo `Precios_Maquila` con imagen `maquila_abril.png` y actualización Abril_26.
+- Se agregó imagen de acceso UBITS para Starbucks College.
+- Duty Roster lunes queda solo Food.
+- Se actualizó CMS desde `Distrito_Go_CMS(19).xlsx` y Query desde `Query(12).xlsx`.
+- Service Worker actualizado a v6.6.2 para evitar caché.

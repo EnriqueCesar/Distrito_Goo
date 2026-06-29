@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v6-6-1';
+const CACHE_NAME = 'distrito-go-v6-6-2';
 
 self.addEventListener('install', event => {
   self.skipWaiting();

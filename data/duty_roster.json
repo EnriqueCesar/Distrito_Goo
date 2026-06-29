@@ -2,10 +2,10 @@
   {
     "Orden": "1",
     "Día": "Lunes",
-    "Estaciones": "Food, Show Case",
-    "Imágenes": "lunes_food.png, lunes_showcase.png",
+    "Estaciones": "Food",
+    "Imágenes": "lunes_food.png",
     "Color": "Naranja",
-    "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
+    "Enfoque": "Food: seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
   },
   {
     "Orden": "2",

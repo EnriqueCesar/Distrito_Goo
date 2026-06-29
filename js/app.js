@@ -78,15 +78,19 @@ function criticalAlerts(){
 }
 
 function eventLink(e){
-  const direct = first(e,['URL','Url','Link','Liga','Vínculo','Vinculo']);
+  const direct = first(e,['URL','Url','Liga','Vínculo','Vinculo']);
   if (direct) return String(direct).trim();
   const ctx = first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']);
   const m = String(ctx||'').match(/https?:\/\/\S+/);
   return m ? m[0].trim() : '';
 }
 function eventDigest(){
-  const rows=currentEvents(CMS).filter(x=>!normalize(first(x.e,['Actividad'])).includes('corte de nomina')).slice(0,3);
-  return `<div class="digest-list">${rows.map(x=>{const url=eventLink(x.e); return `<button class="digest-row" ${url?`data-link="${esc(url)}"`:'data-open="events"'}><span>${esc(first(x.e,['Imagen','Icono'])||'📅')}</span><strong>${esc(first(x.e,['Actividad']))}</strong><small>${url?'Abrir liga directa':`${x.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} → ${x.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}`}</small></button>`}).join('') || '<p class="muted">Sin eventos vigentes.</p>'}</div>`;
+  const rows=currentEvents(CMS).filter(x=>{const n=normalize(first(x.e,['Actividad'])); return !n.includes('corte de nomina') && !n.includes('precios_maquila');}).slice(0,3);
+  return `<div class="digest-list">${rows.map(x=>{
+    const url=eventLink(x.e); const img=first(x.e,['ImagenDetalle','Imagen Detalle','Foto','ImagenArchivo']);
+    const attr = url ? `data-link="${esc(url)}"` : (img ? `data-image="assets/photos/${esc(img)}"` : '');
+    return `<button class="digest-row" ${attr}><span>${esc(first(x.e,['Imagen','Icono'])||'📅')}</span><strong>${esc(first(x.e,['Actividad']))}</strong><small>${url?'Abrir liga directa':(img?'Ver imagen':`${x.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} → ${x.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}`)}</small></button>`
+  }).join('') || '<p class="muted">Sin eventos vigentes.</p>'}</div>`;
 }
 function routineCarousel(){
   const items = (CMS.diarias || [])
@@ -129,7 +133,9 @@ function weeklyTodayBlock(){
   if(!rows.length) return `<section class="priority-block"><h3>📌 Actividades semanales</h3><p class="muted">Sin actividades semanales configuradas para hoy.</p></section>`;
   return `<section class="priority-block"><h3>📌 Actividades semanales de hoy</h3><div class="weekly-grid">${rows.map(x=>{
     const link = linkOf(x);
-    return `<article class="weekly-card" ${isHttp(link)?`data-link="${esc(link)}"`:''}><span>${esc(first(x,['Icono'])||'📌')}</span><div><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Hora / Corte'])||todayName())}</small><em>${esc(first(x,['Descripción','Descripcion']))}</em></div></article>`;
+    const act=normalize(first(x,['Actividad']));
+    const imgAttr = (act.includes('ubits') || act.includes('college')) ? ' data-image="assets/photos/acceso_ubits.jpeg"' : '';
+    return `<article class="weekly-card"${imgAttr} ${isHttp(link)?`data-link="${esc(link)}"`:''}><span>${esc(first(x,['Icono'])||'📌')}</span><div><strong>${esc(first(x,['Actividad']))}</strong><small>${esc(first(x,['Hora / Corte'])||todayName())}</small><em>${esc(first(x,['Descripción','Descripcion']))}</em></div></article>`;
   }).join('')}</div></section>`;
 }
 function yearsSince(dateValue, now=new Date()){
@@ -138,16 +144,34 @@ function yearsSince(dateValue, now=new Date()){
   const m=now.getMonth()-d.getMonth(); if(m<0 || (m===0 && now.getDate()<d.getDate())) y--;
   return Math.max(0,y);
 }
-function sameMonthDayLocal(dateValue, now=new Date()){
-  const d=toDate(dateValue); return d.getDate()===now.getDate() && d.getMonth()===now.getMonth();
+function weekBounds(now=new Date()){
+  const start=new Date(now); start.setHours(0,0,0,0); const diff=(start.getDay()+6)%7; start.setDate(start.getDate()-diff);
+  const end=new Date(start); end.setDate(start.getDate()+6); end.setHours(23,59,59,999); return {start,end};
+}
+function inCurrentWeekMonthDay(dateValue, now=new Date()){
+  const d=toDate(dateValue); if(!d || d.getFullYear()<1901) return false;
+  const {start,end}=weekBounds(now); const c=new Date(now.getFullYear(), d.getMonth(), d.getDate());
+  return c>=start && c<=end;
 }
 function renderCelebrations(){
   const root = document.getElementById('celebrations'); if(!root) return;
-  const now=new Date();
-  const b=(CMS.birthdays||[]).filter(x=>sameMonthDayLocal(first(x,['F_NAC','F.NAC']), now));
-  const a=(CMS.anniversaries||[]).filter(x=>sameMonthDayLocal(first(x,['F_INGRESO','F_INGRESO']), now));
-  const card=(x,type)=>`<article class="celebration-card"><span>${type==='b'?'🎂':'🎉'}</span><div><strong>${esc(first(x,['NOMBRE','Nombre']))}</strong><small>${esc(first(x,['TIENDA','NOM_CCOSTO'])||'Tienda')}</small><em>${type==='b'?'Cumpleaños de hoy':`${yearsSince(first(x,['F_INGRESO']),now)} años en Starbucks`}</em></div></article>`;
-  root.innerHTML = [...b.map(x=>card(x,'b')),...a.map(x=>card(x,'a'))].join('') || '<p class="muted">Hoy no hay cumpleaños ni aniversarios activos en el portafolio.</p>';
+  const now=new Date(); const {start,end}=weekBounds(now);
+  const fmt=d=>d.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','');
+  const b=(CMS.birthdays||[]).filter(x=>inCurrentWeekMonthDay(first(x,['F_NAC','F.NAC']), now));
+  const a=(CMS.anniversaries||[]).filter(x=>inCurrentWeekMonthDay(first(x,['F_INGRESO','F_INGRESO']), now));
+  const dayLabel=(dateValue)=>{const d=toDate(dateValue); return d ? new Date(now.getFullYear(),d.getMonth(),d.getDate()).toLocaleDateString('es-MX',{weekday:'short',day:'2-digit',month:'short'}).replace('.','') : '';};
+  const card=(x,type)=>`<article class="celebration-card"><span>${type==='b'?'🎂':'🎉'}</span><div><strong>${esc(first(x,['NOMBRE','Nombre']))}</strong><small>${esc(first(x,['TIENDA','NOM_CCOSTO'])||'Tienda')} · ${esc(dayLabel(first(x,[type==='b'?'F_NAC':'F_INGRESO','F.NAC'])))}</small><em>${type==='b'?'Cumpleaños de la semana':`${yearsSince(first(x,['F_INGRESO']),now)} años en Starbucks`}</em></div></article>`;
+  root.innerHTML = `<div class="week-note">Semana actual: ${esc(fmt(start))} al ${esc(fmt(end))}</div>` + ([...b.map(x=>card(x,'b')),...a.map(x=>card(x,'a'))].join('') || '<p class="muted">No hay cumpleaños ni aniversarios activos esta semana en el portafolio.</p>');
+}
+
+
+function infoBlock(){
+  const rows=currentEvents(CMS).filter(x=>normalize(first(x.e,['Actividad'])).includes('precios_maquila'));
+  if(!rows.length) return '';
+  return `<section class="priority-block info-block"><h3>ℹ️ Informativo</h3>${rows.map(x=>{
+    const img=first(x.e,['ImagenDetalle','Imagen Detalle']);
+    return `<article class="priority-card" ${img?`data-image="assets/photos/${esc(img)}"`:''}><span>${esc(first(x.e,['Imagen','Icono'])||'ℹ️')}</span><div><small>${esc(first(x.e,['Actividad']))}</small><strong>Última actualización Abril_26</strong><em>${esc(first(x.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']))}</em></div></article>`;
+  }).join('')}</section>`;
 }
 
 function renderToday() {
@@ -155,6 +179,7 @@ function renderToday() {
   $('#todayCards').innerHTML = `
     <section class="priority-block"><h3>🚨 Alertas críticas</h3>${criticalAlerts()}</section>
     <section class="priority-block"><h3>📅 Eventos vigentes</h3>${eventDigest()}</section>
+    ${infoBlock()}
     ${weeklyTodayBlock()}
     <section class="priority-block two-mini">
       <article class="priority-card wfm-card" data-open="wfm"><span>${esc(wfm.icon)}</span><div><small>WFM · Semana ${esc(wfm.meta.week)}</small><strong>${esc(wfm.action)}</strong><em>${esc(wfm.meta.shortRange)} · Siguiente: ${esc(wfm.nextAction)}</em></div></article>
@@ -173,7 +198,7 @@ function bind() {
     if (o.dataset.open === 'duty') showDuty(CMS);
     if (o.dataset.open === 'wfm') showWFM();
     if (o.dataset.open === 'events') renderEventsModal(CMS);
-    if (o.dataset.image) openModal(`<img class="modal-img" src="${esc(o.dataset.image)}" alt="Guía visual" loading="lazy">`);
+    if (o.dataset.image) { openModal(`<img class="modal-img" src="${esc(o.dataset.image)}" alt="Guía visual" loading="lazy">${o.dataset.link?`<p style="margin-top:12px"><a class="details-link" href="${esc(o.dataset.link)}" target="_blank" rel="noopener">Abrir liga</a></p>`:''}`); return; }
     if (o.dataset.link) window.open(o.dataset.link,'_blank','noopener');
     if (o.dataset.scroll) document.getElementById(o.dataset.scroll)?.scrollIntoView({behavior:'smooth'});
   });
@@ -187,7 +212,7 @@ async function init() {
   renderToday(); renderEvents(CMS); renderCelebrations(); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=6.6.0').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=6.6.2').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });

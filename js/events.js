@@ -60,7 +60,7 @@ function dateRange(start,end){
   return fmt(start)+(start.toDateString()!==end.toDateString()?` – ${fmt(end)}`:'');
 }
 function eventUrl(e){
-  const direct = first(e,['URL','Url','Link','Liga','Vínculo','Vinculo']);
+  const direct = first(e,['URL','Url','Liga','Vínculo','Vinculo']);
   if (direct) return String(direct).trim();
   const ctx = first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']);
   const m = String(ctx||'').match(/https?:\/\/\S+/);
@@ -89,12 +89,14 @@ function eventCard({e,start,end,type,groupedChildren},today){
   const [label,cls]=labelFor(start,end,today);
   const details = groupedChildren?.length ? `<button class="details-link" data-summer-detail='${esc(JSON.stringify(groupedChildren.map(x=>({a:first(x.e,['Actividad']),c:first(x.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']),i:first(x.e,['Imagen','Icono'])||'•'}))))}'>Ver detalles</button>` : '';
   const url = eventUrl(e);
+  const imageDetail = first(e,['ImagenDetalle','Imagen Detalle','Foto','ImagenArchivo']);
+  const imageBtn = imageDetail ? `<button class="details-link" data-image="assets/photos/${esc(imageDetail)}">Ver imagen</button>` : '';
   const linkBtn = url ? `<a class="details-link event-link" href="${esc(url)}" target="_blank" rel="noopener">Abrir liga</a>` : '';
   return `<article class="event ${cls}" data-type="${esc(type)}">
     <span class="event-icon">${esc(first(e,['Imagen','Icono'])||'📌')}</span>
     <div><div class="event-top"><h4>${esc(first(e,['Actividad']))}</h4><small>${groupedChildren?.length?`${groupedChildren.length} actividades`:esc(label)}</small></div>
     <p>${esc(first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0])}</p>
-    <div class="event-meta"><small>${esc(dateRange(start,end))}</small><small>${esc(type)}</small>${details}${linkBtn}</div>
+    <div class="event-meta"><small>${esc(dateRange(start,end))}</small><small>${esc(type)}</small>${details}${imageBtn}${linkBtn}</div>
     ${isPayroll(e)?payrollAlert(start,end,today):''}</div>
   </article>`;
 }
