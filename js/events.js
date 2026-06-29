@@ -59,6 +59,13 @@ function dateRange(start,end){
   const fmt=x=>x.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','');
   return fmt(start)+(start.toDateString()!==end.toDateString()?` – ${fmt(end)}`:'');
 }
+function eventUrl(e){
+  const direct = first(e,['URL','Url','Link','Liga','Vínculo','Vinculo']);
+  if (direct) return String(direct).trim();
+  const ctx = first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']);
+  const m = String(ctx||'').match(/https?:\/\/\S+/);
+  return m ? m[0].trim() : '';
+}
 function isPayroll(e){ return normalize(first(e,['Actividad'])).includes('corte de nomina'); }
 export function payrollCritical(cms){
   const now=new Date();
@@ -81,11 +88,13 @@ function payrollAlert(start,end,today){
 function eventCard({e,start,end,type,groupedChildren},today){
   const [label,cls]=labelFor(start,end,today);
   const details = groupedChildren?.length ? `<button class="details-link" data-summer-detail='${esc(JSON.stringify(groupedChildren.map(x=>({a:first(x.e,['Actividad']),c:first(x.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']),i:first(x.e,['Imagen','Icono'])||'•'}))))}'>Ver detalles</button>` : '';
+  const url = eventUrl(e);
+  const linkBtn = url ? `<a class="details-link event-link" href="${esc(url)}" target="_blank" rel="noopener">Abrir liga</a>` : '';
   return `<article class="event ${cls}" data-type="${esc(type)}">
     <span class="event-icon">${esc(first(e,['Imagen','Icono'])||'📌')}</span>
     <div><div class="event-top"><h4>${esc(first(e,['Actividad']))}</h4><small>${groupedChildren?.length?`${groupedChildren.length} actividades`:esc(label)}</small></div>
     <p>${esc(first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']).split('\n')[0])}</p>
-    <div class="event-meta"><small>${esc(dateRange(start,end))}</small><small>${esc(type)}</small>${details}</div>
+    <div class="event-meta"><small>${esc(dateRange(start,end))}</small><small>${esc(type)}</small>${details}${linkBtn}</div>
     ${isPayroll(e)?payrollAlert(start,end,today):''}</div>
   </article>`;
 }

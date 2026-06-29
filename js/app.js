@@ -76,9 +76,17 @@ function criticalAlerts(){
   const ica = autoICAAlert(); if(ica) cards.push(ica);
   return cards.join('') || `<article class="priority-card ok"><span>✅</span><div><small>Alertas críticas</small><strong>Sin alertas críticas activas</strong><em>Nómina y AutoICA aparecerán únicamente cuando correspondan.</em></div></article>`;
 }
+
+function eventLink(e){
+  const direct = first(e,['URL','Url','Link','Liga','Vínculo','Vinculo']);
+  if (direct) return String(direct).trim();
+  const ctx = first(e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']);
+  const m = String(ctx||'').match(/https?:\/\/\S+/);
+  return m ? m[0].trim() : '';
+}
 function eventDigest(){
   const rows=currentEvents(CMS).filter(x=>!normalize(first(x.e,['Actividad'])).includes('corte de nomina')).slice(0,3);
-  return `<div class="digest-list">${rows.map(x=>`<button class="digest-row" data-open="events"><span>${esc(first(x.e,['Imagen','Icono'])||'📅')}</span><strong>${esc(first(x.e,['Actividad']))}</strong><small>${x.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} → ${x.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}</small></button>`).join('') || '<p class="muted">Sin eventos vigentes.</p>'}</div>`;
+  return `<div class="digest-list">${rows.map(x=>{const url=eventLink(x.e); return `<button class="digest-row" ${url?`data-link="${esc(url)}"`:'data-open="events"'}><span>${esc(first(x.e,['Imagen','Icono'])||'📅')}</span><strong>${esc(first(x.e,['Actividad']))}</strong><small>${url?'Abrir liga directa':`${x.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} → ${x.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}`}</small></button>`}).join('') || '<p class="muted">Sin eventos vigentes.</p>'}</div>`;
 }
 function routineCarousel(){
   const items = (CMS.diarias || [])
