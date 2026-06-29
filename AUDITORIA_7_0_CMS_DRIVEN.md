@@ -31,3 +31,9 @@
 - Duty Roster lunes: queda únicamente Food.
 - Cumpleaños y aniversarios: semana actual lunes a domingo.
 - Caché: actualizado a `distrito-go-v7-0-0`.
+
+
+## Corrección 7.0.1 - Partner Hub semanal
+- Aniversarios de la semana ahora calculan los años que se cumplen en la fecha de aniversario dentro de la semana actual.
+- Se excluyen registros con 0 años para evitar mostrar altas futuras o ingresos que aún no cumplen un año.
+- Cumpleaños se mantienen por semana actual de lunes a domingo.

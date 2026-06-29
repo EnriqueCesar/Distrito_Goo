@@ -148,20 +148,41 @@ function weekBounds(now=new Date()){
   const start=new Date(now); start.setHours(0,0,0,0); const diff=(start.getDay()+6)%7; start.setDate(start.getDate()-diff);
   const end=new Date(start); end.setDate(start.getDate()+6); end.setHours(23,59,59,999); return {start,end};
 }
+function occurrenceInCurrentWeek(dateValue, now=new Date()){
+  const d=toDate(dateValue); if(!d || d.getFullYear()<1901) return null;
+  const {start,end}=weekBounds(now);
+  const yearsToTest = [...new Set([start.getFullYear(), end.getFullYear(), now.getFullYear()])];
+  for(const year of yearsToTest){
+    const c = new Date(year, d.getMonth(), d.getDate()); c.setHours(12,0,0,0);
+    if(c>=start && c<=end) return c;
+  }
+  return null;
+}
 function inCurrentWeekMonthDay(dateValue, now=new Date()){
-  const d=toDate(dateValue); if(!d || d.getFullYear()<1901) return false;
-  const {start,end}=weekBounds(now); const c=new Date(now.getFullYear(), d.getMonth(), d.getDate());
-  return c>=start && c<=end;
+  return !!occurrenceInCurrentWeek(dateValue, now);
+}
+function anniversaryYearsInCurrentWeek(dateValue, now=new Date()){
+  const ingreso=toDate(dateValue); if(!ingreso || ingreso.getFullYear()<1901) return 0;
+  const occurrence = occurrenceInCurrentWeek(dateValue, now);
+  if(!occurrence) return 0;
+  const years = occurrence.getFullYear() - ingreso.getFullYear();
+  return years >= 1 ? years : 0;
 }
 function renderCelebrations(){
   const root = document.getElementById('celebrations'); if(!root) return;
   const now=new Date(); const {start,end}=weekBounds(now);
   const fmt=d=>d.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','');
-  const b=(CMS.birthdays||[]).filter(x=>inCurrentWeekMonthDay(first(x,['F_NAC','F.NAC']), now));
-  const a=(CMS.anniversaries||[]).filter(x=>inCurrentWeekMonthDay(first(x,['F_INGRESO','F_INGRESO']), now));
-  const dayLabel=(dateValue)=>{const d=toDate(dateValue); return d ? new Date(now.getFullYear(),d.getMonth(),d.getDate()).toLocaleDateString('es-MX',{weekday:'short',day:'2-digit',month:'short'}).replace('.','') : '';};
-  const card=(x,type)=>`<article class="celebration-card"><span>${type==='b'?'🎂':'🎉'}</span><div><strong>${esc(first(x,['NOMBRE','Nombre']))}</strong><small>${esc(first(x,['TIENDA','NOM_CCOSTO'])||'Tienda')} · ${esc(dayLabel(first(x,[type==='b'?'F_NAC':'F_INGRESO','F.NAC'])))}</small><em>${type==='b'?'Cumpleaños de la semana':`${yearsSince(first(x,['F_INGRESO']),now)} años en Starbucks`}</em></div></article>`;
-  root.innerHTML = `<div class="week-note">Semana actual: ${esc(fmt(start))} al ${esc(fmt(end))}</div>` + ([...b.map(x=>card(x,'b')),...a.map(x=>card(x,'a'))].join('') || '<p class="muted">No hay cumpleaños ni aniversarios activos esta semana en el portafolio.</p>');
+  const birthdays=(CMS.birthdays||[]).map(x=>({x,occ:occurrenceInCurrentWeek(first(x,['F_NAC','F.NAC']), now)})).filter(r=>r.occ);
+  const anniversaries=(CMS.anniversaries||[]).map(x=>{
+    const ingreso = first(x,['F_INGRESO','F.INGRESO','Ingreso']);
+    const occ = occurrenceInCurrentWeek(ingreso, now);
+    const years = anniversaryYearsInCurrentWeek(ingreso, now);
+    return {x,occ,years};
+  }).filter(r=>r.occ && r.years >= 1);
+  const dayLabel=(occ)=>occ ? occ.toLocaleDateString('es-MX',{weekday:'short',day:'2-digit',month:'short'}).replace('.','') : '';
+  const cardBirth=({x,occ})=>`<article class="celebration-card"><span>🎂</span><div><strong>${esc(first(x,['NOMBRE','Nombre']))}</strong><small>${esc(first(x,['TIENDA','NOM_CCOSTO'])||'Tienda')} · ${esc(dayLabel(occ))}</small><em>Cumpleaños de la semana</em></div></article>`;
+  const cardAnniv=({x,occ,years})=>`<article class="celebration-card"><span>🎉</span><div><strong>${esc(first(x,['NOMBRE','Nombre']))}</strong><small>${esc(first(x,['TIENDA','NOM_CCOSTO'])||'Tienda')} · ${esc(dayLabel(occ))}</small><em>${years} ${years===1?'año':'años'} en Starbucks</em></div></article>`;
+  root.innerHTML = `<div class="week-note">Semana actual: ${esc(fmt(start))} al ${esc(fmt(end))}</div>` + ([...birthdays.map(cardBirth),...anniversaries.map(cardAnniv)].join('') || '<p class="muted">No hay cumpleaños ni aniversarios activos esta semana en el portafolio.</p>');
 }
 
 
@@ -212,7 +233,7 @@ async function init() {
   renderToday(); renderEvents(CMS); renderCelebrations(); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=7.0.0').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=7.0.2').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });
