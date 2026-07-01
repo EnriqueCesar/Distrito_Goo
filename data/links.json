@@ -76,12 +76,14 @@
     "URL": "https://neo.frogmi.com/alsea-mexico/dashboard/gallery",
     "Notas": "System Check y seguimiento operativo."
   },
-  {
-    "Categoria": "Herramientas",
-    "Icono": "🏢",
-    "Nombre": "WOE",
-    "URL": "https://play.google.com/store/apps/details?id=com.alsea.appmanager",
-    "Notas": "Portal central de herramientas."
+ {
+  "Categoria": "Herramientas",
+  "Icono": "🏢",
+  "Nombre": "WOE",
+  "URL": "app://woe",
+  "Package": "com.alsea.appmanager",
+  "PlayStore": "https://play.google.com/store/apps/details?id=com.alsea.appmanager",
+  "Notas": "Portal central de herramientas."
   },
   {
     "Categoria": "Herramientas",
