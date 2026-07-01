@@ -1,9 +1,15 @@
 {
-  "appName": "Distrito GO X",
-  "version": "10.0 Entrega 3",
-  "tagline": "Multiherramienta operativa para Partners: día a día, eventos, seguimiento y herramientas clave.",
+  "appName": "Distrito Go",
+  "version": "10.0 Premium",
+  "tagline": "Multiherramienta Operativa para enfocar el día, anticipar eventos y activar herramientas clave.",
   "org": "Centro Norte",
-  "modoVisual": "favoritos_categorias_dia_a_dia",
-  "cmsFuente": "Distrito_Go_CMS(33).xlsx",
-  "githubReady": true
+  "modoVisual": "centro_operativo_premium",
+  "cmsFuente": "Distrito_Go_CMS(36).xlsx",
+  "githubReady": true,
+  "emergencyContact": {
+    "label": "Contacto DM",
+    "name": "Kike DM",
+    "url": "https://wa.me/message/ENKDSAHYHIGAN1",
+    "photo": "assets/photos/kike-dm.jpeg"
+  }
 }

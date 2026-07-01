@@ -5,336 +5,432 @@
       "Fecha Fin": "2026-07-15",
       "Actividad": "🧹 Limpieza Backs",
       "Contexto / Recordatorio": "Enfoque en limpieza, acomodo Max&Min y Lay Out.",
-      "Imagen": "🧹"
+      "Link": "",
+      "Imagen": "🧹",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-06-26",
       "Fecha Fin": "2026-07-11",
       "Actividad": "🏆 Barista Champion Regional",
       "Contexto / Recordatorio": "¡Apoyemos a Hugo! ¡Mucho éxito!",
-      "Imagen": "🏆"
+      "Link": "",
+      "Imagen": "🏆",
+      "ImagenPath": "assets/photos/hugo-barista-champion.jpeg"
     },
     {
       "Fecha Inicio": "2026-06-29",
       "Fecha Fin": "2026-07-02",
       "Actividad": "Pagos Especiales 1 Qna_Julio",
-      "Contexto / Recordatorio": "Envio Pagos 2 de Julio antes de 10:00 am \nhttps://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
-      "Imagen": "📅"
+      "Contexto / Recordatorio": "Envio Pagos 2 de Julio antes de 10:00 am",
+      "Link": "https://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-06-30",
       "Fecha Fin": "2026-07-01",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de junio.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-31",
       "Actividad": "🎓 Recertificación Shift Supervisor",
       "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas aprox.).",
-      "Imagen": "🎓"
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🎓",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-10",
       "Actividad": "💳 Inventario Pin Pad y TPV Q3",
       "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
-      "Imagen": "💳"
+      "Link": "",
+      "Imagen": "💳",
+      "ImagenPath": "assets/photos/pinpad-atb-cambios.png"
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-05",
       "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
-      "Imagen": "🛡"
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-10",
       "Actividad": "💳 Inventario TPV y Pin Pads Q3",
       "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
-      "Imagen": "💳"
+      "Link": "",
+      "Imagen": "💳",
+      "ImagenPath": "assets/photos/pinpad-atb-cambios.png"
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-08-02",
       "Actividad": "CDD_3Q",
       "Contexto / Recordatorio": "cdd_3Q_2026.png",
-      "Imagen": "📖"
+      "Link": "",
+      "Imagen": "📖",
+      "ImagenPath": "assets/photos/cdd_3Q_2026.png"
     },
     {
       "Fecha Inicio": "2026-07-13",
       "Fecha Fin": "2026-07-19",
       "Actividad": "✅ Validación Summer Attensi",
       "Contexto / Recordatorio": "Validación de conocimientos Summer antes del lanzamiento.",
-      "Imagen": "✅"
+      "Link": "",
+      "Imagen": "✅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-13",
       "Fecha Fin": "2026-07-31",
       "Actividad": "👥 Best Talent - Cascada RD y DM",
       "Contexto / Recordatorio": "Sesiones de revisión y proyección de talento.",
-      "Imagen": "👥"
+      "Link": "",
+      "Imagen": "👥",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-15",
       "Fecha Fin": "2026-07-16",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de julio.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "☀️ Campaña Summer 2026",
       "Contexto / Recordatorio": "Inicio de campaña Summer; ejecución de bebidas, food, retail y promociones.",
-      "Imagen": "☀️"
+      "Link": "",
+      "Imagen": "☀️",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🥥 Coconut Ube Platform",
       "Contexto / Recordatorio": "Lanzamiento de Coconut Ube Latte y Frappuccino.",
-      "Imagen": "🥥"
+      "Link": "",
+      "Imagen": "🥥",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "☕ Aerocano",
       "Contexto / Recordatorio": "Nueva plataforma de Espresso aireado.",
-      "Imagen": "☕"
+      "Link": "",
+      "Imagen": "☕",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "💪 Protein Lattes",
       "Contexto / Recordatorio": "Nueva línea de bebidas con proteína.",
-      "Imagen": "💪"
+      "Link": "",
+      "Imagen": "💪",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🥤 Strato Frappuccino",
       "Contexto / Recordatorio": "Nueva plataforma Frappuccino con Cold Foam.",
-      "Imagen": "🥤"
+      "Link": "",
+      "Imagen": "🥤",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🥪 Nueva Focaccia",
       "Contexto / Recordatorio": "Innovación Food. Revisar producción y disponibilidad.",
-      "Imagen": "🥪"
+      "Link": "",
+      "Imagen": "🥪",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🍩 Dona Ube",
       "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-      "Imagen": "🍩"
+      "Link": "",
+      "Imagen": "🍩",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🦄 Cake Pop Unicorn",
       "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-      "Imagen": "🦄"
+      "Link": "",
+      "Imagen": "🦄",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🍰 Cheesecake Brulée de Limón",
       "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-      "Imagen": "🍰"
+      "Link": "",
+      "Imagen": "🍰",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🥭 Mango Enchilado",
       "Contexto / Recordatorio": "Innovación Retail Attach para incrementar ticket.",
-      "Imagen": "🥭"
+      "Link": "",
+      "Imagen": "🥭",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🧀 Snack Box",
       "Contexto / Recordatorio": "Nueva opción Retail Lobby.",
-      "Imagen": "🧀"
+      "Link": "",
+      "Imagen": "🧀",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
       "Actividad": "🌍 Kati Kati Blend",
       "Contexto / Recordatorio": "Café de temporada para Retail y Coffee Experience.",
-      "Imagen": "🌍"
+      "Link": "",
+      "Imagen": "🌍",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-16",
       "Actividad": "⭐ Starbucks Rewards Summer",
       "Contexto / Recordatorio": "Promociones diferenciadas por día en Starbucks Rewards.",
-      "Imagen": "⭐"
+      "Link": "",
+      "Imagen": "⭐",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-28",
       "Fecha Fin": "2026-07-28",
       "Actividad": "📚 Mujeres que Inspiran - Club de Lectura",
       "Contexto / Recordatorio": "Sesión de desarrollo y reflexión.",
-      "Imagen": "📚"
+      "Link": "",
+      "Imagen": "📚",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-01",
       "Fecha Fin": "2026-08-05",
       "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
-      "Imagen": "🛡"
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-02",
       "Fecha Fin": "2026-08-03",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de julio.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-03",
       "Fecha Fin": "2026-08-31",
       "Actividad": "🌟 Best Talent - Cascada DM - SM",
       "Contexto / Recordatorio": "Inicio de calibraciones y desarrollo DM-SM.",
-      "Imagen": "🌟"
+      "Link": "",
+      "Imagen": "🌟",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-03",
       "Fecha Fin": "2026-08-09",
       "Actividad": "⬆️ Upsize sin costo adicional",
       "Contexto / Recordatorio": "Promoción para impulsar ADTs.",
-      "Imagen": "⬆️"
+      "Link": "",
+      "Imagen": "⬆️",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-13",
       "Fecha Fin": "2026-08-13",
       "Actividad": "🎥 Coffee Webinar",
       "Contexto / Recordatorio": "Sesión virtual para Coffee Masters.",
-      "Imagen": "🎥"
+      "Link": "",
+      "Imagen": "🎥",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-16",
       "Fecha Fin": "2026-08-17",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de agosto.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-17",
       "Fecha Fin": "2026-08-23",
       "Actividad": "☕ Seminario de Café",
       "Contexto / Recordatorio": "Ejecución del Seminario para Coffee Masters.",
-      "Imagen": "☕"
+      "Link": "",
+      "Imagen": "☕",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-25",
       "Fecha Fin": "2026-08-25",
       "Actividad": "🚀 Mujeres que Inspiran - Abriendo Camino",
       "Contexto / Recordatorio": "Sesión de capacitación formal.",
-      "Imagen": "🚀"
+      "Link": "",
+      "Imagen": "🚀",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-08-31",
       "Fecha Fin": "2026-09-01",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de agosto.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-09-01",
       "Fecha Fin": "2026-09-05",
       "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
-      "Imagen": "🛡"
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-09-16",
       "Fecha Fin": "2026-09-17",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de septiembre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-09-29",
       "Fecha Fin": "2026-09-29",
       "Actividad": "🎤 Mujeres que Inspiran - Voces que Inspiran",
       "Contexto / Recordatorio": "Conversaciones con líderes y desarrollo profesional.",
-      "Imagen": "🎤"
+      "Link": "",
+      "Imagen": "🎤",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-09-30",
       "Fecha Fin": "2026-10-01",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de septiembre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-10-01",
       "Fecha Fin": "2026-10-05",
       "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
-      "Imagen": "🛡"
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-10-15",
       "Fecha Fin": "2026-10-16",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de octubre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-10-27",
       "Fecha Fin": "2026-10-27",
       "Actividad": "📖 Mujeres que Inspiran - Entre Páginas",
       "Contexto / Recordatorio": "Club de lectura y aprendizaje compartido.",
-      "Imagen": "📖"
+      "Link": "",
+      "Imagen": "📖",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-11-01",
       "Fecha Fin": "2026-11-05",
       "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
-      "Imagen": "🛡"
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-11-02",
       "Fecha Fin": "2026-11-03",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de octubre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-11-16",
       "Fecha Fin": "2026-11-17",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de noviembre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-11-30",
       "Fecha Fin": "2026-12-01",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de noviembre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-12-01",
       "Fecha Fin": "2026-12-05",
       "Actividad": "🛡 AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.\nhttps://ica-stage.bw-globalsolutions.com/Login.php",
-      "Imagen": "🛡"
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Imagen": "🛡",
+      "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-12-15",
       "Fecha Fin": "2026-12-16",
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de diciembre.",
-      "Imagen": "📅"
+      "Link": "",
+      "Imagen": "📅",
+      "ImagenPath": ""
     }
   ],
   "actividadesDiarias": [
@@ -342,73 +438,85 @@
       "ID": 1,
       "Actividad": "Verificación Espresso y Calidad del Café",
       "Descripción": "Valida ambas verificaciones, registra resultados y comparte comentarios en cada turno.",
-      "Link /Imagen": "espresso.png",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Calidad",
       "Icono": "☕",
       "Color": "Marrón",
-      "Visible": true
+      "Visible": true,
+      "Recurso": "assets/photos/verificacion-cafe-espresso.png",
+      "TipoRecurso": "imagen",
+      "DescripcionBreve": "Valida ambas verificaciones, registra resultados y comparte comentarios en cada turno."
     },
     {
       "ID": 2,
       "Actividad": "RSA Checklist",
       "Descripción": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas.",
-      "Link /Imagen": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Seguridad Alimentaria",
       "Icono": "🛡️",
       "Color": "Rojo",
-      "Visible": true
+      "Visible": true,
+      "Recurso": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
+      "TipoRecurso": "link",
+      "DescripcionBreve": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas."
     },
     {
       "ID": 3,
       "Actividad": "Store Walk",
       "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
-      "Link /Imagen": "storewalk.png",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Experiencia",
       "Icono": "🚶",
       "Color": "Verde",
-      "Visible": true
+      "Visible": true,
+      "Recurso": "assets/photos/store-walk.png",
+      "TipoRecurso": "imagen",
+      "DescripcionBreve": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta accione…"
     },
     {
       "ID": 4,
       "Actividad": "Protocolo de Apertura",
       "Descripción": "Todos los dias antes de 09:00 am envia Reporte al equipo de Excelencia\nSOLO NOTIFICA INCIDENTES\n> Cobertura de Partner \n> Disponibilidad de Producto\n> Estatus Operativo (Funcionamiento equipos)\n> Riesgo para Venta",
-      "Link /Imagen": "Rutina_apertura.jpeg",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
       "Icono": "🌅",
       "Color": "Azul",
-      "Visible": true
+      "Visible": true,
+      "Recurso": "assets/photos/Rutina_apertura.jpeg",
+      "TipoRecurso": "imagen",
+      "DescripcionBreve": "Todos los dias antes de 09:00 am envia Reporte al equipo de Excelencia SOLO NOTIFICA INCIDENTES > Cobe…"
     },
     {
       "ID": 5,
       "Actividad": "10 Pasos para un Turno Exitoso",
       "Descripción": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación.",
-      "Link /Imagen": "10-pasos-turno.png",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Liderazgo",
       "Icono": "🔟",
       "Color": "Naranja",
-      "Visible": true
+      "Visible": true,
+      "Recurso": "assets/photos/10-pasos-turno.png",
+      "TipoRecurso": "imagen",
+      "DescripcionBreve": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación."
     },
     {
       "ID": 6,
       "Actividad": "Menu Core",
       "Descripción": "Revisa disponibilidad de productos, horarios y estatus operativo antes del inicio del turno.",
-      "Link /Imagen": "http://consulta.delivery.alsea.net/",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Operación",
       "Icono": "📋",
       "Color": "Morado",
-      "Visible": true
+      "Visible": true,
+      "Recurso": "http://consulta.delivery.alsea.net/",
+      "TipoRecurso": "link",
+      "DescripcionBreve": "Revisa disponibilidad de productos, horarios y estatus operativo antes del inicio del turno."
     }
   ],
   "actividadesSemanales": [
@@ -417,10 +525,10 @@
       "Actividad": "WFM - Pronóstico",
       "Descripción": "Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.",
       "Día": "Lunes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "📈",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 2,
@@ -447,7 +555,7 @@
       "Actividad": "Gastos Oracle",
       "Descripción": "Registra y valida gastos pendientes.",
       "Día": "Lunes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "💳",
       "Color": "Azul",
       "Link": "https://enev.login.us2.oraclecloud.com/"
@@ -457,7 +565,7 @@
       "Actividad": "Pago Gastos",
       "Descripción": "Da seguimiento al pago de gastos.",
       "Día": "Lunes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "💰",
       "Color": "Azul",
       "Link": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal"
@@ -467,7 +575,7 @@
       "Actividad": "Workvivo",
       "Descripción": "Realiza la publicación semanal en Workvivo.",
       "Día": "Lunes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "📱",
       "Color": "Azul",
       "Link": "https://alsea.workvivo.us/login"
@@ -477,7 +585,7 @@
       "Actividad": "Starbucks College",
       "Descripción": "Valida el avance de cursos en Ubits.",
       "Día": "Martes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "🎓",
       "Color": "Morado",
       "Link": "https://login.ubitslearning.com/login"
@@ -487,47 +595,47 @@
       "Actividad": "Coffee Tuesday",
       "Descripción": "Participa con los clientes en degustaciones y genera una experiencia memorable.",
       "Día": "Martes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "☕",
       "Color": "Verde",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 9,
       "Actividad": "WFM - Carga Inicial",
       "Descripción": "Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.",
       "Día": "Martes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "📅",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 10,
       "Actividad": "WFM - Disponibilidades",
       "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners.",
       "Día": "Miércoles",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "👥",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 11,
       "Actividad": "WFM - Ajustes",
       "Descripción": "Revisa los horarios generados por Kronos, realiza ajustes operativos y agrega actividades Non-Coverage.",
       "Día": "Jueves",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "⚙️",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 12,
       "Actividad": "Comunicado Semanal",
       "Descripción": "Revisa el comunicado semanal y comparte los puntos relevantes con el equipo.",
       "Día": "Viernes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "📢",
       "Color": "Naranja",
       "Link": "https://capacitacion.alsea.net/course/view.php?id=29227"
@@ -537,30 +645,30 @@
       "Actividad": "WFM - Revisión DM",
       "Descripción": "El DM revisa los horarios y comunica observaciones o ajustes requeridos.",
       "Día": "Viernes",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "✅",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 14,
       "Actividad": "WFM - Publicación",
       "Descripción": "Realiza las correcciones finales y publica los horarios en Humanet antes del domingo.",
       "Día": "Sábado",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "🚀",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     },
     {
       "ID": 15,
       "Actividad": "WFM - Validación Final",
       "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
       "Día": "Domingo",
-      "Hora / Corte": null,
+      "Hora / Corte": "",
       "Icono": "📤",
       "Color": "Azul",
-      "Link": null
+      "Link": ""
     }
   ],
   "dutyRoster": [
@@ -570,7 +678,11 @@
       "Estaciones": "Food, Show Case",
       "Imágenes": "lunes_food.png",
       "Color": "Naranja",
-      "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
+      "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos.",
+      "ImagenesPath": [
+        "assets/duty/lunes_food.png",
+        "assets/duty/lunes_showcase.png"
+      ]
     },
     {
       "Orden": 2,
@@ -578,7 +690,11 @@
       "Estaciones": "PIC, Lobby",
       "Imágenes": "martes_pic.png, martes_lobby.png",
       "Color": "Rojo / Verde",
-      "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente."
+      "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente.",
+      "ImagenesPath": [
+        "assets/duty/martes_pic.png",
+        "assets/duty/martes_lobby.png"
+      ]
     },
     {
       "Orden": 3,
@@ -586,7 +702,10 @@
       "Estaciones": "BOH",
       "Imágenes": "miercoles_boh.png",
       "Color": "Azul",
-      "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH."
+      "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH.",
+      "ImagenesPath": [
+        "assets/duty/miercoles_boh.png"
+      ]
     },
     {
       "Orden": 4,
@@ -594,7 +713,11 @@
       "Estaciones": "Espresso, Lobby",
       "Imágenes": "jueves_espresso.png, jueves_lobby.png",
       "Color": "Café / Verde",
-      "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente."
+      "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente.",
+      "ImagenesPath": [
+        "assets/duty/jueves_espresso.png",
+        "assets/duty/jueves_lobby.png"
+      ]
     },
     {
       "Orden": 5,
@@ -602,7 +725,10 @@
       "Estaciones": "Café Filtrado",
       "Imágenes": "viernes_cafe_filtrado.png",
       "Color": "Naranja",
-      "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food."
+      "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food.",
+      "ImagenesPath": [
+        "assets/duty/viernes_cafe_filtrado.png"
+      ]
     },
     {
       "Orden": 6,
@@ -610,7 +736,10 @@
       "Estaciones": "CBS",
       "Imágenes": "sabado_cbs.png",
       "Color": "Azul",
-      "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa."
+      "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa.",
+      "ImagenesPath": [
+        "assets/duty/sabado_cbs.png"
+      ]
     },
     {
       "Orden": 7,
@@ -618,7 +747,11 @@
       "Estaciones": "Lobby, Drive Thru",
       "Imágenes": "domingo_lobby.png, domingo_drive_thru.png",
       "Color": "Verde",
-      "Enfoque": "Experiencia del cliente y apariencia general de la tienda."
+      "Enfoque": "Experiencia del cliente y apariencia general de la tienda.",
+      "ImagenesPath": [
+        "assets/duty/domingo_lobby.png",
+        "assets/duty/domingo_drive_thru.png"
+      ]
     }
   ],
   "dutyDetail": [
@@ -1205,7 +1338,7 @@
         "SBX": "SBX106807",
         "NO. EMPLEADO": "106807",
         "NOMBRE COMPLETO": "ALONDRA ABIGAIL HERNANDEZ GARCIA",
-        "CECO": "2005-06-12",
+        "CECO": 38515,
         "TIENDA": "PATIO ECATEPEC",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1214,14 +1347,17 @@
         "GB180": "Completo",
         "ANTIGÜEDAD": 7.133333333333334,
         "JORNADA": "32R",
-        "ESTATUS ALTA": "Alta julio"
+        "ESTATUS ALTA": "Alta julio",
+        "Partner": "ALONDRA ABIGAIL HERNANDEZ GARCIA",
+        "Tienda": "PATIO ECATEPEC",
+        "Estatus": "Alta julio"
       },
       {
         "Mes": "Julio",
         "SBX": "SBX095810",
         "NO. EMPLEADO": "095810",
         "NOMBRE COMPLETO": "SEBASTIAN  SOTO ZUÑIGA",
-        "CECO": "2006-05-25",
+        "CECO": 38862,
         "TIENDA": "SAN MIGUEL IZCALLI",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1230,14 +1366,17 @@
         "GB180": "Completo",
         "ANTIGÜEDAD": 28.166666666666668,
         "JORNADA": "32R",
-        "ESTATUS ALTA": "Alta julio"
+        "ESTATUS ALTA": "Alta julio",
+        "Partner": "SEBASTIAN  SOTO ZUÑIGA",
+        "Tienda": "SAN MIGUEL IZCALLI",
+        "Estatus": "Alta julio"
       },
       {
         "Mes": "Julio",
         "SBX": "SBX102053",
         "NO. EMPLEADO": "102053",
         "NOMBRE COMPLETO": "MELANYE ARELY SALAS MONCADA",
-        "CECO": "2004-12-12",
+        "CECO": 38333,
         "TIENDA": "IZCALLI MEGA",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1246,14 +1385,17 @@
         "GB180": "Completo",
         "ANTIGÜEDAD": 16.733333333333334,
         "JORNADA": "32R",
-        "ESTATUS ALTA": "Alta julio"
+        "ESTATUS ALTA": "Alta julio",
+        "Partner": "MELANYE ARELY SALAS MONCADA",
+        "Tienda": "IZCALLI MEGA",
+        "Estatus": "Alta julio"
       },
       {
         "Mes": "Julio",
         "SBX": "SBX106137",
         "NO. EMPLEADO": "106137",
         "NOMBRE COMPLETO": "ANGEL SAID MONTESINOS GARCIA",
-        "CECO": "2005-09-09",
+        "CECO": 38604,
         "TIENDA": "COSMOPOL",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1262,14 +1404,17 @@
         "GB180": "Completo",
         "ANTIGÜEDAD": 8.166666666666666,
         "JORNADA": "40R",
-        "ESTATUS ALTA": "Alta julio"
+        "ESTATUS ALTA": "Alta julio",
+        "Partner": "ANGEL SAID MONTESINOS GARCIA",
+        "Tienda": "COSMOPOL",
+        "Estatus": "Alta julio"
       },
       {
         "Mes": "Julio",
         "SBX": "SBX100034",
         "NO. EMPLEADO": "100034",
         "NOMBRE COMPLETO": "RAYMUNDO ALEJANDRO ROJAS GRANIEL",
-        "CECO": "2004-12-12",
+        "CECO": 38333,
         "TIENDA": "IZCALLI MEGA",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1278,14 +1423,17 @@
         "GB180": "Completo",
         "ANTIGÜEDAD": 20.466666666666665,
         "JORNADA": "32R",
-        "ESTATUS ALTA": "Alta julio"
+        "ESTATUS ALTA": "Alta julio",
+        "Partner": "RAYMUNDO ALEJANDRO ROJAS GRANIEL",
+        "Tienda": "IZCALLI MEGA",
+        "Estatus": "Alta julio"
       },
       {
         "Mes": "Julio",
         "SBX": "SBX096221",
         "NO. EMPLEADO": "096221",
         "NOMBRE COMPLETO": "MARIANA  PEREZ RAMIREZ",
-        "CECO": "2004-12-12",
+        "CECO": 38333,
         "TIENDA": "IZCALLI MEGA",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1294,7 +1442,10 @@
         "GB180": "Completo",
         "ANTIGÜEDAD": 27.066666666666666,
         "JORNADA": "40R",
-        "ESTATUS ALTA": "Alta julio"
+        "ESTATUS ALTA": "Alta julio",
+        "Partner": "MARIANA  PEREZ RAMIREZ",
+        "Tienda": "IZCALLI MEGA",
+        "Estatus": "Alta julio"
       }
     ],
     "ss": [
@@ -1303,7 +1454,7 @@
         "SBX": "SBX099728",
         "NO. EMPLEADO": "099728",
         "NOMBRE COMPLETO": "ANDREA MICHELLE COLIN ROLON",
-        "CECO": "2004-12-12",
+        "CECO": 38333,
         "TIENDA": "IZCALLI MEGA",
         "REGION": "Centro Norte",
         "DM": "Enrique Cesar Flores",
@@ -1311,7 +1462,10 @@
         "RD": "Jorge Antonio Alcantar Aguiar",
         "mes de solicitud": "Julio",
         "BT": "Completo",
-        "ESTATUS ALTA": "Alta Julio"
+        "ESTATUS ALTA": "Alta Julio",
+        "Partner": "ANDREA MICHELLE COLIN ROLON",
+        "Tienda": "IZCALLI MEGA",
+        "Estatus": "Alta Julio"
       }
     ],
     "tbw": [
@@ -1319,7 +1473,7 @@
         "Corte": "2026-06-15",
         "SBX": "SBX107402",
         "NOMBRE": "PAULINA  ZANATTA CASTRO",
-        "CeCo": "2006-05-25",
+        "CeCo": 38862,
         "TIENDA": "SAN MIGUEL IZCALLI",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1332,13 +1486,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Completo",
         "To be Welcoming Género\nDía 60 al 90": "Completo",
         "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-        "Avance": 0.8
+        "Avance": 0.8,
+        "Partner": "PAULINA  ZANATTA CASTRO",
+        "Tienda": "SAN MIGUEL IZCALLI",
+        "AvanceResumen": "80%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108026",
         "NOMBRE": "STEPHANY  REYES MOLINA",
-        "CeCo": "2005-04-14",
+        "CeCo": 38456,
         "TIENDA": "PLAZA LAS FLORES",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1351,13 +1508,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Completo",
         "To be Welcoming Género\nDía 60 al 90": "Completo",
         "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-        "Avance": 0.8
+        "Avance": 0.8,
+        "Partner": "STEPHANY  REYES MOLINA",
+        "Tienda": "PLAZA LAS FLORES",
+        "AvanceResumen": "80%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108169",
         "NOMBRE": "ABRAHAM EFREN MIRANDA BALLESTEROS",
-        "CeCo": "2004-12-18",
+        "CeCo": 38339,
         "TIENDA": "SAN MARCOS",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1370,13 +1530,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Incompleto",
         "To be Welcoming Género\nDía 60 al 90": "Incompleto",
         "To be Welcoming Sexualidad\ndía 90- 120": "Completo",
-        "Avance": 0.2
+        "Avance": 0.2,
+        "Partner": "ABRAHAM EFREN MIRANDA BALLESTEROS",
+        "Tienda": "SAN MARCOS",
+        "AvanceResumen": "20%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108276",
         "NOMBRE": "MARIA FERNANDA ESTEVEZ QUINTANAR",
-        "CeCo": "2005-09-09",
+        "CeCo": 38604,
         "TIENDA": "COSMOPOL",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1389,13 +1552,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Incompleto",
         "To be Welcoming Género\nDía 60 al 90": "Incompleto",
         "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "MARIA FERNANDA ESTEVEZ QUINTANAR",
+        "Tienda": "COSMOPOL",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108416",
         "NOMBRE": "GERARDO GUILLERMO VEGA LOPEZ",
-        "CeCo": "2004-12-18",
+        "CeCo": 38339,
         "TIENDA": "SAN MARCOS",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1408,13 +1574,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Incompleto",
         "To be Welcoming Género\nDía 60 al 90": "Incompleto",
         "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "GERARDO GUILLERMO VEGA LOPEZ",
+        "Tienda": "SAN MARCOS",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108476",
         "NOMBRE": "ROBERTO ANTONIO AMADOR RUIZ",
-        "CeCo": "2004-12-12",
+        "CeCo": 38333,
         "TIENDA": "IZCALLI MEGA",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1427,13 +1596,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
         "To be Welcoming Género\nDía 60 al 90": "En curso",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "ROBERTO ANTONIO AMADOR RUIZ",
+        "Tienda": "IZCALLI MEGA",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108511",
         "NOMBRE": "FERNANDO JULIAN FLORES REYES",
-        "CeCo": "2005-01-16",
+        "CeCo": 38368,
         "TIENDA": "LUNA PARK",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1446,13 +1618,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
         "To be Welcoming Género\nDía 60 al 90": "En curso",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "FERNANDO JULIAN FLORES REYES",
+        "Tienda": "LUNA PARK",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108726",
         "NOMBRE": "ANGEL ZAHAMI PEREZ VALDEZ",
-        "CeCo": "2004-12-12",
+        "CeCo": 38333,
         "TIENDA": "IZCALLI MEGA",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1465,13 +1640,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
         "To be Welcoming Género\nDía 60 al 90": "En curso",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "ANGEL ZAHAMI PEREZ VALDEZ",
+        "Tienda": "IZCALLI MEGA",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX108967",
         "NOMBRE": "LUIS PAULO ROJAS SOLIS",
-        "CeCo": "2004-12-12",
+        "CeCo": 38333,
         "TIENDA": "IZCALLI MEGA",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1484,13 +1662,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
         "To be Welcoming Género\nDía 60 al 90": "En curso",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "LUIS PAULO ROJAS SOLIS",
+        "Tienda": "IZCALLI MEGA",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX109197",
         "NOMBRE": "ANGELA LILIAN VARGAS ESCOTO",
-        "CeCo": "2004-12-18",
+        "CeCo": 38339,
         "TIENDA": "SAN MARCOS",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1503,13 +1684,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "ANGELA LILIAN VARGAS ESCOTO",
+        "Tienda": "SAN MARCOS",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX109309",
         "NOMBRE": "JOSE  QUEZADA HUITRON",
-        "CeCo": "2005-01-16",
+        "CeCo": 38368,
         "TIENDA": "LUNA PARK",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1522,13 +1706,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "JOSE  QUEZADA HUITRON",
+        "Tienda": "LUNA PARK",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX109619",
         "NOMBRE": "ANA LUISA RAMIREZ DIAZ",
-        "CeCo": "2004-12-12",
+        "CeCo": 38333,
         "TIENDA": "IZCALLI MEGA",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1541,13 +1728,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "ANA LUISA RAMIREZ DIAZ",
+        "Tienda": "IZCALLI MEGA",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX109725",
         "NOMBRE": "LUZ MARIANA CHAVEZ CORONA",
-        "CeCo": "2005-02-18",
+        "CeCo": 38401,
         "TIENDA": "CC COACALCO",
         "PUESTO": "Supervisor",
         "Región": "Centro Norte",
@@ -1560,13 +1750,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "LUZ MARIANA CHAVEZ CORONA",
+        "Tienda": "CC COACALCO",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX109957",
         "NOMBRE": "JONATHAN URIEL GONZALEZ SALAZAR",
-        "CeCo": "2005-01-16",
+        "CeCo": 38368,
         "TIENDA": "LUNA PARK",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1579,13 +1772,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "JONATHAN URIEL GONZALEZ SALAZAR",
+        "Tienda": "LUNA PARK",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX109960",
         "NOMBRE": "DANIELA  SERRANO URIBE",
-        "CeCo": "2005-01-16",
+        "CeCo": 38368,
         "TIENDA": "LUNA PARK",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1598,13 +1794,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "DANIELA  SERRANO URIBE",
+        "Tienda": "LUNA PARK",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX110138",
         "NOMBRE": "SAMANTA  GARCIA HERNANDEZ",
-        "CeCo": "2018-04-03",
+        "CeCo": 43193,
         "TIENDA": "COSMOPOL N1",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1617,13 +1816,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "SAMANTA  GARCIA HERNANDEZ",
+        "Tienda": "COSMOPOL N1",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX110145",
         "NOMBRE": "MARCELA PATRICIA GALICIA MORALES",
-        "CeCo": "2004-12-18",
+        "CeCo": 38339,
         "TIENDA": "SAN MARCOS",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1636,13 +1838,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "MARCELA PATRICIA GALICIA MORALES",
+        "Tienda": "SAN MARCOS",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX110146",
         "NOMBRE": "YAEL  ALVA BUSTAMANTE",
-        "CeCo": "2004-12-18",
+        "CeCo": 38339,
         "TIENDA": "SAN MARCOS",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1655,13 +1860,16 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "YAEL  ALVA BUSTAMANTE",
+        "Tienda": "SAN MARCOS",
+        "AvanceResumen": "0%"
       },
       {
         "Corte": "2026-06-15",
         "SBX": "SBX110164",
         "NOMBRE": "CHRISTOPHER OMAR SAENZ RIVAS",
-        "CeCo": "2005-09-09",
+        "CeCo": 38604,
         "TIENDA": "COSMOPOL",
         "PUESTO": "Barista",
         "Región": "Centro Norte",
@@ -1674,15 +1882,15 @@
         "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
         "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-        "Avance": 0
+        "Avance": 0,
+        "Partner": "CHRISTOPHER OMAR SAENZ RIVAS",
+        "Tienda": "COSMOPOL",
+        "AvanceResumen": "0%"
       }
     ]
   },
-  "wfm": [
-    {
-      "Regla WFM": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
-    }
-  ],
-  "fuente": "Distrito_Go_CMS(33).xlsx",
-  "actualizado": "2026-07-01"
+  "wfm": {
+    "regla": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
+  },
+  "cmsFuente": "Distrito_Go_CMS(36).xlsx"
 }

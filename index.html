@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#006241" />
-  <meta name="description" content="Distrito GO X 10.0 Entrega 3 - multiherramienta operativa con CMS, eventos, día a día y PWA optimizada." />
-  <title>Distrito GO X 10.0 | Entrega 3</title>
+  <meta name="description" content="Distrito Go 10.0 Entrega 4 - Centro Operativo Distrito Kike." />
+  <title>Distrito Go | Multiherramienta Operativa</title>
   <link rel="manifest" href="./manifest.json" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
   <link rel="stylesheet" href="./styles/variables.css" />
@@ -19,8 +19,8 @@
     <div class="brand-lockup">
       <div class="brand-mark" aria-hidden="true">DG</div>
       <div>
-        <p class="eyebrow">Centro operativo</p>
-        <h1 id="app-title">Distrito GO</h1>
+        <p class="eyebrow">Multiherramienta Operativa</p>
+        <h1 id="app-title">Distrito Go</h1>
       </div>
     </div>
     <div class="header-actions">
@@ -30,122 +30,115 @@
   </header>
 
   <main id="main" class="app-shell" tabindex="-1">
-    <section class="hero-card" aria-labelledby="hero-title">
-      <div>
-        <p id="hero-greeting" class="eyebrow">Hola 👋</p>
-        <h2 id="hero-title">¿Qué deseas hacer hoy?</h2>
-        <p id="hero-subtitle" class="hero-subtitle">Prioriza, ejecuta y mejora cada día.</p>
+    <section class="hero-card hero-partner" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p id="hero-greeting" class="eyebrow">Hola Partner 👋</p>
+        <h2 id="hero-title">Distrito Go</h2>
+        <p id="hero-subtitle" class="hero-subtitle">Multiherramienta Operativa para enfocar el día, eventos, desarrollo Partner y herramientas clave.</p>
+        <p id="hero-date" class="hero-date">Cargando fecha...</p>
+        <div class="hero-actions">
+          <button id="start-day" class="primary-action" type="button">Ver mi día operativo</button>
+          <button id="open-tools-panel" class="secondary-action" type="button">Explorar herramientas</button>
+        </div>
       </div>
-      <button id="install-btn" class="install-button hidden" type="button">Instalar App</button>
+      <aside class="dm-card" aria-label="Contacto directo DM">
+        <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Gerente de Distrito" loading="lazy" />
+        <div>
+          <strong>Soporte directo</strong>
+          <span>Emergencias, riesgos y evidencias</span>
+          <a id="dm-contact" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener">Contactar DM</a>
+        </div>
+      </aside>
     </section>
 
-    <section class="dashboard-grid" id="dashboard-grid" aria-label="Dashboard ejecutivo">
-      <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+    <section id="command-center" class="command-center" aria-labelledby="command-title">
+      <div class="section-title compact-title"><div><h3 id="command-title">Centro operativo de hoy</h3><p class="section-subtitle">Revisa alertas, eventos y rutinas sin saturar la vista.</p></div></div>
+      <div id="command-grid" class="command-grid skeleton-grid"></div>
     </section>
 
-    <section class="search-panel" aria-label="Buscador Spotlight">
-      <label class="search-box">
-        <span aria-hidden="true">🔎</span>
-        <input id="spotlight-input" type="search" placeholder="Buscar herramienta, KPI, campaña, soporte..." autocomplete="off" />
-        <kbd>/</kbd>
-      </label>
-      <div id="active-chips" class="chip-row" aria-label="Filtros activos"></div>
-    </section>
-
-
-    <section id="dia-a-dia" class="ops-section" aria-labelledby="today-title">
+    <section id="dia-a-dia" class="ops-section priority-section" aria-labelledby="today-title">
       <div class="section-title">
-        <div><h3 id="today-title">✅ Día a día operativo</h3><p id="today-date" class="section-subtitle">Cargando fecha...</p></div>
-        <span>CMS</span>
+        <div><h3 id="today-title">✅ Mi día operativo</h3><p id="today-date" class="section-subtitle">Cargando fecha...</p></div>
+        <span id="today-status">Hoy</span>
       </div>
+      <div id="wfm-card" class="wfm-card"></div>
       <div class="ops-split">
         <div><h4>Rutina diaria</h4><div id="daily-grid" class="ops-grid skeleton-grid"></div></div>
-        <div><h4>Foco semanal de hoy</h4><div id="weekly-grid" class="ops-grid skeleton-grid"></div></div>
+        <div><h4>Actividad semanal de hoy</h4><div id="weekly-grid" class="ops-grid skeleton-grid"></div></div>
       </div>
     </section>
 
     <section id="eventos-cms" class="ops-section" aria-labelledby="events-title">
       <div class="section-title">
-        <div><h3 id="events-title">📅 Eventos y campañas</h3><p class="section-subtitle">No perder el origen: recordatorios y campañas desde CMS.</p></div>
-        <span id="events-count">0 activos</span>
+        <div><h3 id="events-title">📅 Eventos y campañas</h3><p class="section-subtitle">Filtro por semana o mes para ver solo lo relevante.</p></div>
+        <span id="events-count">0 eventos</span>
       </div>
-      <div id="events-grid" class="ops-grid skeleton-grid"></div>
+      <div class="segmented-control" role="tablist" aria-label="Filtro de eventos">
+        <button class="segment is-active" type="button" data-events-filter="week">Semana</button>
+        <button class="segment" type="button" data-events-filter="month">Mes</button>
+        <button class="segment" type="button" data-events-filter="all">Todos</button>
+      </div>
+      <div id="events-grid" class="ops-grid events-grid skeleton-grid"></div>
     </section>
 
     <section id="altas-curso" class="ops-section" aria-labelledby="altas-title">
       <div class="section-title">
-        <div><h3 id="altas-title">🌱 Altas_Curso y TBW</h3><p class="section-subtitle">BT, SS y seguimiento de To Be Welcoming desde CMS.</p></div>
+        <div><h3 id="altas-title">🌱 Desarrollo Partner</h3><p class="section-subtitle">BT y SS juntos; TBW separado para no mezclar focos.</p></div>
         <span id="altas-count">0</span>
       </div>
-      <div id="altas-grid" class="people-grid skeleton-grid"></div>
+      <div class="people-split">
+        <article class="people-panel"><div class="panel-head"><strong>BT / SS</strong><span id="btss-count">0</span></div><div id="btss-grid" class="people-list"></div></article>
+        <article class="people-panel"><div class="panel-head"><strong>TBW</strong><span id="tbw-count">0</span></div><div id="tbw-grid" class="people-list tbw-list"></div></article>
+      </div>
     </section>
 
     <section id="duty-roster" class="ops-section" aria-labelledby="duty-title">
-      <div class="section-title"><div><h3 id="duty-title">🧭 Duty Roster</h3><p class="section-subtitle">Enfoque del día y actividades por estación.</p></div></div>
-      <div class="duty-card"><div id="duty-focus"></div><ul id="duty-detail"></ul></div>
+      <div class="section-title"><div><h3 id="duty-title">🧭 Duty Roster</h3><p class="section-subtitle">Imagen premium del día, estaciones y detalle crítico.</p></div></div>
+      <div class="duty-card"><div id="duty-focus"></div><div id="duty-gallery" class="duty-gallery"></div><ul id="duty-detail"></ul></div>
     </section>
 
-    <section id="checklist-apertura" class="ops-section" aria-labelledby="checklist-title">
-      <div class="section-title"><div><h3 id="checklist-title">☀️ Apertura</h3><p class="section-subtitle">10 puntos clave para iniciar el día con control.</p></div></div>
-      <div id="checklist-grid" class="check-grid"></div>
-    </section>
-
-    <section class="quick-actions" aria-labelledby="quick-title">
+    <section id="tool-workspace" class="workspace-section is-collapsed" aria-labelledby="workspace-title">
       <div class="section-title">
-        <h3 id="quick-title">Accesos rápidos</h3>
-        <span id="last-update">V10.0</span>
+        <div><h3 id="workspace-title">🧰 Herramientas</h3><p class="section-subtitle">Ocultas por limpieza visual. Ábrelas cuando necesites buscar, filtrar o ejecutar.</p></div>
+        <button id="toggle-tools" class="text-button" type="button">Mostrar herramientas</button>
       </div>
-      <div id="quick-actions" class="quick-grid skeleton-grid"></div>
-    </section>
-
-    <section class="favorites-section" aria-labelledby="favorites-title">
-      <div class="section-title">
-        <h3 id="favorites-title">⭐ Favoritos inteligentes</h3>
-        <button id="reset-favorites" class="text-button" type="button">Restaurar</button>
+      <div id="workspace-body" class="workspace-body" hidden>
+        <section class="search-panel" aria-label="Buscador Spotlight">
+          <label class="search-box">
+            <span aria-hidden="true">🔎</span>
+            <input id="spotlight-input" type="search" placeholder="Buscar app, reporte, actividad o herramienta..." autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <div id="active-chips" class="chip-row" aria-label="Filtros activos"></div>
+        </section>
+        <section class="favorites-section" aria-labelledby="favorites-title">
+          <div class="section-title"><h3 id="favorites-title">⭐ Favoritos inteligentes</h3><button id="reset-favorites" class="text-button" type="button">Restaurar</button></div>
+          <div id="favorites-grid" class="tools-grid skeleton-grid"></div>
+        </section>
+        <section class="recent-section" aria-labelledby="recent-title">
+          <div class="section-title"><h3 id="recent-title">🕘 Recientes</h3><button id="clear-recents" class="text-button" type="button">Limpiar</button></div>
+          <div id="recent-grid" class="tools-grid compact-grid"></div>
+        </section>
+        <section class="categories-section" aria-labelledby="categories-title">
+          <div class="section-title"><h3 id="categories-title">Categorías</h3><button id="show-all" class="text-button" type="button">Ver todo</button></div>
+          <div id="category-hubs" class="category-grid skeleton-grid"></div>
+        </section>
+        <section class="tools-section" aria-labelledby="tools-title">
+          <div class="section-title"><h3 id="tools-title">Todas las herramientas</h3><span id="result-count">0 resultados</span></div>
+          <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
+          <div id="lazy-sentinel" class="lazy-sentinel" aria-hidden="true"></div>
+        </section>
       </div>
-      <div id="favorites-grid" class="tools-grid skeleton-grid"></div>
-    </section>
-
-    <section class="recent-section" aria-labelledby="recent-title">
-      <div class="section-title">
-        <h3 id="recent-title">🕘 Recientes</h3>
-        <button id="clear-recents" class="text-button" type="button">Limpiar</button>
-      </div>
-      <div id="recent-grid" class="tools-grid compact-grid"></div>
-    </section>
-
-    <section class="categories-section" aria-labelledby="categories-title">
-      <div class="section-title">
-        <h3 id="categories-title">Categorías</h3>
-        <button id="show-all" class="text-button" type="button">Ver todo</button>
-      </div>
-      <div id="category-hubs" class="category-grid skeleton-grid"></div>
-    </section>
-
-    <section class="tools-section" aria-labelledby="tools-title">
-      <div class="section-title">
-        <h3 id="tools-title">Herramientas</h3>
-        <span id="result-count">0 resultados</span>
-      </div>
-      <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
-      <div id="lazy-sentinel" class="lazy-sentinel" aria-hidden="true"></div>
     </section>
   </main>
 
   <dialog id="spotlight-modal" class="spotlight-modal" aria-label="Búsqueda rápida">
-    <div class="modal-search">
-      <span aria-hidden="true">🔎</span>
-      <input id="modal-search-input" type="search" placeholder="Spotlight Search..." />
-      <button id="close-spotlight" type="button" aria-label="Cerrar">×</button>
-    </div>
+    <div class="modal-search"><span aria-hidden="true">🔎</span><input id="modal-search-input" type="search" placeholder="Spotlight Search..." /><button id="close-spotlight" type="button" aria-label="Cerrar">×</button></div>
     <div id="modal-results" class="modal-results"></div>
   </dialog>
 
-  <dialog id="quick-modal" class="quick-modal" aria-label="Acciones rápidas">
-    <div class="quick-modal-head">
-      <strong id="quick-modal-title">Acciones</strong>
-      <button id="close-quick-modal" type="button" aria-label="Cerrar">×</button>
-    </div>
+  <dialog id="quick-modal" class="quick-modal" aria-label="Detalle">
+    <div class="quick-modal-head"><strong id="quick-modal-title">Detalle</strong><button id="close-quick-modal" type="button" aria-label="Cerrar">×</button></div>
     <div id="quick-modal-body" class="quick-modal-body"></div>
   </dialog>
 
@@ -155,8 +148,8 @@
     <button class="nav-item is-active" data-view="home" type="button">🏠<span>Inicio</span></button>
     <button class="nav-item" data-view="today" type="button">✅<span>Día</span></button>
     <button class="nav-item" data-view="events" type="button">📅<span>Eventos</span></button>
-    <button class="nav-item" data-view="search" type="button">🔎<span>Buscar</span></button>
-    <button class="nav-item" data-view="all" type="button">🧭<span>Todo</span></button>
+    <button class="nav-item" data-view="altas" type="button">🌱<span>Partner</span></button>
+    <button class="nav-item" data-view="all" type="button">🧰<span>Herr.</span></button>
   </nav>
 
   <script type="module" src="./modules/app.js"></script>

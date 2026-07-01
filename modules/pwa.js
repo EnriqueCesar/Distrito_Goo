@@ -4,11 +4,8 @@ import { toast } from './toast.js';
 
 export function bindPWA(){
   window.addEventListener('beforeinstallprompt', e => {
-    e.preventDefault();
-    state.deferredPrompt = e;
-    $('#install-btn').classList.remove('hidden');
+    e.preventDefault(); state.deferredPrompt = e;
   });
-  $('#install-btn').addEventListener('click', installPWA);
   window.addEventListener('dgx:install', installPWA);
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js').then(reg => {
@@ -18,16 +15,14 @@ export function bindPWA(){
 }
 
 export async function installPWA(){
-  if(!state.deferredPrompt){ toast('Usa “Agregar a pantalla de inicio” desde tu navegador'); return; }
+  if(!state.deferredPrompt){ toast('Agrega Distrito Go desde el menú del navegador'); return; }
   state.deferredPrompt.prompt();
   await state.deferredPrompt.userChoice;
   state.deferredPrompt = null;
-  $('#install-btn').classList.add('hidden');
 }
 
 export function bindPullToRefresh(){
-  let startY = 0;
-  let pulling = false;
+  let startY = 0; let pulling = false;
   const indicator = $('#pull-indicator');
   window.addEventListener('touchstart', e => { if(scrollY === 0) startY = e.touches[0].clientY; }, {passive:true});
   window.addEventListener('touchmove', e => {
@@ -35,7 +30,6 @@ export function bindPullToRefresh(){
   }, {passive:true});
   window.addEventListener('touchend', () => {
     if(pulling){ setTimeout(() => location.reload(), 450); }
-    pulling = false;
-    indicator.classList.remove('show');
+    pulling = false; indicator.classList.remove('show');
   });
 }

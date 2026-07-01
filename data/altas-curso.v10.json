@@ -5,7 +5,7 @@
       "SBX": "SBX106807",
       "NO. EMPLEADO": "106807",
       "NOMBRE COMPLETO": "ALONDRA ABIGAIL HERNANDEZ GARCIA",
-      "CECO": "2005-06-12",
+      "CECO": 38515,
       "TIENDA": "PATIO ECATEPEC",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -14,14 +14,17 @@
       "GB180": "Completo",
       "ANTIGÜEDAD": 7.133333333333334,
       "JORNADA": "32R",
-      "ESTATUS ALTA": "Alta julio"
+      "ESTATUS ALTA": "Alta julio",
+      "Partner": "ALONDRA ABIGAIL HERNANDEZ GARCIA",
+      "Tienda": "PATIO ECATEPEC",
+      "Estatus": "Alta julio"
     },
     {
       "Mes": "Julio",
       "SBX": "SBX095810",
       "NO. EMPLEADO": "095810",
       "NOMBRE COMPLETO": "SEBASTIAN  SOTO ZUÑIGA",
-      "CECO": "2006-05-25",
+      "CECO": 38862,
       "TIENDA": "SAN MIGUEL IZCALLI",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -30,14 +33,17 @@
       "GB180": "Completo",
       "ANTIGÜEDAD": 28.166666666666668,
       "JORNADA": "32R",
-      "ESTATUS ALTA": "Alta julio"
+      "ESTATUS ALTA": "Alta julio",
+      "Partner": "SEBASTIAN  SOTO ZUÑIGA",
+      "Tienda": "SAN MIGUEL IZCALLI",
+      "Estatus": "Alta julio"
     },
     {
       "Mes": "Julio",
       "SBX": "SBX102053",
       "NO. EMPLEADO": "102053",
       "NOMBRE COMPLETO": "MELANYE ARELY SALAS MONCADA",
-      "CECO": "2004-12-12",
+      "CECO": 38333,
       "TIENDA": "IZCALLI MEGA",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -46,14 +52,17 @@
       "GB180": "Completo",
       "ANTIGÜEDAD": 16.733333333333334,
       "JORNADA": "32R",
-      "ESTATUS ALTA": "Alta julio"
+      "ESTATUS ALTA": "Alta julio",
+      "Partner": "MELANYE ARELY SALAS MONCADA",
+      "Tienda": "IZCALLI MEGA",
+      "Estatus": "Alta julio"
     },
     {
       "Mes": "Julio",
       "SBX": "SBX106137",
       "NO. EMPLEADO": "106137",
       "NOMBRE COMPLETO": "ANGEL SAID MONTESINOS GARCIA",
-      "CECO": "2005-09-09",
+      "CECO": 38604,
       "TIENDA": "COSMOPOL",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -62,14 +71,17 @@
       "GB180": "Completo",
       "ANTIGÜEDAD": 8.166666666666666,
       "JORNADA": "40R",
-      "ESTATUS ALTA": "Alta julio"
+      "ESTATUS ALTA": "Alta julio",
+      "Partner": "ANGEL SAID MONTESINOS GARCIA",
+      "Tienda": "COSMOPOL",
+      "Estatus": "Alta julio"
     },
     {
       "Mes": "Julio",
       "SBX": "SBX100034",
       "NO. EMPLEADO": "100034",
       "NOMBRE COMPLETO": "RAYMUNDO ALEJANDRO ROJAS GRANIEL",
-      "CECO": "2004-12-12",
+      "CECO": 38333,
       "TIENDA": "IZCALLI MEGA",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -78,14 +90,17 @@
       "GB180": "Completo",
       "ANTIGÜEDAD": 20.466666666666665,
       "JORNADA": "32R",
-      "ESTATUS ALTA": "Alta julio"
+      "ESTATUS ALTA": "Alta julio",
+      "Partner": "RAYMUNDO ALEJANDRO ROJAS GRANIEL",
+      "Tienda": "IZCALLI MEGA",
+      "Estatus": "Alta julio"
     },
     {
       "Mes": "Julio",
       "SBX": "SBX096221",
       "NO. EMPLEADO": "096221",
       "NOMBRE COMPLETO": "MARIANA  PEREZ RAMIREZ",
-      "CECO": "2004-12-12",
+      "CECO": 38333,
       "TIENDA": "IZCALLI MEGA",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -94,7 +109,10 @@
       "GB180": "Completo",
       "ANTIGÜEDAD": 27.066666666666666,
       "JORNADA": "40R",
-      "ESTATUS ALTA": "Alta julio"
+      "ESTATUS ALTA": "Alta julio",
+      "Partner": "MARIANA  PEREZ RAMIREZ",
+      "Tienda": "IZCALLI MEGA",
+      "Estatus": "Alta julio"
     }
   ],
   "ss": [
@@ -103,7 +121,7 @@
       "SBX": "SBX099728",
       "NO. EMPLEADO": "099728",
       "NOMBRE COMPLETO": "ANDREA MICHELLE COLIN ROLON",
-      "CECO": "2004-12-12",
+      "CECO": 38333,
       "TIENDA": "IZCALLI MEGA",
       "REGION": "Centro Norte",
       "DM": "Enrique Cesar Flores",
@@ -111,7 +129,10 @@
       "RD": "Jorge Antonio Alcantar Aguiar",
       "mes de solicitud": "Julio",
       "BT": "Completo",
-      "ESTATUS ALTA": "Alta Julio"
+      "ESTATUS ALTA": "Alta Julio",
+      "Partner": "ANDREA MICHELLE COLIN ROLON",
+      "Tienda": "IZCALLI MEGA",
+      "Estatus": "Alta Julio"
     }
   ],
   "tbw": [
@@ -119,7 +140,7 @@
       "Corte": "2026-06-15",
       "SBX": "SBX107402",
       "NOMBRE": "PAULINA  ZANATTA CASTRO",
-      "CeCo": "2006-05-25",
+      "CeCo": 38862,
       "TIENDA": "SAN MIGUEL IZCALLI",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -132,13 +153,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Completo",
       "To be Welcoming Género\nDía 60 al 90": "Completo",
       "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-      "Avance": 0.8
+      "Avance": 0.8,
+      "Partner": "PAULINA  ZANATTA CASTRO",
+      "Tienda": "SAN MIGUEL IZCALLI",
+      "AvanceResumen": "80%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108026",
       "NOMBRE": "STEPHANY  REYES MOLINA",
-      "CeCo": "2005-04-14",
+      "CeCo": 38456,
       "TIENDA": "PLAZA LAS FLORES",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -151,13 +175,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Completo",
       "To be Welcoming Género\nDía 60 al 90": "Completo",
       "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-      "Avance": 0.8
+      "Avance": 0.8,
+      "Partner": "STEPHANY  REYES MOLINA",
+      "Tienda": "PLAZA LAS FLORES",
+      "AvanceResumen": "80%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108169",
       "NOMBRE": "ABRAHAM EFREN MIRANDA BALLESTEROS",
-      "CeCo": "2004-12-18",
+      "CeCo": 38339,
       "TIENDA": "SAN MARCOS",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -170,13 +197,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Incompleto",
       "To be Welcoming Género\nDía 60 al 90": "Incompleto",
       "To be Welcoming Sexualidad\ndía 90- 120": "Completo",
-      "Avance": 0.2
+      "Avance": 0.2,
+      "Partner": "ABRAHAM EFREN MIRANDA BALLESTEROS",
+      "Tienda": "SAN MARCOS",
+      "AvanceResumen": "20%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108276",
       "NOMBRE": "MARIA FERNANDA ESTEVEZ QUINTANAR",
-      "CeCo": "2005-09-09",
+      "CeCo": 38604,
       "TIENDA": "COSMOPOL",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -189,13 +219,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Incompleto",
       "To be Welcoming Género\nDía 60 al 90": "Incompleto",
       "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "MARIA FERNANDA ESTEVEZ QUINTANAR",
+      "Tienda": "COSMOPOL",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108416",
       "NOMBRE": "GERARDO GUILLERMO VEGA LOPEZ",
-      "CeCo": "2004-12-18",
+      "CeCo": 38339,
       "TIENDA": "SAN MARCOS",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -208,13 +241,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Incompleto",
       "To be Welcoming Género\nDía 60 al 90": "Incompleto",
       "To be Welcoming Sexualidad\ndía 90- 120": "En curso",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "GERARDO GUILLERMO VEGA LOPEZ",
+      "Tienda": "SAN MARCOS",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108476",
       "NOMBRE": "ROBERTO ANTONIO AMADOR RUIZ",
-      "CeCo": "2004-12-12",
+      "CeCo": 38333,
       "TIENDA": "IZCALLI MEGA",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -227,13 +263,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
       "To be Welcoming Género\nDía 60 al 90": "En curso",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "ROBERTO ANTONIO AMADOR RUIZ",
+      "Tienda": "IZCALLI MEGA",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108511",
       "NOMBRE": "FERNANDO JULIAN FLORES REYES",
-      "CeCo": "2005-01-16",
+      "CeCo": 38368,
       "TIENDA": "LUNA PARK",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -246,13 +285,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
       "To be Welcoming Género\nDía 60 al 90": "En curso",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "FERNANDO JULIAN FLORES REYES",
+      "Tienda": "LUNA PARK",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108726",
       "NOMBRE": "ANGEL ZAHAMI PEREZ VALDEZ",
-      "CeCo": "2004-12-12",
+      "CeCo": 38333,
       "TIENDA": "IZCALLI MEGA",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -265,13 +307,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
       "To be Welcoming Género\nDía 60 al 90": "En curso",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "ANGEL ZAHAMI PEREZ VALDEZ",
+      "Tienda": "IZCALLI MEGA",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX108967",
       "NOMBRE": "LUIS PAULO ROJAS SOLIS",
-      "CeCo": "2004-12-12",
+      "CeCo": 38333,
       "TIENDA": "IZCALLI MEGA",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -284,13 +329,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "En curso",
       "To be Welcoming Género\nDía 60 al 90": "En curso",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "LUIS PAULO ROJAS SOLIS",
+      "Tienda": "IZCALLI MEGA",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX109197",
       "NOMBRE": "ANGELA LILIAN VARGAS ESCOTO",
-      "CeCo": "2004-12-18",
+      "CeCo": 38339,
       "TIENDA": "SAN MARCOS",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -303,13 +351,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "ANGELA LILIAN VARGAS ESCOTO",
+      "Tienda": "SAN MARCOS",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX109309",
       "NOMBRE": "JOSE  QUEZADA HUITRON",
-      "CeCo": "2005-01-16",
+      "CeCo": 38368,
       "TIENDA": "LUNA PARK",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -322,13 +373,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "JOSE  QUEZADA HUITRON",
+      "Tienda": "LUNA PARK",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX109619",
       "NOMBRE": "ANA LUISA RAMIREZ DIAZ",
-      "CeCo": "2004-12-12",
+      "CeCo": 38333,
       "TIENDA": "IZCALLI MEGA",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -341,13 +395,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "ANA LUISA RAMIREZ DIAZ",
+      "Tienda": "IZCALLI MEGA",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX109725",
       "NOMBRE": "LUZ MARIANA CHAVEZ CORONA",
-      "CeCo": "2005-02-18",
+      "CeCo": 38401,
       "TIENDA": "CC COACALCO",
       "PUESTO": "Supervisor",
       "Región": "Centro Norte",
@@ -360,13 +417,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "LUZ MARIANA CHAVEZ CORONA",
+      "Tienda": "CC COACALCO",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX109957",
       "NOMBRE": "JONATHAN URIEL GONZALEZ SALAZAR",
-      "CeCo": "2005-01-16",
+      "CeCo": 38368,
       "TIENDA": "LUNA PARK",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -379,13 +439,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "JONATHAN URIEL GONZALEZ SALAZAR",
+      "Tienda": "LUNA PARK",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX109960",
       "NOMBRE": "DANIELA  SERRANO URIBE",
-      "CeCo": "2005-01-16",
+      "CeCo": 38368,
       "TIENDA": "LUNA PARK",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -398,13 +461,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "DANIELA  SERRANO URIBE",
+      "Tienda": "LUNA PARK",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX110138",
       "NOMBRE": "SAMANTA  GARCIA HERNANDEZ",
-      "CeCo": "2018-04-03",
+      "CeCo": 43193,
       "TIENDA": "COSMOPOL N1",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -417,13 +483,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "SAMANTA  GARCIA HERNANDEZ",
+      "Tienda": "COSMOPOL N1",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX110145",
       "NOMBRE": "MARCELA PATRICIA GALICIA MORALES",
-      "CeCo": "2004-12-18",
+      "CeCo": 38339,
       "TIENDA": "SAN MARCOS",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -436,13 +505,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "MARCELA PATRICIA GALICIA MORALES",
+      "Tienda": "SAN MARCOS",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX110146",
       "NOMBRE": "YAEL  ALVA BUSTAMANTE",
-      "CeCo": "2004-12-18",
+      "CeCo": 38339,
       "TIENDA": "SAN MARCOS",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -455,13 +527,16 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "YAEL  ALVA BUSTAMANTE",
+      "Tienda": "SAN MARCOS",
+      "AvanceResumen": "0%"
     },
     {
       "Corte": "2026-06-15",
       "SBX": "SBX110164",
       "NOMBRE": "CHRISTOPHER OMAR SAENZ RIVAS",
-      "CeCo": "2005-09-09",
+      "CeCo": 38604,
       "TIENDA": "COSMOPOL",
       "PUESTO": "Barista",
       "Región": "Centro Norte",
@@ -474,7 +549,10 @@
       "To be Welcoming Discapacidad \nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Género\nDía 60 al 90": "Hasta dia 60",
       "To be Welcoming Sexualidad\ndía 90- 120": "Hasta dia 90",
-      "Avance": 0
+      "Avance": 0,
+      "Partner": "CHRISTOPHER OMAR SAENZ RIVAS",
+      "Tienda": "COSMOPOL",
+      "AvanceResumen": "0%"
     }
   ]
 }

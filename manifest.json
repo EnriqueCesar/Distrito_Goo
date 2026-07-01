@@ -1,7 +1,7 @@
 {
-  "name": "Distrito GO X 10.0",
-  "short_name": "Distrito GO",
-  "description": "Multiherramienta operativa para Partners: día a día, eventos CMS, favoritos, buscador y apps nativas.",
+  "name": "Distrito Go - Multiherramienta Operativa",
+  "short_name": "Distrito Go",
+  "description": "Centro Operativo Distrito Kike: día a día, eventos CMS, Duty Roster premium, desarrollo Partner y multiherramienta operativa.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

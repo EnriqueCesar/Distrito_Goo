@@ -4,66 +4,159 @@ import { toast } from './toast.js';
 
 const today = new Date();
 const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+let eventFilter = 'week';
+let actionsBound = false;
 
 function parseDate(value){
   if(!value) return null;
-  const d = new Date(`${value}T00:00:00`);
+  if(value instanceof Date) return value;
+  const text = String(value).trim();
+  if(/^\d{4}-\d{2}-\d{2}$/.test(text)) return new Date(`${text}T00:00:00`);
+  const d = new Date(text);
   return Number.isNaN(d.getTime()) ? null : d;
 }
-function isActiveEvent(evt){
-  const start = parseDate(evt['Fecha Inicio']);
-  const end = parseDate(evt['Fecha Fin']);
-  if(!start && !end) return true;
-  const t = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
-  return (!start || start.getTime() <= t) && (!end || end.getTime() >= t);
+function startOfDay(d){ return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+function endOfDay(d){ return new Date(d.getFullYear(), d.getMonth(), d.getDate(),23,59,59); }
+function startOfWeek(d){ const s=startOfDay(d); const diff=(s.getDay()+6)%7; s.setDate(s.getDate()-diff); return s; }
+function endOfWeek(d){ const e=startOfWeek(d); e.setDate(e.getDate()+6); return endOfDay(e); }
+function addDays(d, days){ const x=new Date(d); x.setDate(x.getDate()+days); return x; }
+function inRange(evt, start, end){
+  const a=parseDate(evt['Fecha Inicio']);
+  const b=parseDate(evt['Fecha Fin']) || a;
+  if(!a && !b) return true;
+  return (!b || b >= start) && (!a || a <= end);
 }
-function card(title, text, icon='✅', extra=''){
-  return `<article class="ops-card"><div class="ops-icon">${icon}</div><div><h4>${escapeHtml(title || 'Actividad')}</h4><p>${escapeHtml(text || '')}</p>${extra}</div></article>`;
+function fmtDDMM(value){
+  const d=parseDate(value); if(!d) return '';
+  return d.toLocaleDateString('es-MX', {day:'2-digit', month:'2-digit'});
 }
-function peopleCard(p, tipo){
-  const nombre = p['NOMBRE COMPLETO'] || p.NOMBRE || 'Partner';
-  const tienda = p.TIENDA || '';
-  const estatus = p['ESTATUS ALTA'] || p.Avance || p.BT || '';
-  return `<article class="person-card"><strong>${escapeHtml(nombre)}</strong><span>${escapeHtml(tipo)} · ${escapeHtml(tienda)}</span><small>${escapeHtml(String(estatus))}</small></article>`;
+function briefText(text='', max=112){
+  const clean = String(text || '').replace(/https?:\/\/\S+/g,'').replace(/\s+/g,' ').trim();
+  return clean.length > max ? clean.slice(0, max-1).trim() + '…' : clean;
 }
+function getWeekNumber(d){
+  const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const dayNum = date.getUTCDay() || 7;
+  date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(date.getUTCFullYear(),0,1));
+  return Math.ceil((((date - yearStart) / 86400000) + 1)/7);
+}
+function nextWeeklyActivity(day){
+  const list = state.operacional.actividadesSemanales || [];
+  const nowIndex = today.getDay();
+  for(let i=1;i<=7;i++){
+    const idx=(nowIndex+i)%7;
+    const name=dayNames[idx];
+    const found=list.find(a => (a['Día']||'').toLowerCase() === name.toLowerCase());
+    if(found) return found;
+  }
+  return null;
+}
+function isImageResource(item){ return item?.TipoRecurso === 'imagen' && item?.Recurso; }
+function renderResourceAction(item){
+  if(!item?.Recurso) return '';
+  if(item.TipoRecurso === 'link' || String(item.Recurso).startsWith('http')) return `<a class="mini-link" href="${escapeHtml(item.Recurso)}" target="_blank" rel="noopener">Abrir recurso</a>`;
+  return `<button class="mini-link image-link" type="button" data-image="${escapeHtml(item.Recurso)}" data-title="${escapeHtml(item.Actividad)}">Ver imagen</button>`;
+}
+function opsCard(title, text, icon='✅', extra='', item=null){
+  const thumb = isImageResource(item) ? `<button class="ops-thumb image-link" type="button" data-image="${escapeHtml(item.Recurso)}" data-title="${escapeHtml(item.Actividad)}"><img src="${escapeHtml(item.Recurso)}" alt="${escapeHtml(item.Actividad)}" loading="lazy"/><span>Ver guía</span></button>` : '';
+  return `<article class="ops-card ${thumb ? 'has-thumb' : ''}"><div class="ops-icon">${icon}</div><div class="ops-content"><h4>${escapeHtml(title || 'Actividad')}</h4><p>${escapeHtml(briefText(text))}</p>${extra}</div>${thumb}</article>`;
+}
+function eventCard(e){
+  const icon = e.Imagen || '📅';
+  const title = e.Actividad || 'Evento';
+  const dateLine = `${fmtDDMM(e['Fecha Inicio'])}${e['Fecha Fin'] ? ' al ' + fmtDDMM(e['Fecha Fin']) : ''}`;
+  const image = e.ImagenPath ? `<button class="mini-link image-link" type="button" data-image="${escapeHtml(e.ImagenPath)}" data-title="${escapeHtml(title)}">Ver imagen</button>` : '';
+  const link = e.Link ? `<a class="mini-link" href="${escapeHtml(e.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '';
+  return `<article class="ops-card event-card"><div class="ops-icon">${icon}</div><div class="ops-content"><span class="event-date">${escapeHtml(dateLine)}</span><h4>${escapeHtml(title)}</h4><p>${escapeHtml(briefText(e['Contexto / Recordatorio'], 145))}</p><div class="inline-actions">${link}${image}</div></div></article>`;
+}
+function personRow(p, tipo){
+  const nombre = p.Partner || p['NOMBRE COMPLETO'] || p.NOMBRE || 'Partner';
+  const tienda = p.Tienda || p.TIENDA || '';
+  const estatus = p.Estatus || p['ESTATUS ALTA'] || p.BT || '';
+  return `<div class="person-row"><strong>${escapeHtml(nombre)}</strong><span>${escapeHtml(tienda)}</span><em>${escapeHtml(tipo)} · ${escapeHtml(String(estatus))}</em></div>`;
+}
+function tbwRow(p){
+  const nombre = p.Partner || p.NOMBRE || 'Partner';
+  const tienda = p.Tienda || p.TIENDA || '';
+  const avance = String(p.AvanceResumen || p.Avance || '0%');
+  const pct = parseInt(avance,10) || 0;
+  return `<div class="tbw-row"><div><strong>${escapeHtml(nombre)}</strong><span>${escapeHtml(tienda)}</span></div><div class="progress" aria-label="Avance ${escapeHtml(avance)}"><i style="width:${Math.min(100,Math.max(0,pct))}%"></i></div><em>${escapeHtml(avance)}</em></div>`;
+}
+
 export function renderOperationalSections(){
-  renderToday(); renderEvents(); renderAltas(); renderDuty(); renderChecklist(); bindOperationalActions();
+  renderToday();
+  renderEvents();
+  renderAltas();
+  renderDuty();
+  bindOperationalActions();
 }
 export function renderToday(){
   const day = dayNames[today.getDay()];
-  const daily = (state.operacional.actividadesDiarias || []).filter(a => a.Visible !== false).slice(0,6);
+  const daily = (state.operacional.actividadesDiarias || [])
+    .filter(a => a.Visible !== false)
+    .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9))
+    .slice(0,6);
   const weekly = (state.operacional.actividadesSemanales || []).filter(a => (a['Día'] || '').toLowerCase() === day.toLowerCase());
-  $('#today-date').textContent = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long' });
-  $('#daily-grid').innerHTML = daily.map(a => card(a.Actividad, a['Descripción'], a.Icono || '✅', a['Link /Imagen'] && String(a['Link /Imagen']).startsWith('http') ? `<a class="mini-link" href="${escapeHtml(a['Link /Imagen'])}" target="_blank" rel="noopener">Abrir recurso</a>` : '')).join('');
-  $('#weekly-grid').innerHTML = weekly.length ? weekly.map(a => card(a.Actividad, `${a['Descripción'] || ''} ${a['Hora / Corte'] ? '· ' + a['Hora / Corte'] : ''}`, a.Icono || '📌', a.Link ? `<a class="mini-link" href="${escapeHtml(a.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '')).join('') : card('Sin actividad semanal específica', 'Mantén foco en apertura, calidad, seguimiento y herramientas clave.', '☕');
+  $('#today-date').textContent = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
+  renderWFM(day, weekly[0]);
+  $('#daily-grid').innerHTML = daily.map(a => opsCard(a.Actividad, a.DescripcionBreve || a['Descripción'], a.Icono || '✅', renderResourceAction(a), a)).join('');
+  $('#weekly-grid').innerHTML = weekly.length ? weekly.map(a => opsCard(a.Actividad, `${a['Descripción'] || ''}${a['Hora / Corte'] ? ' · ' + a['Hora / Corte'] : ''}`, a.Icono || '📌', a.Link ? `<a class="mini-link" href="${escapeHtml(a.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '')).join('') : opsCard('Sin actividad semanal específica', 'Mantén foco en apertura, calidad y seguimiento.', '☕');
+}
+function renderWFM(day, todayActivity){
+  const planningDate = addDays(today, 15);
+  const weekStart = startOfWeek(planningDate);
+  const weekEnd = endOfWeek(planningDate);
+  const next = nextWeeklyActivity(day);
+  $('#wfm-card').innerHTML = `<div class="wfm-head"><span>📅 WFM</span><strong>Planeación Inteligente</strong></div><div class="wfm-grid"><div><small>Hoy</small><b>${escapeHtml(day)}</b></div><div><small>Semana en planeación</small><b>Semana ${getWeekNumber(planningDate)}</b></div><div><small>Periodo</small><b>${fmtDDMM(weekStart)} al ${fmtDDMM(weekEnd)}</b></div></div><div class="wfm-action"><strong>${todayActivity?.Icono || '✅'} ${escapeHtml(todayActivity?.Actividad || 'Revisión operativa')}</strong><p>${escapeHtml(briefText(todayActivity?.['Descripción'] || 'Revisa prioridades del día y anticipa necesidades de la semana en planeación.', 130))}</p></div>${next?`<div class="wfm-next"><small>Siguiente paso</small><span>${next.Icono || '⏭️'} ${escapeHtml(next.Actividad)}</span></div>`:''}`;
 }
 export function renderEvents(){
-  const active = (state.operacional.eventos || []).filter(isActiveEvent);
-  const next = active.length ? active : (state.operacional.eventos || []).slice(0,8);
-  $('#events-count').textContent = `${active.length} activos / ${state.operacional.eventos.length} CMS`;
-  $('#events-grid').innerHTML = next.slice(0,10).map(e => card(e.Actividad, e['Contexto / Recordatorio'], e.Imagen || '📅', `<small class="date-line">${escapeHtml(e['Fecha Inicio'] || '')}${e['Fecha Fin'] ? ' al ' + escapeHtml(e['Fecha Fin']) : ''}</small>`)).join('') || card('Sin eventos cargados', 'Revisa la pestaña Eventos del CMS.', '📅');
+  const all = state.operacional.eventos || [];
+  const now = startOfDay(today);
+  let start, end;
+  if(eventFilter === 'week'){ start=startOfWeek(today); end=endOfWeek(today); }
+  else if(eventFilter === 'month'){ start=new Date(today.getFullYear(), today.getMonth(),1); end=endOfDay(new Date(today.getFullYear(), today.getMonth()+1,0)); }
+  else { start=now; end=new Date(today.getFullYear(),11,31,23,59,59); }
+  const filtered = all.filter(e => inRange(e,start,end) && (parseDate(e['Fecha Fin']) || parseDate(e['Fecha Inicio']) || end) >= now)
+    .sort((a,b)=>(parseDate(a['Fecha Inicio'])||0)-(parseDate(b['Fecha Inicio'])||0));
+  $('#events-count').textContent = `${filtered.length} ${eventFilter === 'week' ? 'esta semana' : eventFilter === 'month' ? 'este mes' : 'próximos'}`;
+  $('#events-grid').innerHTML = filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este filtro', 'Cambia a Mes o Todos para ver próximos recordatorios.', '📅');
 }
 export function renderAltas(){
   const a = state.operacional.altasCurso || {bt:[],ss:[],tbw:[]};
   $('#altas-count').textContent = `${a.bt.length} BT · ${a.ss.length} SS · ${a.tbw.length} TBW`;
-  $('#altas-grid').innerHTML = [
-    ...a.bt.slice(0,4).map(p => peopleCard(p,'BT')),
-    ...a.ss.slice(0,3).map(p => peopleCard(p,'SS')),
-    ...a.tbw.slice(0,5).map(p => peopleCard(p,'TBW'))
-  ].join('') || '<div class="empty-state"><strong>Sin altas en curso</strong><p>CMS sin registros para este periodo.</p></div>';
+  $('#btss-count').textContent = `${a.bt.length + a.ss.length} registros`;
+  $('#tbw-count').textContent = `${a.tbw.length} partners`;
+  $('#btss-grid').innerHTML = [...a.bt.map(p => personRow(p,'BT')), ...a.ss.map(p => personRow(p,'SS'))].join('') || '<p class="muted">Sin registros BT/SS.</p>';
+  $('#tbw-grid').innerHTML = a.tbw.map(tbwRow).join('') || '<p class="muted">Sin seguimiento TBW.</p>';
 }
 export function renderDuty(){
   const day = dayNames[today.getDay()];
-  const item = (state.operacional.dutyRoster || []).find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase()) || (state.operacional.dutyRoster || [])[0];
-  const detail = (state.operacional.dutyDetail || []).filter(d => item && (d['Día'] || '').toLowerCase() === (item['Día'] || '').toLowerCase()).slice(0,9);
-  $('#duty-focus').innerHTML = item ? `<strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong><p>${escapeHtml(item.Enfoque)}</p>` : '<p>Sin Duty Roster cargado.</p>';
-  $('#duty-detail').innerHTML = detail.map(d => `<li>${d.Icono || '•'} ${escapeHtml(d.Actividad)}${d['Crítico'] === true ? ' <strong>Crítico</strong>' : ''}</li>`).join('');
-}
-export function renderChecklist(){
-  $('#checklist-grid').innerHTML = (state.operacional.checklistApertura || []).slice(0,10).map(c => `<div class="check-item"><span>${c.Icono || '✓'}</span><strong>${escapeHtml(c.Concepto)}</strong></div>`).join('');
+  const roster = state.operacional.dutyRoster || [];
+  const item = roster.find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase()) || roster[0];
+  const detail = (state.operacional.dutyDetail || []).filter(d => item && (d['Día'] || '').toLowerCase() === (item['Día'] || '').toLowerCase()).sort((a,b)=>(a.Orden||0)-(b.Orden||0));
+  $('#duty-focus').innerHTML = item ? `<div class="duty-focus-head"><span>Hoy</span><strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong></div><p>${escapeHtml(item.Enfoque)}</p>` : '<p>Sin Duty Roster cargado.</p>';
+  $('#duty-gallery').innerHTML = item?.ImagenesPath?.length ? item.ImagenesPath.map((src,i)=>`<button class="duty-image image-link" type="button" data-image="${escapeHtml(src)}" data-title="${escapeHtml(item.Estaciones)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(item.Estaciones)} ${i+1}" loading="lazy"/><span>${item.ImagenesPath.length>1 ? `Estación ${i+1}` : 'Ver imagen'}</span></button>`).join('') : '';
+  $('#duty-detail').innerHTML = detail.map(d => `<li class="${d['Crítico'] === true ? 'is-critical' : ''}">${d.Icono || '•'} <span>${escapeHtml(d.Actividad)}</span>${d['Crítico'] === true ? ' <strong>Crítico</strong>' : ''}</li>`).join('');
 }
 function bindOperationalActions(){
-  $$('.ops-card a, .mini-link').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+  if(actionsBound) return;
+  actionsBound = true;
+  document.body.addEventListener('click', e => {
+    const segment = e.target.closest('.segment');
+    if(segment){
+      eventFilter = segment.dataset.eventsFilter;
+      $$('.segment').forEach(b=>b.classList.toggle('is-active', b===segment));
+      renderEvents();
+    }
+    const img = e.target.closest('.image-link');
+    if(img){ e.preventDefault(); openImageModal(img.dataset.title || 'Imagen', img.dataset.image); }
+  });
+}
+function openImageModal(title, src){
+  $('#quick-modal-title').textContent = title;
+  $('#quick-modal-body').innerHTML = `<img class="modal-image" src="${escapeHtml(src)}" alt="${escapeHtml(title)}" loading="lazy"/>`;
+  $('#quick-modal').showModal();
 }
 export function goToSection(id){
   const el = document.getElementById(id);
