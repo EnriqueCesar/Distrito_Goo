@@ -1,29 +1,31 @@
-# Distrito GO 6.6
+# Distrito GO
 
-Versión corregida con rutinas, eventos, links, actividades semanales, AutoICA y celebraciones por fecha actual.
+Asistente Operativo Diario · versión 7.2.0 Producción Limpia.
 
-Ver `CAMBIOS_APLICADOS.md` para el detalle.
+## Estructura limpia
 
-# Distrito GO 6.5 Producción
+```text
+assets/    Recursos visuales activos: brand, duty, icons, photos
+css/       Estilos por responsabilidad
+data/      JSON generado desde el CMS
+docs/      Historial y guía de actualización
+js/        Módulos funcionales
+tools/     Utilidad para convertir CMS Excel a JSON
+```
 
-Versión corregida para GitHub Pages.
+## Flujo recomendado
 
-## Qué se corrigió
-- Error de sintaxis en `js/app.js` que detenía la carga de Mi Día Operativo, Eventos y Herramientas.
-- CMS regenerado desde `Distrito_Go_CMS(17).xlsx` hacia archivos JSON en `/data`.
-- Versionado actualizado a `v=6.6.0` para forzar actualización en navegador.
-- Service Worker actualizado a `distrito-go-v6-6-0` y con estrategia `no-store`.
-- Sin archivos `.txt` de auditoría.
+1. Actualizar `Distrito_Go_CMS.xlsx`.
+2. Ejecutar `tools/cms_to_json.py` para regenerar `data/`.
+3. Subir a GitHub Pages.
+4. Hacer recarga dura en navegador o esperar actualización del Service Worker.
 
-## Cómo actualizar a futuro
-1. Edita el Excel CMS.
-2. Convierte cada pestaña a su JSON correspondiente dentro de `/data`.
-3. Sube el proyecto completo a GitHub.
-4. Cambia la versión en `index.html`, `js/app.js` y `sw.js` cuando haya cambios importantes.
+## Versión 7.2.0
 
-## Archivos clave
-- `index.html`: estructura principal.
-- `js/app.js`: render principal.
-- `js/cms.js`: rutas de JSON.
-- `/data`: información editable del CMS.
-- `sw.js`: control de caché.
+- Limpieza de raíz: solo queda `README.md` en la raíz como documentación principal.
+- Recursos visuales depurados: se eliminaron imágenes y carpetas no usadas.
+- Datos regenerados desde el CMS 26.
+- Evento CDD Q3 destacado y registrado en agenda.
+- Inventario TPV / Pin Pads sin duplicados.
+- Altas en Curso BT/SS del 1 al 25 de julio.
+- Cache actualizado a `distrito-go-v7-2-0`.

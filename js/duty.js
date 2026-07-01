@@ -1,7 +1,7 @@
 import {esc,first,todayName,normalize} from './utils.js';
 import {openModal} from './modal.js';
 
-const dutyPath = 'assets/duty/premium/';
+const dutyPath = 'assets/duty/';
 function splitList(v){return String(v||'').split(',').map(x=>x.trim()).filter(Boolean)}
 export function todayDuty(cms){const day=todayName();return (cms.dutyRoster||[]).find(x=>normalize(first(x,['Día','Dia']))===normalize(day))||{} }
 function colorClass(color=''){const n=normalize(color); if(n.includes('naranja'))return 'orange'; if(n.includes('rojo'))return 'red'; if(n.includes('azul'))return 'blue'; if(n.includes('cafe'))return 'coffee'; if(n.includes('verde'))return 'green'; return 'green'}

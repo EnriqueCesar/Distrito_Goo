@@ -1,7 +1,7 @@
 {
   "name": "Distrito GO",
   "short_name": "Distrito GO",
-  "description": "Asistente Operativo Diario · CMS Driven 7.0",
+  "description": "Asistente Operativo Diario · CMS Driven 7.2.0",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f7f3ea",

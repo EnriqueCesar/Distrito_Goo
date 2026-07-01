@@ -274,7 +274,7 @@ async function init() {
   renderToday(); renderEvents(CMS); renderCelebrations(); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=7.1.0').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=7.2.0').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });
