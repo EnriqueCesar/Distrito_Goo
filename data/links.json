@@ -237,18 +237,18 @@
     "URL": "https://grupovips-my.sharepoint.com/:f:/g/personal/enrique_cesar_starbucks_com_mx/IgB7AeWMyb-lCLeDz-62fSxeAc9aT-RQWkczz9aclI6E5Gc?e=t1LFaZ",
     "Notas": "Accede a reportes e información estratégica para una mejor toma de decisiones."
   },
-  {
+    {
     "Categoria": "Trabajo",
     "Icono": "📲",
     "Nombre": "Celular DM",
     "URL": "https://wa.me/message/ENKDSAHYHIGAN1",
     "Notas": "Comunicación directa diaria para apertura, riesgos, evidencias, operación y escalamiento crítico."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "📋",
+    "Nombre": "Variacion_Semanal",
+    "URL": "https://enriquecesar.github.io/variaciones_semanal/",
+    "Notas": "Revisión tendencial de variaciones de inventario por semana."
   }
 ]
-{
-  "Categoria": "App",
-  "Icono": "📋",
-  "Nombre": "Variacion_Semanal",
-  "URL": "https://enriquecesar.github.io/variaciones_semanal/",
-  "Notas": "Revisión tendencial de variaciones de inventario por semana."
-}
