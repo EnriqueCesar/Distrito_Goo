@@ -1,79 +1,254 @@
 [
   {
-    "Categoria": "App",
+    "Categoria": "Operación",
     "Icono": "📅",
     "Nombre": "PBT Web",
     "URL": "https://enriquecesar.github.io/pbt2.0_web/",
-    "Notas": "Consulta planes de negocio, KPIs y prioridades operativas."
+    "Notas": "Planes de negocio y prioridades operativas."
   },
   {
-    "Categoria": "App",
-    "Icono": "🏗️",
-    "Nombre": "Layout",
-    "URL": "https://enriquecesar.github.io/layout/",
-    "Notas": "Diseña, ajusta y valida layouts operativos."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "🗺️",
-    "Nombre": "CN Connect",
-    "URL": "https://enriquecesar.github.io/CentroNorteConnect/",
-    "Notas": "Consulta la estructura, tiendas e indicadores de la Región Centro Norte."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "🎯",
-    "Nombre": "Foco 2026",
-    "URL": "https://enriquecesar.github.io/Foco2026/",
-    "Notas": "Da seguimiento a prioridades, compromisos y planes de acción."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "📈",
-    "Nombre": "Variaciones",
-    "URL": "https://enriquecesar.github.io/variaciones_semanal/",
-    "Notas": "Analiza tendencias de faltantes y sobrantes para enfocar oportunidades."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "📦",
-    "Nombre": "Max & Min",
-    "URL": "https://enriquecesar.github.io/Max-Min/",
-    "Notas": "Calcula inventarios ideales y optimiza el control de costo."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "🧮",
-    "Nombre": "PBT Planes",
-    "URL": "https://enriquecesar.github.io/pbt_motor_exact/",
-    "Notas": "Genera e imprime planes considerando WeekPart, DayPart y dotación."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "💚",
-    "Nombre": "Partner Hub",
-    "URL": "https://enriquecesar.github.io/Partner_Hub/",
-    "Notas": "Consulta aniversarios, cumpleaños e información de Partners."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "🏪",
-    "Nombre": "Perfil Tienda",
-    "URL": "https://enriquecesar.github.io/Perfil_Tienda_DM/",
-    "Notas": "Visualiza indicadores históricos y oportunidades de mejora."
-  },
-  {
-    "Categoria": "App",
-    "Icono": "🔎",
-    "Nombre": "Code Brew",
-    "URL": "https://enriquecesar.github.io/CodeBrew_Merch/",
-    "Notas": "Busca artículos, códigos y mercancía de forma rápida."
-  },
-  {
-    "Categoria": "App",
+    "Categoria": "Operación",
     "Icono": "👥",
     "Nombre": "WFM Intelligence",
     "URL": "https://enriquecesar.github.io/WFM/",
-    "Notas": "Analiza tendencias de WFM, productividad y códigos de pago."
+    "Notas": "Productividad, códigos de pago y tendencias."
+  },
+  {
+    "Categoria": "Operación",
+    "Icono": "📈",
+    "Nombre": "Variación Semanal",
+    "URL": "https://enriquecesar.github.io/variaciones_semanal/",
+    "Notas": "Faltantes, sobrantes y variaciones."
+  },
+  {
+    "Categoria": "Operación",
+    "Icono": "📦",
+    "Nombre": "Max & Min",
+    "URL": "https://enriquecesar.github.io/Max-Min/",
+    "Notas": "Inventarios ideales y control de costo."
+  },
+  {
+    "Categoria": "Operación",
+    "Icono": "🧮",
+    "Nombre": "PBT Planes",
+    "URL": "https://enriquecesar.github.io/pbt_motor_exact/",
+    "Notas": "Generación de planes por WeekPart y DayPart."
+  },
+  {
+    "Categoria": "Operación",
+    "Icono": "🏪",
+    "Nombre": "Perfil Tienda",
+    "URL": "https://enriquecesar.github.io/Perfil_Tienda_DM/",
+    "Notas": "Indicadores históricos y oportunidades."
+  },
+  {
+    "Categoria": "Operación",
+    "Icono": "🎯",
+    "Nombre": "Foco 2026",
+    "URL": "https://enriquecesar.github.io/Foco2026/",
+    "Notas": "Seguimiento semanal y planes de acción."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🏗️",
+    "Nombre": "Layout",
+    "URL": "https://enriquecesar.github.io/layout/",
+    "Notas": "Diseño y validación de layouts."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🗺️",
+    "Nombre": "CN Connect",
+    "URL": "https://enriquecesar.github.io/CentroNorteConnect/",
+    "Notas": "Mapa, tiendas e indicadores regionales."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🔎",
+    "Nombre": "Code Brew",
+    "URL": "https://enriquecesar.github.io/CodeBrew_Merch/",
+    "Notas": "Buscador inteligente de artículos."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🐸",
+    "Nombre": "Frogmi",
+    "URL": "https://neo.frogmi.com/alsea-mexico/dashboard/gallery",
+    "Notas": "System Check y seguimiento operativo."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🏢",
+    "Nombre": "WOE",
+    "URL": "https://centro.operaciones.alsea.net/Login",
+    "Notas": "Portal central de herramientas."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🧪",
+    "Nombre": "ICA",
+    "URL": "https://ica-stage.bw-globalsolutions.com/Login.php",
+    "Notas": "AutoICA y seguimiento."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🚗",
+    "Nombre": "HME",
+    "URL": "https://hmecloud.com/?pg=Login",
+    "Notas": "Monitoreo Drive Thru."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "⭐",
+    "Nombre": "Qualtrics",
+    "URL": "https://xmalsea.qualtrics.com/login",
+    "Notas": "Experiencia del Cliente."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "📊",
+    "Nombre": "KPIs Centro Norte",
+    "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/jorge_alcantar_starbucks_com_mx/IQAyMdoeH7jwQYP-P2bwGeJ5AVvxUPM7UZ6huFsOlWyK5_w?e=lNlhEj",
+    "Notas": "Reporte regional."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "☁️",
+    "Nombre": "Nube Portafolio",
+    "URL": "https://grupovips-my.sharepoint.com/:f:/g/personal/enrique_cesar_starbucks_com_mx/IgB7AeWMyb-lCLeDz-62fSxeAc9aT-RQWkczz9aclI6E5Gc?e=t1LFaZ",
+    "Notas": "Repositorio estratégico."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "📲",
+    "Nombre": "Celular DM",
+    "URL": "https://wa.me/message/ENKDSAHYHIGAN1",
+    "Notas": "Comunicación directa."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🛠️",
+    "Nombre": "Mesa de Servicio",
+    "URL": "https://mds.alsea.com.mx/user/profile/public/id/140",
+    "Notas": "Soporte técnico."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🚨",
+    "Nombre": "Retain",
+    "URL": "https://alseamxres.retain.es//entrada.php",
+    "Notas": "Incidentes críticos."
+  },
+  {
+    "Categoria": "Herramientas",
+    "Icono": "🔐",
+    "Nombre": "Okta",
+    "URL": "https://auth-als.okta.com/login/default",
+    "Notas": "Acceso seguro."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "💚",
+    "Nombre": "Partner Hub",
+    "URL": "https://enriquecesar.github.io/Partner_Hub/",
+    "Notas": "Partners, aniversarios y cumpleaños."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "🎮",
+    "Nombre": "Attensi",
+    "URL": "https://manager.attensi.com/starbucks_mexico/home",
+    "Notas": "Capacitación gamificada."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "☕",
+    "Nombre": "Smartcup",
+    "URL": "https://capacitacion.alsea.net/login/index.php",
+    "Notas": "Aprendizaje Starbucks."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "📚",
+    "Nombre": "UBITS",
+    "URL": "https://login.ubitslearning.com/login",
+    "Notas": "Cursos y desarrollo."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "🌱",
+    "Nombre": "PDS",
+    "URL": "https://starbucks-pds.bw-globalsolutions.com/?mainMenu=v_desarrollo",
+    "Notas": "Coaching y desempeño."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "📍",
+    "Nombre": "META",
+    "URL": "https://meta.alsea.net/meta/login#/login",
+    "Notas": "Seguimiento de desempeño."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "🧃",
+    "Nombre": "Promoplanner",
+    "URL": "https://www.promoplannermexico.com.mx/POP/administracion/LogIn.asp",
+    "Notas": "Campañas vigentes."
+  },
+  {
+    "Categoria": "Desarrollo",
+    "Icono": "🎨",
+    "Nombre": "Design Gallery",
+    "URL": "https://starbucks.goepower.com/Store/Default.aspx?CUR=b580e256bd274fd6b1c2c96677a1b37e",
+    "Notas": "Material POP."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "👥",
+    "Nombre": "HCM",
+    "URL": "https://ejlw.login.us2.oraclecloud.com/",
+    "Notas": "Información de Partners."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "💳",
+    "Nombre": "Recibo de Nómina",
+    "URL": "https://alsea.tureciboelectronico.com/TuRecibo_Alsea/Login.aspx",
+    "Notas": "Consulta recibos."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "❤️",
+    "Nombre": "Va por mi Cuenta",
+    "URL": "https://extranet.alsea.net/ex/vxmc/index.aspx?e=timeout",
+    "Notas": "Programa social."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "🏦",
+    "Nombre": "Sura",
+    "URL": "https://rk.suraim.com.mx/RkWebSite/Account/Login",
+    "Notas": "Caja de ahorro."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "🩺",
+    "Nombre": "Beneflex",
+    "URL": "https://www.beneflex.com.mx/MisOpcionales/ie/ieMisDatos.aspx",
+    "Notas": "Beneficios y SGMM."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "🎼",
+    "Nombre": "Harmony",
+    "URL": "https://harmony.moodmedia.com/wpn/enter-mobile-key",
+    "Notas": "Programación musical."
+  },
+  {
+    "Categoria": "Servicios",
+    "Icono": "🎧",
+    "Nombre": "Network Música",
+    "URL": "https://player.apps.playnetwork.com/player/dashboard",
+    "Notas": "Validación musical."
   }
 ]
