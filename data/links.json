@@ -245,3 +245,10 @@
     "Notas": "Comunicación directa diaria para apertura, riesgos, evidencias, operación y escalamiento crítico."
   }
 ]
+{
+  "Categoria": "App",
+  "Icono": "📋",
+  "Nombre": "Variacion_Semanal",
+  "URL": "https://enriquecesar.github.io/variaciones_semanal/",
+  "Notas": "Revisión tendencial de variaciones de inventario por semana."
+}
