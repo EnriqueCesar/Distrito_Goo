@@ -1,14 +1,18 @@
 {
   "version": "10.0",
-  "entrega": "1",
-  "status": "foundation",
+  "entrega": "2",
+  "status": "motor",
   "updated": "2026-07-01",
   "notes": [
-    "Nueva arquitectura JSON",
-    "Home V10",
-    "Dashboard ejecutivo",
-    "Favoritos inteligentes",
-    "Spotlight Search",
-    "PWA renovada"
+    "Componentes reutilizables",
+    "Cards v2",
+    "Quick Actions",
+    "Historial de recientes",
+    "Apps nativas con fallback",
+    "Pull to Refresh",
+    "Toast Notifications",
+    "Skeleton Loading",
+    "Lazy Loading",
+    "Proyecto limpio para GitHub Pages"
   ]
 }

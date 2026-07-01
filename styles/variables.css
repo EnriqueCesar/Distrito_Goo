@@ -1,6 +1,7 @@
 :root{
   --sb-green:#006241;
   --sb-green-2:#00754A;
+  --sb-green-3:#00A862;
   --sb-light:#D4E9E2;
   --sb-mint:#EAF6F1;
   --sb-cream:#F7F3EA;
@@ -22,6 +23,7 @@
 [data-theme="dark"]{
   --sb-green:#00A862;
   --sb-green-2:#44C08A;
+  --sb-green-3:#71D3A5;
   --sb-light:#103B2C;
   --sb-mint:#0B241C;
   --sb-cream:#121614;

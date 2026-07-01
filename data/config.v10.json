@@ -1,7 +1,7 @@
 {
   "appName": "Distrito GO",
-  "version": "10.0 Entrega 1",
-  "build": "2026.07.01-foundation",
+  "version": "10.0 Entrega 2",
+  "build": "2026.07.01-motor",
   "dmName": "Enrique César",
   "tagline": "Prioriza, ejecuta y mejora cada día.",
   "modoVisual": "favoritos_categorias",
@@ -17,6 +17,13 @@
     "chips": true,
     "skeleton": true,
     "pullToRefresh": true,
-    "darkModeReady": true
-  }
+    "darkModeReady": true,
+    "components": true,
+    "quickActions": true,
+    "history": true,
+    "toast": true,
+    "lazyLoading": true,
+    "smartFavorites": true
+  },
+  "entrega": "2"
 }

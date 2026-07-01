@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#006241" />
-  <meta name="description" content="Distrito GO 10.0 - centro operativo diario." />
-  <title>Distrito GO 10.0</title>
+  <meta name="description" content="Distrito GO 10.0 Entrega 2 - motor operativo modular." />
+  <title>Distrito GO 10.0 | Entrega 2</title>
   <link rel="manifest" href="./manifest.json" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
   <link rel="stylesheet" href="./styles/variables.css" />
@@ -13,7 +13,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
-
   <div id="pull-indicator" class="pull-indicator" aria-hidden="true">↻ Actualizando...</div>
 
   <header class="app-header" role="banner">
@@ -24,7 +23,10 @@
         <h1 id="app-title">Distrito GO</h1>
       </div>
     </div>
-    <button id="theme-toggle" class="icon-button" type="button" aria-label="Cambiar tema">☾</button>
+    <div class="header-actions">
+      <button id="open-spotlight" class="icon-button" type="button" aria-label="Buscar">⌘K</button>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Cambiar tema">☾</button>
+    </div>
   </header>
 
   <main id="main" class="app-shell" tabindex="-1">
@@ -34,7 +36,7 @@
         <h2 id="hero-title">¿Qué deseas hacer hoy?</h2>
         <p id="hero-subtitle" class="hero-subtitle">Prioriza, ejecuta y mejora cada día.</p>
       </div>
-      <button id="install-btn" class="install-button hidden" type="button">Instalar</button>
+      <button id="install-btn" class="install-button hidden" type="button">Instalar App</button>
     </section>
 
     <section class="dashboard-grid" id="dashboard-grid" aria-label="Dashboard ejecutivo">
@@ -55,15 +57,23 @@
         <h3 id="quick-title">Accesos rápidos</h3>
         <span id="last-update">V10.0</span>
       </div>
-      <div id="quick-actions" class="quick-grid"></div>
+      <div id="quick-actions" class="quick-grid skeleton-grid"></div>
     </section>
 
     <section class="favorites-section" aria-labelledby="favorites-title">
       <div class="section-title">
         <h3 id="favorites-title">⭐ Favoritos inteligentes</h3>
-        <button id="clear-recents" class="text-button" type="button">Limpiar recientes</button>
+        <button id="reset-favorites" class="text-button" type="button">Restaurar</button>
       </div>
-      <div id="favorites-grid" class="tools-grid"></div>
+      <div id="favorites-grid" class="tools-grid skeleton-grid"></div>
+    </section>
+
+    <section class="recent-section" aria-labelledby="recent-title">
+      <div class="section-title">
+        <h3 id="recent-title">🕘 Recientes</h3>
+        <button id="clear-recents" class="text-button" type="button">Limpiar</button>
+      </div>
+      <div id="recent-grid" class="tools-grid compact-grid"></div>
     </section>
 
     <section class="categories-section" aria-labelledby="categories-title">
@@ -71,7 +81,7 @@
         <h3 id="categories-title">Categorías</h3>
         <button id="show-all" class="text-button" type="button">Ver todo</button>
       </div>
-      <div id="category-hubs" class="category-grid"></div>
+      <div id="category-hubs" class="category-grid skeleton-grid"></div>
     </section>
 
     <section class="tools-section" aria-labelledby="tools-title">
@@ -80,6 +90,7 @@
         <span id="result-count">0 resultados</span>
       </div>
       <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
+      <div id="lazy-sentinel" class="lazy-sentinel" aria-hidden="true"></div>
     </section>
   </main>
 
@@ -92,11 +103,20 @@
     <div id="modal-results" class="modal-results"></div>
   </dialog>
 
+  <dialog id="quick-modal" class="quick-modal" aria-label="Acciones rápidas">
+    <div class="quick-modal-head">
+      <strong id="quick-modal-title">Acciones</strong>
+      <button id="close-quick-modal" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <div id="quick-modal-body" class="quick-modal-body"></div>
+  </dialog>
+
   <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
 
   <nav class="bottom-nav" aria-label="Navegación principal">
     <button class="nav-item is-active" data-view="home" type="button">🏠<span>Inicio</span></button>
     <button class="nav-item" data-view="favorites" type="button">⭐<span>Favoritos</span></button>
+    <button class="nav-item" data-view="recent" type="button">🕘<span>Recientes</span></button>
     <button class="nav-item" data-view="search" type="button">🔎<span>Buscar</span></button>
     <button class="nav-item" data-view="all" type="button">🧭<span>Todo</span></button>
   </nav>

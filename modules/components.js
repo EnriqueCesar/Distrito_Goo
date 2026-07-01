@@ -1,0 +1,33 @@
+import { escapeHtml } from './utils.js';
+
+export function skeletonCards(count = 4){
+  return Array.from({length: count}, () => '<div class="skeleton-card"></div>').join('');
+}
+
+export function emptyState(title, subtitle = 'Intenta otra búsqueda o categoría.'){
+  return `<div class="empty-state"><div class="empty-icon">☕</div><div><strong>${escapeHtml(title)}</strong><p>${escapeHtml(subtitle)}</p></div></div>`;
+}
+
+export function metricCard(card){
+  return `<article class="metric-card"><div class="metric-icon" aria-hidden="true">${card.icono}</div><div><div class="metric-value">${card.valor}</div><div class="metric-label">${escapeHtml(card.label)}</div></div></article>`;
+}
+
+export function quickAction(action){
+  return `<button class="quick-card" type="button" data-action="${escapeHtml(action.action)}"><span aria-hidden="true">${action.icono}</span><span>${escapeHtml(action.label)}</span></button>`;
+}
+
+export function chip(c, active){
+  return `<button class="chip ${active ? 'is-active' : ''}" type="button" data-category="${escapeHtml(c.id)}">${c.icono} ${escapeHtml(c.nombre)} · ${c.contador}</button>`;
+}
+
+export function categoryHub(c){
+  return `<button class="category-card" type="button" data-category="${escapeHtml(c.id)}" style="--cat-color:${c.color};--cat-accent:${c.accent}"><div class="cat-icon">${c.icono}</div><h4>${escapeHtml(c.nombre)}</h4><p>${escapeHtml(c.descripcion)}</p><span class="counter">${c.contador} herramientas</span></button>`;
+}
+
+export function toolCard(tool, isFav, compact = false){
+  return `<article class="tool-card ${compact ? 'is-compact' : ''}" tabindex="0" role="button" data-id="${escapeHtml(tool.id)}" aria-label="Abrir ${escapeHtml(tool.nombre)}"><div class="tool-top"><div class="tool-icon" aria-hidden="true">${tool.icono}</div><button class="fav-toggle ${isFav ? 'is-fav' : ''}" type="button" data-fav="${escapeHtml(tool.id)}" aria-label="${isFav ? 'Quitar de favoritos' : 'Agregar a favoritos'}">${isFav ? '⭐' : '☆'}</button></div><h4>${escapeHtml(tool.nombre)}</h4><p>${escapeHtml(tool.notas)}</p><div class="tool-meta"><span>${tool.categoriaIcono} ${escapeHtml(tool.categoria)}</span><span>${tool.tipo === 'app' ? '📱 App' : '🌐 Web'}</span></div></article>`;
+}
+
+export function modalResult(tool){
+  return `<div class="modal-result" role="button" tabindex="0" data-id="${escapeHtml(tool.id)}"><div class="tool-icon">${tool.icono}</div><div><strong>${escapeHtml(tool.nombre)}</strong><br><small>${tool.categoriaIcono} ${escapeHtml(tool.categoria)} · ${escapeHtml(tool.notas)}</small></div></div>`;
+}
