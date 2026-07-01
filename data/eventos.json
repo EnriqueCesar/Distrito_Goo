@@ -1,5 +1,14 @@
 [
   {
+    "Fecha Inicio": "2026-04-26",
+    "Fecha Fin": "2026-12-31",
+    "Actividad": "Precios_Maquila",
+    "Contexto / Recordatorio": "Última Actualización Abril_26",
+    "Imagen": "ℹ️",
+    "ImagenDetalle": "maquila_abril.png",
+    "Tipo": "Informativo"
+  },
+  {
     "Fecha Inicio": "2026-06-23",
     "Fecha Fin": "2026-06-30",
     "Actividad": "🧹 Limpieza Backs",
@@ -15,6 +24,15 @@
     "ImagenDetalle": "hugo-barista-champion.jpeg"
   },
   {
+    "Fecha Inicio": "2026-06-29",
+    "Fecha Fin": "2026-07-02",
+    "Actividad": "Pagos Especiales 1 Qna_Julio",
+    "Contexto / Recordatorio": "Envio Pagos 2 de Julio antes de 10:00 am \nhttps://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
+    "Imagen": "📅",
+    "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
+    "Link": "Abrir archivo Pagos Especiales"
+  },
+  {
     "Fecha Inicio": "2026-06-30",
     "Fecha Fin": "2026-07-01",
     "Actividad": "📅 Corte de Nómina",
@@ -22,20 +40,6 @@
     "Imagen": "📅",
     "URL": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3Dl3nkhYXbqUTKDp8Bf0uxGDPpBZWkMQF7j3HLyy4r8SvMjdao7m8UM%2BDTKwOcnx5sJLL9bMZOiz%2BCFKFydS%2FxmHFRXzmVqCRtilYx5MU6CokaAbqH%2FbzY5lEur%2F2BdsGt97iecodji%2FLcLrzXqC2kCfYjIxwLkLYTAYHBRkfRAnX9JohUD1hEtqWNroirzg9qJ363%2FW%2BUkx0tsWFTl0t%2FUtdP%2BaB329lgoJ3KXSD3DIrgKyhRuHr%2BypO63BIDb13HzbEm6kQ%2FK83eOZieuambuMw7nujUiZv33flaz%2F%2BsBIo8nv2yHypyfhVtjdrll%2BsdacmJuospuvjZ2XMnZZzQ4qla3iQC98%2BIDNvNHRif2HLWZwYUcRiu0Tf1rj2XjM3%2FjxAIN4JgyhtDarjvNUphjG7ie2pKXwAUdk7E2%2BNv5I6bycmGNiGsrCxloC3yQRd1%20agentid%3DOraFusionApp_11AG%20ver%3D1%20crmethod%3D2%26cksum%3Df2502d4131048a2deb7d8284fd47fd959a544229&ECID-Context=1.006FTSu0GtL4IvV6y3edMG009i4h00056_%3BkXjE",
     "Link": "Abrir Oracle HCM para corte de nómina"
-  },
-  {
-    "Fecha Inicio": "2026-07-01",
-    "Fecha Fin": "2026-07-31",
-    "Actividad": "🎓 Recertificación Shift Supervisor",
-    "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas aprox.).",
-    "Imagen": "🎓"
-  },
-  {
-    "Fecha Inicio": "2026-07-01",
-    "Fecha Fin": "2026-07-10",
-    "Actividad": "💳 Inventario Pin Pad y TPV Q3",
-    "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
-    "Imagen": "💳"
   },
   {
     "Fecha Inicio": "2026-07-01",
@@ -52,6 +56,21 @@
     "Actividad": "💳 Inventario TPV y Pin Pads Q3",
     "Contexto / Recordatorio": "Realiza el inventario trimestral en ATB. Verifica número de serie, afiliación y fotografías completas para evitar rechazos del registro.",
     "Imagen": "💳"
+  },
+  {
+    "Fecha Inicio": "2026-07-01",
+    "Fecha Fin": "2026-07-31",
+    "Actividad": "🎓 Recertificación Shift Supervisor",
+    "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas aprox.).",
+    "Imagen": "🎓"
+  },
+  {
+    "Fecha Inicio": "2026-07-01",
+    "Fecha Fin": "2026-08-02",
+    "Actividad": "📖 Conversaciones de Desempeño y Desarrollo Q3",
+    "Contexto / Recordatorio": "Seguimiento y/o impulso a los objetivos de PDP. Periodo del 1 de julio al 2 de agosto.",
+    "Imagen": "📖",
+    "ImagenDetalle": "cdd_3Q_2026.png"
   },
   {
     "Fecha Inicio": "2026-07-13",
@@ -78,6 +97,13 @@
   },
   {
     "Fecha Inicio": "2026-07-20",
+    "Fecha Fin": "2026-08-16",
+    "Actividad": "⭐ Starbucks Rewards Summer",
+    "Contexto / Recordatorio": "Promociones diferenciadas por día en Starbucks Rewards.",
+    "Imagen": "⭐"
+  },
+  {
+    "Fecha Inicio": "2026-07-20",
     "Fecha Fin": "2026-08-30",
     "Actividad": "☀️ Campaña Summer 2026",
     "Contexto / Recordatorio": "Inicio de campaña Summer; ejecución de bebidas, food, retail y promociones.",
@@ -86,16 +112,30 @@
   {
     "Fecha Inicio": "2026-07-20",
     "Fecha Fin": "2026-08-30",
-    "Actividad": "🥥 Coconut Ube Platform",
-    "Contexto / Recordatorio": "Lanzamiento de Coconut Ube Latte y Frappuccino.",
-    "Imagen": "🥥"
+    "Actividad": "☕ Aerocano",
+    "Contexto / Recordatorio": "Nueva plataforma de Espresso aireado.",
+    "Imagen": "☕"
   },
   {
     "Fecha Inicio": "2026-07-20",
     "Fecha Fin": "2026-08-30",
-    "Actividad": "☕ Aerocano",
-    "Contexto / Recordatorio": "Nueva plataforma de Espresso aireado.",
-    "Imagen": "☕"
+    "Actividad": "🌍 Kati Kati Blend",
+    "Contexto / Recordatorio": "Café de temporada para Retail y Coffee Experience.",
+    "Imagen": "🌍"
+  },
+  {
+    "Fecha Inicio": "2026-07-20",
+    "Fecha Fin": "2026-08-30",
+    "Actividad": "🍩 Dona Ube",
+    "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
+    "Imagen": "🍩"
+  },
+  {
+    "Fecha Inicio": "2026-07-20",
+    "Fecha Fin": "2026-08-30",
+    "Actividad": "🍰 Cheesecake Brulée de Limón",
+    "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
+    "Imagen": "🍰"
   },
   {
     "Fecha Inicio": "2026-07-20",
@@ -114,30 +154,16 @@
   {
     "Fecha Inicio": "2026-07-20",
     "Fecha Fin": "2026-08-30",
+    "Actividad": "🥥 Coconut Ube Platform",
+    "Contexto / Recordatorio": "Lanzamiento de Coconut Ube Latte y Frappuccino.",
+    "Imagen": "🥥"
+  },
+  {
+    "Fecha Inicio": "2026-07-20",
+    "Fecha Fin": "2026-08-30",
     "Actividad": "🥪 Nueva Focaccia",
     "Contexto / Recordatorio": "Innovación Food. Revisar producción y disponibilidad.",
     "Imagen": "🥪"
-  },
-  {
-    "Fecha Inicio": "2026-07-20",
-    "Fecha Fin": "2026-08-30",
-    "Actividad": "🍩 Dona Ube",
-    "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-    "Imagen": "🍩"
-  },
-  {
-    "Fecha Inicio": "2026-07-20",
-    "Fecha Fin": "2026-08-30",
-    "Actividad": "🦄 Cake Pop Unicorn",
-    "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-    "Imagen": "🦄"
-  },
-  {
-    "Fecha Inicio": "2026-07-20",
-    "Fecha Fin": "2026-08-30",
-    "Actividad": "🍰 Cheesecake Brulée de Limón",
-    "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-    "Imagen": "🍰"
   },
   {
     "Fecha Inicio": "2026-07-20",
@@ -149,23 +175,16 @@
   {
     "Fecha Inicio": "2026-07-20",
     "Fecha Fin": "2026-08-30",
-    "Actividad": "🧀 Snack Box",
-    "Contexto / Recordatorio": "Nueva opción Retail Lobby.",
-    "Imagen": "🧀"
+    "Actividad": "🦄 Cake Pop Unicorn",
+    "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
+    "Imagen": "🦄"
   },
   {
     "Fecha Inicio": "2026-07-20",
     "Fecha Fin": "2026-08-30",
-    "Actividad": "🌍 Kati Kati Blend",
-    "Contexto / Recordatorio": "Café de temporada para Retail y Coffee Experience.",
-    "Imagen": "🌍"
-  },
-  {
-    "Fecha Inicio": "2026-07-20",
-    "Fecha Fin": "2026-08-16",
-    "Actividad": "⭐ Starbucks Rewards Summer",
-    "Contexto / Recordatorio": "Promociones diferenciadas por día en Starbucks Rewards.",
-    "Imagen": "⭐"
+    "Actividad": "🧀 Snack Box",
+    "Contexto / Recordatorio": "Nueva opción Retail Lobby.",
+    "Imagen": "🧀"
   },
   {
     "Fecha Inicio": "2026-07-28",
@@ -194,17 +213,17 @@
   },
   {
     "Fecha Inicio": "2026-08-03",
-    "Fecha Fin": "2026-08-31",
-    "Actividad": "🌟 Best Talent - Cascada DM - SM",
-    "Contexto / Recordatorio": "Inicio de calibraciones y desarrollo DM-SM.",
-    "Imagen": "🌟"
-  },
-  {
-    "Fecha Inicio": "2026-08-03",
     "Fecha Fin": "2026-08-09",
     "Actividad": "⬆️ Upsize sin costo adicional",
     "Contexto / Recordatorio": "Promoción para impulsar ADTs.",
     "Imagen": "⬆️"
+  },
+  {
+    "Fecha Inicio": "2026-08-03",
+    "Fecha Fin": "2026-08-31",
+    "Actividad": "🌟 Best Talent - Cascada DM - SM",
+    "Contexto / Recordatorio": "Inicio de calibraciones y desarrollo DM-SM.",
+    "Imagen": "🌟"
   },
   {
     "Fecha Inicio": "2026-08-13",
@@ -278,13 +297,6 @@
     "Imagen": "📅",
     "URL": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3Dl3nkhYXbqUTKDp8Bf0uxGDPpBZWkMQF7j3HLyy4r8SvMjdao7m8UM%2BDTKwOcnx5sJLL9bMZOiz%2BCFKFydS%2FxmHFRXzmVqCRtilYx5MU6CokaAbqH%2FbzY5lEur%2F2BdsGt97iecodji%2FLcLrzXqC2kCfYjIxwLkLYTAYHBRkfRAnX9JohUD1hEtqWNroirzg9qJ363%2FW%2BUkx0tsWFTl0t%2FUtdP%2BaB329lgoJ3KXSD3DIrgKyhRuHr%2BypO63BIDb13HzbEm6kQ%2FK83eOZieuambuMw7nujUiZv33flaz%2F%2BsBIo8nv2yHypyfhVtjdrll%2BsdacmJuospuvjZ2XMnZZzQ4qla3iQC98%2BIDNvNHRif2HLWZwYUcRiu0Tf1rj2XjM3%2FjxAIN4JgyhtDarjvNUphjG7ie2pKXwAUdk7E2%2BNv5I6bycmGNiGsrCxloC3yQRd1%20agentid%3DOraFusionApp_11AG%20ver%3D1%20crmethod%3D2%26cksum%3Df2502d4131048a2deb7d8284fd47fd959a544229&ECID-Context=1.006FTSu0GtL4IvV6y3edMG009i4h00056_%3BkXjE",
     "Link": "Abrir Oracle HCM para corte de nómina"
-  },
-  {
-    "Fecha Inicio": "2026-10-01",
-    "Fecha Fin": "2026-10-10",
-    "Actividad": "💳 Inventario Pin Pad y TPV Q4",
-    "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
-    "Imagen": "💳"
   },
   {
     "Fecha Inicio": "2026-10-01",
@@ -371,23 +383,5 @@
     "Imagen": "📅",
     "URL": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3Dl3nkhYXbqUTKDp8Bf0uxGDPpBZWkMQF7j3HLyy4r8SvMjdao7m8UM%2BDTKwOcnx5sJLL9bMZOiz%2BCFKFydS%2FxmHFRXzmVqCRtilYx5MU6CokaAbqH%2FbzY5lEur%2F2BdsGt97iecodji%2FLcLrzXqC2kCfYjIxwLkLYTAYHBRkfRAnX9JohUD1hEtqWNroirzg9qJ363%2FW%2BUkx0tsWFTl0t%2FUtdP%2BaB329lgoJ3KXSD3DIrgKyhRuHr%2BypO63BIDb13HzbEm6kQ%2FK83eOZieuambuMw7nujUiZv33flaz%2F%2BsBIo8nv2yHypyfhVtjdrll%2BsdacmJuospuvjZ2XMnZZzQ4qla3iQC98%2BIDNvNHRif2HLWZwYUcRiu0Tf1rj2XjM3%2FjxAIN4JgyhtDarjvNUphjG7ie2pKXwAUdk7E2%2BNv5I6bycmGNiGsrCxloC3yQRd1%20agentid%3DOraFusionApp_11AG%20ver%3D1%20crmethod%3D2%26cksum%3Df2502d4131048a2deb7d8284fd47fd959a544229&ECID-Context=1.006FTSu0GtL4IvV6y3edMG009i4h00056_%3BkXjE",
     "Link": "Abrir Oracle HCM para corte de nómina"
-  },
-  {
-    "Fecha Inicio": "2026-06-29",
-    "Fecha Fin": "2026-07-02",
-    "Actividad": "Pagos Especiales 1 Qna_Julio",
-    "Contexto / Recordatorio": "Envio Pagos 2 de Julio antes de 10:00 am \nhttps://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
-    "Imagen": "📅",
-    "URL": "https://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
-    "Link": "Abrir archivo Pagos Especiales"
-  },
-  {
-    "Fecha Inicio": "2026-04-26",
-    "Fecha Fin": "2026-12-31",
-    "Actividad": "Precios_Maquila",
-    "Contexto / Recordatorio": "Última Actualización Abril_26",
-    "Imagen": "ℹ️",
-    "ImagenDetalle": "maquila_abril.png",
-    "Tipo": "Informativo"
   }
 ]

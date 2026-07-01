@@ -84,8 +84,47 @@ function eventLink(e){
   const m = String(ctx||'').match(/https?:\/\/\S+/);
   return m ? m[0].trim() : '';
 }
+
+function mainDevelopmentEvent(){
+  const now = new Date();
+  return currentEvents(CMS).find(x=>{
+    const txt = normalize(`${first(x.e,['Actividad'])} ${first(x.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion'])}`);
+    return txt.includes('conversaciones de desempeno') || txt.includes('conversaciones de desempeño') || txt.includes('cdd_3q') || txt.includes('pdp');
+  });
+}
+function developmentHero(){
+  const row = mainDevelopmentEvent();
+  if(!row) return '';
+  const img = first(row.e,['ImagenDetalle','Imagen Detalle','Foto','ImagenArchivo']) || 'cdd_3Q_2026.png';
+  return `<section class="priority-block cdd-block"><div class="cdd-header"><h3>🌱 Desarrollo Q3</h3><small>${row.start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')} al ${row.end.toLocaleDateString('es-MX',{day:'2-digit',month:'short'}).replace('.','')}</small></div><article class="cdd-card" data-image="assets/photos/${esc(img)}"><img src="assets/photos/${esc(img)}" alt="Conversaciones de Desempeño y Desarrollo Q3" loading="lazy"><div><strong>${esc(first(row.e,['Actividad']))}</strong><em>${esc(first(row.e,['Contexto / Recordatorio','Contexto','Descripción','Descripcion']))}</em></div></article></section>`;
+}
+function altasWindowActive(now=new Date()){
+  const y = now.getFullYear();
+  const start = new Date(y,6,1); start.setHours(0,0,0,0);
+  const end = new Date(y,6,25); end.setHours(23,59,59,999);
+  return now >= start && now <= end;
+}
+function altaStatus(row, tipo){
+  if(tipo === 'SS') return first(row,['BT','GB180','ESTATUS ALTA']) || 'En curso';
+  return first(row,['GB180','BT','ESTATUS ALTA']) || 'En curso';
+}
+function altasCursoBlock(){
+  if(!altasWindowActive()) return '';
+  const rows = [
+    ...(CMS.bt||[]).map(x=>({...x,_tipo:'BT'})),
+    ...(CMS.ss||[]).map(x=>({...x,_tipo:'SS'}))
+  ].filter(x=>normalize(first(x,['ESTATUS ALTA','mes de solicitud','Mes'])).includes('julio'));
+  if(!rows.length) return '';
+  return `<section class="priority-block altas-curso"><div class="altas-title"><div><h3>👥 Altas en Curso</h3><small>Alerta activa del 1 al 25 de julio</small></div><span>${rows.length}</span></div><div class="altas-grid">${rows.slice(0,8).map(r=>`<article class="alta-card"><div><strong>${esc(shortPartnerName(first(r,['NOMBRE COMPLETO','NOMBRE','Nombre']))}</strong><small>${esc(first(r,['TIENDA','Tienda'])||'Tienda')}</small></div><span class="alta-type ${esc(r._tipo.toLowerCase())}">${esc(r._tipo)}</span><em>${esc(altaStatus(r,r._tipo))}</em></article>`).join('')}</div>${rows.length>8?`<small class="altas-more">+${rows.length-8} altas adicionales en CMS.</small>`:''}</section>`;
+}
+function shortPartnerName(name){
+  const parts = String(name||'').trim().replace(/\s+/g,' ').split(' ').filter(Boolean);
+  if(parts.length <= 3) return parts.join(' ');
+  return `${parts[0]} ${parts[1]} ${parts[2]}`;
+}
+
 function eventDigest(){
-  const rows=currentEvents(CMS).filter(x=>{const n=normalize(first(x.e,['Actividad'])); return !n.includes('corte de nomina') && !n.includes('precios_maquila');}).slice(0,5);
+  const rows=currentEvents(CMS).filter(x=>{const n=normalize(first(x.e,['Actividad'])); return !n.includes('corte de nomina') && !n.includes('precios_maquila') && !n.includes('conversaciones de desempeno') && !n.includes('conversaciones de desempeño') && !n.includes('cdd_3q');}).slice(0,5);
   return `<div class="digest-list">${rows.map(x=>{
     const url=eventLink(x.e); const img=first(x.e,['ImagenDetalle','Imagen Detalle','Foto','ImagenArchivo']);
     const attr = url ? `data-link="${esc(url)}"` : (img ? `data-image="assets/photos/${esc(img)}"` : '');
@@ -199,18 +238,20 @@ function renderToday() {
   const wfm = wfmSmart();
   $('#todayCards').innerHTML = `
     <section class="priority-block"><h3>🚨 Alertas críticas</h3>${criticalAlerts()}</section>
+    ${developmentHero()}
+    ${altasCursoBlock()}
     <section class="priority-block"><h3>📅 Eventos vigentes</h3>${eventDigest()}</section>
     ${infoBlock()}
     ${weeklyTodayBlock()}
     <section class="priority-block two-mini">
-      <article class="priority-card wfm-card" data-open="wfm"><span>${esc(wfm.icon)}</span><div><small>WFM · Semana ${esc(wfm.meta.week)}</small><strong>${esc(wfm.action)}</strong><em>${esc(wfm.meta.shortRange)} · Siguiente: ${esc(wfm.nextAction)}</em></div></article>
+      <article class="priority-card wfm-card" data-open="wfm"><span>${esc(wfm.icon)}</span><div><small>Planeación WFM</small><strong>${esc(wfm.action.replace(/^WFM\s*-\s*/i,''))}</strong><em>${esc(wfm.meta.shortRange)} · Semana ${esc(wfm.meta.week)} · Sigue: ${esc(wfm.nextAction.replace(/^WFM\s*-\s*/i,''))}</em></div></article>
       ${dutyCard(CMS)}
     </section>
     <section class="priority-block"><h3>☕ Rutina del día</h3>${routineCarousel()}</section>`;
 }
 function showWFM() {
   const smart = wfmSmart();
-  openModal(`<span class="eyebrow">WFM Inteligente</span><h2>${esc(smart.icon)} ${esc(smart.action)}</h2><div class="wfm-clean"><div><small>Semana</small><strong>${esc(smart.meta.week)}</strong></div><div><small>Fecha</small><strong>${esc(smart.meta.shortRange)}</strong></div><div><small>Actividad</small><strong>${esc(smart.action.replace(/^WFM\s*-\s*/i,''))}</strong></div><div><small>Siguiente</small><strong>${esc(smart.nextAction)}</strong></div></div>`);
+  openModal(`<span class="eyebrow">Planeación WFM</span><h2>${esc(smart.icon)} Actividad de hoy</h2><div class="wfm-clean"><div><small>Hoy</small><strong>${esc(formatDateMX(new Date()))}</strong></div><div><small>Planeando</small><strong>${esc(smart.meta.shortRange)}</strong></div><div><small>Semana</small><strong>${esc(smart.meta.week)}</strong></div><div><small>Siguiente</small><strong>${esc(smart.nextAction.replace(/^WFM\s*-\s*/i,''))}</strong></div></div><p class="modal-note">${esc(smart.action.replace(/^WFM\s*-\s*/i,''))}: ${esc(smart.detail)}</p>`);
 }
 function bind() {
   document.body.addEventListener('click', e => {
@@ -233,7 +274,7 @@ async function init() {
   renderToday(); renderEvents(CMS); renderCelebrations(); renderTabs(CMS); renderApps(CMS); bind();
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations?.().then(regs => regs.forEach(r => r.update?.())).catch(()=>{});
-    navigator.serviceWorker.register('sw.js?v=7.0.2').then(r => r.update()).catch(() => {});
+    navigator.serviceWorker.register('sw.js?v=7.1.0').then(r => r.update()).catch(() => {});
   }
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('#installBtn').classList.remove('hidden'); });
