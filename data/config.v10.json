@@ -1,0 +1,22 @@
+{
+  "appName": "Distrito GO",
+  "version": "10.0 Entrega 1",
+  "build": "2026.07.01-foundation",
+  "dmName": "Enrique César",
+  "tagline": "Prioriza, ejecuta y mejora cada día.",
+  "modoVisual": "favoritos_categorias",
+  "theme": "starbucks-light",
+  "features": {
+    "dashboard": true,
+    "favoritos": true,
+    "spotlight": true,
+    "pwa": true,
+    "nativeApps": true,
+    "recentes": true,
+    "contadores": true,
+    "chips": true,
+    "skeleton": true,
+    "pullToRefresh": true,
+    "darkModeReady": true
+  }
+}

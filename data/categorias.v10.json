@@ -1,0 +1,92 @@
+[
+  {
+    "id": "operacion",
+    "icono": "⚙️",
+    "color": "#006241",
+    "accent": "#00A862",
+    "descripcion": "Indicadores, reportes y herramientas para operar mejor.",
+    "keywords": [
+      "kpi",
+      "operación",
+      "tienda",
+      "inventario",
+      "wfm",
+      "pbt"
+    ],
+    "nombre": "Operación",
+    "contador": 19
+  },
+  {
+    "id": "desarrollo",
+    "icono": "🌱",
+    "color": "#1E8E3E",
+    "accent": "#71B280",
+    "descripcion": "Capacitación, coaching y crecimiento de Partners.",
+    "keywords": [
+      "partners",
+      "capacitación",
+      "coaching",
+      "desarrollo"
+    ],
+    "nombre": "Desarrollo",
+    "contador": 5
+  },
+  {
+    "id": "campanas",
+    "icono": "📣",
+    "color": "#C66A00",
+    "accent": "#F59E0B",
+    "descripcion": "Materiales, POP y campañas vigentes.",
+    "keywords": [
+      "campaña",
+      "pop",
+      "materiales",
+      "comunicación visual"
+    ],
+    "nombre": "Campañas",
+    "contador": 2
+  },
+  {
+    "id": "comunicacion",
+    "icono": "💬",
+    "color": "#0B72B9",
+    "accent": "#38BDF8",
+    "descripcion": "Contacto directo, colaboración y comunicación operativa.",
+    "keywords": [
+      "whatsapp",
+      "comunicación",
+      "workvivo"
+    ],
+    "nombre": "Comunicación",
+    "contador": 2
+  },
+  {
+    "id": "servicios",
+    "icono": "💼",
+    "color": "#6D4C41",
+    "accent": "#A1887F",
+    "descripcion": "Nómina, beneficios y plataformas personales.",
+    "keywords": [
+      "beneficios",
+      "nómina",
+      "servicios"
+    ],
+    "nombre": "Servicios",
+    "contador": 7
+  },
+  {
+    "id": "soporte",
+    "icono": "🛡️",
+    "color": "#B3261E",
+    "accent": "#EF5350",
+    "descripcion": "Incidentes, accesos y soporte técnico.",
+    "keywords": [
+      "soporte",
+      "ticket",
+      "incidente",
+      "acceso"
+    ],
+    "nombre": "Soporte",
+    "contador": 4
+  }
+]

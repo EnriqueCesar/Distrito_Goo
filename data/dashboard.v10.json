@@ -1,0 +1,56 @@
+{
+  "saludo": "Hola Enrique 👋",
+  "titulo": "¿Qué deseas hacer hoy?",
+  "cards": [
+    {
+      "id": "herramientas",
+      "label": "Herramientas",
+      "valor": 39,
+      "icono": "🧭"
+    },
+    {
+      "id": "favoritos",
+      "label": "Favoritos",
+      "valor": 17,
+      "icono": "⭐"
+    },
+    {
+      "id": "categorias",
+      "label": "Categorías",
+      "valor": 6,
+      "icono": "🗂️"
+    },
+    {
+      "id": "apps",
+      "label": "Apps nativas",
+      "valor": 2,
+      "icono": "📱"
+    }
+  ],
+  "quickActions": [
+    {
+      "id": "search",
+      "label": "Buscar herramienta",
+      "icono": "🔎",
+      "action": "openSearch"
+    },
+    {
+      "id": "favorites",
+      "label": "Ver favoritos",
+      "icono": "⭐",
+      "action": "showFavorites"
+    },
+    {
+      "id": "refresh",
+      "label": "Actualizar",
+      "icono": "🔄",
+      "action": "refreshData"
+    },
+    {
+      "id": "install",
+      "label": "Instalar PWA",
+      "icono": "⬇️",
+      "action": "installPWA"
+    }
+  ]
+}

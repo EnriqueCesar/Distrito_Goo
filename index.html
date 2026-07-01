@@ -1,73 +1,106 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#006241" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <title>Distrito GO</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="assets/icons/icon-192.png" />
-  <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
-  <link rel="stylesheet" href="css/base.css?v=7.2.0" />
-  <link rel="stylesheet" href="css/layout.css?v=7.2.0" />
-  <link rel="stylesheet" href="css/cards.css?v=7.2.0" />
-  <link rel="stylesheet" href="css/modal.css?v=7.2.0" />
-  <link rel="stylesheet" href="css/responsive.css?v=7.2.0" />
+  <meta name="description" content="Distrito GO 10.0 - centro operativo diario." />
+  <title>Distrito GO 10.0</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/app.css" />
 </head>
 <body>
-  <div id="app" class="app-shell">
-    <header class="hero" id="hero">
-      <nav class="topbar">
-        <div class="brand"><img src="assets/brand/distrito_kike.jpeg" alt="Distrito Kike"/><div><span>Centro Operativo Diario</span><strong>Distrito GO</strong></div></div>
-        <button id="installBtn" class="ghost hidden">Instalar</button>
-      </nav>
-      <section class="hero-grid clean-home">
-        <div class="hero-copy">
-          <p class="eyebrow" id="todayLabel">Hoy</p>
-          <h1 id="greeting">Buenos días, Partner</h1>
-          <p class="subcopy">Prioriza el día, encuentra herramientas y ejecuta sin ruido operativo.</p>
-          <div class="hero-actions">
-            <button class="primary-action" data-scroll="daySection">Mi Día Operativo</button>
-            <button class="ghost" data-scroll="appsSection">Buscar herramienta</button>
-          </div>
-        </div>
-        <a class="dm-card" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contactar a mi DM">
-          <div class="dm-badge">Gerente de Distrito</div>
-          <div class="dm-photo"><img src="assets/photos/kike-dm.jpeg" alt="DM Enrique César Flores" loading="lazy" onerror="this.parentElement.classList.add('no-photo')"/></div>
-          <div class="dm-copy"><strong>🚨 WhatsApp Emergencia</strong><small>Contacto operativo directo</small></div>
-        </a>
-      </section>
-    </header>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    <main>
-      <section class="section panel priority-panel" id="daySection">
-        <div class="section-title"><div><span>Mi día operativo</span><h2>Solo prioridades de hoy</h2></div></div>
-        <div class="priority-stack" id="todayCards"></div>
-      </section>
+  <div id="pull-indicator" class="pull-indicator" aria-hidden="true">↻ Actualizando...</div>
 
-      <section class="section panel events-panel" id="eventsSection">
-        <div class="section-title"><div><span>Eventos</span><h2>Agenda</h2></div></div>
-        <div class="filter-row" id="eventFiltersMini"></div>
-        <div id="events" class="event-list"></div>
-      </section>
+  <header class="app-header" role="banner">
+    <div class="brand-lockup">
+      <div class="brand-mark" aria-hidden="true">DG</div>
+      <div>
+        <p class="eyebrow">Centro operativo</p>
+        <h1 id="app-title">Distrito GO</h1>
+      </div>
+    </div>
+    <button id="theme-toggle" class="icon-button" type="button" aria-label="Cambiar tema">☾</button>
+  </header>
 
-      <section class="section panel celebration-panel" id="celebrationsSection">
-        <div class="section-title"><div><span>Partners</span><h2>Cumpleaños y aniversarios de la semana</h2></div></div>
-        <div id="celebrations" class="celebration-list"></div>
-      </section>
+  <main id="main" class="app-shell" tabindex="-1">
+    <section class="hero-card" aria-labelledby="hero-title">
+      <div>
+        <p id="hero-greeting" class="eyebrow">Hola 👋</p>
+        <h2 id="hero-title">¿Qué deseas hacer hoy?</h2>
+        <p id="hero-subtitle" class="hero-subtitle">Prioriza, ejecuta y mejora cada día.</p>
+      </div>
+      <button id="install-btn" class="install-button hidden" type="button">Instalar</button>
+    </section>
 
-      <section class="section panel" id="appsSection">
-        <div class="section-title"><div><span>Herramientas</span><h2>Buscador operativo</h2></div></div>
-        <div class="searchbar"><input id="searchInput" type="search" placeholder="Buscar app, reporte, actividad o herramienta…"/><button id="clearSearch" class="ghost">Limpiar</button></div>
-        <div id="tabs" class="tabs"></div>
-        <div id="appsGrid" class="apps-grid"></div>
-      </section>
-    </main>
-  </div>
+    <section class="dashboard-grid" id="dashboard-grid" aria-label="Dashboard ejecutivo">
+      <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+    </section>
 
-  <dialog id="modal" class="modal"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></dialog>
-  <script type="module" src="js/app.js?v=7.2.0"></script>
-<div class="version-badge">Distrito GO 7.2.0 · Producción limpia</div>
+    <section class="search-panel" aria-label="Buscador Spotlight">
+      <label class="search-box">
+        <span aria-hidden="true">🔎</span>
+        <input id="spotlight-input" type="search" placeholder="Buscar herramienta, KPI, campaña, soporte..." autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <div id="active-chips" class="chip-row" aria-label="Filtros activos"></div>
+    </section>
+
+    <section class="quick-actions" aria-labelledby="quick-title">
+      <div class="section-title">
+        <h3 id="quick-title">Accesos rápidos</h3>
+        <span id="last-update">V10.0</span>
+      </div>
+      <div id="quick-actions" class="quick-grid"></div>
+    </section>
+
+    <section class="favorites-section" aria-labelledby="favorites-title">
+      <div class="section-title">
+        <h3 id="favorites-title">⭐ Favoritos inteligentes</h3>
+        <button id="clear-recents" class="text-button" type="button">Limpiar recientes</button>
+      </div>
+      <div id="favorites-grid" class="tools-grid"></div>
+    </section>
+
+    <section class="categories-section" aria-labelledby="categories-title">
+      <div class="section-title">
+        <h3 id="categories-title">Categorías</h3>
+        <button id="show-all" class="text-button" type="button">Ver todo</button>
+      </div>
+      <div id="category-hubs" class="category-grid"></div>
+    </section>
+
+    <section class="tools-section" aria-labelledby="tools-title">
+      <div class="section-title">
+        <h3 id="tools-title">Herramientas</h3>
+        <span id="result-count">0 resultados</span>
+      </div>
+      <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <dialog id="spotlight-modal" class="spotlight-modal" aria-label="Búsqueda rápida">
+    <div class="modal-search">
+      <span aria-hidden="true">🔎</span>
+      <input id="modal-search-input" type="search" placeholder="Spotlight Search..." />
+      <button id="close-spotlight" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <div id="modal-results" class="modal-results"></div>
+  </dialog>
+
+  <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button class="nav-item is-active" data-view="home" type="button">🏠<span>Inicio</span></button>
+    <button class="nav-item" data-view="favorites" type="button">⭐<span>Favoritos</span></button>
+    <button class="nav-item" data-view="search" type="button">🔎<span>Buscar</span></button>
+    <button class="nav-item" data-view="all" type="button">🧭<span>Todo</span></button>
+  </nav>
+
+  <script type="module" src="./modules/app.js"></script>
 </body>
 </html>
