@@ -115,7 +115,7 @@ function altasCursoBlock(){
     ...(CMS.ss||[]).map(x=>({...x,_tipo:'SS'}))
   ].filter(x=>normalize(first(x,['ESTATUS ALTA','mes de solicitud','Mes'])).includes('julio'));
   if(!rows.length) return '';
-  return `<section class="priority-block altas-curso"><div class="altas-title"><div><h3>👥 Altas en Curso</h3><small>Alerta activa del 1 al 25 de julio</small></div><span>${rows.length}</span></div><div class="altas-grid">${rows.slice(0,8).map(r=>`<article class="alta-card"><div><strong>${esc(shortPartnerName(first(r,['NOMBRE COMPLETO','NOMBRE','Nombre']))}</strong><small>${esc(first(r,['TIENDA','Tienda'])||'Tienda')}</small></div><span class="alta-type ${esc(r._tipo.toLowerCase())}">${esc(r._tipo)}</span><em>${esc(altaStatus(r,r._tipo))}</em></article>`).join('')}</div>${rows.length>8?`<small class="altas-more">+${rows.length-8} altas adicionales en CMS.</small>`:''}</section>`;
+  return `<section class="priority-block altas-curso"><div class="altas-title"><div><h3>👥 Altas en Curso</h3><small>Alerta activa del 1 al 25 de julio</small></div><span>${rows.length}</span></div><div class="altas-grid">${rows.slice(0,8).map(r=>`<article class="alta-card"><div><strong>${esc(shortPartnerName(first(r,['NOMBRE COMPLETO','NOMBRE','Nombre'])))}</strong><small>${esc(first(r,['TIENDA','Tienda'])||'Tienda')}</small></div><span class="alta-type ${esc(r._tipo.toLowerCase())}">${esc(r._tipo)}</span><em>${esc(altaStatus(r,r._tipo))}</em></article>`).join('')}</div>${rows.length>8?`<small class="altas-more">+${rows.length-8} altas adicionales en CMS.</small>`:''}</section>`;
 }
 function shortPartnerName(name){
   const parts = String(name||'').trim().replace(/\s+/g,' ').split(' ').filter(Boolean);
