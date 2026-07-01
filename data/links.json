@@ -1,14 +1,14 @@
 [
   {
     "Categoria": "App",
-    "Icono": "📋",
+    "Icono": "📅",
     "Nombre": "PBT Web",
     "URL": "https://enriquecesar.github.io/pbt2.0_web/",
     "Notas": "Consulta planes de negocio, KPIs y prioridades operativas."
   },
   {
     "Categoria": "App",
-    "Icono": "🧩",
+    "Icono": "🏗️",
     "Nombre": "Layout",
     "URL": "https://enriquecesar.github.io/layout/",
     "Notas": "Diseña, ajusta y valida layouts operativos."
@@ -43,7 +43,7 @@
   },
   {
     "Categoria": "App",
-    "Icono": "🧾",
+    "Icono": "🧮",
     "Nombre": "PBT Planes",
     "URL": "https://enriquecesar.github.io/pbt_motor_exact/",
     "Notas": "Genera e imprime planes considerando WeekPart, DayPart y dotación."
@@ -68,5 +68,12 @@
     "Nombre": "Code Brew",
     "URL": "https://enriquecesar.github.io/CodeBrew_Merch/",
     "Notas": "Busca artículos, códigos y mercancía de forma rápida."
+  },
+  {
+    "Categoria": "App",
+    "Icono": "👥",
+    "Nombre": "WFM Intelligence",
+    "URL": "https://enriquecesar.github.io/WFM/",
+    "Notas": "Analiza tendencias de WFM, productividad y códigos de pago."
   }
 ]
