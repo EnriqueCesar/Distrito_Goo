@@ -1,16 +1,29 @@
 {
-  "name": "Distrito GO 10.0 Entrega 2",
+  "name": "Distrito GO X 10.0",
   "short_name": "Distrito GO",
-  "description": "Centro operativo diario con favoritos, historial, buscador y apps nativas.",
+  "description": "Multiherramienta operativa para Partners: día a día, eventos CMS, favoritos, buscador y apps nativas.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F7F3EA",
   "theme_color": "#006241",
-  "categories": ["business", "productivity"],
+  "categories": [
+    "business",
+    "productivity"
+  ],
   "icons": [
-    {"src":"./assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
-    {"src":"./assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

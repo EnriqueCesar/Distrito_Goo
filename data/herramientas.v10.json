@@ -18,7 +18,8 @@
     "keywords": [
       "operación",
       "app",
-      "pbt web 2.0",
+      "pbt",
+      "web",
       "consulta",
       "plan",
       "tiempo",
@@ -54,7 +55,8 @@
       "ajusta",
       "valida",
       "layouts",
-      "operativos"
+      "operativos",
+      "web"
     ],
     "estado": "activo"
   },
@@ -77,14 +79,15 @@
     "keywords": [
       "operación",
       "app",
-      "cn connect",
+      "connect",
       "consulta",
       "estructura",
       "tiendas",
       "indicadores",
       "región",
       "centro",
-      "norte"
+      "norte",
+      "web"
     ],
     "estado": "activo"
   },
@@ -107,18 +110,20 @@
     "keywords": [
       "operación",
       "app",
-      "foco 2026",
+      "foco",
+      "2026",
       "seguimiento",
       "semanal",
       "compromisos",
       "avances",
       "planes",
-      "acción"
+      "acción",
+      "web"
     ],
     "estado": "activo"
   },
   {
-    "id": "max-y-min",
+    "id": "max-min",
     "categoriaId": "operacion",
     "categoria": "Operación",
     "categoriaIcono": "⚙️",
@@ -136,13 +141,15 @@
     "keywords": [
       "operación",
       "app",
-      "max & min",
+      "max",
+      "min",
       "optimiza",
       "inventarios",
       "ideales",
       "estaciones",
       "control",
-      "costo"
+      "costo",
+      "web"
     ],
     "estado": "activo"
   },
@@ -165,13 +172,15 @@
     "keywords": [
       "operación",
       "app",
-      "pbt planes",
+      "pbt",
+      "planes",
       "consulta",
       "imprime",
-      "planes",
+      "por",
       "weekpart",
       "daypart",
-      "dotación"
+      "dotación",
+      "web"
     ],
     "estado": "activo"
   },
@@ -194,12 +203,14 @@
     "keywords": [
       "operación",
       "app",
-      "partner hub",
+      "partner",
+      "hub",
       "consulta",
       "aniversarios",
       "cumpleaños",
       "información",
-      "partners"
+      "partners",
+      "web"
     ],
     "estado": "activo"
   },
@@ -222,12 +233,14 @@
     "keywords": [
       "operación",
       "app",
-      "perfil tienda",
+      "perfil",
+      "tienda",
       "consulta",
       "históricos",
       "tendencias",
       "oportunidades",
-      "tienda"
+      "por",
+      "web"
     ],
     "estado": "activo"
   },
@@ -250,13 +263,15 @@
     "keywords": [
       "operación",
       "app",
-      "code brew",
+      "code",
+      "brew",
       "busca",
       "artículos",
       "códigos",
       "mercancía",
       "forma",
-      "rápida"
+      "rápida",
+      "web"
     ],
     "estado": "activo"
   },
@@ -279,12 +294,14 @@
     "keywords": [
       "operación",
       "app",
-      "variación semanal",
+      "variación",
+      "semanal",
       "analiza",
       "faltantes",
       "sobrantes",
       "variaciones",
-      "semanales"
+      "semanales",
+      "web"
     ],
     "estado": "activo"
   },
@@ -307,11 +324,13 @@
     "keywords": [
       "operación",
       "app",
-      "wfm intelligence",
+      "wfm",
+      "intelligence",
       "analiza",
       "productividad",
       "códigos",
-      "pago"
+      "pago",
+      "web"
     ],
     "estado": "activo"
   },
@@ -334,11 +353,13 @@
     "keywords": [
       "operación",
       "trabajo",
-      "kpis centro norte",
+      "kpis",
+      "centro",
+      "norte",
       "consulta",
       "reporte",
       "regional",
-      "kpis"
+      "web"
     ],
     "estado": "activo"
   },
@@ -367,7 +388,8 @@
       "system",
       "check",
       "seguimiento",
-      "operativo"
+      "operativo",
+      "web"
     ],
     "estado": "activo"
   },
@@ -390,8 +412,10 @@
     "keywords": [
       "operación",
       "trabajo",
-      "frogmi app",
+      "frogmi",
+      "app",
       "enfoca",
+      "tus",
       "system",
       "checks",
       "corrige",
@@ -420,7 +444,8 @@
     "keywords": [
       "operación",
       "trabajo",
-      "woe app",
+      "woe",
+      "app",
       "abre",
       "portal",
       "central",
@@ -454,7 +479,8 @@
       "operativos",
       "tiendas",
       "drive",
-      "thru"
+      "thru",
+      "web"
     ],
     "estado": "activo"
   },
@@ -481,7 +507,8 @@
       "realiza",
       "seguimiento",
       "autoica",
-      "mensual"
+      "mensual",
+      "web"
     ],
     "estado": "activo"
   },
@@ -508,7 +535,9 @@
       "monitorea",
       "indicadores",
       "experiencia",
-      "cliente"
+      "del",
+      "cliente",
+      "web"
     ],
     "estado": "activo"
   },
@@ -531,11 +560,13 @@
     "keywords": [
       "operación",
       "trabajo",
-      "nube portafolio",
+      "nube",
+      "portafolio",
       "accede",
       "reportes",
       "información",
-      "estratégica"
+      "estratégica",
+      "web"
     ],
     "estado": "activo"
   },
@@ -562,7 +593,9 @@
       "consulta",
       "avances",
       "pendientes",
-      "equipo"
+      "del",
+      "equipo",
+      "web"
     ],
     "estado": "activo"
   },
@@ -589,7 +622,8 @@
       "plataforma",
       "aprendizaje",
       "para",
-      "partners"
+      "partners",
+      "web"
     ],
     "estado": "activo"
   },
@@ -618,7 +652,8 @@
       "pendientes",
       "mantén",
       "actualizado",
-      "kardex"
+      "kardex",
+      "web"
     ],
     "estado": "activo"
   },
@@ -643,7 +678,8 @@
       "pds",
       "coaching",
       "conversaciones",
-      "desempeño"
+      "desempeño",
+      "web"
     ],
     "estado": "activo"
   },
@@ -670,7 +706,8 @@
       "desempeño",
       "seguimiento",
       "cédula",
-      "tienda"
+      "tienda",
+      "web"
     ],
     "estado": "activo"
   },
@@ -697,7 +734,8 @@
       "consulta",
       "vigentes",
       "materiales",
-      "comunicados"
+      "comunicados",
+      "web"
     ],
     "estado": "activo"
   },
@@ -720,11 +758,14 @@
     "keywords": [
       "campañas",
       "campaña",
-      "design gallery",
+      "design",
+      "gallery",
       "accede",
       "materiales",
+      "pop",
       "recursos",
-      "visuales"
+      "visuales",
+      "web"
     ],
     "estado": "activo"
   },
@@ -747,12 +788,14 @@
     "keywords": [
       "soporte",
       "incidentes",
-      "seg operativo",
+      "seg",
+      "operativo",
       "completa",
       "encuestas",
       "escala",
       "riesgos",
-      "operativos"
+      "operativos",
+      "web"
     ],
     "estado": "activo"
   },
@@ -775,10 +818,12 @@
     "keywords": [
       "soporte",
       "incidentes",
-      "mesa de servicio",
+      "mesa",
+      "servicio",
       "levanta",
       "tickets",
-      "seguimiento"
+      "seguimiento",
+      "web"
     ],
     "estado": "activo"
   },
@@ -806,7 +851,8 @@
       "incidencias",
       "críticas",
       "mediante",
-      "ticket"
+      "ticket",
+      "web"
     ],
     "estado": "activo"
   },
@@ -832,7 +878,8 @@
       "okta",
       "acceso",
       "seguro",
-      "plataformas"
+      "plataformas",
+      "web"
     ],
     "estado": "activo"
   },
@@ -860,7 +907,8 @@
       "información",
       "partners",
       "cortes",
-      "nómina"
+      "nómina",
+      "web"
     ],
     "estado": "activo"
   },
@@ -883,11 +931,12 @@
     "keywords": [
       "servicios",
       "informativa",
-      "recibo de nómina",
+      "recibo",
+      "nómina",
       "consulta",
       "recibos",
       "movimientos",
-      "nómina"
+      "web"
     ],
     "estado": "activo"
   },
@@ -910,11 +959,13 @@
     "keywords": [
       "servicios",
       "informativa",
-      "va por mi cuenta",
+      "por",
+      "cuenta",
       "gestiona",
       "donaciones",
+      "del",
       "programa",
-      "cuenta"
+      "web"
     ],
     "estado": "activo"
   },
@@ -941,7 +992,8 @@
       "consulta",
       "información",
       "caja",
-      "ahorro"
+      "ahorro",
+      "web"
     ],
     "estado": "activo"
   },
@@ -964,11 +1016,12 @@
     "keywords": [
       "servicios",
       "informativa",
-      "beneflex | sgmm",
+      "beneflex",
+      "sgmm",
       "consulta",
       "coberturas",
       "beneficios",
-      "sgmm"
+      "web"
     ],
     "estado": "activo"
   },
@@ -995,7 +1048,8 @@
       "administra",
       "programación",
       "musical",
-      "tienda"
+      "tienda",
+      "web"
     ],
     "estado": "activo"
   },
@@ -1018,11 +1072,13 @@
     "keywords": [
       "servicios",
       "trabajo",
-      "network música",
+      "network",
+      "música",
       "consulta",
       "valida",
       "programación",
-      "musical"
+      "musical",
+      "web"
     ],
     "estado": "activo"
   },
@@ -1045,12 +1101,13 @@
     "keywords": [
       "comunicación",
       "trabajo",
-      "celular dm",
+      "celular",
       "directa",
       "para",
       "apertura",
       "riesgos",
-      "evidencias"
+      "evidencias",
+      "web"
     ],
     "estado": "activo"
   },
@@ -1078,8 +1135,10 @@
       "publicaciones",
       "comparte",
       "cultura",
+      "que",
       "vives",
-      "tienda"
+      "tienda",
+      "web"
     ],
     "estado": "activo"
   }

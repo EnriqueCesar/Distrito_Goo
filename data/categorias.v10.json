@@ -1,92 +1,56 @@
 [
   {
     "id": "operacion",
+    "nombre": "Operación",
     "icono": "⚙️",
     "color": "#006241",
-    "accent": "#00A862",
-    "descripcion": "Indicadores, reportes y herramientas para operar mejor.",
-    "keywords": [
-      "kpi",
-      "operación",
-      "tienda",
-      "inventario",
-      "wfm",
-      "pbt"
-    ],
-    "nombre": "Operación",
+    "accent": "#D4E9E2",
+    "descripcion": "Indicadores, rutinas y herramientas para ejecutar el día a día.",
     "contador": 19
   },
   {
     "id": "desarrollo",
-    "icono": "🌱",
-    "color": "#1E8E3E",
-    "accent": "#71B280",
-    "descripcion": "Capacitación, coaching y crecimiento de Partners.",
-    "keywords": [
-      "partners",
-      "capacitación",
-      "coaching",
-      "desarrollo"
-    ],
     "nombre": "Desarrollo",
+    "icono": "🌱",
+    "color": "#2E7D32",
+    "accent": "#E8F5E9",
+    "descripcion": "Capacitación, coaching, altas y crecimiento de Partners.",
     "contador": 5
   },
   {
     "id": "campanas",
-    "icono": "📣",
-    "color": "#C66A00",
-    "accent": "#F59E0B",
-    "descripcion": "Materiales, POP y campañas vigentes.",
-    "keywords": [
-      "campaña",
-      "pop",
-      "materiales",
-      "comunicación visual"
-    ],
     "nombre": "Campañas",
+    "icono": "📣",
+    "color": "#C76B00",
+    "accent": "#FFF2D8",
+    "descripcion": "Campañas, POP, comunicación visual y materiales vigentes.",
     "contador": 2
   },
   {
     "id": "comunicacion",
-    "icono": "💬",
-    "color": "#0B72B9",
-    "accent": "#38BDF8",
-    "descripcion": "Contacto directo, colaboración y comunicación operativa.",
-    "keywords": [
-      "whatsapp",
-      "comunicación",
-      "workvivo"
-    ],
     "nombre": "Comunicación",
+    "icono": "💬",
+    "color": "#0077A3",
+    "accent": "#E1F5FE",
+    "descripcion": "Contacto directo, colaboración y comunicación operativa.",
     "contador": 2
   },
   {
     "id": "servicios",
+    "nombre": "Servicios",
     "icono": "💼",
     "color": "#6D4C41",
-    "accent": "#A1887F",
+    "accent": "#F1E4DA",
     "descripcion": "Nómina, beneficios y plataformas personales.",
-    "keywords": [
-      "beneficios",
-      "nómina",
-      "servicios"
-    ],
-    "nombre": "Servicios",
     "contador": 7
   },
   {
     "id": "soporte",
-    "icono": "🛡️",
-    "color": "#B3261E",
-    "accent": "#EF5350",
-    "descripcion": "Incidentes, accesos y soporte técnico.",
-    "keywords": [
-      "soporte",
-      "ticket",
-      "incidente",
-      "acceso"
-    ],
     "nombre": "Soporte",
+    "icono": "🛡️",
+    "color": "#C62828",
+    "accent": "#FFEBEE",
+    "descripcion": "Incidentes, accesos, seguridad y soporte técnico.",
     "contador": 4
   }
 ]

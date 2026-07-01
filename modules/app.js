@@ -8,6 +8,7 @@ import { bindNavigation } from './navigation.js';
 import { bindPWA, bindPullToRefresh } from './pwa.js';
 import { renderDashboard, renderQuickActions, renderChips, renderCategories } from './quick-actions.js';
 import { renderTools, loadMoreTools, renderSmartSections } from './cards.js';
+import { renderOperationalSections } from './operational.js';
 
 async function boot(){
   bindStaticEvents();
@@ -17,6 +18,7 @@ async function boot(){
   renderDashboard();
   renderQuickActions();
   renderChips();
+  renderOperationalSections();
   renderSmartSections();
   renderCategories();
   renderTools(true);
@@ -25,14 +27,14 @@ async function boot(){
   bindPWA();
   bindPullToRefresh();
   bindLazyLoading();
-  toast('Entrega 2 lista');
+  toast('Distrito GO X actualizado');
 }
 
 function renderHeader(){
   $('#app-title').textContent = state.config.appName;
   $('#hero-greeting').textContent = state.dashboard.saludo;
   $('#hero-title').textContent = state.dashboard.titulo;
-  $('#hero-subtitle').textContent = state.config.tagline;
+  $('#hero-subtitle').textContent = state.dashboard.subtitulo || state.config.tagline;
   $('#last-update').textContent = state.config.version;
 }
 

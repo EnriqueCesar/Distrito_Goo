@@ -1,0 +1,515 @@
+[
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Categoría": "Limpieza",
+    "Orden": 1,
+    "Actividad": "Pisos y drenajes",
+    "Icono": "🧹",
+    "Crítico": false
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Categoría": "Equipos",
+    "Orden": 2,
+    "Actividad": "Horno",
+    "Icono": "🔥",
+    "Crítico": false
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Categoría": "Show Case",
+    "Orden": 3,
+    "Actividad": "Show Case",
+    "Icono": "🥐",
+    "Crítico": false
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Categoría": "Producto",
+    "Orden": 4,
+    "Actividad": "Caducidades",
+    "Icono": "📅",
+    "Crítico": true
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Categoría": "Producto",
+    "Orden": 5,
+    "Actividad": "Grab & Go (<7°C)",
+    "Icono": "🥪",
+    "Crítico": true
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Food",
+    "Categoría": "Refrigeración",
+    "Orden": 6,
+    "Actividad": "Temperaturas",
+    "Icono": "❄️",
+    "Crítico": true
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Show Case",
+    "Categoría": "Presentación",
+    "Orden": 7,
+    "Actividad": "Mercadotecnia y Rótulos",
+    "Icono": "🏷️",
+    "Crítico": false
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Show Case",
+    "Categoría": "Seguridad",
+    "Orden": 8,
+    "Actividad": "Alérgenos",
+    "Icono": "⚠️",
+    "Crítico": true
+  },
+  {
+    "Día": "Lunes",
+    "Estación": "Show Case",
+    "Categoría": "Limpieza",
+    "Orden": 9,
+    "Actividad": "Ventilas y Cristales",
+    "Icono": "✨",
+    "Crítico": false
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Seguridad",
+    "Orden": 1,
+    "Actividad": "Productos Químicos",
+    "Icono": "🧴",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Sanitización",
+    "Orden": 2,
+    "Actividad": "Sanitizante (200-300 ppm)",
+    "Icono": "🫧",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Seguridad",
+    "Orden": 3,
+    "Actividad": "Lavado de Manos",
+    "Icono": "🖐️",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Documentación",
+    "Orden": 4,
+    "Actividad": "Duty Roster y Registros",
+    "Icono": "📋",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Seguridad",
+    "Orden": 5,
+    "Actividad": "Control de Plagas",
+    "Icono": "🐭",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Producto",
+    "Orden": 6,
+    "Actividad": "Caducidades y Temperaturas",
+    "Icono": "🌡️",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "PIC",
+    "Categoría": "Partners",
+    "Orden": 7,
+    "Actividad": "Salud e Higiene",
+    "Icono": "❤️",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 8,
+    "Actividad": "Lobby",
+    "Icono": "🪑",
+    "Crítico": false
+  },
+  {
+    "Día": "Martes",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 9,
+    "Actividad": "Sanitarios",
+    "Icono": "🚻",
+    "Crítico": true
+  },
+  {
+    "Día": "Martes",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 10,
+    "Actividad": "Condiment Bar",
+    "Icono": "🥛",
+    "Crítico": false
+  },
+  {
+    "Día": "Martes",
+    "Estación": "Lobby",
+    "Categoría": "Exterior",
+    "Orden": 11,
+    "Actividad": "Terraza y Acceso",
+    "Icono": "🌳",
+    "Crítico": false
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Almacenaje",
+    "Orden": 1,
+    "Actividad": "Almacenaje",
+    "Icono": "📦",
+    "Crítico": false
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Equipos",
+    "Orden": 2,
+    "Actividad": "Máquina de Hielo",
+    "Icono": "🧊",
+    "Crítico": true
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Lavado",
+    "Orden": 3,
+    "Actividad": "Lavado de Platos",
+    "Icono": "🍽️",
+    "Crítico": false
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Equipos",
+    "Orden": 4,
+    "Actividad": "Sanitizadora",
+    "Icono": "🫧",
+    "Crítico": true
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Limpieza",
+    "Orden": 5,
+    "Actividad": "Cubo Key",
+    "Icono": "🪣",
+    "Crítico": false
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Refrigeración",
+    "Orden": 6,
+    "Actividad": "Refrigeradores",
+    "Icono": "❄️",
+    "Crítico": true
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Refrigeración",
+    "Orden": 7,
+    "Actividad": "Congeladores",
+    "Icono": "🧊",
+    "Crítico": true
+  },
+  {
+    "Día": "Miércoles",
+    "Estación": "BOH",
+    "Categoría": "Partners",
+    "Orden": 8,
+    "Actividad": "Hábitos Partners",
+    "Icono": "👥",
+    "Crítico": false
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Categoría": "Barra",
+    "Orden": 1,
+    "Actividad": "Barra Espresso / Mastrena",
+    "Icono": "☕",
+    "Crítico": true
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Categoría": "Refrigeración",
+    "Orden": 2,
+    "Actividad": "Refrigerador Espresso",
+    "Icono": "❄️",
+    "Crítico": true
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Categoría": "Producto",
+    "Orden": 3,
+    "Actividad": "Jarras y Leches",
+    "Icono": "🥛",
+    "Crítico": true
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Categoría": "Producto",
+    "Orden": 4,
+    "Actividad": "Jarabes y Toppings",
+    "Icono": "🍯",
+    "Crítico": false
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Categoría": "Limpieza",
+    "Orden": 5,
+    "Actividad": "Toallas Sanitizantes",
+    "Icono": "🧽",
+    "Crítico": false
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Espresso",
+    "Categoría": "Limpieza",
+    "Orden": 6,
+    "Actividad": "Piso, Paredes y Techo",
+    "Icono": "🧹",
+    "Crítico": false
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 7,
+    "Actividad": "Lobby",
+    "Icono": "🪑",
+    "Crítico": false
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 8,
+    "Actividad": "Sanitarios",
+    "Icono": "🚻",
+    "Crítico": true
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 9,
+    "Actividad": "Condiment Bar",
+    "Icono": "🥛",
+    "Crítico": false
+  },
+  {
+    "Día": "Jueves",
+    "Estación": "Lobby",
+    "Categoría": "Exterior",
+    "Orden": 10,
+    "Actividad": "Drive Thru y Terraza",
+    "Icono": "🚗",
+    "Crítico": false
+  },
+  {
+    "Día": "Viernes",
+    "Estación": "Café Filtrado",
+    "Categoría": "Equipo",
+    "Orden": 1,
+    "Actividad": "Bunn / Clover",
+    "Icono": "☕",
+    "Crítico": true
+  },
+  {
+    "Día": "Viernes",
+    "Estación": "Café Filtrado",
+    "Categoría": "Café",
+    "Orden": 2,
+    "Actividad": "Café y Molienda",
+    "Icono": "🌱",
+    "Crítico": true
+  },
+  {
+    "Día": "Viernes",
+    "Estación": "Café Filtrado",
+    "Categoría": "Producto",
+    "Orden": 3,
+    "Actividad": "Caducidades",
+    "Icono": "📅",
+    "Crítico": true
+  },
+  {
+    "Día": "Viernes",
+    "Estación": "Café Filtrado",
+    "Categoría": "Limpieza",
+    "Orden": 4,
+    "Actividad": "Smallwares",
+    "Icono": "🧼",
+    "Crítico": false
+  },
+  {
+    "Día": "Viernes",
+    "Estación": "Café Filtrado",
+    "Categoría": "Limpieza",
+    "Orden": 5,
+    "Actividad": "Barra Posterior",
+    "Icono": "🧹",
+    "Crítico": false
+  },
+  {
+    "Día": "Sábado",
+    "Estación": "CBS",
+    "Categoría": "Equipos",
+    "Orden": 1,
+    "Actividad": "Licuadoras",
+    "Icono": "🥤",
+    "Crítico": true
+  },
+  {
+    "Día": "Sábado",
+    "Estación": "CBS",
+    "Categoría": "Equipos",
+    "Orden": 2,
+    "Actividad": "Máquina de Hielo",
+    "Icono": "🧊",
+    "Crítico": true
+  },
+  {
+    "Día": "Sábado",
+    "Estación": "CBS",
+    "Categoría": "Producto",
+    "Orden": 3,
+    "Actividad": "Bases y Toppings",
+    "Icono": "🍓",
+    "Crítico": true
+  },
+  {
+    "Día": "Sábado",
+    "Estación": "CBS",
+    "Categoría": "Refrigeración",
+    "Orden": 4,
+    "Actividad": "Temperaturas",
+    "Icono": "❄️",
+    "Crítico": true
+  },
+  {
+    "Día": "Sábado",
+    "Estación": "CBS",
+    "Categoría": "Limpieza",
+    "Orden": 5,
+    "Actividad": "Barra CBS",
+    "Icono": "🧽",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 1,
+    "Actividad": "Exterior",
+    "Icono": "🌳",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 2,
+    "Actividad": "Terraza",
+    "Icono": "🌿",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 3,
+    "Actividad": "Entrada",
+    "Icono": "🚪",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 4,
+    "Actividad": "Lobby",
+    "Icono": "🪑",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 5,
+    "Actividad": "Sanitarios",
+    "Icono": "🚻",
+    "Crítico": true
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Lobby",
+    "Categoría": "Experiencia",
+    "Orden": 6,
+    "Actividad": "Condiment Bar",
+    "Icono": "🥛",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Drive Thru",
+    "Categoría": "Drive Thru",
+    "Orden": 7,
+    "Actividad": "Menús y Bocina",
+    "Icono": "📢",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Drive Thru",
+    "Categoría": "Drive Thru",
+    "Orden": 8,
+    "Actividad": "Ventanilla",
+    "Icono": "🚗",
+    "Crítico": false
+  },
+  {
+    "Día": "Domingo",
+    "Estación": "Drive Thru",
+    "Categoría": "Drive Thru",
+    "Orden": 9,
+    "Actividad": "Presentación Exterior",
+    "Icono": "🌟",
+    "Crítico": false
+  }
+]

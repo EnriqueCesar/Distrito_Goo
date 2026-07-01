@@ -1,29 +1,9 @@
 {
-  "appName": "Distrito GO",
-  "version": "10.0 Entrega 2",
-  "build": "2026.07.01-motor",
-  "dmName": "Enrique César",
-  "tagline": "Prioriza, ejecuta y mejora cada día.",
-  "modoVisual": "favoritos_categorias",
-  "theme": "starbucks-light",
-  "features": {
-    "dashboard": true,
-    "favoritos": true,
-    "spotlight": true,
-    "pwa": true,
-    "nativeApps": true,
-    "recentes": true,
-    "contadores": true,
-    "chips": true,
-    "skeleton": true,
-    "pullToRefresh": true,
-    "darkModeReady": true,
-    "components": true,
-    "quickActions": true,
-    "history": true,
-    "toast": true,
-    "lazyLoading": true,
-    "smartFavorites": true
-  },
-  "entrega": "2"
+  "appName": "Distrito GO X",
+  "version": "10.0 Entrega 3",
+  "tagline": "Multiherramienta operativa para Partners: día a día, eventos, seguimiento y herramientas clave.",
+  "org": "Centro Norte",
+  "modoVisual": "favoritos_categorias_dia_a_dia",
+  "cmsFuente": "Distrito_Go_CMS(33).xlsx",
+  "githubReady": true
 }

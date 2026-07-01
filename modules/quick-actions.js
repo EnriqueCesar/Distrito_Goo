@@ -4,6 +4,7 @@ import { quickAction, categoryHub, chip, metricCard } from './components.js';
 import { renderTools } from './cards.js';
 import { openSpotlight } from './search.js';
 import { toast } from './toast.js';
+import { goToSection } from './operational.js';
 
 export function renderDashboard(){
   $('#dashboard-grid').innerHTML = state.dashboard.cards.map(metricCard).join('');
@@ -48,7 +49,11 @@ export function runAction(action){
   if(action === 'openSearch') openSpotlight();
   if(action === 'showFavorites') { state.categoria = 'favorites'; renderChips(); renderTools(true); document.querySelector('.tools-section').scrollIntoView({behavior:'smooth'}); }
   if(action === 'showRecent') { state.categoria = 'recent'; renderChips(); renderTools(true); document.querySelector('.tools-section').scrollIntoView({behavior:'smooth'}); }
+  if(action === 'showToday') goToSection('dia-a-dia');
+  if(action === 'showEvents') goToSection('eventos-cms');
+  if(action === 'showAltas') goToSection('altas-curso');
+  if(action === 'showDuty') goToSection('duty-roster');
   if(action === 'refreshData') location.reload();
   if(action === 'installPWA') window.dispatchEvent(new CustomEvent('dgx:install'));
-  if(!['openSearch','showFavorites','showRecent','refreshData','installPWA'].includes(action)) toast('Acción preparada para futuras versiones');
+  if(!['openSearch','showFavorites','showRecent','showToday','showEvents','showAltas','showDuty','refreshData','installPWA'].includes(action)) toast('Acción preparada para futuras versiones');
 }

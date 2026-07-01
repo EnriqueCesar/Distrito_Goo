@@ -1,6 +1,7 @@
 {
-  "saludo": "Hola Enrique 👋",
-  "titulo": "¿Qué deseas hacer hoy?",
+  "saludo": "Hola Partners 👋",
+  "titulo": "Distrito GO X · Multiherramienta Operativa",
+  "subtitulo": "Día a día, eventos, herramientas y seguimiento en un solo lugar.",
   "cards": [
     {
       "id": "herramientas",
@@ -9,34 +10,58 @@
       "icono": "🧭"
     },
     {
-      "id": "favoritos",
-      "label": "Favoritos",
-      "valor": 17,
-      "icono": "⭐"
+      "id": "eventos",
+      "label": "Eventos CMS",
+      "valor": 48,
+      "icono": "📅"
     },
     {
-      "id": "categorias",
-      "label": "Categorías",
-      "valor": 6,
-      "icono": "🗂️"
+      "id": "dia",
+      "label": "Día a día",
+      "valor": 21,
+      "icono": "✅"
     },
     {
-      "id": "apps",
-      "label": "Apps nativas",
-      "valor": 2,
-      "icono": "📱"
+      "id": "altas",
+      "label": "Altas / TBW",
+      "valor": 26,
+      "icono": "🌱"
     }
   ],
   "quickActions": [
     {
+      "id": "today",
+      "label": "Día a día",
+      "icono": "✅",
+      "action": "showToday"
+    },
+    {
+      "id": "events",
+      "label": "Eventos",
+      "icono": "📅",
+      "action": "showEvents"
+    },
+    {
+      "id": "altas",
+      "label": "Altas Curso",
+      "icono": "🌱",
+      "action": "showAltas"
+    },
+    {
+      "id": "duty",
+      "label": "Duty Roster",
+      "icono": "🧭",
+      "action": "showDuty"
+    },
+    {
       "id": "search",
-      "label": "Buscar herramienta",
+      "label": "Buscar",
       "icono": "🔎",
       "action": "openSearch"
     },
     {
       "id": "favorites",
-      "label": "Ver favoritos",
+      "label": "Favoritos",
       "icono": "⭐",
       "action": "showFavorites"
     },
@@ -48,7 +73,7 @@
     },
     {
       "id": "install",
-      "label": "Instalar PWA",
+      "label": "Instalar App",
       "icono": "⬇️",
       "action": "installPWA"
     }
