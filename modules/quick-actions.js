@@ -27,7 +27,7 @@ export function renderQuickActions(){
     {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''},
     {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle operativo del día.', action:'showDuty'},
     {title:'Desarrollo Partner', icon:'🌱', text:'BT / SS juntos y TBW separado por avance.', action:'showAltas'},
-    {title:'Herramientas', icon:'🧰', text:'Se muestran solo al solicitarlas: buscador, favoritos y categorías.', action:'showTools'}
+    {title:'Herramientas', icon:'🧰', text:'Buscador, favoritos y categorías cuando lo necesites.', action:'showTools'}
   ];
   $('#command-grid').innerHTML = cards.map(c => `<button class="command-card" type="button" data-action="${c.action}"><span class="command-icon">${c.icon}</span><strong>${escapeHtml(c.title)}</strong><p>${escapeHtml(c.text)}</p>${c.badge?`<em>${escapeHtml(c.badge)}</em>`:''}</button>`).join('');
   $$('#command-grid .command-card').forEach(btn => btn.addEventListener('click', () => runAction(btn.dataset.action)));

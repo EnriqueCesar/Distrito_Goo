@@ -4,7 +4,7 @@ export function skeletonCards(count = 4){
   return Array.from({length: count}, () => '<div class="skeleton-card"></div>').join('');
 }
 
-export function emptyState(title, subtitle = 'Intenta otra búsqueda o categoría.'){
+export function emptyState(title, subtitle = 'Cambia el filtro o revisa la sección correspondiente.'){
   return `<div class="empty-state"><div class="empty-icon">☕</div><div><strong>${escapeHtml(title)}</strong><p>${escapeHtml(subtitle)}</p></div></div>`;
 }
 
@@ -25,7 +25,7 @@ export function categoryHub(c){
 }
 
 export function toolCard(tool, isFav, compact = false){
-  return `<article class="tool-card ${compact ? 'is-compact' : ''}" tabindex="0" role="button" data-id="${escapeHtml(tool.id)}" aria-label="Abrir ${escapeHtml(tool.nombre)}"><div class="tool-top"><div class="tool-icon" aria-hidden="true">${tool.icono}</div><button class="fav-toggle ${isFav ? 'is-fav' : ''}" type="button" data-fav="${escapeHtml(tool.id)}" aria-label="${isFav ? 'Quitar de favoritos' : 'Agregar a favoritos'}">${isFav ? '⭐' : '☆'}</button></div><h4>${escapeHtml(tool.nombre)}</h4><p>${escapeHtml(tool.notas)}</p><div class="tool-meta"><span>${tool.categoriaIcono} ${escapeHtml(tool.categoria)}</span><span>${tool.tipo === 'app' ? '📱 App' : '🌐 Web'}</span></div></article>`;
+  return `<article class="tool-card ${compact ? 'is-compact' : ''}" tabindex="0" role="button" data-id="${escapeHtml(tool.id)}" aria-label="Abrir ${escapeHtml(tool.nombre)}"><div class="tool-top"><div class="tool-icon" aria-hidden="true">${tool.icono}</div><button class="fav-toggle ${isFav ? 'is-fav' : ''}" type="button" data-fav="${escapeHtml(tool.id)}" aria-label="${isFav ? 'Quitar de favoritos' : 'Agregar a favoritos'}">${isFav ? '⭐' : '☆'}</button></div><h4>${escapeHtml(tool.nombre)}</h4><p>${escapeHtml(tool.notas)}</p></article>`;
 }
 
 export function modalResult(tool){

@@ -55,12 +55,11 @@ function nextWeeklyActivity(day){
 function isImageResource(item){ return item?.TipoRecurso === 'imagen' && item?.Recurso; }
 function renderResourceAction(item){
   if(!item?.Recurso) return '';
-  if(item.TipoRecurso === 'link' || String(item.Recurso).startsWith('http')) return `<a class="mini-link" href="${escapeHtml(item.Recurso)}" target="_blank" rel="noopener">Abrir recurso</a>`;
+  if(item.TipoRecurso === 'link' || String(item.Recurso).startsWith('http')) return `<a class="mini-link" href="${escapeHtml(item.Recurso)}" target="_blank" rel="noopener">Abrir link</a>`;
   return `<button class="mini-link image-link" type="button" data-image="${escapeHtml(item.Recurso)}" data-title="${escapeHtml(item.Actividad)}">Ver imagen</button>`;
 }
 function opsCard(title, text, icon='✅', extra='', item=null){
-  const thumb = isImageResource(item) ? `<button class="ops-thumb image-link" type="button" data-image="${escapeHtml(item.Recurso)}" data-title="${escapeHtml(item.Actividad)}"><img src="${escapeHtml(item.Recurso)}" alt="${escapeHtml(item.Actividad)}" loading="lazy"/><span>Ver guía</span></button>` : '';
-  return `<article class="ops-card ${thumb ? 'has-thumb' : ''}"><div class="ops-icon">${icon}</div><div class="ops-content"><h4>${escapeHtml(title || 'Actividad')}</h4><p>${escapeHtml(briefText(text))}</p>${extra}</div>${thumb}</article>`;
+  return `<article class="ops-card"><div class="ops-icon">${icon}</div><div class="ops-content"><h4>${escapeHtml(title || 'Actividad')}</h4><p>${escapeHtml(briefText(text))}</p>${extra ? `<div class="inline-actions">${extra}</div>` : ''}</div></article>`;
 }
 function eventCard(e){
   const icon = e.Imagen || '📅';
@@ -136,7 +135,10 @@ export function renderDuty(){
   const item = roster.find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase()) || roster[0];
   const detail = (state.operacional.dutyDetail || []).filter(d => item && (d['Día'] || '').toLowerCase() === (item['Día'] || '').toLowerCase()).sort((a,b)=>(a.Orden||0)-(b.Orden||0));
   $('#duty-focus').innerHTML = item ? `<div class="duty-focus-head"><span>Hoy</span><strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong></div><p>${escapeHtml(item.Enfoque)}</p>` : '<p>Sin Duty Roster cargado.</p>';
-  $('#duty-gallery').innerHTML = item?.ImagenesPath?.length ? item.ImagenesPath.map((src,i)=>`<button class="duty-image image-link" type="button" data-image="${escapeHtml(src)}" data-title="${escapeHtml(item.Estaciones)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(item.Estaciones)} ${i+1}" loading="lazy"/><span>${item.ImagenesPath.length>1 ? `Estación ${i+1}` : 'Ver imagen'}</span></button>`).join('') : '';
+  $('#duty-gallery').innerHTML = item?.ImagenesPath?.length ? item.ImagenesPath.map((src,i)=>{
+    const station = String(item.Estaciones || 'Estación').split(',')[i]?.trim() || `Estación ${i+1}`;
+    return `<button class="duty-link image-link" type="button" data-image="${escapeHtml(src)}" data-title="${escapeHtml(item['Día'] + ' · ' + station)}"><span>🖼️</span><strong>${escapeHtml(station)}</strong><em>Ver imagen</em></button>`;
+  }).join('') : '';
   $('#duty-detail').innerHTML = detail.map(d => `<li class="${d['Crítico'] === true ? 'is-critical' : ''}">${d.Icono || '•'} <span>${escapeHtml(d.Actividad)}</span>${d['Crítico'] === true ? ' <strong>Crítico</strong>' : ''}</li>`).join('');
 }
 function bindOperationalActions(){

@@ -1,10 +1,10 @@
 {
   "appName": "Distrito Go",
-  "version": "10.0 Premium",
-  "tagline": "Multiherramienta Operativa para enfocar el día, anticipar eventos y activar herramientas clave.",
+  "version": "10.0 Premium Limpia",
+  "tagline": "Centro Operativo Distrito Go: día a día, eventos, desarrollo Partner y herramientas clave.",
   "org": "Centro Norte",
   "modoVisual": "centro_operativo_premium",
-  "cmsFuente": "Distrito_Go_CMS(36).xlsx",
+  "cmsFuente": "Distrito_Go_CMS(39).xlsx",
   "githubReady": true,
   "emergencyContact": {
     "label": "Contacto DM",

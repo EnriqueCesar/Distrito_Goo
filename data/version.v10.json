@@ -1,13 +1,13 @@
 {
-  "version": "10.0 Premium",
+  "version": "10.0 Premium Limpia",
   "nombre": "Centro Operativo Distrito Kike",
-  "fecha": "2026-07-01",
+  "fecha": "2026-07-02",
   "cambios": [
-    "Duty Roster premium con imágenes reales del proyecto 7.1.0",
-    "Rutina diaria con imagen por actividad",
-    "Eventos CMS con filtro Semana / Mes / Todos y formato DD/MM",
-    "BT y SS separados de TBW para no mezclar focos",
-    "Herramientas ocultas hasta solicitud",
-    "Assets auditados: solo imágenes utilizadas"
+    "Vista más limpia: imágenes como hipervínculo Ver imagen",
+    "Duty Roster dinámico por día con enlaces a imagen por estación",
+    "Eventos CMS auditados con recursos visuales y filtro Semana / Mes / Todos",
+    "Rutina diaria resumida con enlace a guía visual",
+    "Herramientas sin metadatos redundantes de categoría/tipo",
+    "Contraste mejorado en modo claro y oscuro"
   ]
 }
