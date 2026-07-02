@@ -5,7 +5,8 @@
     "icono": "⚙️",
     "color": "#006241",
     "descripcion": "Indicadores, reportes y herramientas para operar mejor.",
-    "contador": 19
+    "contador": 19,
+    "accent": "#00A862"
   },
   {
     "id": "desarrollo",
@@ -13,7 +14,8 @@
     "icono": "🌱",
     "color": "#2E7D32",
     "descripcion": "Capacitación, coaching y crecimiento de Partners.",
-    "contador": 5
+    "contador": 5,
+    "accent": "#66BB6A"
   },
   {
     "id": "campanas",
@@ -21,7 +23,8 @@
     "icono": "📣",
     "color": "#C75B12",
     "descripcion": "Materiales, POP y campañas vigentes.",
-    "contador": 2
+    "contador": 2,
+    "accent": "#FFB74D"
   },
   {
     "id": "comunicacion",
@@ -29,7 +32,8 @@
     "icono": "💬",
     "color": "#0077B6",
     "descripcion": "Contacto directo y colaboración operativa.",
-    "contador": 2
+    "contador": 2,
+    "accent": "#29B6F6"
   },
   {
     "id": "servicios",
@@ -37,7 +41,8 @@
     "icono": "💼",
     "color": "#6D4C41",
     "descripcion": "Nómina, beneficios y servicios al Partner.",
-    "contador": 7
+    "contador": 7,
+    "accent": "#A1887F"
   },
   {
     "id": "soporte",
@@ -45,6 +50,7 @@
     "icono": "🛡️",
     "color": "#B3261E",
     "descripcion": "Incidentes, accesos y soporte técnico.",
-    "contador": 4
+    "contador": 4,
+    "accent": "#EF5350"
   }
 ]

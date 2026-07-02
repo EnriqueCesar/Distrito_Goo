@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#006241" />
-  <meta name="description" content="Distrito Go 10.0 Premium Limpia - Centro Operativo Partner." />
+  <meta name="description" content="Distrito Go 10.0 Premium Optimizada - Centro Operativo Partner." />
   <title>Distrito Go | Multiherramienta Operativa</title>
   <link rel="manifest" href="./manifest.json" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
@@ -41,8 +41,11 @@
           <button id="open-tools-panel" class="secondary-action" type="button">Explorar herramientas</button>
         </div>
       </div>
-      <aside class="dm-card" aria-label="Contacto directo DM">
-        <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Gerente de Distrito" loading="lazy" />
+      <aside class="dm-card support-card" aria-label="Contacto directo DM">
+        <div class="dm-visuals">
+          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Gerente de Distrito" loading="lazy" />
+          <img id="support-visual" src="./assets/photos/soporte-directo.jpg" alt="Apoyo visual de comunicación" loading="lazy" />
+        </div>
         <div>
           <strong>Soporte directo</strong>
           <span>Emergencias, riesgos y evidencias</span>
@@ -54,6 +57,14 @@
     <section id="command-center" class="command-center" aria-labelledby="command-title">
       <div class="section-title compact-title"><div><h3 id="command-title">Centro operativo de hoy</h3></div></div>
       <div id="command-grid" class="command-grid skeleton-grid"></div>
+    </section>
+
+    <section id="informativo" class="ops-section info-section" aria-labelledby="info-title">
+      <div class="section-title">
+        <div><h3 id="info-title">☕ Informativo</h3><p class="section-subtitle">Datos de consulta rápida para validar sin saturar la operación.</p></div>
+        <span id="info-count">0</span>
+      </div>
+      <div id="info-grid" class="ops-grid info-grid skeleton-grid"></div>
     </section>
 
     <section id="dia-a-dia" class="ops-section priority-section" aria-labelledby="today-title">

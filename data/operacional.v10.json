@@ -446,7 +446,7 @@
     {
       "ID": 1,
       "Actividad": "Verificación Espresso y Calidad del Café",
-      "Descripción": "Valida Espresso y Calidad del Café; registra resultados y comparte comentarios por turno.",
+      "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios en cada turno.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Calidad",
@@ -455,12 +455,12 @@
       "Visible": true,
       "Recurso": "assets/photos/verificacion-cafe-espresso.png",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Valida Espresso y Calidad del Café por turno."
+      "DescripcionBreve": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios …"
     },
     {
       "ID": 2,
       "Actividad": "RSA Checklist",
-      "Descripción": "Completa RSA antes de las 10:00 a.m. y comparte evidencia de correcciones.",
+      "Descripción": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Seguridad Alimentaria",
@@ -469,12 +469,12 @@
       "Visible": true,
       "Recurso": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
       "TipoRecurso": "link",
-      "DescripcionBreve": "Completa RSA antes de las 10:00 a.m."
+      "DescripcionBreve": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas."
     },
     {
       "ID": 3,
       "Actividad": "Store Walk",
-      "Descripción": "Recorre la tienda con foco en los 4 estándares; detecta oportunidades y registra acciones.",
+      "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Experiencia",
@@ -483,12 +483,12 @@
       "Visible": true,
       "Recurso": "assets/photos/store-walk.png",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Recorrido diario enfocado en 4 estándares."
+      "DescripcionBreve": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones e…"
     },
     {
       "ID": 4,
       "Actividad": "Protocolo de Apertura",
-      "Descripción": "Antes de las 09:00 a.m. reporta solo incidencias: cobertura, producto, equipos o riesgo de venta.",
+      "Descripción": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desviaciones detectadas.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
@@ -497,12 +497,12 @@
       "Visible": true,
       "Recurso": "assets/photos/Rutina_apertura.jpeg",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Reporta solo incidencias antes de las 09:00 a.m."
+      "DescripcionBreve": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desvia…"
     },
     {
       "ID": 5,
       "Actividad": "10 Pasos para un Turno Exitoso",
-      "Descripción": "Revisa los 10 pasos antes de iniciar la operación y alinea prioridades del turno.",
+      "Descripción": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación.",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Liderazgo",
@@ -511,12 +511,12 @@
       "Visible": true,
       "Recurso": "assets/photos/10-pasos-turno.png",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Alinea los 10 pasos antes de iniciar el turno."
+      "DescripcionBreve": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación."
     },
     {
       "ID": 6,
       "Actividad": "Menu Core",
-      "Descripción": "Valida disponibilidad de productos, horarios y estatus operativo antes del turno.",
+      "Descripción": "Verifica la disponibilidad de productos, horarios y estatus operativo antes del inicio del turno.",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Operación",
@@ -525,12 +525,12 @@
       "Visible": true,
       "Recurso": "http://consulta.delivery.alsea.net/",
       "TipoRecurso": "link",
-      "DescripcionBreve": "Valida disponibilidad y estatus operativo."
+      "DescripcionBreve": "Verifica la disponibilidad de productos, horarios y estatus operativo antes del inicio del turno."
     },
     {
       "ID": 7,
       "Actividad": "Corte de Leche",
-      "Descripción": "Verifica tijeras por estación y ejecuta el corte correcto para evitar contaminación y desperdicio.",
+      "Descripción": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las bolsas para evitar contaminación y desperdicio, cuidando la calidad del producto.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
@@ -539,7 +539,7 @@
       "Visible": true,
       "Recurso": "assets/photos/cortado_leche.jpeg",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Verifica tijeras y corte correcto del empaque."
+      "DescripcionBreve": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las …"
     }
   ],
   "actividadesSemanales": [
@@ -700,81 +700,81 @@
       "Día": "Lunes",
       "Estaciones": "Food, Show Case",
       "Imágenes": "lunes_food.png",
-      "Color": "Naranja",
-      "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos.",
       "ImagenesPath": [
         "assets/duty/lunes_food.png",
         "assets/duty/lunes_showcase.png"
-      ]
+      ],
+      "Color": "Naranja",
+      "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos."
     },
     {
       "Orden": 2,
       "Día": "Martes",
       "Estaciones": "PIC, Lobby",
       "Imágenes": "martes_pic.png, martes_lobby.png",
-      "Color": "Rojo / Verde",
-      "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente.",
       "ImagenesPath": [
         "assets/duty/martes_pic.png",
         "assets/duty/martes_lobby.png"
-      ]
+      ],
+      "Color": "Rojo / Verde",
+      "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente."
     },
     {
       "Orden": 3,
       "Día": "Miércoles",
       "Estaciones": "BOH",
       "Imágenes": "miercoles_boh.png",
-      "Color": "Azul",
-      "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH.",
       "ImagenesPath": [
         "assets/duty/miercoles_boh.png"
-      ]
+      ],
+      "Color": "Azul",
+      "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH."
     },
     {
       "Orden": 4,
       "Día": "Jueves",
       "Estaciones": "Espresso, Lobby",
       "Imágenes": "jueves_espresso.png, jueves_lobby.png",
-      "Color": "Café / Verde",
-      "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente.",
       "ImagenesPath": [
         "assets/duty/jueves_espresso.png",
         "assets/duty/jueves_lobby.png"
-      ]
+      ],
+      "Color": "Café / Verde",
+      "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente."
     },
     {
       "Orden": 5,
       "Día": "Viernes",
       "Estaciones": "Café Filtrado",
       "Imágenes": "viernes_cafe_filtrado.png",
-      "Color": "Naranja",
-      "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food.",
       "ImagenesPath": [
         "assets/duty/viernes_cafe_filtrado.png"
-      ]
+      ],
+      "Color": "Naranja",
+      "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food."
     },
     {
       "Orden": 6,
       "Día": "Sábado",
       "Estaciones": "CBS",
       "Imágenes": "sabado_cbs.png",
-      "Color": "Azul",
-      "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa.",
       "ImagenesPath": [
         "assets/duty/sabado_cbs.png"
-      ]
+      ],
+      "Color": "Azul",
+      "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa."
     },
     {
       "Orden": 7,
       "Día": "Domingo",
       "Estaciones": "Lobby, Drive Thru",
       "Imágenes": "domingo_lobby.png, domingo_drive_thru.png",
-      "Color": "Verde",
-      "Enfoque": "Experiencia del cliente y apariencia general de la tienda.",
       "ImagenesPath": [
         "assets/duty/domingo_lobby.png",
         "assets/duty/domingo_drive_thru.png"
-      ]
+      ],
+      "Color": "Verde",
+      "Enfoque": "Experiencia del cliente y apariencia general de la tienda."
     }
   ],
   "dutyDetail": [
@@ -1915,5 +1915,36 @@
   "wfm": {
     "regla": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
   },
-  "cmsFuente": "Distrito_Go_CMS(36).xlsx"
+  "cmsFuente": "Distrito_Go_CMS(36).xlsx",
+  "informativo": [
+    {
+      "ID": 1,
+      "Actividad": "Maquila",
+      "Descripción": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)",
+      "Frecuencia": "Diario",
+      "Prioridad": 1,
+      "Categoría": "Operación",
+      "Icono": "☕",
+      "Color": "Marrón",
+      "Visible": true,
+      "Recurso": "assets/photos/maquila_abril.png",
+      "TipoRecurso": "imagen",
+      "DescripcionBreve": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)"
+    },
+    {
+      "ID": 2,
+      "Actividad": "Ubits",
+      "Descripción": "Accede y da Seguimiento a tu Kardex",
+      "Frecuencia": "Diario",
+      "Prioridad": 1,
+      "Categoría": "Capacitacion",
+      "Icono": "ℹ️",
+      "Color": "",
+      "Visible": false,
+      "Recurso": "",
+      "TipoRecurso": "",
+      "DescripcionBreve": "Accede y da Seguimiento a tu Kardex"
+    }
+  ],
+  "wfmRegla": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
 }

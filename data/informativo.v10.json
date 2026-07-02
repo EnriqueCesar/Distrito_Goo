@@ -1,0 +1,30 @@
+[
+  {
+    "ID": 1,
+    "Actividad": "Maquila",
+    "Descripción": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)",
+    "Frecuencia": "Diario",
+    "Prioridad": 1,
+    "Categoría": "Operación",
+    "Icono": "☕",
+    "Color": "Marrón",
+    "Visible": true,
+    "Recurso": "assets/photos/maquila_abril.png",
+    "TipoRecurso": "imagen",
+    "DescripcionBreve": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)"
+  },
+  {
+    "ID": 2,
+    "Actividad": "Ubits",
+    "Descripción": "Accede y da Seguimiento a tu Kardex",
+    "Frecuencia": "Diario",
+    "Prioridad": 1,
+    "Categoría": "Capacitacion",
+    "Icono": "ℹ️",
+    "Color": "",
+    "Visible": false,
+    "Recurso": "",
+    "TipoRecurso": "",
+    "DescripcionBreve": "Accede y da Seguimiento a tu Kardex"
+  }
+]

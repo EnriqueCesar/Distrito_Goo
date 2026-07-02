@@ -1,7 +1,7 @@
 {
   "name": "Distrito Go - Multiherramienta Operativa",
   "short_name": "Distrito Go",
-  "description": "Centro Operativo Distrito Kike: día a día, eventos CMS, Duty Roster premium, desarrollo Partner y multiherramienta operativa.",
+  "description": "Centro Operativo Distrito Kike: día a día, eventos CMS, Informativos, Duty Roster premium, WFM inteligente, desarrollo Partner y multiherramienta operativa.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

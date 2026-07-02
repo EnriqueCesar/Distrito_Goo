@@ -84,6 +84,7 @@ function tbwRow(p){
 }
 
 export function renderOperationalSections(){
+  renderInformativo();
   renderToday();
   renderEvents();
   renderAltas();
@@ -106,8 +107,40 @@ function renderWFM(day, todayActivity){
   const planningDate = addDays(today, 15);
   const weekStart = startOfWeek(planningDate);
   const weekEnd = endOfWeek(planningDate);
+  const currentWeekStart = startOfWeek(today);
+  const currentWeekEnd = endOfWeek(today);
   const next = nextWeeklyActivity(day);
-  $('#wfm-card').innerHTML = `<div class="wfm-head"><span>📅 WFM</span><strong>Planeación Inteligente</strong></div><div class="wfm-grid"><div><small>Hoy</small><b>${escapeHtml(day)}</b></div><div><small>Semana en planeación</small><b>Semana ${getWeekNumber(planningDate)}</b></div><div><small>Periodo</small><b>${fmtDDMM(weekStart)} al ${fmtDDMM(weekEnd)}</b></div></div><div class="wfm-action"><strong>${todayActivity?.Icono || '✅'} ${escapeHtml(todayActivity?.Actividad || 'Revisión operativa')}</strong><p>${escapeHtml(briefText(todayActivity?.['Descripción'] || 'Revisa prioridades del día y anticipa necesidades de la semana en planeación.', 130))}</p></div>${next?`<div class="wfm-next"><small>Siguiente paso</small><span>${next.Icono || '⏭️'} ${escapeHtml(next.Actividad)}</span></div>`:''}`;
+  const todayLabel = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long' });
+  const planningLabel = `${fmtDDMM(weekStart)} al ${fmtDDMM(weekEnd)}`;
+  const currentLabel = `${fmtDDMM(currentWeekStart)} al ${fmtDDMM(currentWeekEnd)}`;
+  const actionTitle = `${todayActivity?.Icono || '✅'} ${escapeHtml(todayActivity?.Actividad || 'Revisión operativa')}`;
+  const actionText = briefText(todayActivity?.['Descripción'] || 'Revisa prioridades del día y anticipa necesidades de la semana en planeación.', 150);
+  $('#wfm-card').innerHTML = `
+    <div class="wfm-head"><span>📅 WFM</span><strong>Planeación inteligente</strong></div>
+    <p class="wfm-rule">Programamos horarios con 15 días de anticipación. La vista se actualiza automáticamente con la fecha actual.</p>
+    <div class="wfm-timeline" aria-label="Planeación WFM">
+      <div class="wfm-step is-now"><small>Hoy</small><b>${escapeHtml(todayLabel)}</b><em>Semana actual ${getWeekNumber(today)}</em></div>
+      <div class="wfm-connector">+15 días</div>
+      <div class="wfm-step is-plan"><small>Semana en planeación</small><b>Semana ${getWeekNumber(planningDate)}</b><em>${planningLabel}</em></div>
+    </div>
+    <div class="wfm-grid">
+      <div><small>Semana actual</small><b>${currentLabel}</b></div>
+      <div><small>Semana objetivo</small><b>${planningLabel}</b></div>
+      <div><small>Foco de hoy</small><b>${escapeHtml(day)}</b></div>
+    </div>
+    <div class="wfm-action"><small>Actividad de hoy</small><strong>${actionTitle}</strong><p>${escapeHtml(actionText)}</p></div>
+    ${next ? `<div class="wfm-next"><small>Siguiente paso</small><span>${next.Icono || '⏭️'} ${escapeHtml(next.Actividad)}</span></div>` : ''}`;
+}
+
+export function renderInformativo(){
+  const info = (state.operacional.informativo || [])
+    .filter(a => a.Visible !== false)
+    .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9));
+  const count = document.getElementById('info-count');
+  if(count) count.textContent = `${info.length} registro${info.length === 1 ? '' : 's'}`;
+  const grid = document.getElementById('info-grid');
+  if(!grid) return;
+  grid.innerHTML = info.map(a => opsCard(a.Actividad, a.DescripcionBreve || a['Descripción'], a.Icono || 'ℹ️', renderResourceAction(a), a)).join('') || opsCard('Sin informativos activos', 'No hay registros informativos visibles por ahora.', '☕');
 }
 export function renderEvents(){
   const all = state.operacional.eventos || [];

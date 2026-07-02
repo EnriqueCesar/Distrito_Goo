@@ -17,7 +17,7 @@ export const state = {
   dashboard: null,
   favoritosBase: [],
   version: null,
-  operacional: { eventos: [], actividadesDiarias: [], actividadesSemanales: [], dutyRoster: [], dutyDetail: [], checklistApertura: [], altasCurso: { bt: [], ss: [], tbw: [] }, wfm: [] },
+  operacional: { eventos: [], actividadesDiarias: [], actividadesSemanales: [], dutyRoster: [], dutyDetail: [], checklistApertura: [], altasCurso: { bt: [], ss: [], tbw: [] }, wfm: [], informativo: [], wfmRegla: "" },
   query: '',
   categoria: 'all',
   visibleCount: 16,

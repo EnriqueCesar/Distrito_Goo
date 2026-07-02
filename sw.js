@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-premium-limpia-v10-0-6';
+const CACHE_NAME = 'distrito-go-premium-optimizada-v10-0-7';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -9,6 +9,7 @@ const APP_SHELL = [
   "./data/config.v10.json",
   "./data/version.v10.json",
   "./data/operacional.v10.json",
+  "./data/informativo.v10.json",
   "./data/eventos.v10.json",
   "./data/actividades-diarias.v10.json",
   "./data/actividades-semanales.v10.json",
@@ -35,6 +36,7 @@ const APP_SHELL = [
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/photos/kike-dm.jpeg",
+  "./assets/photos/soporte-directo.jpg",
   "./assets/photos/Rutina_apertura.jpeg",
   "./assets/photos/10-pasos-turno.png",
   "./assets/photos/store-walk.png",
@@ -45,6 +47,7 @@ const APP_SHELL = [
   "./assets/photos/limpieza_back.jpeg",
   "./assets/photos/concurso_venta_dona_julio.jpeg",
   "./assets/photos/cortado_leche.jpeg",
+  "./assets/photos/maquila_abril.png",
   "./assets/duty/domingo_drive_thru.png",
   "./assets/duty/domingo_lobby.png",
   "./assets/duty/jueves_espresso.png",

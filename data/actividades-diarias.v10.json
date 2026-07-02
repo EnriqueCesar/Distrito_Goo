@@ -2,7 +2,7 @@
   {
     "ID": 1,
     "Actividad": "Verificación Espresso y Calidad del Café",
-    "Descripción": "Valida Espresso y Calidad del Café; registra resultados y comparte comentarios por turno.",
+    "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios en cada turno.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Calidad",
@@ -11,12 +11,12 @@
     "Visible": true,
     "Recurso": "assets/photos/verificacion-cafe-espresso.png",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Valida Espresso y Calidad del Café por turno."
+    "DescripcionBreve": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios …"
   },
   {
     "ID": 2,
     "Actividad": "RSA Checklist",
-    "Descripción": "Completa RSA antes de las 10:00 a.m. y comparte evidencia de correcciones.",
+    "Descripción": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Seguridad Alimentaria",
@@ -25,12 +25,12 @@
     "Visible": true,
     "Recurso": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
     "TipoRecurso": "link",
-    "DescripcionBreve": "Completa RSA antes de las 10:00 a.m."
+    "DescripcionBreve": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas."
   },
   {
     "ID": 3,
     "Actividad": "Store Walk",
-    "Descripción": "Recorre la tienda con foco en los 4 estándares; detecta oportunidades y registra acciones.",
+    "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Experiencia",
@@ -39,12 +39,12 @@
     "Visible": true,
     "Recurso": "assets/photos/store-walk.png",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Recorrido diario enfocado en 4 estándares."
+    "DescripcionBreve": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones e…"
   },
   {
     "ID": 4,
     "Actividad": "Protocolo de Apertura",
-    "Descripción": "Antes de las 09:00 a.m. reporta solo incidencias: cobertura, producto, equipos o riesgo de venta.",
+    "Descripción": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desviaciones detectadas.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Operación",
@@ -53,12 +53,12 @@
     "Visible": true,
     "Recurso": "assets/photos/Rutina_apertura.jpeg",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Reporta solo incidencias antes de las 09:00 a.m."
+    "DescripcionBreve": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desvia…"
   },
   {
     "ID": 5,
     "Actividad": "10 Pasos para un Turno Exitoso",
-    "Descripción": "Revisa los 10 pasos antes de iniciar la operación y alinea prioridades del turno.",
+    "Descripción": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación.",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Liderazgo",
@@ -67,12 +67,12 @@
     "Visible": true,
     "Recurso": "assets/photos/10-pasos-turno.png",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Alinea los 10 pasos antes de iniciar el turno."
+    "DescripcionBreve": "Revisa y ejecuta los 10 Pasos para un Turno Exitoso antes de iniciar la operación."
   },
   {
     "ID": 6,
     "Actividad": "Menu Core",
-    "Descripción": "Valida disponibilidad de productos, horarios y estatus operativo antes del turno.",
+    "Descripción": "Verifica la disponibilidad de productos, horarios y estatus operativo antes del inicio del turno.",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Operación",
@@ -81,12 +81,12 @@
     "Visible": true,
     "Recurso": "http://consulta.delivery.alsea.net/",
     "TipoRecurso": "link",
-    "DescripcionBreve": "Valida disponibilidad y estatus operativo."
+    "DescripcionBreve": "Verifica la disponibilidad de productos, horarios y estatus operativo antes del inicio del turno."
   },
   {
     "ID": 7,
     "Actividad": "Corte de Leche",
-    "Descripción": "Verifica tijeras por estación y ejecuta el corte correcto para evitar contaminación y desperdicio.",
+    "Descripción": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las bolsas para evitar contaminación y desperdicio, cuidando la calidad del producto.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Operación",
@@ -95,6 +95,6 @@
     "Visible": true,
     "Recurso": "assets/photos/cortado_leche.jpeg",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Verifica tijeras y corte correcto del empaque."
+    "DescripcionBreve": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las …"
   }
 ]
