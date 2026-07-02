@@ -1,17 +1,15 @@
 {
-  "version": "10.0 Premium Optimizada",
+  "version": "10.0 Premium Radar",
   "nombre": "Centro Operativo Distrito Kike",
   "fecha": "2026-07-02",
   "cambios": [
-    "Informativo CMS integrado: Maquila y consultas rápidas",
-    "Imagen de apoyo junto a Soporte Directo",
-    "WFM didáctico con proyección +15 días y semana en planeación",
-    "Imágenes como hipervínculo Ver imagen para limpieza visual",
-    "Duty Roster dinámico por día con enlaces a imagen por estación",
-    "Eventos CMS con filtro Semana / Mes / Todos y fechas DD/MM",
-    "Contraste reforzado en modo claro y oscuro",
-    "PWA actualizada con cache nuevo"
+    "Radar del día integrado: campaña ¿Y si, sí? con hipervínculo Ver imagen",
+    "Informativo actualizado: Precio Maquila Abril-26 con hipervínculo Ver imagen",
+    "Imagen ¿Y si, sí? colocada junto a Soporte Directo en el inicio",
+    "WFM didáctico mantiene proyección +15 días con semana en planeación",
+    "PWA actualizada con assets nuevos en caché",
+    "Limpieza visual: las imágenes se abren bajo demanda para no saturar"
   ],
   "release": "2026-07-02",
-  "notes": "Informativo CMS, WFM didáctico, soporte visual, Maquila Abril-26 y limpieza visual."
+  "notes": "Radar del día, campaña ¿Y si, sí?, Precio Maquila Abril-26, soporte visual y PWA actualizada."
 }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-premium-optimizada-v10-0-7';
+const CACHE_NAME = 'distrito-go-premium-radar-v10-0-8';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -48,6 +48,8 @@ const APP_SHELL = [
   "./assets/photos/concurso_venta_dona_julio.jpeg",
   "./assets/photos/cortado_leche.jpeg",
   "./assets/photos/maquila_abril.png",
+  "./assets/photos/ysisi.jpeg",
+  "./assets/photos/y-si-si-inicio.jpeg",
   "./assets/duty/domingo_drive_thru.png",
   "./assets/duty/domingo_lobby.png",
   "./assets/duty/jueves_espresso.png",
