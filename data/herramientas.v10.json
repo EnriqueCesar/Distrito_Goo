@@ -1,5 +1,35 @@
 [
   {
+    "id": "concurso-venta",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "App",
+    "icono": "🏆",
+    "nombre": "Concurso de Venta",
+    "tipo": "web",
+    "url": "https://enriquecesar.github.io/concurso_venta/",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "Ranking dinámico para consultar los 2 concursos activos y enfocar a la tienda ganadora.",
+    "favorito": true,
+    "orden": 0,
+    "keywords": [
+      "concurso",
+      "venta",
+      "ranking",
+      "dona",
+      "grab",
+      "go",
+      "general",
+      "avance",
+      "tienda",
+      "ganador"
+    ],
+    "estado": "activo"
+  },
+  {
     "id": "pbt-web-2-0",
     "categoriaId": "operacion",
     "categoria": "Operación",

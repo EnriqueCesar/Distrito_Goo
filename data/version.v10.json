@@ -1,8 +1,11 @@
 {
   "version": "10.0 Premium Radar",
   "nombre": "Centro Operativo Distrito Kike",
-  "fecha": "2026-07-02",
+  "fecha": "2026-07-03",
   "cambios": [
+    "Concurso de Venta integrado como Hero principal con acceso directo al ranking",
+    "Botón Concurso agregado en navegación inferior",
+    "Concurso de Venta agregado a herramientas/favoritos sin afectar módulos existentes",
     "Radar del día integrado: campaña ¿Y si, sí? con hipervínculo Ver imagen",
     "Informativo actualizado: Precio Maquila Abril-26 con hipervínculo Ver imagen",
     "Imagen ¿Y si, sí? colocada junto a Soporte Directo en el inicio",
@@ -10,6 +13,6 @@
     "PWA actualizada con assets nuevos en caché",
     "Limpieza visual: las imágenes se abren bajo demanda para no saturar"
   ],
-  "release": "2026-07-02",
-  "notes": "Radar del día, campaña ¿Y si, sí?, Precio Maquila Abril-26, soporte visual y PWA actualizada."
+  "release": "2026-07-03",
+  "notes": "Concurso de Venta con visibilidad prioritaria y enlace directo al ranking."
 }
