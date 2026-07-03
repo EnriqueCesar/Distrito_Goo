@@ -1,14 +1,14 @@
-# Distrito Go · Versión 10.2 Concurso Activo Limpia
+# Distrito Go · Versión 10.3 Premium
 
 Versión optimizada para GitHub Pages.
 
 ## Cambios clave
-- Concurso de Venta agregado como franja superior activa, hero, actividad diaria, evento vigente, favorito y acceso en navegación inferior.
+- Logo PWA actualizado desde carpeta `icons` y validado en `manifest.json`.
+- Concurso de Venta conservado únicamente como Hero principal y Evento activo.
 - Link activo: https://enriquecesar.github.io/concurso_venta/
-- Texto visible: “Conoce nuestros dos concursos activos”.
-- Vigencia: 03 de julio al 10 de agosto.
-- Imagen de Maquila actualizada con el arte correcto.
-- Limpieza de archivos legacy, documentos redundantes e imágenes no referenciadas.
+- Vigencia visible: 03 de julio al 10 de agosto.
+- 🎓 Recertificación Shift Supervisor queda sin link, solo como evento informativo.
+- Caché PWA actualizada a `distrito-go-v10-3-0-premium`.
 
 ## Carga
-Subir el contenido completo a GitHub Pages. La caché PWA cambió a `distrito-go-v10-2-0-concurso-activo-limpia` para forzar actualización.
+Subir el contenido completo a GitHub Pages reemplazando archivos existentes desde la raíz del repositorio.

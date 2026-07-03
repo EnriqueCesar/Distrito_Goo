@@ -27,7 +27,6 @@ export function revealWorkspace(scroll = true){
 export function nav(view){
   $$('.nav-item').forEach(b => b.classList.toggle('is-active', b.dataset.view === view));
   if(view === 'home') window.scrollTo({top:0, behavior:'smooth'});
-  if(view === 'contest') $('#concurso-venta').scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'today') $('#dia-a-dia').scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'events') $('#eventos-cms').scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'altas') $('#altas-curso').scrollIntoView({behavior:'smooth', block:'start'});

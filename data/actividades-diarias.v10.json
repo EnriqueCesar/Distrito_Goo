@@ -1,19 +1,5 @@
 [
   {
-    "ID": 101,
-    "Actividad": "🏆 Concursos activos | Ranking de Venta",
-    "Descripción": "Conoce nuestros dos concursos activos: Dona Grab & Go y Concurso General. Revisa el ranking diario del 03 de julio al 10 de agosto y enfoca al equipo ganador.",
-    "Frecuencia": "Diario",
-    "Prioridad": 1,
-    "Categoría": "Concurso de Venta",
-    "Icono": "🏆",
-    "Color": "Verde",
-    "Visible": true,
-    "Recurso": "https://enriquecesar.github.io/concurso_venta/",
-    "TipoRecurso": "link",
-    "DescripcionBreve": "Conoce los 2 concursos activos. Ranking diario del 03/jul al 10/ago."
-  },
-  {
     "ID": 1,
     "Actividad": "Verificación Espresso y Calidad del Café",
     "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios en cada turno.",

@@ -23,7 +23,6 @@ export function renderQuickActions(){
   const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
   const duty = (state.operacional.dutyRoster || []).find(d => d['Día'] === dayNames[today.getDay()]);
   const cards = [
-    {title:'Concursos activos', icon:'🏆', text:'Conoce nuestros 2 concursos activos. Vigencia 03/jul al 10/ago.', action:'openContest', badge:'Ranking'},
     {title:'Mi día operativo', icon:'✅', text:'Rutina diaria, WFM y actividad semanal de hoy.', action:'showToday'},
     {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''},
     {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle operativo del día.', action:'showDuty'},
@@ -66,9 +65,8 @@ export function runAction(action){
   if(action === 'showAltas') goToSection('altas-curso');
   if(action === 'showDuty') goToSection('duty-roster');
   if(action === 'showTools') revealWorkspace();
-  if(action === 'openContest') window.open('https://enriquecesar.github.io/concurso_venta/', '_blank', 'noopener');
   if(action === 'showFavorites') { revealWorkspace(false); state.categoria = 'favorites'; renderChips(); renderTools(true); document.querySelector('.tools-section').scrollIntoView({behavior:'smooth'}); }
   if(action === 'showRecent') { revealWorkspace(false); state.categoria = 'recent'; renderChips(); renderTools(true); document.querySelector('.tools-section').scrollIntoView({behavior:'smooth'}); }
   if(action === 'refreshData') location.reload();
-  if(!['openSearch','showFavorites','showRecent','showToday','showEvents','showAltas','showDuty','refreshData','showTools','openContest'].includes(action)) toast('Acción preparada');
+  if(!['openSearch','showFavorites','showRecent','showToday','showEvents','showAltas','showDuty','refreshData','showTools'].includes(action)) toast('Acción preparada');
 }

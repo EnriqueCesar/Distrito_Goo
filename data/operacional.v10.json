@@ -51,7 +51,7 @@
       "Actividad": "🎓 Recertificación Shift Supervisor",
       "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas aprox.).",
       "Imagen": "🎓",
-      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "Link": "",
       "ImagenPath": ""
     },
     {
@@ -434,20 +434,6 @@
     }
   ],
   "actividadesDiarias": [
-    {
-      "ID": 101,
-      "Actividad": "🏆 Concursos activos | Ranking de Venta",
-      "Descripción": "Conoce nuestros dos concursos activos: Dona Grab & Go y Concurso General. Revisa el ranking diario del 03 de julio al 10 de agosto y enfoca al equipo ganador.",
-      "Frecuencia": "Diario",
-      "Prioridad": 1,
-      "Categoría": "Concurso de Venta",
-      "Icono": "🏆",
-      "Color": "Verde",
-      "Visible": true,
-      "Recurso": "https://enriquecesar.github.io/concurso_venta/",
-      "TipoRecurso": "link",
-      "DescripcionBreve": "Conoce los 2 concursos activos. Ranking diario del 03/jul al 10/ago."
-    },
     {
       "ID": 1,
       "Actividad": "Verificación Espresso y Calidad del Café",
@@ -1798,20 +1784,6 @@
   },
   "cmsFuente": "Distrito_Go_CMS(41).xlsx",
   "informativo": [
-    {
-      "ID": 101,
-      "Actividad": "🏆 Conoce nuestros 2 concursos activos",
-      "Descripción": "Acceso principal al ranking de Concurso de Venta. Vigente del 03 de julio al 10 de agosto.",
-      "Frecuencia": "Diario",
-      "Prioridad": 1,
-      "Categoría": "Ranking",
-      "Icono": "🏆",
-      "Color": "Verde",
-      "Visible": true,
-      "Recurso": "https://enriquecesar.github.io/concurso_venta/",
-      "TipoRecurso": "link",
-      "DescripcionBreve": "Ranking activo: Dona Grab & Go + Concurso General."
-    },
     {
       "ID": 1,
       "Actividad": "Maquila",

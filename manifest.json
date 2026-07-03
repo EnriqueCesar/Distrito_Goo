@@ -1,8 +1,8 @@
 {
   "name": "Distrito Go - Multiherramienta Operativa",
   "short_name": "Distrito Go",
-  "description": "Centro Operativo Distrito Kike: día a día, eventos CMS, Informativos, Duty Roster premium, WFM inteligente, desarrollo Partner y multiherramienta operativa.",
-  "start_url": "./index.html",
+  "description": "Centro Operativo Distrito Kike: día a día, eventos CMS, informativos, Duty Roster, WFM inteligente, desarrollo Partner y herramientas clave.",
+  "start_url": "./index.html?v=10.3.0",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
@@ -14,8 +14,50 @@
   ],
   "icons": [
     {
+      "src": "./assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
       "src": "./assets/icons/icon-192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-384.png",
+      "sizes": "384x384",
       "type": "image/png",
       "purpose": "any maskable"
     },

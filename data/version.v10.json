@@ -1,11 +1,12 @@
 {
-  "version": "10.2.0-CONCURSO-ACTIVO-LIMPIA",
+  "version": "10.3 Premium",
   "releaseDate": "2026-07-03",
   "changes": [
-    "Concurso de Venta visible desde el inicio como franja activa, hero, actividad diaria, evento vigente y favorito.",
-    "Vigencia corregida del 03 de julio al 10 de agosto.",
-    "Imagen de Maquila actualizada con el arte correcto.",
-    "Limpieza de archivos e imágenes no utilizadas sin afectar módulos activos."
+    "Logo PWA sustituido con paquete icons validado en todos los tamaños requeridos.",
+    "Concurso de Venta simplificado: se conserva únicamente el hero principal y el evento activo.",
+    "Se retiraron accesos duplicados del concurso en ribbon, navegación inferior, favoritos, herramientas, informativo y actividad diaria.",
+    "Recertificación Shift Supervisor queda como evento informativo sin enlace.",
+    "Caché PWA actualizada para forzar despliegue limpio."
   ],
-  "notes": "Versión optimizada, ligera y alineada a CMS base."
+  "notes": "Versión optimizada sin romper estructura del ecosistema actual."
 }

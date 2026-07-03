@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v10-2-0-concurso-activo-limpia';
+const CACHE_NAME = 'distrito-go-v10-3-0-premium';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -33,6 +33,13 @@ const APP_SHELL = [
   "./modules/operational.js",
   "./styles/variables.css",
   "./styles/app.css",
+  "./assets/icons/icon-72.png",
+  "./assets/icons/icon-96.png",
+  "./assets/icons/icon-128.png",
+  "./assets/icons/icon-144.png",
+  "./assets/icons/icon-152.png",
+  "./assets/icons/icon-180.png",
+  "./assets/icons/icon-384.png",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/photos/kike-dm.jpeg",

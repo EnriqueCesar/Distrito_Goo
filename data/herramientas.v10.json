@@ -1,35 +1,5 @@
 [
   {
-    "id": "concurso-venta",
-    "categoriaId": "operacion",
-    "categoria": "Operación",
-    "categoriaIcono": "⚙️",
-    "grupo": "App",
-    "icono": "🏆",
-    "nombre": "Concursos activos",
-    "tipo": "web",
-    "url": "https://enriquecesar.github.io/concurso_venta/",
-    "webUrl": "",
-    "package": "",
-    "playStore": "",
-    "notas": "Conoce nuestros 2 concursos activos. Ranking de Venta vigente del 03/jul al 10/ago.",
-    "favorito": true,
-    "orden": 0,
-    "keywords": [
-      "concurso",
-      "venta",
-      "ranking",
-      "dona",
-      "grab",
-      "go",
-      "general",
-      "activo",
-      "julio",
-      "agosto"
-    ],
-    "estado": "activo"
-  },
-  {
     "id": "pbt-web-2-0",
     "categoriaId": "operacion",
     "categoria": "Operación",
