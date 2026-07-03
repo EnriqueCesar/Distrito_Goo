@@ -96,7 +96,7 @@ export function renderToday(){
   const daily = (state.operacional.actividadesDiarias || [])
     .filter(a => a.Visible !== false)
     .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9))
-    .slice(0,6);
+    .slice(0,8);
   const weekly = (state.operacional.actividadesSemanales || []).filter(a => (a['Día'] || '').toLowerCase() === day.toLowerCase());
   $('#today-date').textContent = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
   renderWFM(day, weekly[0]);

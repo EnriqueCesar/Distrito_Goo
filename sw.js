@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-premium-radar-v10-0-9';
+const CACHE_NAME = 'distrito-go-v10-1-0-concurso-auditada';
 const APP_SHELL = [
   "./",
   "./index.html",
