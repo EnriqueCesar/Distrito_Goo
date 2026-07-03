@@ -1,12 +1,14 @@
 {
-  "version": "10.3 Premium",
+  "version": "10.3.1 Premium Mundialista",
   "releaseDate": "2026-07-03",
   "changes": [
     "Logo PWA sustituido con paquete icons validado en todos los tamaños requeridos.",
     "Concurso de Venta simplificado: se conserva únicamente el hero principal y el evento activo.",
-    "Se retiraron accesos duplicados del concurso en ribbon, navegación inferior, favoritos, herramientas, informativo y actividad diaria.",
+    "Se retiraron accesos duplicados del concurso para mantener foco visual.",
     "Recertificación Shift Supervisor queda como evento informativo sin enlace.",
-    "Caché PWA actualizada para forzar despliegue limpio."
+    "Radar Mundialista agregado como apartado visible con modal de imagen completa.",
+    "Imagen ysisi.jpeg integrada con #OrgulloCN, #DistritoKike y ¿Y Si, Sí?.",
+    "Caché PWA actualizada a v10.3.1 para forzar despliegue limpio."
   ],
   "notes": "Versión optimizada sin romper estructura del ecosistema actual."
 }

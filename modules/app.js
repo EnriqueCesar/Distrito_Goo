@@ -67,6 +67,14 @@ function bindStaticEvents(){
     toast('Favoritos restaurados');
   });
   $('#close-quick-modal').addEventListener('click', () => $('#quick-modal').close());
+  document.querySelectorAll('[data-campaign-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.campaignModal;
+      $('#quick-modal-title').textContent = '🌎 Radar Mundialista · ¿Y Si, Sí?';
+      $('#quick-modal-body').innerHTML = `<img class="modal-image campaign-modal-image" src="${src}" alt="Radar Mundialista ¿Y Si, Sí?" loading="lazy"/>`;
+      $('#quick-modal').showModal();
+    });
+  });
   window.addEventListener('dgx:filtersChanged', renderChips);
 }
 
