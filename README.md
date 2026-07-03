@@ -1,21 +1,14 @@
-# Distrito Go 10.0 Premium Radar
+# Distrito Go · Versión 10.2 Concurso Activo Limpia
 
-Centro Operativo Partner listo para GitHub Pages.
+Versión optimizada para GitHub Pages.
 
-## Ajustes incluidos
+## Cambios clave
+- Concurso de Venta agregado como franja superior activa, hero, actividad diaria, evento vigente, favorito y acceso en navegación inferior.
+- Link activo: https://enriquecesar.github.io/concurso_venta/
+- Texto visible: “Conoce nuestros dos concursos activos”.
+- Vigencia: 03 de julio al 10 de agosto.
+- Imagen de Maquila actualizada con el arte correcto.
+- Limpieza de archivos legacy, documentos redundantes e imágenes no referenciadas.
 
-- Radar del día integrado: campaña **¿Y si, sí?** con botón **Ver imagen**.
-- Informativo actualizado: **Precio Maquila Abril-26** con botón **Ver imagen**.
-- Imagen **¿Y si, sí?** colocada junto a Soporte Directo en el inicio.
-- WFM didáctico con fecha actual, proyección +15 días, semana en planeación y siguiente paso.
-- Imágenes visibles únicamente mediante hipervínculo para mantener limpieza visual.
-- Duty Roster dinámico por día con enlace por estación.
-- Eventos CMS con filtros Semana / Mes / Todos y fechas DD/MM.
-- Rutina diaria resumida con acceso a guía visual.
-- Herramientas sin metadatos redundantes de categoría/tipo.
-- Contraste reforzado en tema claro y oscuro.
-- PWA actualizada con caché nuevo.
-
-## Publicación
-
-Subir el contenido completo de esta carpeta a GitHub Pages.
+## Carga
+Subir el contenido completo a GitHub Pages. La caché PWA cambió a `distrito-go-v10-2-0-concurso-activo-limpia` para forzar actualización.

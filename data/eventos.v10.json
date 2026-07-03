@@ -1,5 +1,14 @@
 [
   {
+    "Fecha Inicio": "2026-07-03",
+    "Fecha Fin": "2026-08-10",
+    "Actividad": "🏆 Concursos activos | Ranking de Venta",
+    "Contexto / Recordatorio": "Conoce nuestros dos concursos activos. Consulta el ranking diario de Dona Grab & Go y Concurso General para enfocar el resultado de tienda.",
+    "Link": "https://enriquecesar.github.io/concurso_venta/",
+    "Imagen": "🏆",
+    "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
+  },
+  {
     "Fecha Inicio": "2026-06-23",
     "Fecha Fin": "2026-07-15",
     "Actividad": "🧹 Limpieza Backs",
@@ -70,15 +79,6 @@
     "Link": "",
     "Imagen": "📖",
     "ImagenPath": "assets/photos/cdd_3Q_2026.png"
-  },
-  {
-    "Fecha Inicio": "2026-07-01",
-    "Fecha Fin": "2026-07-31",
-    "Actividad": "🍩 Dona Grab & Go",
-    "Contexto / Recordatorio": "Enfocar venta incremental vs Semana 26.",
-    "Link": "",
-    "Imagen": "🍩",
-    "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
   },
   {
     "Fecha Inicio": "2026-07-13",

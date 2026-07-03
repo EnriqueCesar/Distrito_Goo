@@ -6,13 +6,13 @@
     "categoriaIcono": "⚙️",
     "grupo": "App",
     "icono": "🏆",
-    "nombre": "Concurso de Venta",
+    "nombre": "Concursos activos",
     "tipo": "web",
     "url": "https://enriquecesar.github.io/concurso_venta/",
     "webUrl": "",
     "package": "",
     "playStore": "",
-    "notas": "Ranking dinámico de los 2 concursos activos. Consulta avance, líder actual y foco ganador.",
+    "notas": "Conoce nuestros 2 concursos activos. Ranking de Venta vigente del 03/jul al 10/ago.",
     "favorito": true,
     "orden": 0,
     "keywords": [
@@ -23,9 +23,9 @@
       "grab",
       "go",
       "general",
-      "avance",
-      "tienda",
-      "ganador"
+      "activo",
+      "julio",
+      "agosto"
     ],
     "estado": "activo"
   },

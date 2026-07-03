@@ -1,10 +1,11 @@
 {
-  "version": "10.1.0-CONCURSO-AUDITADA",
-  "build": "2026-07-03",
+  "version": "10.2.0-CONCURSO-ACTIVO-LIMPIA",
+  "releaseDate": "2026-07-03",
   "changes": [
-    "Auditoría CMS con Distrito_Go_CMS(41).xlsx",
-    "Concurso de Venta agregado como Hero visual, actividad diaria, evento activo, herramienta favorita y navegación inferior",
-    "Limpieza de imágenes no referenciadas y actualización de caché PWA"
+    "Concurso de Venta visible desde el inicio como franja activa, hero, actividad diaria, evento vigente y favorito.",
+    "Vigencia corregida del 03 de julio al 10 de agosto.",
+    "Imagen de Maquila actualizada con el arte correcto.",
+    "Limpieza de archivos e imágenes no utilizadas sin afectar módulos activos."
   ],
-  "notes": "Versión limpia con ranking de concursos activo y acceso directo."
+  "notes": "Versión optimizada, ligera y alineada a CMS base."
 }

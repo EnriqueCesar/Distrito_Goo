@@ -1,5 +1,19 @@
 [
   {
+    "ID": 101,
+    "Actividad": "🏆 Conoce nuestros 2 concursos activos",
+    "Descripción": "Acceso principal al ranking de Concurso de Venta. Vigente del 03 de julio al 10 de agosto.",
+    "Frecuencia": "Diario",
+    "Prioridad": 1,
+    "Categoría": "Ranking",
+    "Icono": "🏆",
+    "Color": "Verde",
+    "Visible": true,
+    "Recurso": "https://enriquecesar.github.io/concurso_venta/",
+    "TipoRecurso": "link",
+    "DescripcionBreve": "Ranking activo: Dona Grab & Go + Concurso General."
+  },
+  {
     "ID": 2,
     "Actividad": "Radar del día | ¿Y si, sí?",
     "Descripción": "Campaña vigente. Consulta DO’S & DON’TS para escribir frases autorizadas en vasos y bolsas.",

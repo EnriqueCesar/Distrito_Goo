@@ -23,7 +23,7 @@ export function renderQuickActions(){
   const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
   const duty = (state.operacional.dutyRoster || []).find(d => d['Día'] === dayNames[today.getDay()]);
   const cards = [
-    {title:'Concurso de Venta', icon:'🏆', text:'Ranking activo de Dona Grab & Go y Concurso General.', action:'openContest', badge:'2 activos'},
+    {title:'Concursos activos', icon:'🏆', text:'Conoce nuestros 2 concursos activos. Vigencia 03/jul al 10/ago.', action:'openContest', badge:'Ranking'},
     {title:'Mi día operativo', icon:'✅', text:'Rutina diaria, WFM y actividad semanal de hoy.', action:'showToday'},
     {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''},
     {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle operativo del día.', action:'showDuty'},

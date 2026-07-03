@@ -1,6 +1,15 @@
 {
   "eventos": [
     {
+      "Fecha Inicio": "2026-07-03",
+      "Fecha Fin": "2026-08-10",
+      "Actividad": "🏆 Concursos activos | Ranking de Venta",
+      "Contexto / Recordatorio": "Conoce nuestros dos concursos activos. Consulta el ranking diario de Dona Grab & Go y Concurso General para enfocar el resultado de tienda.",
+      "Link": "https://enriquecesar.github.io/concurso_venta/",
+      "Imagen": "🏆",
+      "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
+    },
+    {
       "Fecha Inicio": "2026-06-23",
       "Fecha Fin": "2026-07-15",
       "Actividad": "🧹 Limpieza Backs",
@@ -35,15 +44,6 @@
       "Imagen": "📅",
       "Link": "Abrir Oracle HCM",
       "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-07-01",
-      "Fecha Fin": "2026-07-31",
-      "Actividad": "🏆 Concurso de Venta | Ranking activo",
-      "Contexto / Recordatorio": "Ranking dinámico para Dona Grab & Go y Concurso General. Consulta avance, líder y foco ganador diariamente.",
-      "Imagen": "🏆",
-      "Link": "https://enriquecesar.github.io/concurso_venta/",
-      "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
     },
     {
       "Fecha Inicio": "2026-07-01",
@@ -435,18 +435,18 @@
   ],
   "actividadesDiarias": [
     {
-      "ID": 0,
-      "Actividad": "🏆 Concurso de Venta | Ranking activo",
-      "Descripción": "Consulta diariamente el ranking de los 2 concursos activos: Dona Grab & Go y Concurso General. Enfoca acciones por tienda ganadora.",
+      "ID": 101,
+      "Actividad": "🏆 Concursos activos | Ranking de Venta",
+      "Descripción": "Conoce nuestros dos concursos activos: Dona Grab & Go y Concurso General. Revisa el ranking diario del 03 de julio al 10 de agosto y enfoca al equipo ganador.",
       "Frecuencia": "Diario",
-      "Prioridad": 0,
-      "Categoría": "Venta",
+      "Prioridad": 1,
+      "Categoría": "Concurso de Venta",
       "Icono": "🏆",
       "Color": "Verde",
       "Visible": true,
       "Recurso": "https://enriquecesar.github.io/concurso_venta/",
       "TipoRecurso": "link",
-      "DescripcionBreve": "Ranking dinámico de los 2 concursos activos. Consulta avance, líder y foco ganador."
+      "DescripcionBreve": "Conoce los 2 concursos activos. Ranking diario del 03/jul al 10/ago."
     },
     {
       "ID": 1,
@@ -1799,18 +1799,18 @@
   "cmsFuente": "Distrito_Go_CMS(41).xlsx",
   "informativo": [
     {
-      "ID": 0,
-      "Actividad": "🏆 Ranking Concursos Activos",
-      "Descripción": "Acceso prioritario al ranking de Concurso de Venta. Revisa avance y líder actual.",
+      "ID": 101,
+      "Actividad": "🏆 Conoce nuestros 2 concursos activos",
+      "Descripción": "Acceso principal al ranking de Concurso de Venta. Vigente del 03 de julio al 10 de agosto.",
       "Frecuencia": "Diario",
-      "Prioridad": 0,
-      "Categoría": "Venta",
+      "Prioridad": 1,
+      "Categoría": "Ranking",
       "Icono": "🏆",
       "Color": "Verde",
       "Visible": true,
       "Recurso": "https://enriquecesar.github.io/concurso_venta/",
       "TipoRecurso": "link",
-      "DescripcionBreve": "Consulta el ranking de los 2 concursos activos."
+      "DescripcionBreve": "Ranking activo: Dona Grab & Go + Concurso General."
     },
     {
       "ID": 1,
