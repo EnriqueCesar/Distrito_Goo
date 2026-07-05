@@ -27,6 +27,7 @@ async function boot(){
   bindPWA();
   bindPullToRefresh();
   bindLazyLoading();
+  bindBearistaInformativo();
   toast('Distrito Go actualizado');
 }
 
@@ -76,6 +77,38 @@ function bindStaticEvents(){
     });
   });
   window.addEventListener('dgx:filtersChanged', renderChips);
+}
+
+
+function bindBearistaInformativo(){
+  const card = $('#bearista-informativo');
+  if(!card) return;
+  const imgSrc = 'assets/img/bearistahugger.jpeg';
+  const now = new Date();
+  const start = new Date('2026-07-05T00:00:00');
+  const end = new Date('2026-07-07T00:00:00');
+  const force = new URLSearchParams(window.location.search).get('bearista') === '1';
+  const active = force || (now >= start && now < end);
+  if(!active){
+    card.remove();
+    return;
+  }
+  card.classList.remove('hidden');
+  if(localStorage.getItem('dgx_bearista_hugger_closed') === '1') card.classList.add('is-collapsed');
+  const openBearista = () => {
+    $('#quick-modal-title').textContent = 'Desafío adicional ¿Y Si, 100%?';
+    $('#quick-modal-body').innerHTML = `<img class="modal-image bearista-modal-image" src="${imgSrc}" alt="Desafío adicional Bearista Hugger" loading="lazy"/>`;
+    $('#quick-modal').showModal();
+  };
+  document.querySelectorAll('[data-bearista-modal]').forEach(btn => btn.addEventListener('click', openBearista));
+  const close = $('#bearista-close');
+  if(close){
+    close.addEventListener('click', () => {
+      localStorage.setItem('dgx_bearista_hugger_closed', '1');
+      card.classList.add('is-collapsed');
+      toast('Informativo minimizado');
+    });
+  }
 }
 
 function bindLazyLoading(){

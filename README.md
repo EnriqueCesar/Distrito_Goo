@@ -1,21 +1,15 @@
-# Distrito Go · Versión 10.3.1 Premium Mundialista
+# Distrito Go · Versión 10.3.2 Bearista Hugger
 
 Versión optimizada para GitHub Pages.
 
 ## Cambios clave
 
-- Logo PWA actualizado con paquete `assets/icons`.
-- `manifest.json` validado con iconos 72, 96, 128, 144, 152, 180, 192, 384 y 512.
-- Nuevo favicon y apple touch icon.
-- Concurso de Venta conservado únicamente como Hero principal y Evento activo.
-- Link activo: https://enriquecesar.github.io/concurso_venta/
-- Vigencia concurso: 03 de julio al 10 de agosto.
-- 🎓 Recertificación Shift Supervisor queda sin link, solo como evento informativo.
-- Radar Mundialista agregado como apartado visible con modal de imagen completa.
-- Imagen `ysisi.jpeg` integrada con #OrgulloCN, #DistritoKike y ¿Y Si, Sí?.
-- Imagen de Maquila actualizada.
-- Limpieza de documentos de auditoría redundantes.
-- Caché PWA actualizada a `distrito-go-v10-3-1-premium-mundialista`.
+- Se conserva estructura visual, navegación, módulos, filtros, PWA, manifest, service worker, íconos y assets funcionales.
+- Informativo temporal Bearista Hugger agregado del 5 al 6 de julio de 2026.
+- Imagen `assets/img/bearistahugger.jpeg` integrada con vista completa desde modal e hipervínculo directo.
+- Cierre del informativo con `localStorage`; durante el periodo activo queda minimizado y mantiene acceso a la imagen completa.
+- Caché PWA actualizada a `distrito-go-v10-3-2-bearista-hugger` para forzar nueva versión al publicar.
+- Versionado de CSS, JS y manifest actualizado a `10.3.2`.
 
 ## Carga
 

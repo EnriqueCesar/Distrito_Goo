@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v10-3-1-premium-mundialista';
+const CACHE_NAME = 'distrito-go-v10-3-2-bearista-hugger';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -57,6 +57,7 @@ const APP_SHELL = [
   "./assets/photos/maquila_abril.png",
   "./assets/photos/ysisi.jpeg",
   "./assets/photos/y-si-si-inicio.jpeg",
+  "./assets/img/bearistahugger.jpeg",
   "./assets/duty/domingo_drive_thru.png",
   "./assets/duty/domingo_lobby.png",
   "./assets/duty/jueves_espresso.png",
