@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v10-3-3-audit-optimizacion';
+const CACHE_NAME = 'distrito-go-v10-3-4-pages-fix';
 const APP_SHELL = [
   "./",
   "./index.html",

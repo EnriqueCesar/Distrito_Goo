@@ -8,7 +8,7 @@ export function bindPWA(){
   });
   window.addEventListener('dgx:install', installPWA);
   if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('./sw.js?v=10.3.1').then(reg => {
+    navigator.serviceWorker.register('./sw.js?v=10.3.4').then(reg => {
       reg.addEventListener('updatefound', () => toast('Actualización preparada'));
     }).catch(console.warn);
   }

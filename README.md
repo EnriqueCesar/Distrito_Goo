@@ -1,6 +1,6 @@
-# Distrito Go v10.3.3 Audit Optimizada
+# Distrito Go v10.3.4 Pages Fix
 
-Versión lista para GitHub Pages desde `main` / `/root`.
+Versión auditada, limpia y lista para GitHub Pages desde `main` / `/root`.
 
 ## Cambios aplicados
 - Se conservó la experiencia actual: navegación, módulos, datos, filtros, PWA, manifest, service worker, assets activos e informativos.
@@ -9,7 +9,7 @@ Versión lista para GitHub Pages desde `main` / `/root`.
 - Se limpiaron assets no referenciados y se conservaron los recursos usados por `index.html`, `manifest.json`, `sw.js`, módulos y datos activos.
 - Se agregó `.nojekyll` en raíz.
 - Se actualizó `manifest.json` con `start_url: "./"`, `scope: "./"` y `display: "standalone"`.
-- Se actualizó el cache del service worker a `distrito-go-v10-3-3-audit-optimizacion`.
+- Se actualizó el cache del service worker a `distrito-go-v10-3-4-pages-fix`.
 - Se agregaron accesos rápidos en el hero para mejorar navegación sin romper la estructura actual.
 
 ## Estructura final
