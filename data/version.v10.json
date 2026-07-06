@@ -1,14 +1,13 @@
 {
-  "version": "10.3.1 Premium Mundialista",
-  "releaseDate": "2026-07-03",
+  "version": "10.3.3 Audit Optimizada",
+  "releaseDate": "2026-07-05",
   "changes": [
-    "Logo PWA sustituido con paquete icons validado en todos los tamaños requeridos.",
-    "Concurso de Venta simplificado: se conserva únicamente el hero principal y el evento activo.",
-    "Se retiraron accesos duplicados del concurso para mantener foco visual.",
-    "Recertificación Shift Supervisor queda como evento informativo sin enlace.",
-    "Radar Mundialista agregado como apartado visible con modal de imagen completa.",
-    "Imagen ysisi.jpeg integrada con #OrgulloCN, #DistritoKike y ¿Y Si, Sí?.",
-    "Caché PWA actualizada a v10.3.1 para forzar despliegue limpio."
+    "Auditoría de estructura para GitHub Pages.",
+    "Limpieza de carpetas no conectadas y archivos redundantes.",
+    "Consolidación de assets únicamente referenciados por la versión activa.",
+    "Rutas relativas validadas para PWA, manifest y service worker.",
+    "Accesos rápidos agregados al hero para mejorar navegación sin alterar módulos.",
+    "Cache PWA actualizado para forzar refresh de publicación."
   ],
-  "notes": "Versión optimizada sin romper estructura del ecosistema actual."
+  "notes": "Versión limpia, estática y lista para publicar en branch main / root."
 }

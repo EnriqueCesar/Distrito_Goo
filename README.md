@@ -1,16 +1,29 @@
-# Distrito Go · Versión 10.3.2 Bearista Hugger
+# Distrito Go v10.3.3 Audit Optimizada
 
-Versión optimizada para GitHub Pages.
+Versión lista para GitHub Pages desde `main` / `/root`.
 
-## Cambios clave
+## Cambios aplicados
+- Se conservó la experiencia actual: navegación, módulos, datos, filtros, PWA, manifest, service worker, assets activos e informativos.
+- Se auditó la estructura activa del proyecto y se retiraron carpetas no conectadas de la versión en producción (`css/`, `js/`, `docs/`, `tools/`) para evitar redundancia.
+- Se mantuvieron únicamente los JSON v10 que alimentan la app modular actual.
+- Se limpiaron assets no referenciados y se conservaron los recursos usados por `index.html`, `manifest.json`, `sw.js`, módulos y datos activos.
+- Se agregó `.nojekyll` en raíz.
+- Se actualizó `manifest.json` con `start_url: "./"`, `scope: "./"` y `display: "standalone"`.
+- Se actualizó el cache del service worker a `distrito-go-v10-3-3-audit-optimizacion`.
+- Se agregaron accesos rápidos en el hero para mejorar navegación sin romper la estructura actual.
 
-- Se conserva estructura visual, navegación, módulos, filtros, PWA, manifest, service worker, íconos y assets funcionales.
-- Informativo temporal Bearista Hugger agregado del 5 al 6 de julio de 2026.
-- Imagen `assets/img/bearistahugger.jpeg` integrada con vista completa desde modal e hipervínculo directo.
-- Cierre del informativo con `localStorage`; durante el periodo activo queda minimizado y mantiene acceso a la imagen completa.
-- Caché PWA actualizada a `distrito-go-v10-3-2-bearista-hugger` para forzar nueva versión al publicar.
-- Versionado de CSS, JS y manifest actualizado a `10.3.2`.
+## Estructura final
+- `index.html`
+- `manifest.json`
+- `sw.js`
+- `.nojekyll`
+- `README.md`
+- `styles/`
+- `modules/`
+- `data/`
+- `assets/`
 
-## Carga
+## Publicación
+Configurar GitHub Pages en branch `main` y folder `/root`.
 
-Subir el contenido completo a GitHub Pages en la raíz del repositorio y reemplazar archivos existentes.
+Commit sugerido: `Audit and optimize Distrito Goo structure`
