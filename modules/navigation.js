@@ -5,7 +5,8 @@ import { openSpotlight } from './search.js';
 
 export function bindNavigation(){
   $$('.nav-item').forEach(btn => btn.addEventListener('click', () => nav(btn.dataset.view)));
-  $('#show-all').addEventListener('click', () => {
+  const showAll = $('#show-all');
+  if(showAll) showAll.addEventListener('click', () => {
     revealWorkspace(false);
     state.categoria = 'all'; state.query = '';
     $('#spotlight-input').value = '';
@@ -17,11 +18,13 @@ export function bindNavigation(){
 export function revealWorkspace(scroll = true){
   const section = $('#tool-workspace');
   const body = $('#workspace-body');
-  if(body.hidden){
-    body.hidden = false; section.classList.remove('is-collapsed');
-    $('#toggle-tools').textContent = 'Ocultar herramientas';
+  if(body && body.hidden){
+    body.hidden = false;
+    section.classList.remove('is-collapsed');
+    const toggle = $('#toggle-tools');
+    if(toggle) toggle.textContent = 'Herramientas abiertas';
   }
-  if(scroll) section.scrollIntoView({behavior:'smooth', block:'start'});
+  if(scroll && section) section.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 export function nav(view){

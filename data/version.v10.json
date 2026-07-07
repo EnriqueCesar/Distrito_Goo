@@ -1,13 +1,13 @@
 {
-  "version": "10.3.3 Audit Optimizada",
-  "releaseDate": "2026-07-05",
+  "version": "11.0 LaunchPad Premium",
+  "releaseDate": "2026-07-07",
   "changes": [
-    "Auditoría de estructura para GitHub Pages.",
-    "Limpieza de carpetas no conectadas y archivos redundantes.",
-    "Consolidación de assets únicamente referenciados por la versión activa.",
-    "Rutas relativas validadas para PWA, manifest y service worker.",
-    "Accesos rápidos agregados al hero para mejorar navegación sin alterar módulos.",
-    "Cache PWA actualizado para forzar refresh de publicación."
+    "Interfaz principal simplificada con Categorías como punto de entrada.",
+    "Favoritos y Recientes retirados de la vista principal.",
+    "Nueva aplicación Transferencias agregada al catálogo operativo.",
+    "Duty Roster Premium integrado desde premium.zip con imagen automática por día.",
+    "Concurso de Venta rediseñado para lectura rápida ejecutiva.",
+    "PWA y compatibilidad con GitHub Pages conservadas."
   ],
-  "notes": "Versión limpia, estática y lista para publicar en branch main / root."
+  "notes": "Versión lista para publicar en GitHub Pages con assets premium integrados."
 }

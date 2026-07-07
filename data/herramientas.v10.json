@@ -335,6 +335,32 @@
     "estado": "activo"
   },
   {
+    "id": "transferencias",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "App",
+    "icono": "⇄",
+    "nombre": "Transferencias",
+    "tipo": "web",
+    "url": "https://enriquecesar.github.io/Transferencia/",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "Audita transferencias entre tiendas con foco operativo y conciliación rápida.",
+    "favorito": true,
+    "orden": 12,
+    "keywords": [
+      "transferencias",
+      "auditoria",
+      "inventario",
+      "tiendas",
+      "operacion",
+      "conciliacion"
+    ],
+    "estado": "activo"
+  },
+  {
     "id": "kpis-centro-norte",
     "categoriaId": "operacion",
     "categoria": "Operación",
@@ -349,7 +375,7 @@
     "playStore": "",
     "notas": "Consulta el reporte regional de KPIs.",
     "favorito": true,
-    "orden": 12,
+    "orden": 13,
     "keywords": [
       "centro",
       "consulta",
@@ -378,7 +404,7 @@
     "playStore": "",
     "notas": "Revisa hallazgos, System Check y seguimiento operativo.",
     "favorito": true,
-    "orden": 13,
+    "orden": 14,
     "keywords": [
       "check",
       "frogmi",
@@ -408,7 +434,7 @@
     "playStore": "https://play.google.com/store/apps/details?id=com.inzpiral.neofrogmi",
     "notas": "Enfoca tus System Checks, corrige hallazgos y mejora la ejecución.",
     "favorito": true,
-    "orden": 14,
+    "orden": 15,
     "keywords": [
       "app",
       "checks",
@@ -440,7 +466,7 @@
     "playStore": "https://play.google.com/store/apps/details?id=com.alsea.appmanager",
     "notas": "Abre el portal central de herramientas operativas.",
     "favorito": true,
-    "orden": 15,
+    "orden": 16,
     "keywords": [
       "abre",
       "app",
@@ -469,7 +495,7 @@
     "playStore": "",
     "notas": "Consulta tiempos operativos de tiendas Drive Thru.",
     "favorito": false,
-    "orden": 16,
+    "orden": 17,
     "keywords": [
       "consulta",
       "drive",
@@ -499,7 +525,7 @@
     "playStore": "",
     "notas": "Realiza y da seguimiento a tu AutoICA mensual.",
     "favorito": false,
-    "orden": 17,
+    "orden": 18,
     "keywords": [
       "autoica",
       "ica",
@@ -527,7 +553,7 @@
     "playStore": "",
     "notas": "Monitorea indicadores de Experiencia del Cliente.",
     "favorito": false,
-    "orden": 18,
+    "orden": 19,
     "keywords": [
       "cliente",
       "del",
@@ -556,7 +582,7 @@
     "playStore": "",
     "notas": "Accede a reportes e información estratégica.",
     "favorito": true,
-    "orden": 19,
+    "orden": 20,
     "keywords": [
       "accede",
       "estrategica",
@@ -585,7 +611,7 @@
     "playStore": "",
     "notas": "Consulta avances de capacitación y pendientes del equipo.",
     "favorito": false,
-    "orden": 20,
+    "orden": 21,
     "keywords": [
       "attensi",
       "avances",
@@ -614,7 +640,7 @@
     "playStore": "",
     "notas": "Plataforma de aprendizaje para Partners.",
     "favorito": false,
-    "orden": 21,
+    "orden": 22,
     "keywords": [
       "aprendizaje",
       "capacitacion",
@@ -642,7 +668,7 @@
     "playStore": "",
     "notas": "Completa cursos pendientes y mantén actualizado tu Kardex.",
     "favorito": false,
-    "orden": 22,
+    "orden": 23,
     "keywords": [
       "actualizado",
       "capacitacion",
@@ -672,7 +698,7 @@
     "playStore": "",
     "notas": "Coaching, desarrollo y conversaciones de desempeño.",
     "favorito": false,
-    "orden": 23,
+    "orden": 24,
     "keywords": [
       "coaching",
       "conversaciones",
@@ -698,7 +724,7 @@
     "playStore": "",
     "notas": "Consulta desempeño y seguimiento de cédula de tienda.",
     "favorito": false,
-    "orden": 24,
+    "orden": 25,
     "keywords": [
       "cedula",
       "consulta",
@@ -726,7 +752,7 @@
     "playStore": "",
     "notas": "Consulta campañas vigentes, materiales y comunicados.",
     "favorito": false,
-    "orden": 25,
+    "orden": 26,
     "keywords": [
       "campana",
       "campanas",
@@ -754,7 +780,7 @@
     "playStore": "",
     "notas": "Accede a materiales POP y recursos visuales.",
     "favorito": false,
-    "orden": 26,
+    "orden": 27,
     "keywords": [
       "accede",
       "campana",
@@ -784,7 +810,7 @@
     "playStore": "",
     "notas": "Completa encuestas y escala riesgos operativos.",
     "favorito": false,
-    "orden": 27,
+    "orden": 28,
     "keywords": [
       "completa",
       "encuestas",
@@ -814,7 +840,7 @@
     "playStore": "",
     "notas": "Levanta tickets de soporte y da seguimiento.",
     "favorito": false,
-    "orden": 28,
+    "orden": 29,
     "keywords": [
       "incidentes",
       "levanta",
@@ -842,7 +868,7 @@
     "playStore": "",
     "notas": "Registra incidencias críticas mediante ticket.",
     "favorito": false,
-    "orden": 29,
+    "orden": 30,
     "keywords": [
       "criticas",
       "incidencias",
@@ -871,7 +897,7 @@
     "playStore": "",
     "notas": "Acceso seguro a plataformas.",
     "favorito": false,
-    "orden": 30,
+    "orden": 31,
     "keywords": [
       "acceso",
       "incidentes",
@@ -898,7 +924,7 @@
     "playStore": "",
     "notas": "Consulta información de Partners y cortes de nómina.",
     "favorito": false,
-    "orden": 31,
+    "orden": 32,
     "keywords": [
       "consulta",
       "cortes",
@@ -927,7 +953,7 @@
     "playStore": "",
     "notas": "Consulta recibos y movimientos de nómina.",
     "favorito": false,
-    "orden": 32,
+    "orden": 33,
     "keywords": [
       "consulta",
       "informativa",
@@ -955,7 +981,7 @@
     "playStore": "",
     "notas": "Gestiona donaciones del programa Va por mi Cuenta.",
     "favorito": false,
-    "orden": 33,
+    "orden": 34,
     "keywords": [
       "cuenta",
       "del",
@@ -984,7 +1010,7 @@
     "playStore": "",
     "notas": "Consulta información de Caja de Ahorro.",
     "favorito": false,
-    "orden": 34,
+    "orden": 35,
     "keywords": [
       "ahorro",
       "caja",
@@ -1012,7 +1038,7 @@
     "playStore": "",
     "notas": "Consulta coberturas y beneficios SGMM.",
     "favorito": false,
-    "orden": 35,
+    "orden": 36,
     "keywords": [
       "beneficios",
       "beneflex",
@@ -1040,7 +1066,7 @@
     "playStore": "",
     "notas": "Administra la programación musical de tienda.",
     "favorito": false,
-    "orden": 36,
+    "orden": 37,
     "keywords": [
       "administra",
       "harmony",
@@ -1068,7 +1094,7 @@
     "playStore": "",
     "notas": "Consulta y valida programación musical.",
     "favorito": false,
-    "orden": 37,
+    "orden": 38,
     "keywords": [
       "consulta",
       "musica",
@@ -1097,7 +1123,7 @@
     "playStore": "",
     "notas": "Comunicación directa para apertura, riesgos y evidencias.",
     "favorito": true,
-    "orden": 38,
+    "orden": 39,
     "keywords": [
       "apertura",
       "celular",
@@ -1126,7 +1152,7 @@
     "playStore": "",
     "notas": "Realiza publicaciones y comparte la cultura que vives en tienda.",
     "favorito": false,
-    "orden": 39,
+    "orden": 40,
     "keywords": [
       "comparte",
       "comunicacion",

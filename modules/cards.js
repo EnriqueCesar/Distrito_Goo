@@ -9,8 +9,6 @@ export function getFilteredTools(){
   const q = normalize(state.query);
   return state.herramientas.filter(tool => {
     const inCategory = state.categoria === 'all' ||
-      (state.categoria === 'favorites' && state.favorites.includes(tool.id)) ||
-      (state.categoria === 'recent' && state.recents.includes(tool.id)) ||
       tool.categoriaId === state.categoria;
     const haystack = normalize([tool.nombre, tool.notas, tool.categoria, tool.grupo, tool.tipo, ...(tool.keywords || [])].join(' '));
     return inCategory && (!q || haystack.includes(q));
@@ -21,8 +19,8 @@ export function renderTools(reset = false){
   if(reset) state.visibleCount = 16;
   const all = getFilteredTools();
   const visible = all.slice(0, state.visibleCount);
-  $('#result-count').textContent = `${all.length} resultado${all.length === 1 ? '' : 's'}`;
-  $('#tools-grid').innerHTML = visible.map(t => toolCard(t, state.favorites.includes(t.id))).join('') || emptyState('No encontré resultados');
+  $('#result-count').textContent = `${all.length} herramienta${all.length === 1 ? '' : 's'}`;
+  $('#tools-grid').innerHTML = visible.map(t => toolCard(t, false)).join('') || emptyState('No encontré herramientas');
   bindToolCards('#tools-grid');
   $('#lazy-sentinel').classList.toggle('hidden', visible.length >= all.length);
 }
@@ -37,7 +35,7 @@ export function loadMoreTools(){
 
 export function renderToolCollection(selector, tools, compact = false){
   const el = $(selector);
-  el.innerHTML = tools.map(t => toolCard(t, state.favorites.includes(t.id), compact)).join('') || emptyState('Sin elementos por ahora');
+  el.innerHTML = tools.map(t => toolCard(t, false, compact)).join('') || emptyState('Sin elementos por ahora');
   bindToolCards(selector);
 }
 
@@ -51,10 +49,6 @@ export function bindToolCards(scope){
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openTool(card.dataset.id); }
     });
   });
-  $$(`${scope} .fav-toggle`).forEach(btn => btn.addEventListener('click', event => {
-    event.stopPropagation();
-    toggleFavorite(btn.dataset.fav);
-  }));
 }
 
 export function openTool(id){
@@ -63,7 +57,6 @@ export function openTool(id){
   pushRecent(tool.id);
   state.usage[tool.id] = (state.usage[tool.id] || 0) + 1;
   setJSON('dgx_usage', state.usage);
-  renderSmartSections();
   if(tool.tipo === 'app' && tool.package){
     openNativeApp(tool);
   }else{
@@ -75,7 +68,6 @@ export function openTool(id){
 export function toggleFavorite(id){
   state.favorites = state.favorites.includes(id) ? state.favorites.filter(x => x !== id) : [id, ...state.favorites];
   setJSON('dgx_favorites', state.favorites);
-  renderSmartSections();
   renderTools(false);
   toast(state.favorites.includes(id) ? 'Agregado a favoritos' : 'Quitado de favoritos');
 }
@@ -98,6 +90,5 @@ export function getSmartFavorites(){
 }
 
 export function renderSmartSections(){
-  renderToolCollection('#favorites-grid', getSmartFavorites());
-  renderToolCollection('#recent-grid', getByIds(state.recents).slice(0, 6), true);
+  // Favoritos y recientes se retiraron de la vista principal en la versión LaunchPad Premium.
 }

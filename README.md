@@ -1,29 +1,60 @@
-# Distrito Go v10.3.4 Pages Fix
+# Distrito Go v11 LaunchPad Premium
 
-Versión auditada, limpia y lista para GitHub Pages desde `main` / `/root`.
+Versión funcional enfocada en una experiencia más limpia para uso diario del District Manager.
 
-## Cambios aplicados
-- Se conservó la experiencia actual: navegación, módulos, datos, filtros, PWA, manifest, service worker, assets activos e informativos.
-- Se auditó la estructura activa del proyecto y se retiraron carpetas no conectadas de la versión en producción (`css/`, `js/`, `docs/`, `tools/`) para evitar redundancia.
-- Se mantuvieron únicamente los JSON v10 que alimentan la app modular actual.
-- Se limpiaron assets no referenciados y se conservaron los recursos usados por `index.html`, `manifest.json`, `sw.js`, módulos y datos activos.
-- Se agregó `.nojekyll` en raíz.
-- Se actualizó `manifest.json` con `start_url: "./"`, `scope: "./"` y `display: "standalone"`.
-- Se actualizó el cache del service worker a `distrito-go-v10-3-4-pages-fix`.
-- Se agregaron accesos rápidos en el hero para mejorar navegación sin romper la estructura actual.
+## Cambios principales
 
-## Estructura final
-- `index.html`
-- `manifest.json`
-- `sw.js`
-- `.nojekyll`
-- `README.md`
-- `styles/`
-- `modules/`
-- `data/`
-- `assets/`
+- Pantalla principal simplificada con Categorías como punto central de navegación.
+- Favoritos y Recientes retirados de la vista principal para reducir saturación.
+- Nueva app Transferencias integrada en la categoría Operación.
+- Duty Roster Premium integrado desde `premium.zip` en `assets/premium/duty-roster/`.
+- Duty Roster muestra automáticamente las imágenes correspondientes al día actual.
+- Las imágenes del Duty Roster abren su recurso en nueva pestaña.
+- Concurso de Venta rediseñado con vista ejecutiva: concurso activo, vigencia, avance y botón de ranking.
+- CMS actualizado únicamente para registrar la nueva app Transferencias.
+- PWA, rutas relativas y compatibilidad con GitHub Pages conservadas.
 
-## Publicación
-Configurar GitHub Pages en branch `main` y folder `/root`.
+## Archivos de datos activos
 
-Commit sugerido: `Audit and optimize Distrito Goo structure`
+La app consume los JSON versionados definidos en `modules/state.js`:
+
+- `data/config.v10.json`
+- `data/categorias.v10.json`
+- `data/herramientas.v10.json`
+- `data/dashboard.v10.json`
+- `data/favoritos.v10.json`
+- `data/version.v10.json`
+- `data/operacional.v10.json`
+
+## Duty Roster Premium
+
+Las imágenes premium quedan en:
+
+`assets/premium/duty-roster/`
+
+La selección del día se realiza automáticamente con la fecha local del navegador:
+
+- Lunes: Food / Show Case
+- Martes: PIC / Lobby
+- Miércoles: BOH
+- Jueves: Espresso / Lobby
+- Viernes: Café Filtrado
+- Sábado: CBS
+- Domingo: Lobby / Drive Thru
+
+## Validaciones realizadas
+
+- Proyecto auditado antes de modificar.
+- JSON activos actualizados sin cambiar arquitectura.
+- PWA y Service Worker conservados.
+- Manifest validado como JSON.
+- Assets premium copiados y referenciados.
+- Nueva app Transferencias agregada al catálogo y CMS.
+- Favoritos y Recientes retirados de la interfaz principal.
+- Rutas locales referenciadas validadas.
+- Ningún archivo supera 20 MB.
+- ZIP final generado para GitHub Pages.
+
+## Despliegue en GitHub Pages
+
+Subir el contenido del proyecto a la rama configurada para Pages, respetando la raíz del repositorio. El proyecto usa rutas relativas y mantiene `.nojekyll`.

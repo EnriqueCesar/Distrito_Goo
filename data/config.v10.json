@@ -1,10 +1,10 @@
 {
   "appName": "Distrito Go",
-  "version": "10.3.3 Audit Optimizada",
-  "tagline": "Centro Operativo Distrito Go: día a día, eventos, informativos, desarrollo Partner y herramientas clave.",
+  "version": "11.0 LaunchPad Premium",
+  "tagline": "LaunchPad operativo para consultar prioridades, Duty Roster y herramientas clave del Distrito.",
   "org": "Centro Norte",
   "modoVisual": "centro_operativo_premium",
-  "cmsFuente": "Distrito_Go_CMS.xlsx",
+  "cmsFuente": "Distrito_Go_CMS_corregido_v11.xlsx",
   "githubReady": true,
   "emergencyContact": {
     "label": "Contacto DM",

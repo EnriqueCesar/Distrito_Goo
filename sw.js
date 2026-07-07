@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v10-3-4-pages-fix';
+const CACHE_NAME = 'distrito-go-v11-launchpad-premium';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -62,7 +62,18 @@ const APP_SHELL = [
   "./assets/duty/martes_pic.png",
   "./assets/duty/miercoles_boh.png",
   "./assets/duty/sabado_cbs.png",
-  "./assets/duty/viernes_cafe_filtrado.png"
+  "./assets/duty/viernes_cafe_filtrado.png",
+  "./assets/premium/duty-roster/domingo_drive_thru.png",
+  "./assets/premium/duty-roster/domingo_lobby.png",
+  "./assets/premium/duty-roster/jueves_espresso.png",
+  "./assets/premium/duty-roster/jueves_lobby.png",
+  "./assets/premium/duty-roster/lunes_food.png",
+  "./assets/premium/duty-roster/lunes_showcase.png",
+  "./assets/premium/duty-roster/martes_lobby.png",
+  "./assets/premium/duty-roster/martes_pic.png",
+  "./assets/premium/duty-roster/miercoles_boh.png",
+  "./assets/premium/duty-roster/sabado_cbs.png",
+  "./assets/premium/duty-roster/viernes_cafe_filtrado.png"
 ];
 
 self.addEventListener('install', event => {

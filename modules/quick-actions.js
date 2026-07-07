@@ -27,7 +27,7 @@ export function renderQuickActions(){
     {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''},
     {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle operativo del día.', action:'showDuty'},
     {title:'Desarrollo Partner', icon:'🌱', text:'BT / SS juntos y TBW separado por avance.', action:'showAltas'},
-    {title:'Herramientas', icon:'🧰', text:'Buscador, favoritos y categorías cuando lo necesites.', action:'showTools'}
+    {title:'Herramientas', icon:'🧰', text:'Categorías y buscador para abrir apps clave en segundos.', action:'showTools'}
   ];
   $('#command-grid').innerHTML = cards.map(c => `<button class="command-card" type="button" data-action="${c.action}"><span class="command-icon">${c.icon}</span><strong>${escapeHtml(c.title)}</strong><p>${escapeHtml(c.text)}</p>${c.badge?`<em>${escapeHtml(c.badge)}</em>`:''}</button>`).join('');
   $$('#command-grid .command-card').forEach(btn => btn.addEventListener('click', () => runAction(btn.dataset.action)));
@@ -36,8 +36,6 @@ export function renderQuickActions(){
 export function renderChips(){
   const chips = [
     { id:'all', nombre:'Todo', icono:'🧭', contador: state.herramientas.length },
-    { id:'favorites', nombre:'Favoritos', icono:'⭐', contador: state.favorites.length },
-    { id:'recent', nombre:'Recientes', icono:'🕘', contador: state.recents.length },
     ...state.categorias.map(c => ({...c, contador: state.herramientas.filter(t => t.categoriaId === c.id).length}))
   ];
   $('#active-chips').innerHTML = chips.map(c => chip(c, state.categoria === c.id)).join('');
@@ -65,8 +63,6 @@ export function runAction(action){
   if(action === 'showAltas') goToSection('altas-curso');
   if(action === 'showDuty') goToSection('duty-roster');
   if(action === 'showTools') revealWorkspace();
-  if(action === 'showFavorites') { revealWorkspace(false); state.categoria = 'favorites'; renderChips(); renderTools(true); document.querySelector('.tools-section').scrollIntoView({behavior:'smooth'}); }
-  if(action === 'showRecent') { revealWorkspace(false); state.categoria = 'recent'; renderChips(); renderTools(true); document.querySelector('.tools-section').scrollIntoView({behavior:'smooth'}); }
   if(action === 'refreshData') location.reload();
-  if(!['openSearch','showFavorites','showRecent','showToday','showEvents','showAltas','showDuty','refreshData','showTools'].includes(action)) toast('Acción preparada');
+  if(!['openSearch','showToday','showEvents','showAltas','showDuty','refreshData','showTools'].includes(action)) toast('Acción preparada');
 }

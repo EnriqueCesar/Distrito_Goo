@@ -1,7 +1,7 @@
 {
   "name": "Distrito Go - Multiherramienta Operativa",
   "short_name": "Distrito Go",
-  "description": "Centro Operativo Distrito Go optimizado para GitHub Pages, PWA y navegación móvil.",
+  "description": "LaunchPad operativo Distrito Go con herramientas, Duty Roster Premium y navegación corporativa.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

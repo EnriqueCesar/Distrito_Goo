@@ -167,12 +167,13 @@ export function renderDuty(){
   const roster = state.operacional.dutyRoster || [];
   const item = roster.find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase()) || roster[0];
   const detail = (state.operacional.dutyDetail || []).filter(d => item && (d['Día'] || '').toLowerCase() === (item['Día'] || '').toLowerCase()).sort((a,b)=>(a.Orden||0)-(b.Orden||0));
-  $('#duty-focus').innerHTML = item ? `<div class="duty-focus-head"><span>Hoy</span><strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong></div><p>${escapeHtml(item.Enfoque)}</p>` : '<p>Sin Duty Roster cargado.</p>';
+  const critical = detail.filter(d => d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true').length;
+  $('#duty-focus').innerHTML = item ? `<div class="duty-focus-head"><span>Hoy</span><strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong></div><p>${escapeHtml(item.Enfoque)}</p><div class="duty-premium-meta"><b>${detail.length} puntos</b><b>${critical} críticos</b></div>` : '<p>Sin Duty Roster cargado.</p>';
   $('#duty-gallery').innerHTML = item?.ImagenesPath?.length ? item.ImagenesPath.map((src,i)=>{
     const station = String(item.Estaciones || 'Estación').split(',')[i]?.trim() || `Estación ${i+1}`;
-    return `<button class="duty-link image-link" type="button" data-image="${escapeHtml(src)}" data-title="${escapeHtml(item['Día'] + ' · ' + station)}"><span>🖼️</span><strong>${escapeHtml(station)}</strong><em>Ver imagen</em></button>`;
+    return `<a class="duty-image premium-duty-link" href="${escapeHtml(src)}" target="_blank" rel="noopener" aria-label="Abrir ${escapeHtml(item['Día'] + ' · ' + station)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(item['Día'] + ' · ' + station)}" loading="lazy"/><span>${escapeHtml(station)}</span></a>`;
   }).join('') : '';
-  $('#duty-detail').innerHTML = detail.map(d => `<li class="${d['Crítico'] === true ? 'is-critical' : ''}">${d.Icono || '•'} <span>${escapeHtml(d.Actividad)}</span>${d['Crítico'] === true ? ' <strong>Crítico</strong>' : ''}</li>`).join('');
+  $('#duty-detail').innerHTML = detail.map(d => `<li class="${d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true' ? 'is-critical' : ''}">${d.Icono || '•'} <span>${escapeHtml(d.Actividad)}</span>${d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true' ? ' <strong>Crítico</strong>' : ''}</li>`).join('');
 }
 function bindOperationalActions(){
   if(actionsBound) return;

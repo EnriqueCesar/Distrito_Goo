@@ -7,7 +7,7 @@ import { bindSearch } from './search.js';
 import { bindNavigation, revealWorkspace } from './navigation.js';
 import { bindPWA, bindPullToRefresh } from './pwa.js';
 import { renderDashboard, renderQuickActions, renderChips, renderCategories } from './quick-actions.js';
-import { renderTools, loadMoreTools, renderSmartSections } from './cards.js';
+import { renderTools, loadMoreTools } from './cards.js';
 import { renderOperationalSections } from './operational.js';
 
 async function boot(){
@@ -19,7 +19,6 @@ async function boot(){
   renderQuickActions();
   renderChips();
   renderOperationalSections();
-  renderSmartSections();
   renderCategories();
   renderTools(true);
   bindSearch();
@@ -28,7 +27,7 @@ async function boot(){
   bindPullToRefresh();
   bindLazyLoading();
   bindBearistaInformativo();
-  toast('Distrito Go actualizado');
+  toast('Distrito Go listo');
 }
 
 function renderHeader(){
@@ -54,19 +53,9 @@ function bindStaticEvents(){
   $('#theme-toggle').addEventListener('click', toggleTheme);
   $('#start-day').addEventListener('click', () => $('#dia-a-dia').scrollIntoView({behavior:'smooth', block:'start'}));
   $('#open-tools-panel').addEventListener('click', revealWorkspace);
-  $('#toggle-tools').addEventListener('click', revealWorkspace);
-  $('#clear-recents').addEventListener('click', () => {
-    state.recents = [];
-    remove('dgx_recents');
-    renderSmartSections(); renderChips(); renderTools(false);
-    toast('Historial limpio');
-  });
-  $('#reset-favorites').addEventListener('click', () => {
-    state.favorites = [...state.favoritosBase];
-    setJSON('dgx_favorites', state.favorites);
-    renderSmartSections(); renderChips(); renderTools(false);
-    toast('Favoritos restaurados');
-  });
+  const toggleTools = $('#toggle-tools');
+  if(toggleTools) toggleTools.addEventListener('click', revealWorkspace);
+
   $('#close-quick-modal').addEventListener('click', () => $('#quick-modal').close());
   document.querySelectorAll('[data-campaign-modal]').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -76,7 +65,7 @@ function bindStaticEvents(){
       $('#quick-modal').showModal();
     });
   });
-  window.addEventListener('dgx:filtersChanged', renderChips);
+  window.addEventListener('dgx:filtersChanged', () => { renderChips(); renderTools(true); });
 }
 
 
