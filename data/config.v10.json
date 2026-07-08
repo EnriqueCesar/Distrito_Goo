@@ -1,9 +1,9 @@
 {
   "appName": "Distrito Go",
-  "version": "11.0 LaunchPad Premium",
-  "tagline": "LaunchPad operativo para consultar prioridades, Duty Roster y herramientas clave del Distrito.",
+  "version": "12.0 Green Apron Dashboard",
+  "tagline": "Dashboard operativo diario para priorizar actividades, Duty Roster y herramientas clave del Distrito.",
   "org": "Centro Norte",
-  "modoVisual": "centro_operativo_premium",
+  "modoVisual": "green_apron_dashboard",
   "cmsFuente": "Distrito_Go_CMS_corregido_v11.xlsx",
   "githubReady": true,
   "emergencyContact": {

@@ -1,0 +1,23 @@
+Distrito Go v12 Green Apron Dashboard
+
+Validaciones realizadas:
+- Proyecto descomprimido y auditado.
+- index.html, styles, modules, data, assets, manifest.json, sw.js y README revisados.
+- CMS Distrito_Go_CMS_corregido_v11.xlsx validado como referencia; no requirió cambios.
+- No se incluye Excel dentro del ZIP final.
+- Mi día operativo priorizado en la experiencia principal.
+- Actividades del Día, WFM y Duty Roster conservados.
+- Herramientas disponibles conservadas por categoría.
+- Filtros de herramientas pueden ocultarse/mostrarse.
+- Sidebar Corporate Monoline aplicado en escritorio; navegación inferior conservada en móvil.
+- Favoritos y Recientes continúan fuera de la vista principal.
+- Data JSON validada.
+- manifest.json válido.
+- sw.js validado y cache actualizado a v12.
+- Rutas locales referenciadas en HTML, data y Service Worker verificadas.
+- Ningún archivo supera 20 MB.
+- Proyecto servido localmente con index.html respondiendo 200 OK.
+
+Notas:
+- Duplicados antiguos de Duty Roster retirados porque la data activa usa assets/premium/duty-roster/.
+- No se modificó arquitectura ni nombres de JSON activos.

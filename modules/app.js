@@ -27,7 +27,7 @@ async function boot(){
   bindPullToRefresh();
   bindLazyLoading();
   bindBearistaInformativo();
-  toast('Distrito Go listo');
+  toast('Listo para operar');
 }
 
 function renderHeader(){
@@ -55,6 +55,15 @@ function bindStaticEvents(){
   $('#open-tools-panel').addEventListener('click', revealWorkspace);
   const toggleTools = $('#toggle-tools');
   if(toggleTools) toggleTools.addEventListener('click', revealWorkspace);
+  const toggleFilters = $('#toggle-filters');
+  if(toggleFilters){
+    toggleFilters.addEventListener('click', () => {
+      const panel = $('#tool-workspace');
+      const collapsed = panel.classList.toggle('filters-collapsed');
+      toggleFilters.textContent = collapsed ? 'Mostrar filtros' : 'Ocultar filtros';
+      toggleFilters.setAttribute('aria-expanded', String(!collapsed));
+    });
+  }
 
   $('#close-quick-modal').addEventListener('click', () => $('#quick-modal').close());
   document.querySelectorAll('[data-campaign-modal]').forEach(btn => {

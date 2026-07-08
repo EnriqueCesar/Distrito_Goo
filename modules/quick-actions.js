@@ -24,10 +24,11 @@ export function renderQuickActions(){
   const duty = (state.operacional.dutyRoster || []).find(d => d['Día'] === dayNames[today.getDay()]);
   const cards = [
     {title:'Mi día operativo', icon:'✅', text:'Rutina diaria, WFM y actividad semanal de hoy.', action:'showToday'},
-    {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''},
+    {title:'Actividades del día', icon:'☕', text:'Acciones visibles para mantener la operación enfocada.', action:'showToday'},
     {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle operativo del día.', action:'showDuty'},
     {title:'Desarrollo Partner', icon:'🌱', text:'BT / SS juntos y TBW separado por avance.', action:'showAltas'},
-    {title:'Herramientas', icon:'🧰', text:'Categorías y buscador para abrir apps clave en segundos.', action:'showTools'}
+    {title:'Herramientas', icon:'🧰', text:'LaunchPad por categorías para abrir apps clave en segundos.', action:'showTools'},
+    {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''}
   ];
   $('#command-grid').innerHTML = cards.map(c => `<button class="command-card" type="button" data-action="${c.action}"><span class="command-icon">${c.icon}</span><strong>${escapeHtml(c.title)}</strong><p>${escapeHtml(c.text)}</p>${c.badge?`<em>${escapeHtml(c.badge)}</em>`:''}</button>`).join('');
   $$('#command-grid .command-card').forEach(btn => btn.addEventListener('click', () => runAction(btn.dataset.action)));

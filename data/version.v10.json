@@ -1,13 +1,14 @@
 {
-  "version": "11.0 LaunchPad Premium",
-  "releaseDate": "2026-07-07",
+  "version": "12.0 Green Apron Dashboard",
+  "releaseDate": "2026-07-08",
   "changes": [
-    "Interfaz principal simplificada con Categorías como punto de entrada.",
-    "Favoritos y Recientes retirados de la vista principal.",
-    "Nueva aplicación Transferencias agregada al catálogo operativo.",
-    "Duty Roster Premium integrado desde premium.zip con imagen automática por día.",
-    "Concurso de Venta rediseñado para lectura rápida ejecutiva.",
-    "PWA y compatibilidad con GitHub Pages conservadas."
+    "Mi día operativo queda como prioridad visual de la experiencia.",
+    "Navegación lateral Corporate Monoline en escritorio y navegación inferior en móvil.",
+    "Actividades del Día y Duty Roster ganan jerarquía visual.",
+    "Herramientas organizadas por categorías con filtros menos invasivos.",
+    "Tarjetas rediseñadas con menos saturación visual y más espacio en blanco.",
+    "Concurso de Venta conserva diseño ejecutivo y acceso rápido al ranking.",
+    "PWA, Service Worker, data y GitHub Pages conservados."
   ],
-  "notes": "Versión lista para publicar en GitHub Pages con assets premium integrados."
+  "notes": "Versión visual y operativa enfocada en experiencia diaria. El CMS no requirió cambios."
 }

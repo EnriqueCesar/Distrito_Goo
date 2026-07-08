@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v11-launchpad-premium';
+const CACHE_NAME = 'distrito-go-v12-green-apron-dashboard';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -52,17 +52,6 @@ const APP_SHELL = [
   "./assets/photos/y-si-si-inicio.jpeg",
   "./assets/photos/ysisi.jpeg",
   "./assets/img/bearistahugger.jpeg",
-  "./assets/duty/domingo_drive_thru.png",
-  "./assets/duty/domingo_lobby.png",
-  "./assets/duty/jueves_espresso.png",
-  "./assets/duty/jueves_lobby.png",
-  "./assets/duty/lunes_food.png",
-  "./assets/duty/lunes_showcase.png",
-  "./assets/duty/martes_lobby.png",
-  "./assets/duty/martes_pic.png",
-  "./assets/duty/miercoles_boh.png",
-  "./assets/duty/sabado_cbs.png",
-  "./assets/duty/viernes_cafe_filtrado.png",
   "./assets/premium/duty-roster/domingo_drive_thru.png",
   "./assets/premium/duty-roster/domingo_lobby.png",
   "./assets/premium/duty-roster/jueves_espresso.png",

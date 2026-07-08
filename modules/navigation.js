@@ -32,6 +32,7 @@ export function nav(view){
   if(view === 'home') window.scrollTo({top:0, behavior:'smooth'});
   if(view === 'today') $('#dia-a-dia').scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'events') $('#eventos-cms').scrollIntoView({behavior:'smooth', block:'start'});
+  if(view === 'duty') $('#duty-roster').scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'altas') $('#altas-curso').scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'search') openSpotlight();
   if(view === 'all') revealWorkspace();
