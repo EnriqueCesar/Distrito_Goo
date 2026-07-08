@@ -10,7 +10,7 @@ export function getFilteredTools(){
   return state.herramientas.filter(tool => {
     const inCategory = state.categoria === 'all' ||
       tool.categoriaId === state.categoria;
-    const haystack = normalize([tool.nombre, tool.notas, tool.categoria, tool.grupo, tool.tipo, ...(tool.keywords || [])].join(' '));
+    const haystack = normalize([tool.nombre, tool.notas, tool.categoria, tool.grupo, tool.tipo, tool.url, tool.webUrl, tool.alias, tool.etiquetas, tool.funcion, ...(tool.keywords || [])].join(' '));
     return inCategory && (!q || haystack.includes(q));
   });
 }
@@ -19,6 +19,13 @@ export function renderTools(reset = false){
   if(reset) state.visibleCount = 16;
   const all = getFilteredTools();
   const visible = all.slice(0, state.visibleCount);
+  const isAllWithoutQuery = state.categoria === 'all' && !state.query;
+  if(isAllWithoutQuery){
+    $('#result-count').textContent = 'Selecciona una categoría';
+    $('#tools-grid').innerHTML = emptyState('Elige una categoría', 'Distrito Go mostrará solo las herramientas relacionadas. Usa Spotlight para buscar en todo el LaunchPad.');
+    $('#lazy-sentinel').classList.add('hidden');
+    return;
+  }
   $('#result-count').textContent = `${all.length} herramienta${all.length === 1 ? '' : 's'}`;
   $('#tools-grid').innerHTML = visible.map(t => toolCard(t, false)).join('') || emptyState('No encontré herramientas');
   bindToolCards('#tools-grid');

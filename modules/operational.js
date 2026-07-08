@@ -30,7 +30,7 @@ function fmtDDMM(value){
   const d=parseDate(value); if(!d) return '';
   return d.toLocaleDateString('es-MX', {day:'2-digit', month:'2-digit'});
 }
-function briefText(text='', max=112){
+function briefText(text='', max=82){
   const clean = String(text || '').replace(/https?:\/\/\S+/g,'').replace(/\s+/g,' ').trim();
   return clean.length > max ? clean.slice(0, max-1).trim() + '…' : clean;
 }
@@ -96,9 +96,22 @@ export function renderToday(){
   const daily = (state.operacional.actividadesDiarias || [])
     .filter(a => a.Visible !== false)
     .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9))
-    .slice(0,8);
+    .slice(0,4);
   const weekly = (state.operacional.actividadesSemanales || []).filter(a => (a['Día'] || '').toLowerCase() === day.toLowerCase());
-  $('#today-date').textContent = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
+  const todayLong = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
+  $('#today-date').textContent = todayLong;
+  const mainDaily = daily[0];
+  const mainWeekly = weekly[0];
+  const dutyItem = (state.operacional.dutyRoster || []).find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase());
+  const dutyDetails = (state.operacional.dutyDetail || []).filter(d => dutyItem && (d['Día'] || '').toLowerCase() === (dutyItem['Día'] || '').toLowerCase());
+  const dutyCritical = dutyDetails.filter(d => d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true');
+  const setText = (id, value) => { const el = document.getElementById(id); if(el) el.textContent = value; };
+  setText('today-focus-date', todayLong);
+  setText('today-focus-message', '#GreenApronService · #DistritoKike🚀 · #OrgulloCN');
+  setText('today-main-activity', mainWeekly?.Actividad || mainDaily?.Actividad || 'Revisión operativa');
+  setText('today-main-action', briefText(mainWeekly?.['Descripción'] || mainDaily?.DescripcionBreve || mainDaily?.['Descripción'] || 'Revisa prioridades y abre la herramienta correspondiente.', 74));
+  setText('today-duty-summary', dutyItem ? `${dutyItem['Día']}: ${dutyItem.Estaciones}` : 'Duty Roster');
+  setText('today-critical-summary', dutyCritical.length ? `${dutyCritical.length} punto${dutyCritical.length === 1 ? '' : 's'} crítico${dutyCritical.length === 1 ? '' : 's'} por validar` : 'Sin críticos marcados para hoy');
   renderWFM(day, weekly[0]);
   $('#daily-grid').innerHTML = daily.map(a => opsCard(a.Actividad, a.DescripcionBreve || a['Descripción'], a.Icono || '✅', renderResourceAction(a), a)).join('');
   $('#weekly-grid').innerHTML = weekly.length ? weekly.map(a => opsCard(a.Actividad, `${a['Descripción'] || ''}${a['Hora / Corte'] ? ' · ' + a['Hora / Corte'] : ''}`, a.Icono || '📌', a.Link ? `<a class="mini-link" href="${escapeHtml(a.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '')).join('') : opsCard('Sin actividad semanal específica', 'Mantén foco en apertura, calidad y seguimiento.', '☕');
@@ -116,17 +129,16 @@ function renderWFM(day, todayActivity){
   const actionTitle = `${todayActivity?.Icono || '✅'} ${escapeHtml(todayActivity?.Actividad || 'Revisión operativa')}`;
   const actionText = briefText(todayActivity?.['Descripción'] || 'Revisa prioridades del día y anticipa necesidades de la semana en planeación.', 150);
   $('#wfm-card').innerHTML = `
-    <div class="wfm-head"><span>📅 WFM</span><strong>Planeación inteligente</strong></div>
-    <p class="wfm-rule">Programamos horarios con 15 días de anticipación. La vista se actualiza automáticamente con la fecha actual.</p>
+    <div class="wfm-head"><span>📅 WFM</span><strong>Planeación</strong></div>
     <div class="wfm-timeline" aria-label="Planeación WFM">
       <div class="wfm-step is-now"><small>Hoy</small><b>${escapeHtml(todayLabel)}</b><em>Semana actual ${getWeekNumber(today)}</em></div>
       <div class="wfm-connector">+15 días</div>
       <div class="wfm-step is-plan"><small>Semana en planeación</small><b>Semana ${getWeekNumber(planningDate)}</b><em>${planningLabel}</em></div>
     </div>
     <div class="wfm-grid">
-      <div><small>Semana actual</small><b>${currentLabel}</b></div>
-      <div><small>Semana objetivo</small><b>${planningLabel}</b></div>
-      <div><small>Foco de hoy</small><b>${escapeHtml(day)}</b></div>
+      <div><small>Actual</small><b>${currentLabel}</b></div>
+      <div><small>Objetivo</small><b>${planningLabel}</b></div>
+      <div><small>Hoy</small><b>${escapeHtml(day)}</b></div>
     </div>
     <div class="wfm-action"><small>Actividad de hoy</small><strong>${actionTitle}</strong><p>${escapeHtml(actionText)}</p></div>
     ${next ? `<div class="wfm-next"><small>Siguiente paso</small><span>${next.Icono || '⏭️'} ${escapeHtml(next.Actividad)}</span></div>` : ''}`;

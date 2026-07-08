@@ -23,12 +23,10 @@ export function renderQuickActions(){
   const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
   const duty = (state.operacional.dutyRoster || []).find(d => d['Día'] === dayNames[today.getDay()]);
   const cards = [
-    {title:'Mi día operativo', icon:'✅', text:'Rutina diaria, WFM y actividad semanal de hoy.', action:'showToday'},
-    {title:'Actividades del día', icon:'☕', text:'Acciones visibles para mantener la operación enfocada.', action:'showToday'},
-    {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle operativo del día.', action:'showDuty'},
-    {title:'Desarrollo Partner', icon:'🌱', text:'BT / SS juntos y TBW separado por avance.', action:'showAltas'},
-    {title:'Herramientas', icon:'🧰', text:'LaunchPad por categorías para abrir apps clave en segundos.', action:'showTools'},
-    {title:'Eventos activos', icon:'📅', text:'Semana o mes con fechas DD/MM y recordatorios CMS.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''}
+    {title:'Mi día operativo', icon:'✅', text:'Rutina, WFM y foco semanal.', action:'showToday'},
+    {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle del día.', action:'showDuty'},
+    {title:'Herramientas', icon:'🧰', text:'Abre apps por categoría.', action:'showTools'},
+    {title:'Eventos activos', icon:'📅', text:'Recordatorios próximos.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''}
   ];
   $('#command-grid').innerHTML = cards.map(c => `<button class="command-card" type="button" data-action="${c.action}"><span class="command-icon">${c.icon}</span><strong>${escapeHtml(c.title)}</strong><p>${escapeHtml(c.text)}</p>${c.badge?`<em>${escapeHtml(c.badge)}</em>`:''}</button>`).join('');
   $$('#command-grid .command-card').forEach(btn => btn.addEventListener('click', () => runAction(btn.dataset.action)));
@@ -49,12 +47,15 @@ export function renderChips(){
 export function renderCategories(){
   const withCounts = state.categorias.map(c => ({...c, contador: state.herramientas.filter(t => t.categoriaId === c.id).length}));
   $('#category-hubs').innerHTML = withCounts.map(categoryHub).join('');
-  $$('.category-card').forEach(card => card.addEventListener('click', () => {
+  $$('.category-card').forEach(card => {
+    card.classList.toggle('is-active', state.categoria === card.dataset.category);
+    card.addEventListener('click', () => {
     revealWorkspace(false);
     state.categoria = card.dataset.category;
     renderChips(); renderTools(true);
     document.querySelector('.tools-section').scrollIntoView({behavior:'smooth', block:'start'});
-  }));
+  });
+  });
 }
 
 export function runAction(action){

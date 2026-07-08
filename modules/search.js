@@ -20,13 +20,31 @@ export function bindSearch(){
 export function searchTools(query){
   const q = normalize(query);
   if(!q) return state.herramientas;
+  const terms = q.split(/\s+/).filter(Boolean);
   return state.herramientas
     .map(tool => {
-      const text = normalize([tool.nombre, tool.notas, tool.categoria, tool.grupo, ...(tool.keywords || [])].join(' '));
-      const score = normalize(tool.nombre).includes(q) ? 3 : text.includes(q) ? 1 : 0;
+      const name = normalize(tool.nombre);
+      const category = normalize(tool.categoria);
+      const keywords = normalize((tool.keywords || []).join(' '));
+      const meta = normalize([tool.notas, tool.grupo, tool.tipo, tool.url, tool.webUrl, tool.alias, tool.etiquetas, tool.funcion].join(' '));
+      const haystack = `${name} ${category} ${keywords} ${meta}`;
+      let score = 0;
+      if(name === q) score += 120;
+      if(name.startsWith(q)) score += 80;
+      if(name.includes(q)) score += 60;
+      if(category.includes(q)) score += 36;
+      if(keywords.includes(q)) score += 28;
+      if(meta.includes(q)) score += 16;
+      for(const term of terms){
+        if(name.includes(term)) score += 14;
+        else if(category.includes(term)) score += 9;
+        else if(keywords.includes(term)) score += 7;
+        else if(meta.includes(term)) score += 4;
+        else if(!haystack.includes(term)) score -= 12;
+      }
       return {tool, score};
     })
-    .filter(x => x.score)
+    .filter(x => x.score > 0)
     .sort((a,b) => b.score - a.score || a.tool.orden - b.tool.orden)
     .map(x => x.tool);
 }
@@ -36,7 +54,7 @@ export function openSpotlight(){
   modal.showModal();
   const input = $('#modal-search-input');
   input.value = '';
-  renderModalResults(state.herramientas.slice(0, 12));
+  renderModalResults(state.herramientas.slice(0, 10));
   setTimeout(() => input.focus(), 50);
 }
 

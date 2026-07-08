@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v12-green-apron-dashboard';
+const CACHE_NAME = 'distrito-go-v13-ux-refinement';
 const APP_SHELL = [
   "./",
   "./index.html",

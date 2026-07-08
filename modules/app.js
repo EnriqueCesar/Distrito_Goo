@@ -21,6 +21,7 @@ async function boot(){
   renderOperationalSections();
   renderCategories();
   renderTools(true);
+  collapseFiltersByDefault();
   bindSearch();
   bindNavigation();
   bindPWA();
@@ -77,6 +78,15 @@ function bindStaticEvents(){
   window.addEventListener('dgx:filtersChanged', () => { renderChips(); renderTools(true); });
 }
 
+
+function collapseFiltersByDefault(){
+  const panel = $('#tool-workspace');
+  const toggleFilters = $('#toggle-filters');
+  if(!panel || !toggleFilters) return;
+  panel.classList.add('filters-collapsed');
+  toggleFilters.textContent = 'Mostrar filtros';
+  toggleFilters.setAttribute('aria-expanded', 'false');
+}
 
 function bindBearistaInformativo(){
   const card = $('#bearista-informativo');

@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#006241" />
-  <meta name="description" content="Distrito Go Green Apron Dashboard - Centro operativo diario para District Manager." />
-  <title>Distrito Go | Green Apron Dashboard</title>
+  <meta name="description" content="Distrito Go UX Refinement - Centro operativo diario para District Manager." />
+  <title>Distrito Go | UX Refinement</title>
   <link rel="manifest" href="./manifest.json" />
   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-180.png" />
-  <link rel="stylesheet" href="./styles/variables.css?v=12.0.0" />
-  <link rel="stylesheet" href="./styles/app.css?v=12.0.0" />
+  <link rel="stylesheet" href="./styles/variables.css?v=13.0.0" />
+  <link rel="stylesheet" href="./styles/app.css?v=13.0.0" />
 </head>
-<body>
+<body class="v13-ux-refinement">
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <div id="pull-indicator" class="pull-indicator" aria-hidden="true">↻ Actualizando...</div>
 
@@ -34,11 +34,11 @@
       <div class="hero-copy">
         <p id="hero-greeting" class="eyebrow">#GreenApronService · #DistritoKike🚀 · #OrgulloCN</p>
         <h2 id="hero-title">Mi día operativo</h2>
-        <p id="hero-subtitle" class="hero-subtitle">Prioridades del día, actividades críticas y herramientas clave en un solo lugar.</p>
+        <p id="hero-subtitle" class="hero-subtitle">Prioridad diaria, Duty Roster y herramientas clave en una vista limpia.</p>
         <p id="hero-date" class="hero-date">Cargando fecha...</p>
         <div class="hero-actions">
           <button id="start-day" class="primary-action" type="button">Iniciar revisión del día</button>
-          <button id="open-tools-panel" class="secondary-action" type="button">Abrir LaunchPad</button>
+          <button id="open-tools-panel" class="secondary-action" type="button">Ver categorías</button>
         </div>
         <nav class="hero-shortcuts" aria-label="Accesos rápidos">
           <a href="#informativo">Informativo</a>
@@ -62,17 +62,16 @@
     </section>
 
 
-    <section class="green-apron-strip" aria-label="Enfoque operativo del día">
-      <article><span>01</span><strong>Prioriza el día</strong><p>Revisa actividades, WFM y duty roster antes de entrar a herramientas.</p></article>
-      <article><span>02</span><strong>Activa herramientas</strong><p>Usa categorías para abrir reportes y apps clave sin navegar de más.</p></article>
-      <article><span>03</span><strong>Cuida la experiencia</strong><p>#GreenApronService · seguimiento simple, claro y accionable.</p></article>
-    </section>
-
 
     <section id="dia-a-dia" class="ops-section priority-section" aria-labelledby="today-title">
       <div class="section-title">
         <div><p class="section-kicker">Centro diario</p><h3 id="today-title">✅ Mi día operativo</h3><p id="today-date" class="section-subtitle">Cargando fecha...</p></div>
         <span id="today-status">Hoy</span>
+      </div>
+      <div id="today-focus-grid" class="today-focus-grid" aria-label="Resumen del día operativo">
+        <article class="focus-tile is-primary"><span>Fecha</span><strong id="today-focus-date">Cargando...</strong><p id="today-focus-message">Preparando prioridades.</p></article>
+        <article class="focus-tile"><span>Actividad principal</span><strong id="today-main-activity">Cargando...</strong><p id="today-main-action">Abrir herramienta cuando aplique.</p></article>
+        <article class="focus-tile"><span>Duty Roster</span><strong id="today-duty-summary">Cargando...</strong><p id="today-critical-summary">Validando detalle crítico.</p></article>
       </div>
       <div id="wfm-card" class="wfm-card"></div>
       <div class="ops-split">
@@ -84,14 +83,14 @@
 
     <section id="tool-workspace" class="workspace-section launchpad-section" aria-labelledby="workspace-title">
       <div class="section-title">
-        <div><h3 id="workspace-title">Categorías</h3><p class="section-subtitle">Busca herramientas por categoría y abre lo que necesitas en menos pasos.</p></div>
+        <div><h3 id="workspace-title">Categorías</h3><p class="section-subtitle">Selecciona una categoría para ver únicamente las herramientas relacionadas.</p></div>
         <button id="toggle-tools" class="text-button" type="button">Ir a herramientas</button>
       </div>
       <div id="workspace-body" class="workspace-body">
         <section class="search-panel" aria-label="Buscador Spotlight">
           <label class="search-box">
             <span aria-hidden="true">🔎</span>
-            <input id="spotlight-input" type="search" placeholder="Buscar app, reporte, actividad o herramienta..." autocomplete="off" />
+            <input id="spotlight-input" type="search" placeholder="Buscar herramienta, categoría, función o palabra clave..." autocomplete="off" />
             <kbd>/</kbd>
           </label>
           <div id="active-chips" class="chip-row" aria-label="Filtros activos"></div>
@@ -101,7 +100,7 @@
           <div id="category-hubs" class="category-grid skeleton-grid"></div>
         </section>
         <section class="tools-section" aria-labelledby="tools-title">
-          <div class="section-title"><h3 id="tools-title">Herramientas disponibles</h3><div class="tools-title-actions"><button id="toggle-filters" class="text-button" type="button" aria-expanded="true">Ocultar filtros</button><span id="result-count">0 resultados</span></div></div>
+          <div class="section-title"><h3 id="tools-title">Herramientas disponibles</h3><div class="tools-title-actions"><button id="toggle-filters" class="text-button" type="button" aria-expanded="false">Mostrar filtros</button><span id="result-count">Selecciona una categoría</span></div></div>
           <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
           <div id="lazy-sentinel" class="lazy-sentinel" aria-hidden="true"></div>
         </section>
@@ -204,7 +203,7 @@
   </main>
 
   <dialog id="spotlight-modal" class="spotlight-modal" aria-label="Búsqueda rápida">
-    <div class="modal-search"><span aria-hidden="true">🔎</span><input id="modal-search-input" type="search" placeholder="Spotlight Search..." /><button id="close-spotlight" type="button" aria-label="Cerrar">×</button></div>
+    <div class="modal-search"><span aria-hidden="true">🔎</span><input id="modal-search-input" type="search" placeholder="Buscar herramienta, categoría, función, alias o etiqueta..." /><button id="close-spotlight" type="button" aria-label="Cerrar">×</button></div>
     <div id="modal-results" class="modal-results"></div>
   </dialog>
 
@@ -223,6 +222,6 @@
     <button class="nav-item" data-view="events" type="button">📅<span>Eventos</span></button>
   </nav>
 
-  <script type="module" src="./modules/app.js?v=12.0.0"></script>
+  <script type="module" src="./modules/app.js?v=13.0.0"></script>
 </body>
 </html>
