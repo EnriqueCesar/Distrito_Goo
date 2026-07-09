@@ -36,3 +36,18 @@
   --shadow-soft:0 8px 24px rgba(0,0,0,.28);
   color-scheme:dark;
 }
+
+
+/* v15 Starbucks accessible palette */
+:root{
+  --sb-green:#006241;
+  --sb-dark:#003D2B;
+  --sb-mid:#00754A;
+  --sb-light:#DFF2EA;
+  --sb-warm:#F6F4EF;
+  --white:#FFFFFF;
+  --ink:#102A22;
+  --muted:#4B5F58;
+  --card-line:rgba(0,98,65,.18);
+  --focus-ring:0 0 0 3px rgba(0,117,74,.22);
+}

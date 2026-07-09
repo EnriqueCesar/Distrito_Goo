@@ -288,3 +288,133 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .v13-ux-refinement .focus-tile{min-height:auto;}
   .v13-ux-refinement .modal-search input{font-size:.95rem;}
 }
+
+
+/* === Distrito Goo v15 Starbucks Contrast Experience === */
+.v15-starbucks-contrast-experience{
+  background:var(--sb-warm)!important;
+  color:var(--ink)!important;
+  -webkit-font-smoothing:antialiased;
+}
+.v15-starbucks-contrast-experience .app-header{
+  background:rgba(255,255,255,.96)!important;
+  border-bottom:1px solid var(--card-line)!important;
+  color:var(--ink)!important;
+}
+.v15-starbucks-contrast-experience .eyebrow,
+.v15-starbucks-contrast-experience .section-kicker{color:var(--sb-green)!important;}
+.v15-starbucks-contrast-experience .brand-lockup h1,
+.v15-starbucks-contrast-experience .section-title h3,
+.v15-starbucks-contrast-experience h2,
+.v15-starbucks-contrast-experience h3,
+.v15-starbucks-contrast-experience h4{color:var(--ink);}
+.v15-starbucks-contrast-experience .icon-button,
+.v15-starbucks-contrast-experience .text-button{
+  color:var(--sb-green)!important;background:#fff!important;border:1px solid var(--card-line)!important;
+}
+.v15-starbucks-contrast-experience .icon-button:focus-visible,
+.v15-starbucks-contrast-experience a:focus-visible,
+.v15-starbucks-contrast-experience button:focus-visible,
+.v15-starbucks-contrast-experience input:focus-visible{outline:none;box-shadow:var(--focus-ring)!important;}
+.v15-starbucks-contrast-experience .hero-card.hero-partner{
+  background:linear-gradient(135deg,var(--sb-dark),var(--sb-green))!important;
+  color:#fff!important;border:0!important;box-shadow:none!important;border-radius:30px!important;
+  grid-template-columns:minmax(0,1fr) minmax(250px,340px);align-items:stretch;
+}
+.v15-starbucks-contrast-experience .hero-card.hero-partner:after{content:""!important;display:none!important;}
+.v15-starbucks-contrast-experience .hero-copy h2{color:#fff!important;font-size:clamp(2rem,5vw,4.1rem);letter-spacing:-.055em;line-height:.98;}
+.v15-starbucks-contrast-experience .hero-subtitle{color:#EEF9F4!important;max-width:590px;font-size:1.02rem;font-weight:760;}
+.v15-starbucks-contrast-experience .hero-date{display:inline-flex;width:max-content;max-width:100%;padding:8px 12px;border:1px solid rgba(255,255,255,.24);border-radius:999px;color:#fff!important;background:rgba(255,255,255,.10);font-weight:850;}
+.v15-starbucks-contrast-experience .hero-actions .primary-action{background:#fff!important;color:var(--sb-green)!important;border:1px solid #fff!important;}
+.v15-starbucks-contrast-experience .hero-actions .secondary-action{background:rgba(255,255,255,.12)!important;color:#fff!important;border:1px solid rgba(255,255,255,.34)!important;}
+.v15-starbucks-contrast-experience .hero-shortcuts{display:none!important;}
+.v15-starbucks-contrast-experience .dm-card.support-card{display:grid!important;background:#fff!important;color:var(--ink)!important;border:1px solid rgba(255,255,255,.38)!important;border-radius:26px!important;padding:14px!important;box-shadow:none!important;align-self:stretch;}
+.v15-starbucks-contrast-experience .dm-card.support-card strong{color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .dm-card.support-card span{color:var(--muted)!important;}
+.v15-starbucks-contrast-experience .dm-card.support-card a{display:inline-flex;margin-top:10px;width:max-content;background:var(--sb-green)!important;color:#fff!important;border-radius:999px;padding:10px 14px;text-decoration:none;font-weight:950;}
+.v15-starbucks-contrast-experience .dm-visuals{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px;}
+.v15-starbucks-contrast-experience .dm-visuals img{width:100%;height:126px;object-fit:cover;border-radius:18px;border:1px solid var(--card-line);}
+.v15-starbucks-contrast-experience #support-visual{display:none;}
+.v15-starbucks-contrast-experience .priority-section,
+.v15-starbucks-contrast-experience .workspace-section,
+.v15-starbucks-contrast-experience .ops-section,
+.v15-starbucks-contrast-experience .contest-hero,
+.v15-starbucks-contrast-experience .campaign-radar,
+.v15-starbucks-contrast-experience .bearista-info{
+  background:#fff!important;border:1px solid var(--card-line)!important;box-shadow:none!important;border-radius:28px!important;
+}
+.v15-starbucks-contrast-experience .section-subtitle,
+.v15-starbucks-contrast-experience p,
+.v15-starbucks-contrast-experience .muted{color:var(--muted)!important;}
+.v15-starbucks-contrast-experience .today-focus-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:16px 0;}
+.v15-starbucks-contrast-experience .focus-tile{background:#fff!important;border:1px solid var(--card-line)!important;border-radius:22px!important;padding:18px!important;min-height:126px;color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .focus-tile.is-primary{background:var(--sb-light)!important;border-color:rgba(0,98,65,.24)!important;color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .focus-tile span{color:var(--sb-green)!important;font-weight:950;letter-spacing:.06em;text-transform:uppercase;}
+.v15-starbucks-contrast-experience .focus-tile strong{color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .focus-tile p{color:var(--muted)!important;}
+.v15-starbucks-contrast-experience .wfm-card{background:#F7FCFA!important;border:1.5px solid rgba(0,98,65,.22)!important;border-radius:24px!important;color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .wfm-head span{background:var(--sb-light)!important;color:var(--sb-green)!important;border:1px solid var(--card-line)!important;}
+.v15-starbucks-contrast-experience .wfm-head strong,
+.v15-starbucks-contrast-experience .wfm-step b,
+.v15-starbucks-contrast-experience .wfm-grid b,
+.v15-starbucks-contrast-experience .wfm-action strong,
+.v15-starbucks-contrast-experience .wfm-next span{color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .wfm-step small,
+.v15-starbucks-contrast-experience .wfm-grid small,
+.v15-starbucks-contrast-experience .wfm-action small,
+.v15-starbucks-contrast-experience .wfm-next small{color:var(--sb-green)!important;font-weight:950;}
+.v15-starbucks-contrast-experience .wfm-step,
+.v15-starbucks-contrast-experience .wfm-grid>div,
+.v15-starbucks-contrast-experience .wfm-action,
+.v15-starbucks-contrast-experience .wfm-next{background:#fff!important;border:1px solid var(--card-line)!important;}
+.v15-starbucks-contrast-experience .wfm-connector{color:var(--sb-green)!important;background:var(--sb-light)!important;border:1px solid var(--card-line)!important;}
+.v15-starbucks-contrast-experience .ops-card,
+.v15-starbucks-contrast-experience .command-card,
+.v15-starbucks-contrast-experience .category-card,
+.v15-starbucks-contrast-experience .tool-card,
+.v15-starbucks-contrast-experience .people-panel,
+.v15-starbucks-contrast-experience .duty-card{background:#fff!important;color:var(--ink)!important;border:1px solid var(--card-line)!important;box-shadow:none!important;}
+.v15-starbucks-contrast-experience .ops-card h4,
+.v15-starbucks-contrast-experience .command-card strong,
+.v15-starbucks-contrast-experience .category-card strong,
+.v15-starbucks-contrast-experience .tool-card strong{color:var(--ink)!important;}
+.v15-starbucks-contrast-experience .ops-card p,
+.v15-starbucks-contrast-experience .command-card p,
+.v15-starbucks-contrast-experience .category-card p,
+.v15-starbucks-contrast-experience .tool-card p{color:var(--muted)!important;}
+.v15-starbucks-contrast-experience .ops-icon,
+.v15-starbucks-contrast-experience .command-icon,
+.v15-starbucks-contrast-experience .cat-icon,
+.v15-starbucks-contrast-experience .tool-icon{background:var(--sb-light)!important;color:var(--sb-green)!important;border:1px solid var(--card-line)!important;}
+.v15-starbucks-contrast-experience .mini-link,
+.v15-starbucks-contrast-experience .contest-primary,
+.v15-starbucks-contrast-experience .campaign-primary{background:var(--sb-green)!important;color:#fff!important;border:1px solid var(--sb-green)!important;border-radius:999px!important;font-weight:950!important;}
+.v15-starbucks-contrast-experience .tool-category,
+.v15-starbucks-contrast-experience .category-card .counter,
+.v15-starbucks-contrast-experience .contest-badge{background:var(--sb-light)!important;color:var(--sb-green)!important;border:1px solid var(--card-line)!important;}
+.v15-starbucks-contrast-experience .category-card.is-active{background:var(--sb-light)!important;border-color:var(--sb-green)!important;}
+.v15-starbucks-contrast-experience .search-panel,
+.v15-starbucks-contrast-experience .search-box{background:#fff!important;border-color:var(--card-line)!important;color:var(--ink)!important;}
+.v15-starbucks-contrast-experience input{color:var(--ink)!important;}
+.v15-starbucks-contrast-experience input::placeholder{color:#60746D!important;opacity:1;}
+.v15-starbucks-contrast-experience .bottom-nav.sidebar-nav{background:#fff!important;border:1px solid var(--card-line)!important;box-shadow:none!important;}
+.v15-starbucks-contrast-experience .bottom-nav.sidebar-nav .nav-item{color:var(--muted)!important;}
+.v15-starbucks-contrast-experience .bottom-nav.sidebar-nav .nav-item.is-active{background:var(--sb-light)!important;color:var(--sb-green)!important;border-color:var(--card-line)!important;}
+@media(max-width:900px){
+  .v15-starbucks-contrast-experience .hero-card.hero-partner{grid-template-columns:1fr;}
+  .v15-starbucks-contrast-experience .dm-card.support-card{grid-template-columns:86px 1fr;align-items:center;}
+  .v15-starbucks-contrast-experience .dm-visuals img{height:86px;}
+  .v15-starbucks-contrast-experience .today-focus-grid{grid-template-columns:1fr;}
+  .v15-starbucks-contrast-experience .ops-split{grid-template-columns:1fr!important;}
+}
+@media(max-width:560px){
+  .v15-starbucks-contrast-experience .hero-card.hero-partner{padding:20px!important;border-radius:24px!important;}
+  .v15-starbucks-contrast-experience .hero-copy h2{font-size:2rem;}
+  .v15-starbucks-contrast-experience .hero-date{width:100%;justify-content:center;}
+  .v15-starbucks-contrast-experience .hero-actions{display:grid;grid-template-columns:1fr;}
+  .v15-starbucks-contrast-experience .dm-card.support-card{grid-template-columns:72px 1fr;padding:12px!important;}
+  .v15-starbucks-contrast-experience .dm-visuals img{height:72px;border-radius:16px;}
+  .v15-starbucks-contrast-experience .priority-section,
+  .v15-starbucks-contrast-experience .workspace-section,
+  .v15-starbucks-contrast-experience .ops-section{padding:16px!important;border-radius:22px!important;}
+}
