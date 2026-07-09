@@ -31,14 +31,21 @@ async function boot(){
   toast('Listo para operar');
 }
 
+function getPartnerGreeting(now = new Date()){
+  const hour = now.getHours();
+  if(hour < 12) return 'Buenos días Partner';
+  if(hour < 19) return 'Buenas tardes Partner';
+  return 'Buenas noches Partner';
+}
+
 function renderHeader(){
   $('#app-title').textContent = state.config.appName;
-  $('#hero-greeting').textContent = state.dashboard.saludo;
-  $('#hero-title').textContent = state.dashboard.titulo;
-  $('#hero-subtitle').textContent = state.dashboard.subtitulo || state.config.tagline;
+  $('#hero-greeting').textContent = '#GreenApronService · #DistritoKike🚀';
+  $('#hero-title').textContent = getPartnerGreeting();
+  $('#hero-subtitle').textContent = 'Revisa tus prioridades, actividades críticas y accesos clave del día.';
   const photo = state.config.emergencyContact?.photo;
   if(photo) $('#dm-photo').src = `./${photo}`;
-  $('#dm-contact').href = state.config.emergencyContact?.url || '#';
+  $('#dm-contact').href = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
   updateClock();
   setInterval(updateClock, 60000);
 }
@@ -47,6 +54,7 @@ function updateClock(){
   const now = new Date();
   const date = now.toLocaleDateString('es-MX', {weekday:'long', day:'2-digit', month:'long', year:'numeric'});
   const time = now.toLocaleTimeString('es-MX', {hour:'2-digit', minute:'2-digit'});
+  $('#hero-title').textContent = getPartnerGreeting(now);
   $('#hero-date').textContent = `${date} · ${time}`;
 }
 

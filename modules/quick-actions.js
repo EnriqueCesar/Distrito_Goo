@@ -23,7 +23,7 @@ export function renderQuickActions(){
   const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
   const duty = (state.operacional.dutyRoster || []).find(d => d['Día'] === dayNames[today.getDay()]);
   const cards = [
-    {title:'Mi día operativo', icon:'✅', text:'Rutina, WFM y foco semanal.', action:'showToday'},
+    {title:'Día operativo', icon:'✅', text:'Rutina, WFM y foco semanal.', action:'showToday'},
     {title:'Duty Roster', icon:'🧭', text:duty ? `${duty['Día']}: ${duty.Estaciones}` : 'Imagen y detalle del día.', action:'showDuty'},
     {title:'Herramientas', icon:'🧰', text:'Abre apps por categoría.', action:'showTools'},
     {title:'Eventos activos', icon:'📅', text:'Recordatorios próximos.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''}

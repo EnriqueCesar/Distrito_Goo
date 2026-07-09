@@ -55,7 +55,7 @@ function nextWeeklyActivity(day){
 function isImageResource(item){ return item?.TipoRecurso === 'imagen' && item?.Recurso; }
 function renderResourceAction(item){
   if(!item?.Recurso) return '';
-  if(item.TipoRecurso === 'link' || String(item.Recurso).startsWith('http')) return `<a class="mini-link" href="${escapeHtml(item.Recurso)}" target="_blank" rel="noopener">Abrir link</a>`;
+  if(item.TipoRecurso === 'link' || String(item.Recurso).startsWith('http')) return `<a class="mini-link" href="${escapeHtml(item.Recurso)}" target="_blank" rel="noopener">${String(item.Recurso).includes('consulta.delivery') ? 'Abrir Consulta Delivery' : 'Abrir link'}</a>`;
   return `<button class="mini-link image-link" type="button" data-image="${escapeHtml(item.Recurso)}" data-title="${escapeHtml(item.Actividad)}">Ver imagen</button>`;
 }
 function opsCard(title, text, icon='✅', extra='', item=null){
@@ -95,21 +95,20 @@ export function renderToday(){
   const day = dayNames[today.getDay()];
   const daily = (state.operacional.actividadesDiarias || [])
     .filter(a => a.Visible !== false)
-    .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9))
-    .slice(0,4);
+    .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9));
   const weekly = (state.operacional.actividadesSemanales || []).filter(a => (a['Día'] || '').toLowerCase() === day.toLowerCase());
   const todayLong = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
-  $('#today-date').textContent = todayLong;
+  $('#today-date').textContent = 'Rutina diaria, WFM y Duty Roster en una vista ejecutiva.';
   const mainDaily = daily[0];
   const mainWeekly = weekly[0];
   const dutyItem = (state.operacional.dutyRoster || []).find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase());
   const dutyDetails = (state.operacional.dutyDetail || []).filter(d => dutyItem && (d['Día'] || '').toLowerCase() === (dutyItem['Día'] || '').toLowerCase());
   const dutyCritical = dutyDetails.filter(d => d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true');
   const setText = (id, value) => { const el = document.getElementById(id); if(el) el.textContent = value; };
-  setText('today-focus-date', todayLong);
-  setText('today-focus-message', '#GreenApronService · #DistritoKike🚀 · #OrgulloCN');
+  setText('today-focus-date', 'Prioridades activas');
+  setText('today-focus-message', 'Revisa actividades críticas y accesos clave.');
   setText('today-main-activity', mainWeekly?.Actividad || mainDaily?.Actividad || 'Revisión operativa');
-  setText('today-main-action', briefText(mainWeekly?.['Descripción'] || mainDaily?.DescripcionBreve || mainDaily?.['Descripción'] || 'Revisa prioridades y abre la herramienta correspondiente.', 74));
+  setText('today-main-action', briefText(mainWeekly?.['Descripción'] || mainDaily?.DescripcionBreve || mainDaily?.['Descripción'] || 'Revisa tus prioridades, actividades críticas y accesos clave del día.', 92));
   setText('today-duty-summary', dutyItem ? `${dutyItem['Día']}: ${dutyItem.Estaciones}` : 'Duty Roster');
   setText('today-critical-summary', dutyCritical.length ? `${dutyCritical.length} punto${dutyCritical.length === 1 ? '' : 's'} crítico${dutyCritical.length === 1 ? '' : 's'} por validar` : 'Sin críticos marcados para hoy');
   renderWFM(day, weekly[0]);
@@ -129,7 +128,7 @@ function renderWFM(day, todayActivity){
   const actionTitle = `${todayActivity?.Icono || '✅'} ${escapeHtml(todayActivity?.Actividad || 'Revisión operativa')}`;
   const actionText = briefText(todayActivity?.['Descripción'] || 'Revisa prioridades del día y anticipa necesidades de la semana en planeación.', 150);
   $('#wfm-card').innerHTML = `
-    <div class="wfm-head"><span>📅 WFM</span><strong>Planeación</strong></div>
+    <div class="wfm-head"><span>📅 WFM</span><strong>${escapeHtml(todayActivity?.Actividad || 'Planeación')}</strong></div>
     <div class="wfm-timeline" aria-label="Planeación WFM">
       <div class="wfm-step is-now"><small>Hoy</small><b>${escapeHtml(todayLabel)}</b><em>Semana actual ${getWeekNumber(today)}</em></div>
       <div class="wfm-connector">+15 días</div>
