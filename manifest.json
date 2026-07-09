@@ -1,12 +1,12 @@
 {
   "name": "Distrito Go - Multiherramienta Operativa",
   "short_name": "Distrito Go",
-  "description": "LaunchPad operativo Distrito Go con herramientas, Duty Roster Premium y navegación corporativa.",
+  "description": "Distrito Go con contraste Starbucks, navegación ejecutiva y experiencia diaria accesible.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F7F3EA",
+  "background_color": "#F6F4EF",
   "theme_color": "#006241",
   "categories": [
     "business",

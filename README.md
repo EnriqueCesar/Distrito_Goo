@@ -1,67 +1,41 @@
-# Distrito Goo · v13 UX Refinement
+# Distrito Goo · v15 Starbucks Contrast Experience
 
-Centro operativo diario para District Manager con enfoque #GreenApronService, #DistritoKike🚀 y #OrgulloCN.
+Versión: `v15-starbucks-contrast-experience`
 
-## Versión
+Mejora ligera sobre el proyecto actual para reforzar contraste, accesibilidad, navegación clara y experiencia ejecutiva tipo Starbucks Internal Tool.
 
-`Distrito_Goo_v13_UX_Refinement`
+## Fuente revisada
 
-## Objetivo
+- Proyecto base: `Distrito_Goo-main.zip`
+- CMS de validación: `Distrito_Go_CMS_corregido_v11.xlsx`
+- Pestaña validada: `Actividades_Diaria`
 
-Refinar la experiencia de uso sin rehacer arquitectura ni romper funcionalidad existente. La versión prioriza lectura rápida, menor saturación visual, mejor contraste y navegación por categorías.
+## Ajustes realizados
 
-## Cambios realizados
-
-- Mi Día Operativo queda como centro del dashboard.
-- Se simplificó el bloque principal con fecha, actividad principal, Duty Roster y punto crítico.
-- Actividades diarias reducidas para lectura rápida.
-- WFM conserva la lógica, con presentación más compacta.
-- Categorías funcionan como punto principal para descubrir herramientas.
-- Herramientas quedan enfocadas: por defecto se solicita seleccionar categoría.
-- Filtros/chips quedan colapsados por defecto.
-- Spotlight Search mejora búsqueda global por nombre, categoría, descripción, URL, grupo, tipo, keywords, alias, etiquetas y función si existen.
-- Paleta Starbucks refinada con mejor contraste.
-- Sidebar mantiene estilo Corporate Monoline.
-- Duty Roster Premium, Concurso de Venta, eventos, informativos, desarrollo partner, PWA y data JSON se conservan.
-
-## Archivos principales
-
-- `index.html`
-- `styles/app.css`
-- `styles/variables.css`
-- `modules/app.js`
-- `modules/search.js`
-- `modules/cards.js`
-- `modules/quick-actions.js`
-- `modules/operational.js`
-- `data/*.json`
-- `manifest.json`
-- `sw.js`
-
-## CMS
-
-El archivo `Distrito_Go_CMS_corregido_v11.xlsx` fue validado como referencia externa. No se integra dentro del ZIP del proyecto y no fue necesario generar una versión nueva del CMS para esta mejora UX.
-
-## Compatibilidad
-
-- GitHub Pages compatible.
-- PWA conservada.
-- Service Worker actualizado a cache `distrito-go-v13-ux-refinement`.
-- Rutas relativas conservadas.
-- No se cambia la arquitectura del proyecto.
+- Paleta Starbucks corregida con mayor contraste: `#006241`, `#003D2B`, `#00754A`, `#DFF2EA`, `#F6F4EF`, blanco y texto oscuro.
+- Saludo principal dinámico: Buenos días, Buenas tardes o Buenas noches Partner.
+- Hero más corto: “Revisa tus prioridades, actividades críticas y accesos clave del día.”
+- Información redundante reducida: fecha visible solo en el hero; se quitó el foco repetido de hashtags en tarjetas.
+- WFM reforzado para lectura: fondo claro, texto oscuro, badges legibles y actividad del día visible.
+- Actividades_Diaria ya muestra todas las actividades visibles del CMS, incluyendo “10 Pasos para un Turno Exitoso”.
+- El acceso con URL `consulta.delivery.alsea.net` se muestra como acción “Abrir Consulta Delivery” sin crear una actividad nueva.
+- Foto de Kike DM y acceso “Contactar DM” visibles de forma discreta en el hero.
+- Categorías, herramientas, badges, cards y navegación móvil con contraste reforzado.
+- Spotlight Search se conserva.
+- PWA, manifest y service worker conservados.
 
 ## Validaciones realizadas
 
-- Proyecto descomprimido y auditado.
-- Sintaxis JavaScript validada.
+- `index.html`, CSS, JavaScript, módulos, assets, data, manifest, service worker y README auditados.
+- `Distrito_Go_CMS_corregido_v11.xlsx` revisado: `Actividades_Diaria` contiene “10 Pasos para un Turno Exitoso” y el link `consulta.delivery.alsea.net` dentro de “Menu Core”.
+- Sintaxis JavaScript validada con `node --check`.
 - `manifest.json` validado como JSON.
 - `sw.js` validado.
-- Rutas locales referenciadas por HTML, JSON y Service Worker verificadas.
-- Assets referenciados existen.
-- CMS revisado como archivo externo.
+- Rutas locales referenciadas por HTML, JSON, JS y service worker verificadas.
+- Assets clave verificados: foto DM, 10 pasos, Duty Roster, íconos PWA y recursos de campaña.
+- Navegación principal y anclas esperadas verificadas en DOM.
 - Ningún archivo supera 20 MB.
-- ZIP final generado sin incluir Excel.
 
 ## Despliegue
 
-Subir el contenido del proyecto a la raíz del repositorio `EnriqueCesar/Distrito_Goo`, manteniendo `.nojekyll`, y publicar mediante GitHub Pages.
+Subir el contenido del ZIP a la raíz del repositorio `EnriqueCesar/Distrito_Goo` y publicar con GitHub Pages desde `main` / `/root`.

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v13-ux-refinement';
+const CACHE_NAME = 'distrito-go-v15-starbucks-contrast-experience';
 const APP_SHELL = [
   "./",
   "./index.html",
