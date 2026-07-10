@@ -92,6 +92,37 @@
     "estado": "activo"
   },
   {
+    "id": "espresso-hub",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "Portal",
+    "icono": "☕",
+    "nombre": "Espresso Hub",
+    "tipo": "web",
+    "url": "https://grupovips.sharepoint.com/sites/espressohub/SitePages/CollabHome.aspx?CT=1783694337488&OR=OWA-NT-Mail&CID=10b10932-84a0-a90e-58c4-5e79588d125c&SI=NonSentItems&SLSync=F",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "Consulta recursos, colaboración y contenidos operativos de Espresso Hub.",
+    "imagen": "assets/tools/espresso-hub.jpeg",
+    "cta": "Abrir Espresso Hub",
+    "favorito": true,
+    "orden": 4,
+    "keywords": [
+      "espresso",
+      "hub",
+      "recursos",
+      "colaboracion",
+      "contenidos",
+      "operativos",
+      "sharepoint",
+      "operacion",
+      "portal"
+    ],
+    "estado": "activo"
+  },
+  {
     "id": "foco-2026",
     "categoriaId": "operacion",
     "categoria": "Operación",

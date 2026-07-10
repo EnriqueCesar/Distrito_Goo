@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v15-starbucks-contrast-experience';
+const CACHE_NAME = 'distrito-go-v16-mobile-launcher-espresso-hub-optimization';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -52,6 +52,7 @@ const APP_SHELL = [
   "./assets/photos/y-si-si-inicio.jpeg",
   "./assets/photos/ysisi.jpeg",
   "./assets/img/bearistahugger.jpeg",
+  "./assets/tools/espresso-hub.jpeg",
   "./assets/premium/duty-roster/domingo_drive_thru.png",
   "./assets/premium/duty-roster/domingo_lobby.png",
   "./assets/premium/duty-roster/jueves_espresso.png",

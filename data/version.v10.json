@@ -1,16 +1,15 @@
 {
-  "version": "v15-starbucks-contrast-experience",
+  "version": "v16-mobile-launcher-espresso-hub-optimization",
   "releaseDate": "2026-07-09",
   "changes": [
-    "Saludo dinámico para Partner según hora del día.",
-    "Contraste Starbucks reforzado en WFM, categorías, herramientas, badges y cards móviles.",
-    "Fecha visible una sola vez en el hero para evitar duplicidad.",
-    "Actividades_Diaria muestra todas las actividades visibles del CMS.",
-    "10 Pasos para un Turno Exitoso y acceso Consulta Delivery validados contra CMS.",
-    "Foto DM y acción Contactar DM integradas de forma discreta.",
-    "Spotlight Search, navegación, PWA, Service Worker, data y GitHub Pages conservados."
+    "Espresso Hub integrado como herramienta operativa con imagen y acceso seguro.",
+    "Launcher móvil corregido con cinco elementos iguales y soporte para safe area.",
+    "Resumen redundante de prioridades retirado del inicio sin eliminar los módulos operativos.",
+    "Contraste, espaciado y tarjetas refinados.",
+    "Assets duplicados no referenciados retirados y caché PWA actualizado."
   ],
   "notes": "Versión visual ligera enfocada en contraste, navegación y consumo correcto de Actividades_Diaria.",
   "fecha": "2026-07-09",
-  "descripcion": "Mejora ligera de contraste, accesibilidad y experiencia ejecutiva."
+  "descripcion": "Mejora ligera de contraste, accesibilidad y experiencia ejecutiva.",
+  "updatedAt": "2026-07-10"
 }

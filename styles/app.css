@@ -418,3 +418,27 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .v15-starbucks-contrast-experience .workspace-section,
   .v15-starbucks-contrast-experience .ops-section{padding:16px!important;border-radius:22px!important;}
 }
+
+
+/* === Distrito Go v16 · Mobile Launcher + Espresso Hub === */
+.v16-mobile-launcher-espresso-hub-optimization{background:var(--sb-warm,#F6F4EF);color:var(--ink,#102A22);padding-bottom:calc(96px + env(safe-area-inset-bottom,0px));}
+.v16-mobile-launcher-espresso-hub-optimization .app-shell>section{border-color:rgba(0,98,65,.18);}
+.v16-mobile-launcher-espresso-hub-optimization .tool-card{overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(0,98,65,.2)!important;}
+.v16-mobile-launcher-espresso-hub-optimization .tool-card-body{display:flex;flex:1;flex-direction:column;padding:0;}
+.v16-mobile-launcher-espresso-hub-optimization .tool-card.has-image{padding:0!important;min-height:320px;}
+.v16-mobile-launcher-espresso-hub-optimization .tool-card.has-image .tool-card-body{padding:16px;}
+.v16-mobile-launcher-espresso-hub-optimization .tool-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#F6F4EF;border-bottom:1px solid rgba(0,98,65,.16);}
+.v16-mobile-launcher-espresso-hub-optimization .tool-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:14px;color:#006241;font-weight:900;}
+.v16-mobile-launcher-espresso-hub-optimization .tool-card:focus-visible{outline:3px solid rgba(0,117,74,.3);outline-offset:3px;}
+.v16-mobile-launcher-espresso-hub-optimization .bottom-nav.sidebar-nav .nav-item{border:1px solid transparent;}
+@media(max-width:1023px){
+  .v16-mobile-launcher-espresso-hub-optimization .bottom-nav.sidebar-nav{position:fixed!important;left:50%!important;right:auto!important;top:auto!important;bottom:max(8px,env(safe-area-inset-bottom,0px))!important;transform:translateX(-50%)!important;width:min(calc(100vw - 20px),620px)!important;max-width:620px!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important;padding:7px!important;margin:0!important;border-radius:22px!important;background:#fff!important;border:1px solid rgba(0,98,65,.22)!important;box-shadow:0 10px 30px rgba(0,61,43,.16)!important;z-index:1000!important;box-sizing:border-box!important;}
+  .v16-mobile-launcher-espresso-hub-optimization .bottom-nav.sidebar-nav .nav-item{min-width:0!important;width:100%!important;height:58px!important;padding:5px 2px!important;margin:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;border-radius:15px!important;font-size:1.05rem!important;line-height:1!important;overflow:hidden!important;}
+  .v16-mobile-launcher-espresso-hub-optimization .bottom-nav.sidebar-nav .nav-item span{display:block!important;width:100%!important;max-width:100%!important;font-size:clamp(.56rem,2.45vw,.7rem)!important;line-height:1.05!important;text-align:center!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;color:inherit!important;}
+  .v16-mobile-launcher-espresso-hub-optimization .bottom-nav.sidebar-nav .nav-item.is-active{background:#DFF2EA!important;color:#003D2B!important;border-color:rgba(0,98,65,.28)!important;}
+}
+@media(min-width:1024px){.v16-mobile-launcher-espresso-hub-optimization{padding-bottom:32px;}}
+@media(max-width:560px){
+ .v16-mobile-launcher-espresso-hub-optimization .app-shell{padding-inline:12px;}
+ .v16-mobile-launcher-espresso-hub-optimization .tool-card.has-image{min-height:300px;}
+}

@@ -42,7 +42,7 @@ function renderHeader(){
   $('#app-title').textContent = state.config.appName;
   $('#hero-greeting').textContent = '#GreenApronService · #DistritoKike🚀';
   $('#hero-title').textContent = getPartnerGreeting();
-  $('#hero-subtitle').textContent = 'Revisa tus prioridades, actividades críticas y accesos clave del día.';
+  $('#hero-subtitle').textContent = 'Accede rápidamente a herramientas, eventos y recursos operativos del distrito.';
   const photo = state.config.emergencyContact?.photo;
   if(photo) $('#dm-photo').src = `./${photo}`;
   $('#dm-contact').href = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
