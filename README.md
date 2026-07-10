@@ -33,3 +33,15 @@ Versión: `v16-mobile-launcher-espresso-hub-optimization`
 ## Despliegue
 
 Publicar el contenido del proyecto en la raíz de `EnriqueCesar/Distrito_Goo`, rama `main`, mediante GitHub Pages.
+
+
+## v16.1.0 · Runtime fix
+
+- Se corrigió `renderToday()` para tolerar la ausencia de elementos opcionales como `#today-date`.
+- Se protegieron accesos DOM opcionales en módulos de operación, navegación, búsqueda, tarjetas y arranque.
+- `loadData()` ahora identifica en consola la ruta exacta y la causa real cuando falla un JSON.
+- Se validaron los siete archivos JSON v10 requeridos.
+- Se conservó la integración de Espresso Hub, sus assets, categoría, búsqueda y enlace seguro.
+- Se incrementaron los parámetros de versión de CSS y JavaScript a `v16.1.0`.
+- Se actualizó el caché del service worker a `distrito-go-v16.1.0-runtime-fix` y se eliminan cachés anteriores durante `activate`.
+- Se mantienen rutas relativas y compatibilidad con GitHub Pages/PWA.

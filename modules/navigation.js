@@ -9,7 +9,8 @@ export function bindNavigation(){
   if(showAll) showAll.addEventListener('click', () => {
     revealWorkspace(false);
     state.categoria = 'all'; state.query = '';
-    $('#spotlight-input').value = '';
+    const input = document.getElementById('spotlight-input');
+    if(input) input.value = '';
     window.dispatchEvent(new CustomEvent('dgx:filtersChanged'));
     renderTools(true);
   });
@@ -30,10 +31,10 @@ export function revealWorkspace(scroll = true){
 export function nav(view){
   $$('.nav-item').forEach(b => b.classList.toggle('is-active', b.dataset.view === view));
   if(view === 'home') window.scrollTo({top:0, behavior:'smooth'});
-  if(view === 'today') $('#dia-a-dia').scrollIntoView({behavior:'smooth', block:'start'});
-  if(view === 'events') $('#eventos-cms').scrollIntoView({behavior:'smooth', block:'start'});
-  if(view === 'duty') $('#duty-roster').scrollIntoView({behavior:'smooth', block:'start'});
-  if(view === 'altas') $('#altas-curso').scrollIntoView({behavior:'smooth', block:'start'});
+  if(view === 'today') document.getElementById('dia-a-dia')?.scrollIntoView({behavior:'smooth', block:'start'});
+  if(view === 'events') document.getElementById('eventos-cms')?.scrollIntoView({behavior:'smooth', block:'start'});
+  if(view === 'duty') document.getElementById('duty-roster')?.scrollIntoView({behavior:'smooth', block:'start'});
+  if(view === 'altas') document.getElementById('altas-curso')?.scrollIntoView({behavior:'smooth', block:'start'});
   if(view === 'search') openSpotlight();
   if(view === 'all') revealWorkspace();
 }

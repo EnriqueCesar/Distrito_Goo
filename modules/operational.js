@@ -7,6 +7,15 @@ const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','S�
 let eventFilter = 'week';
 let actionsBound = false;
 
+function setTextIfPresent(id, value){
+  const element = document.getElementById(id);
+  if(element) element.textContent = value;
+}
+function setHtmlIfPresent(id, value){
+  const element = document.getElementById(id);
+  if(element) element.innerHTML = value;
+}
+
 function parseDate(value){
   if(!value) return null;
   if(value instanceof Date) return value;
@@ -98,22 +107,21 @@ export function renderToday(){
     .sort((a,b)=>(a.Prioridad||9)-(b.Prioridad||9));
   const weekly = (state.operacional.actividadesSemanales || []).filter(a => (a['Día'] || '').toLowerCase() === day.toLowerCase());
   const todayLong = today.toLocaleDateString('es-MX', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
-  $('#today-date').textContent = 'Rutina diaria, WFM y Duty Roster en una vista ejecutiva.';
+  setTextIfPresent('today-date', 'Rutina diaria, WFM y Duty Roster en una vista ejecutiva.');
   const mainDaily = daily[0];
   const mainWeekly = weekly[0];
   const dutyItem = (state.operacional.dutyRoster || []).find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase());
   const dutyDetails = (state.operacional.dutyDetail || []).filter(d => dutyItem && (d['Día'] || '').toLowerCase() === (dutyItem['Día'] || '').toLowerCase());
   const dutyCritical = dutyDetails.filter(d => d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true');
-  const setText = (id, value) => { const el = document.getElementById(id); if(el) el.textContent = value; };
-  setText('today-focus-date', 'Prioridades activas');
-  setText('today-focus-message', 'Revisa actividades críticas y accesos clave.');
-  setText('today-main-activity', mainWeekly?.Actividad || mainDaily?.Actividad || 'Revisión operativa');
-  setText('today-main-action', briefText(mainWeekly?.['Descripción'] || mainDaily?.DescripcionBreve || mainDaily?.['Descripción'] || 'Revisa tus prioridades, actividades críticas y accesos clave del día.', 92));
-  setText('today-duty-summary', dutyItem ? `${dutyItem['Día']}: ${dutyItem.Estaciones}` : 'Duty Roster');
-  setText('today-critical-summary', dutyCritical.length ? `${dutyCritical.length} punto${dutyCritical.length === 1 ? '' : 's'} crítico${dutyCritical.length === 1 ? '' : 's'} por validar` : 'Sin críticos marcados para hoy');
+  setTextIfPresent('today-focus-date', 'Prioridades activas');
+  setTextIfPresent('today-focus-message', 'Revisa actividades críticas y accesos clave.');
+  setTextIfPresent('today-main-activity', mainWeekly?.Actividad || mainDaily?.Actividad || 'Revisión operativa');
+  setTextIfPresent('today-main-action', briefText(mainWeekly?.['Descripción'] || mainDaily?.DescripcionBreve || mainDaily?.['Descripción'] || 'Revisa tus prioridades, actividades críticas y accesos clave del día.', 92));
+  setTextIfPresent('today-duty-summary', dutyItem ? `${dutyItem['Día']}: ${dutyItem.Estaciones}` : 'Duty Roster');
+  setTextIfPresent('today-critical-summary', dutyCritical.length ? `${dutyCritical.length} punto${dutyCritical.length === 1 ? '' : 's'} crítico${dutyCritical.length === 1 ? '' : 's'} por validar` : 'Sin críticos marcados para hoy');
   renderWFM(day, weekly[0]);
-  $('#daily-grid').innerHTML = daily.map(a => opsCard(a.Actividad, a.DescripcionBreve || a['Descripción'], a.Icono || '✅', renderResourceAction(a), a)).join('');
-  $('#weekly-grid').innerHTML = weekly.length ? weekly.map(a => opsCard(a.Actividad, `${a['Descripción'] || ''}${a['Hora / Corte'] ? ' · ' + a['Hora / Corte'] : ''}`, a.Icono || '📌', a.Link ? `<a class="mini-link" href="${escapeHtml(a.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '')).join('') : opsCard('Sin actividad semanal específica', 'Mantén foco en apertura, calidad y seguimiento.', '☕');
+  setHtmlIfPresent('daily-grid', daily.map(a => opsCard(a.Actividad, a.DescripcionBreve || a['Descripción'], a.Icono || '✅', renderResourceAction(a), a)).join(''));
+  setHtmlIfPresent('weekly-grid', weekly.length ? weekly.map(a => opsCard(a.Actividad, `${a['Descripción'] || ''}${a['Hora / Corte'] ? ' · ' + a['Hora / Corte'] : ''}`, a.Icono || '📌', a.Link ? `<a class="mini-link" href="${escapeHtml(a.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '')).join('') : opsCard('Sin actividad semanal específica', 'Mantén foco en apertura, calidad y seguimiento.', '☕'));
 }
 function renderWFM(day, todayActivity){
   const planningDate = addDays(today, 15);
@@ -127,7 +135,7 @@ function renderWFM(day, todayActivity){
   const currentLabel = `${fmtDDMM(currentWeekStart)} al ${fmtDDMM(currentWeekEnd)}`;
   const actionTitle = `${todayActivity?.Icono || '✅'} ${escapeHtml(todayActivity?.Actividad || 'Revisión operativa')}`;
   const actionText = briefText(todayActivity?.['Descripción'] || 'Revisa prioridades del día y anticipa necesidades de la semana en planeación.', 150);
-  $('#wfm-card').innerHTML = `
+  setHtmlIfPresent('wfm-card', `
     <div class="wfm-head"><span>📅 WFM</span><strong>${escapeHtml(todayActivity?.Actividad || 'Planeación')}</strong></div>
     <div class="wfm-timeline" aria-label="Planeación WFM">
       <div class="wfm-step is-now"><small>Hoy</small><b>${escapeHtml(todayLabel)}</b><em>Semana actual ${getWeekNumber(today)}</em></div>
@@ -140,7 +148,7 @@ function renderWFM(day, todayActivity){
       <div><small>Hoy</small><b>${escapeHtml(day)}</b></div>
     </div>
     <div class="wfm-action"><small>Actividad de hoy</small><strong>${actionTitle}</strong><p>${escapeHtml(actionText)}</p></div>
-    ${next ? `<div class="wfm-next"><small>Siguiente paso</small><span>${next.Icono || '⏭️'} ${escapeHtml(next.Actividad)}</span></div>` : ''}`;
+    ${next ? `<div class="wfm-next"><small>Siguiente paso</small><span>${next.Icono || '⏭️'} ${escapeHtml(next.Actividad)}</span></div>` : ''}`);
 }
 
 export function renderInformativo(){
@@ -162,16 +170,16 @@ export function renderEvents(){
   else { start=now; end=new Date(today.getFullYear(),11,31,23,59,59); }
   const filtered = all.filter(e => inRange(e,start,end) && (parseDate(e['Fecha Fin']) || parseDate(e['Fecha Inicio']) || end) >= now)
     .sort((a,b)=>(parseDate(a['Fecha Inicio'])||0)-(parseDate(b['Fecha Inicio'])||0));
-  $('#events-count').textContent = `${filtered.length} ${eventFilter === 'week' ? 'esta semana' : eventFilter === 'month' ? 'este mes' : 'próximos'}`;
-  $('#events-grid').innerHTML = filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este filtro', 'Cambia a Mes o Todos para ver próximos recordatorios.', '📅');
+  setTextIfPresent('events-count', `${filtered.length} ${eventFilter === 'week' ? 'esta semana' : eventFilter === 'month' ? 'este mes' : 'próximos'}`);
+  setHtmlIfPresent('events-grid', filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este filtro', 'Cambia a Mes o Todos para ver próximos recordatorios.', '📅'));
 }
 export function renderAltas(){
   const a = state.operacional.altasCurso || {bt:[],ss:[],tbw:[]};
-  $('#altas-count').textContent = `${a.bt.length} BT · ${a.ss.length} SS · ${a.tbw.length} TBW`;
-  $('#btss-count').textContent = `${a.bt.length + a.ss.length} registros`;
-  $('#tbw-count').textContent = `${a.tbw.length} partners`;
-  $('#btss-grid').innerHTML = [...a.bt.map(p => personRow(p,'BT')), ...a.ss.map(p => personRow(p,'SS'))].join('') || '<p class="muted">Sin registros BT/SS.</p>';
-  $('#tbw-grid').innerHTML = a.tbw.map(tbwRow).join('') || '<p class="muted">Sin seguimiento TBW.</p>';
+  setTextIfPresent('altas-count', `${a.bt.length} BT · ${a.ss.length} SS · ${a.tbw.length} TBW`);
+  setTextIfPresent('btss-count', `${a.bt.length + a.ss.length} registros`);
+  setTextIfPresent('tbw-count', `${a.tbw.length} partners`);
+  setHtmlIfPresent('btss-grid', [...a.bt.map(p => personRow(p,'BT')), ...a.ss.map(p => personRow(p,'SS'))].join('') || '<p class="muted">Sin registros BT/SS.</p>');
+  setHtmlIfPresent('tbw-grid', a.tbw.map(tbwRow).join('') || '<p class="muted">Sin seguimiento TBW.</p>');
 }
 export function renderDuty(){
   const day = dayNames[today.getDay()];
@@ -179,12 +187,12 @@ export function renderDuty(){
   const item = roster.find(d => (d['Día'] || '').toLowerCase() === day.toLowerCase()) || roster[0];
   const detail = (state.operacional.dutyDetail || []).filter(d => item && (d['Día'] || '').toLowerCase() === (item['Día'] || '').toLowerCase()).sort((a,b)=>(a.Orden||0)-(b.Orden||0));
   const critical = detail.filter(d => d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true').length;
-  $('#duty-focus').innerHTML = item ? `<div class="duty-focus-head"><span>Hoy</span><strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong></div><p>${escapeHtml(item.Enfoque)}</p><div class="duty-premium-meta"><b>${detail.length} puntos</b><b>${critical} críticos</b></div>` : '<p>Sin Duty Roster cargado.</p>';
-  $('#duty-gallery').innerHTML = item?.ImagenesPath?.length ? item.ImagenesPath.map((src,i)=>{
+  setHtmlIfPresent('duty-focus', item ? `<div class="duty-focus-head"><span>Hoy</span><strong>${escapeHtml(item['Día'])}: ${escapeHtml(item.Estaciones)}</strong></div><p>${escapeHtml(item.Enfoque)}</p><div class="duty-premium-meta"><b>${detail.length} puntos</b><b>${critical} críticos</b></div>` : '<p>Sin Duty Roster cargado.</p>');
+  setHtmlIfPresent('duty-gallery', item?.ImagenesPath?.length ? item.ImagenesPath.map((src,i)=>{
     const station = String(item.Estaciones || 'Estación').split(',')[i]?.trim() || `Estación ${i+1}`;
     return `<a class="duty-image premium-duty-link" href="${escapeHtml(src)}" target="_blank" rel="noopener" aria-label="Abrir ${escapeHtml(item['Día'] + ' · ' + station)}"><img src="${escapeHtml(src)}" alt="${escapeHtml(item['Día'] + ' · ' + station)}" loading="lazy"/><span>${escapeHtml(station)}</span></a>`;
-  }).join('') : '';
-  $('#duty-detail').innerHTML = detail.map(d => `<li class="${d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true' ? 'is-critical' : ''}">${d.Icono || '•'} <span>${escapeHtml(d.Actividad)}</span>${d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true' ? ' <strong>Crítico</strong>' : ''}</li>`).join('');
+  }).join('') : '');
+  setHtmlIfPresent('duty-detail', detail.map(d => `<li class="${d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true' ? 'is-critical' : ''}">${d.Icono || '•'} <span>${escapeHtml(d.Actividad)}</span>${d['Crítico'] === true || String(d['Crítico']).toLowerCase() === 'true' ? ' <strong>Crítico</strong>' : ''}</li>`).join(''));
 }
 function bindOperationalActions(){
   if(actionsBound) return;
@@ -201,9 +209,10 @@ function bindOperationalActions(){
   });
 }
 function openImageModal(title, src){
-  $('#quick-modal-title').textContent = title;
-  $('#quick-modal-body').innerHTML = `<img class="modal-image" src="${escapeHtml(src)}" alt="${escapeHtml(title)}" loading="lazy"/>`;
-  $('#quick-modal').showModal();
+  setTextIfPresent('quick-modal-title', title);
+  setHtmlIfPresent('quick-modal-body', `<img class="modal-image" src="${escapeHtml(src)}" alt="${escapeHtml(title)}" loading="lazy"/>`);
+  const modal = document.getElementById('quick-modal');
+  if(modal?.showModal) modal.showModal();
 }
 export function goToSection(id){
   const el = document.getElementById(id);

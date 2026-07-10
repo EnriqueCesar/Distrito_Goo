@@ -1,5 +1,5 @@
 {
-  "version": "v16-mobile-launcher-espresso-hub-optimization",
+  "version": "16.1.0",
   "releaseDate": "2026-07-09",
   "changes": [
     "Espresso Hub integrado como herramienta operativa con imagen y acceso seguro.",
@@ -11,5 +11,6 @@
   "notes": "Versión visual ligera enfocada en contraste, navegación y consumo correcto de Actividades_Diaria.",
   "fecha": "2026-07-09",
   "descripcion": "Mejora ligera de contraste, accesibilidad y experiencia ejecutiva.",
-  "updatedAt": "2026-07-10"
+  "updatedAt": "2026-07-10",
+  "runtimeFix": "v16.1.0"
 }

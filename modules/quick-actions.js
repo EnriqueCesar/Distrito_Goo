@@ -28,7 +28,9 @@ export function renderQuickActions(){
     {title:'Herramientas', icon:'🧰', text:'Abre apps por categoría.', action:'showTools'},
     {title:'Eventos activos', icon:'📅', text:'Recordatorios próximos.', action:'showEvents', badge:eventosSemana ? `${eventosSemana} semana` : ''}
   ];
-  $('#command-grid').innerHTML = cards.map(c => `<button class="command-card" type="button" data-action="${c.action}"><span class="command-icon">${c.icon}</span><strong>${escapeHtml(c.title)}</strong><p>${escapeHtml(c.text)}</p>${c.badge?`<em>${escapeHtml(c.badge)}</em>`:''}</button>`).join('');
+  const commandGrid = document.getElementById('command-grid');
+  if(!commandGrid) return;
+  commandGrid.innerHTML = cards.map(c => `<button class="command-card" type="button" data-action="${c.action}"><span class="command-icon">${c.icon}</span><strong>${escapeHtml(c.title)}</strong><p>${escapeHtml(c.text)}</p>${c.badge?`<em>${escapeHtml(c.badge)}</em>`:''}</button>`).join('');
   $$('#command-grid .command-card').forEach(btn => btn.addEventListener('click', () => runAction(btn.dataset.action)));
 }
 
@@ -37,7 +39,9 @@ export function renderChips(){
     { id:'all', nombre:'Todo', icono:'🧭', contador: state.herramientas.length },
     ...state.categorias.map(c => ({...c, contador: state.herramientas.filter(t => t.categoriaId === c.id).length}))
   ];
-  $('#active-chips').innerHTML = chips.map(c => chip(c, state.categoria === c.id)).join('');
+  const activeChips = document.getElementById('active-chips');
+  if(!activeChips) return;
+  activeChips.innerHTML = chips.map(c => chip(c, state.categoria === c.id)).join('');
   $$('.chip').forEach(el => el.addEventListener('click', () => {
     state.categoria = el.dataset.category;
     renderChips(); renderTools(true);
@@ -46,7 +50,9 @@ export function renderChips(){
 
 export function renderCategories(){
   const withCounts = state.categorias.map(c => ({...c, contador: state.herramientas.filter(t => t.categoriaId === c.id).length}));
-  $('#category-hubs').innerHTML = withCounts.map(categoryHub).join('');
+  const categoryHubs = document.getElementById('category-hubs');
+  if(!categoryHubs) return;
+  categoryHubs.innerHTML = withCounts.map(categoryHub).join('');
   $$('.category-card').forEach(card => {
     card.classList.toggle('is-active', state.categoria === card.dataset.category);
     card.addEventListener('click', () => {

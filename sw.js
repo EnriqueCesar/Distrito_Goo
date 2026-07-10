@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v16-mobile-launcher-espresso-hub-optimization';
+const CACHE_NAME = 'distrito-go-v16.1.0-runtime-fix';
 const APP_SHELL = [
   "./",
   "./index.html",

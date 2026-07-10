@@ -3,6 +3,9 @@ import { $, $$, normalize } from './utils.js';
 import { toolCard, emptyState } from './components.js';
 import { openNativeApp } from './native-apps.js';
 import { toast } from './toast.js';
+
+function setTextIfPresent(id, value){ const el = document.getElementById(id); if(el) el.textContent = value; }
+function setHtmlIfPresent(id, value){ const el = document.getElementById(id); if(el) el.innerHTML = value; }
 import { setJSON } from './storage.js';
 
 export function getFilteredTools(){
@@ -21,15 +24,15 @@ export function renderTools(reset = false){
   const visible = all.slice(0, state.visibleCount);
   const isAllWithoutQuery = state.categoria === 'all' && !state.query;
   if(isAllWithoutQuery){
-    $('#result-count').textContent = 'Selecciona una categoría';
-    $('#tools-grid').innerHTML = emptyState('Elige una categoría', 'Distrito Go mostrará solo las herramientas relacionadas. Usa Spotlight para buscar en todo el LaunchPad.');
-    $('#lazy-sentinel').classList.add('hidden');
+    setTextIfPresent('result-count', 'Selecciona una categoría');
+    setHtmlIfPresent('tools-grid', emptyState('Elige una categoría', 'Distrito Go mostrará solo las herramientas relacionadas. Usa Spotlight para buscar en todo el LaunchPad.'));
+    document.getElementById('lazy-sentinel')?.classList.add('hidden');
     return;
   }
-  $('#result-count').textContent = `${all.length} herramienta${all.length === 1 ? '' : 's'}`;
-  $('#tools-grid').innerHTML = visible.map(t => toolCard(t, false)).join('') || emptyState('No encontré herramientas');
+  setTextIfPresent('result-count', `${all.length} herramienta${all.length === 1 ? '' : 's'}`);
+  setHtmlIfPresent('tools-grid', visible.map(t => toolCard(t, false)).join('') || emptyState('No encontré herramientas'));
   bindToolCards('#tools-grid');
-  $('#lazy-sentinel').classList.toggle('hidden', visible.length >= all.length);
+  document.getElementById('lazy-sentinel')?.classList.toggle('hidden', visible.length >= all.length);
 }
 
 export function loadMoreTools(){

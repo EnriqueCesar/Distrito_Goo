@@ -10,6 +10,10 @@ import { renderDashboard, renderQuickActions, renderChips, renderCategories } fr
 import { renderTools, loadMoreTools } from './cards.js';
 import { renderOperationalSections } from './operational.js';
 
+function byId(id){ return document.getElementById(id); }
+function setText(id, value){ const el = byId(id); if(el) el.textContent = value; }
+function setHtml(id, value){ const el = byId(id); if(el) el.innerHTML = value; }
+
 async function boot(){
   bindStaticEvents();
   await loadData();
@@ -39,13 +43,15 @@ function getPartnerGreeting(now = new Date()){
 }
 
 function renderHeader(){
-  $('#app-title').textContent = state.config.appName;
-  $('#hero-greeting').textContent = '#GreenApronService · #DistritoKike🚀';
-  $('#hero-title').textContent = getPartnerGreeting();
-  $('#hero-subtitle').textContent = 'Accede rápidamente a herramientas, eventos y recursos operativos del distrito.';
+  setText('app-title', state.config.appName);
+  setText('hero-greeting', '#GreenApronService · #DistritoKike🚀');
+  setText('hero-title', getPartnerGreeting());
+  setText('hero-subtitle', 'Accede rápidamente a herramientas, eventos y recursos operativos del distrito.');
   const photo = state.config.emergencyContact?.photo;
-  if(photo) $('#dm-photo').src = `./${photo}`;
-  $('#dm-contact').href = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
+  const dmPhoto = byId('dm-photo');
+  if(photo && dmPhoto) dmPhoto.src = `./${photo}`;
+  const dmContact = byId('dm-contact');
+  if(dmContact) dmContact.href = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
   updateClock();
   setInterval(updateClock, 60000);
 }
@@ -54,14 +60,14 @@ function updateClock(){
   const now = new Date();
   const date = now.toLocaleDateString('es-MX', {weekday:'long', day:'2-digit', month:'long', year:'numeric'});
   const time = now.toLocaleTimeString('es-MX', {hour:'2-digit', minute:'2-digit'});
-  $('#hero-title').textContent = getPartnerGreeting(now);
-  $('#hero-date').textContent = `${date} · ${time}`;
+  setText('hero-title', getPartnerGreeting(now));
+  setText('hero-date', `${date} · ${time}`);
 }
 
 function bindStaticEvents(){
-  $('#theme-toggle').addEventListener('click', toggleTheme);
-  $('#start-day').addEventListener('click', () => $('#dia-a-dia').scrollIntoView({behavior:'smooth', block:'start'}));
-  $('#open-tools-panel').addEventListener('click', revealWorkspace);
+  byId('theme-toggle')?.addEventListener('click', toggleTheme);
+  byId('start-day')?.addEventListener('click', () => byId('dia-a-dia')?.scrollIntoView({behavior:'smooth', block:'start'}));
+  byId('open-tools-panel')?.addEventListener('click', revealWorkspace);
   const toggleTools = $('#toggle-tools');
   if(toggleTools) toggleTools.addEventListener('click', revealWorkspace);
   const toggleFilters = $('#toggle-filters');
@@ -74,13 +80,14 @@ function bindStaticEvents(){
     });
   }
 
-  $('#close-quick-modal').addEventListener('click', () => $('#quick-modal').close());
+  byId('close-quick-modal')?.addEventListener('click', () => byId('quick-modal')?.close());
   document.querySelectorAll('[data-campaign-modal]').forEach(btn => {
     btn.addEventListener('click', () => {
       const src = btn.dataset.campaignModal;
-      $('#quick-modal-title').textContent = '🌎 Radar Mundialista · ¿Y Si, Sí?';
-      $('#quick-modal-body').innerHTML = `<img class="modal-image campaign-modal-image" src="${src}" alt="Radar Mundialista ¿Y Si, Sí?" loading="lazy"/>`;
-      $('#quick-modal').showModal();
+      setText('quick-modal-title', '🌎 Radar Mundialista · ¿Y Si, Sí?');
+      setHtml('quick-modal-body', `<img class="modal-image campaign-modal-image" src="${src}" alt="Radar Mundialista ¿Y Si, Sí?" loading="lazy"/>`);
+      const modal = byId('quick-modal');
+      if(modal?.showModal) modal.showModal();
     });
   });
   window.addEventListener('dgx:filtersChanged', () => { renderChips(); renderTools(true); });
@@ -112,9 +119,10 @@ function bindBearistaInformativo(){
   card.classList.remove('hidden');
   if(localStorage.getItem('dgx_bearista_hugger_closed') === '1') card.classList.add('is-collapsed');
   const openBearista = () => {
-    $('#quick-modal-title').textContent = 'Desafío adicional ¿Y Si, 100%?';
-    $('#quick-modal-body').innerHTML = `<img class="modal-image bearista-modal-image" src="${imgSrc}" alt="Desafío adicional Bearista Hugger" loading="lazy"/>`;
-    $('#quick-modal').showModal();
+    setText('quick-modal-title', 'Desafío adicional ¿Y Si, 100%?');
+    setHtml('quick-modal-body', `<img class="modal-image bearista-modal-image" src="${imgSrc}" alt="Desafío adicional Bearista Hugger" loading="lazy"/>`);
+    const modal = byId('quick-modal');
+    if(modal?.showModal) modal.showModal();
   };
   document.querySelectorAll('[data-bearista-modal]').forEach(btn => btn.addEventListener('click', openBearista));
   const close = $('#bearista-close');
@@ -140,16 +148,16 @@ function toggleTheme(){
   const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   document.documentElement.dataset.theme = next;
   localStorage.setItem('dgx_theme', next);
-  $('#theme-toggle').textContent = next === 'dark' ? '☀' : '☾';
+  setText('theme-toggle', next === 'dark' ? '☀' : '☾');
 }
 
 function applyTheme(){
   const saved = localStorage.getItem('dgx_theme') || 'light';
   document.documentElement.dataset.theme = saved;
-  $('#theme-toggle').textContent = saved === 'dark' ? '☀' : '☾';
+  setText('theme-toggle', saved === 'dark' ? '☀' : '☾');
 }
 
 boot().catch(error => {
-  console.error(error);
-  toast('No se pudo cargar Distrito Go');
+  console.error('[Distrito Go] Falló el arranque de la aplicación:', error);
+  toast(error?.message || 'No se pudo cargar Distrito Go');
 });
