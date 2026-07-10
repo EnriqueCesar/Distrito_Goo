@@ -442,3 +442,114 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
  .v16-mobile-launcher-espresso-hub-optimization .app-shell{padding-inline:12px;}
  .v16-mobile-launcher-espresso-hub-optimization .tool-card.has-image{min-height:300px;}
 }
+
+/* === Distrito Go v16.2 · Visual Accessibility Refinement === */
+.v16-2-visual-accessibility-refinement{
+  background:#F6F4EF!important;
+  color:#102A22;
+}
+.v16-2-visual-accessibility-refinement :is(button,a,input,[role="button"]):focus-visible{
+  outline:3px solid rgba(0,117,74,.38)!important;
+  outline-offset:3px!important;
+}
+.v16-2-visual-accessibility-refinement :is(.category-card,.tool-card,.quick-card,.nav-item,.primary-action,.secondary-action,.dm-card a){
+  transition:transform .14s ease,border-color .14s ease,background-color .14s ease,box-shadow .14s ease;
+}
+.v16-2-visual-accessibility-refinement :is(.category-card,.tool-card,.quick-card):hover{transform:translateY(-2px)!important;box-shadow:0 8px 22px rgba(0,61,43,.09)!important;}
+
+/* DM: una sola fotografía, nombre y acceso a WhatsApp */
+.v16-2-visual-accessibility-refinement .dm-card.support-card{
+  grid-template-columns:96px minmax(0,1fr)!important;
+  gap:16px!important;
+  padding:16px!important;
+  background:#FFFFFF!important;
+  border:1px solid rgba(0,98,65,.20)!important;
+  color:#102A22!important;
+  box-shadow:none!important;
+  align-self:stretch;
+}
+.v16-2-visual-accessibility-refinement .dm-photo-link{display:block;border-radius:22px;line-height:0;}
+.v16-2-visual-accessibility-refinement .dm-photo-link img{width:96px!important;height:96px!important;border-radius:22px!important;object-fit:cover;}
+.v16-2-visual-accessibility-refinement .dm-contact-copy{display:grid;align-content:center;justify-items:start;gap:10px;min-width:0;}
+.v16-2-visual-accessibility-refinement .dm-contact-copy strong{font-size:1.15rem;color:#102A22;}
+.v16-2-visual-accessibility-refinement .dm-contact-copy a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;background:#006241!important;color:#fff!important;border-radius:999px;text-decoration:none;font-weight:900;}
+
+/* WFM: cards internas con contraste alto y jerarquía ejecutiva */
+.v16-2-visual-accessibility-refinement .wfm-card{
+  background:#F7FCFA!important;
+  border:1px solid rgba(0,98,65,.24)!important;
+  color:#102A22!important;
+  box-shadow:none!important;
+  padding:20px!important;
+}
+.v16-2-visual-accessibility-refinement .wfm-head{justify-content:space-between;flex-wrap:wrap;}
+.v16-2-visual-accessibility-refinement .wfm-head span{display:inline-flex;padding:7px 10px;border-radius:999px;background:#DFF2EA!important;color:#003D2B!important;border:1px solid rgba(0,98,65,.20);font-size:.9rem!important;font-weight:950;}
+.v16-2-visual-accessibility-refinement .wfm-head strong{color:#003D2B!important;font-size:1.15rem;}
+.v16-2-visual-accessibility-refinement .wfm-step,
+.v16-2-visual-accessibility-refinement .wfm-grid>div,
+.v16-2-visual-accessibility-refinement .wfm-action,
+.v16-2-visual-accessibility-refinement .wfm-next{
+  background:#FFFFFF!important;
+  border:1px solid rgba(0,98,65,.20)!important;
+  color:#102A22!important;
+  box-shadow:none!important;
+}
+.v16-2-visual-accessibility-refinement .wfm-step.is-now{border-left:5px solid #00754A!important;}
+.v16-2-visual-accessibility-refinement .wfm-step.is-plan{border-left:5px solid #006241!important;background:#F1F8F5!important;}
+.v16-2-visual-accessibility-refinement .wfm-step small,
+.v16-2-visual-accessibility-refinement .wfm-grid small,
+.v16-2-visual-accessibility-refinement .wfm-action small,
+.v16-2-visual-accessibility-refinement .wfm-next small{color:#006241!important;font-weight:950!important;letter-spacing:.02em;}
+.v16-2-visual-accessibility-refinement .wfm-step b,
+.v16-2-visual-accessibility-refinement .wfm-grid b,
+.v16-2-visual-accessibility-refinement .wfm-action strong,
+.v16-2-visual-accessibility-refinement .wfm-next span{color:#102A22!important;}
+.v16-2-visual-accessibility-refinement .wfm-step em{color:#4B5F58!important;}
+.v16-2-visual-accessibility-refinement .wfm-connector{background:#DFF2EA!important;color:#003D2B!important;border:1px solid rgba(0,98,65,.24)!important;box-shadow:none!important;}
+.v16-2-visual-accessibility-refinement .wfm-action{border-left:5px solid #00754A!important;}
+.v16-2-visual-accessibility-refinement .wfm-next{border-left:5px solid #006241!important;}
+.v16-2-visual-accessibility-refinement .wfm-action p{color:#4B5F58!important;line-height:1.5;}
+
+/* Categorías: superficie clara, tipografía oscura, badge legible */
+.v16-2-visual-accessibility-refinement .category-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch;}
+.v16-2-visual-accessibility-refinement .category-card{
+  display:flex;flex-direction:column;align-items:flex-start;
+  min-height:176px!important;height:100%;padding:18px!important;
+  background:#EDF7F2!important;color:#102A22!important;
+  border:1px solid rgba(0,98,65,.20)!important;border-radius:22px!important;
+  box-shadow:none!important;overflow:visible!important;
+}
+.v16-2-visual-accessibility-refinement .category-card:after{display:none!important;}
+.v16-2-visual-accessibility-refinement .category-card-head{display:flex;align-items:center;gap:11px;width:100%;}
+.v16-2-visual-accessibility-refinement .category-card-head strong{color:#003D2B!important;font-size:1.12rem;line-height:1.2;}
+.v16-2-visual-accessibility-refinement .category-card .cat-icon{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;font-size:1.45rem!important;border-radius:15px;background:#FFFFFF!important;color:#006241!important;border:1px solid rgba(0,98,65,.18)!important;}
+.v16-2-visual-accessibility-refinement .category-description{display:block;margin:13px 0 16px;color:#4B5F58!important;line-height:1.45;font-size:.92rem;}
+.v16-2-visual-accessibility-refinement .category-card .counter{margin-top:auto!important;padding:6px 10px!important;background:#FFFFFF!important;color:#006241!important;border:1px solid rgba(0,98,65,.22)!important;font-size:.82rem;}
+.v16-2-visual-accessibility-refinement .category-card:is(:hover,.is-active){background:#DFF2EA!important;border-color:#006241!important;}
+.v16-2-visual-accessibility-refinement .category-card.is-active{box-shadow:inset 0 0 0 1px #006241!important;}
+
+/* Portada sin mensajes redundantes; Spotlight y lógica permanecen */
+.v16-2-visual-accessibility-refinement .tools-section.is-initially-hidden{display:none!important;}
+.v16-2-visual-accessibility-refinement .redundant-filter-toggle{display:none!important;}
+.v16-2-visual-accessibility-refinement .tools-title-actions{display:flex;align-items:center;gap:8px;}
+.v16-2-visual-accessibility-refinement .tools-title-actions #result-count:empty{display:none;}
+.v16-2-visual-accessibility-refinement .workspace-section{background:#FFFFFF!important;border:1px solid rgba(0,98,65,.18)!important;box-shadow:none!important;}
+.v16-2-visual-accessibility-refinement .search-box{box-shadow:none!important;border-color:rgba(0,98,65,.22)!important;}
+.v16-2-visual-accessibility-refinement .text-button{color:#006241!important;}
+
+@media(max-width:900px){
+  .v16-2-visual-accessibility-refinement .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:620px){
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:76px minmax(0,1fr)!important;padding:13px!important;}
+  .v16-2-visual-accessibility-refinement .dm-photo-link img{width:76px!important;height:76px!important;border-radius:18px!important;}
+  .v16-2-visual-accessibility-refinement .category-grid{grid-template-columns:1fr;}
+  .v16-2-visual-accessibility-refinement .category-card{min-height:154px!important;}
+  .v16-2-visual-accessibility-refinement .wfm-card{padding:15px!important;}
+  .v16-2-visual-accessibility-refinement .wfm-head{align-items:flex-start;}
+}
+@media(prefers-reduced-motion:reduce){
+  .v16-2-visual-accessibility-refinement *,
+  .v16-2-visual-accessibility-refinement *::before,
+  .v16-2-visual-accessibility-refinement *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important;}
+}

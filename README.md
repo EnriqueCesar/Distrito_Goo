@@ -1,47 +1,35 @@
-# Distrito Goo · v16 Mobile Launcher + Espresso Hub Optimization
+# Distrito Go · v16.2 Visual Accessibility Refinement
 
-Versión: `v16-mobile-launcher-espresso-hub-optimization`
+Versión funcional refinada sobre el proyecto existente, sin cambio de arquitectura ni eliminación de lógica.
 
-## Actualización
+## Ajustes incluidos
 
-- Proyecto base: `Distrito_Goo-main.zip`.
-- Nueva herramienta: **Espresso Hub**.
-- Recurso integrado: `assets/tools/espresso-hub.jpeg`.
-- Acceso configurado al portal oficial de Espresso Hub en SharePoint.
+- WFM con texto oscuro, superficies claras, jerarquía visual y cards internas legibles.
+- Categorías con contraste accesible, badge de herramientas, hover, selección activa y foco por teclado.
+- Portada simplificada: se ocultan los mensajes iniciales redundantes de herramientas y filtros, conservando Spotlight y la lógica de filtrado.
+- Card del DM reducida a fotografía, nombre y acceso a WhatsApp; la fotografía también abre el enlace configurado.
+- Navegación y tarjetas con estados de foco visibles, transiciones breves y soporte para `prefers-reduced-motion`.
+- Ajustes responsive para escritorio, tablet, Android, iPhone y modo standalone/PWA.
+- Corrección de un identificador HTML duplicado en el cierre del informativo Bearista.
+- Caché del service worker actualizado a `distrito-go-v16.2.0-visual-accessibility-refinement`.
 
-## Mejoras realizadas
+## Fuente CMS
 
-- Card de Espresso Hub integrada en la categoría **Operación**, con imagen, descripción y acción de acceso.
-- El enlace abre en una pestaña nueva mediante `noopener`.
-- Se retiró del inicio el resumen visual redundante de Prioridades del día, Foco operativo, Actividad principal y Duty Roster.
-- Se conservaron WFM, rutina diaria, actividad semanal y los módulos originales.
-- Launcher móvil corregido con cinco espacios iguales, centrado, ancho adaptable y soporte `safe-area-inset-bottom`.
-- Contraste reforzado en tarjetas, botones, fondos y estados activos.
-- Assets duplicados sin referencias retirados; recursos activos conservados.
-- Caché del service worker actualizado.
+`Distrito_Go_CMS_corregido_v12.xlsx`
 
-## Validaciones ejecutadas
+## Despliegue en GitHub Pages
 
-- Sintaxis de módulos JavaScript y service worker validada.
-- JSON de data y manifest validado.
-- Rutas locales de HTML, JSON, JavaScript y service worker revisadas.
-- Imagen Espresso Hub integrada y optimizada.
-- Ningún archivo supera 20 MB.
-- Ninguna carpeta contiene más de 100 archivos directos.
-- Manifest, service worker, rutas relativas y estructura compatibles con GitHub Pages.
+1. Publica el contenido de esta carpeta en la raíz de la rama configurada para Pages.
+2. Conserva `.nojekyll`.
+3. No cambies las rutas relativas `./` del manifest, módulos, datos o assets.
+4. Después de desplegar, abre la aplicación una vez con conexión para instalar la nueva caché v16.2.
 
-## Despliegue
+## Validaciones locales ejecutadas
 
-Publicar el contenido del proyecto en la raíz de `EnriqueCesar/Distrito_Goo`, rama `main`, mediante GitHub Pages.
+- Sintaxis JavaScript de todos los módulos y `sw.js`.
+- JSON válido en `data/` y `manifest.json`.
+- Rutas locales referenciadas por HTML, CSS, JavaScript, manifest y service worker.
+- IDs HTML sin duplicados.
+- Estructura de manifest y service worker conservada para GitHub Pages/PWA.
 
-
-## v16.1.0 · Runtime fix
-
-- Se corrigió `renderToday()` para tolerar la ausencia de elementos opcionales como `#today-date`.
-- Se protegieron accesos DOM opcionales en módulos de operación, navegación, búsqueda, tarjetas y arranque.
-- `loadData()` ahora identifica en consola la ruta exacta y la causa real cuando falla un JSON.
-- Se validaron los siete archivos JSON v10 requeridos.
-- Se conservó la integración de Espresso Hub, sus assets, categoría, búsqueda y enlace seguro.
-- Se incrementaron los parámetros de versión de CSS y JavaScript a `v16.1.0`.
-- Se actualizó el caché del service worker a `distrito-go-v16.1.0-runtime-fix` y se eliminan cachés anteriores durante `activate`.
-- Se mantienen rutas relativas y compatibilidad con GitHub Pages/PWA.
+Las pruebas que requieren un navegador o dispositivo real deben repetirse en el entorno de despliegue para confirmar instalación PWA y comportamiento específico del sistema operativo.

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./styles/variables.css?v=16.1.0" />
   <link rel="stylesheet" href="./styles/app.css?v=16.1.0" />
 </head>
-<body class="v16-mobile-launcher-espresso-hub-optimization">
+<body class="v15-starbucks-contrast-experience v16-mobile-launcher-espresso-hub-optimization v16-2-visual-accessibility-refinement">
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <div id="pull-indicator" class="pull-indicator" aria-hidden="true">↻ Actualizando...</div>
 
@@ -49,14 +49,12 @@
         </nav>
       </div>
       <aside class="dm-card support-card" aria-label="Contacto directo DM">
-        <div class="dm-visuals">
-          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Gerente de Distrito" loading="lazy" />
-          <img id="support-visual" src="./assets/photos/y-si-si-inicio.jpeg" alt="Campaña ¿Y si, sí?" loading="lazy" />
-        </div>
-        <div>
+        <a id="dm-photo-link" class="dm-photo-link" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contactar a Kike DM por WhatsApp">
+          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Kike DM" loading="lazy" />
+        </a>
+        <div class="dm-contact-copy">
           <strong>Kike DM</strong>
-          <span>Soporte directo para prioridades críticas</span>
-          <a id="dm-contact" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener">Contactar DM</a>
+          <a id="dm-contact" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </aside>
     </section>
@@ -90,8 +88,8 @@
           <div class="section-title"><h3 id="categories-title">Categorías</h3><button id="show-all" class="text-button" type="button">Ver todo</button></div>
           <div id="category-hubs" class="category-grid skeleton-grid"></div>
         </section>
-        <section class="tools-section" aria-labelledby="tools-title">
-          <div class="section-title"><h3 id="tools-title">Herramientas disponibles</h3><div class="tools-title-actions"><button id="toggle-filters" class="text-button" type="button" aria-expanded="false">Mostrar filtros</button><span id="result-count">Selecciona una categoría</span></div></div>
+        <section class="tools-section is-initially-hidden" aria-labelledby="tools-title">
+          <div class="section-title"><h3 id="tools-title">Herramientas disponibles</h3><div class="tools-title-actions"><button id="toggle-filters" class="text-button redundant-filter-toggle" type="button" aria-expanded="false" tabindex="-1" aria-hidden="true">Mostrar filtros</button><span id="result-count">Selecciona una categoría</span></div></div>
           <div id="tools-grid" class="tools-grid" aria-live="polite"></div>
           <div id="lazy-sentinel" class="lazy-sentinel" aria-hidden="true"></div>
         </section>

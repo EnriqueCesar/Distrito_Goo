@@ -1,10 +1,10 @@
 {
   "appName": "Distrito Go",
-  "version": "12.0 Green Apron Dashboard",
+  "version": "16.2 Visual Accessibility Refinement",
   "tagline": "Dashboard operativo diario para priorizar actividades, Duty Roster y herramientas clave del Distrito.",
   "org": "Centro Norte",
   "modoVisual": "green_apron_dashboard",
-  "cmsFuente": "Distrito_Go_CMS_corregido_v11.xlsx",
+  "cmsFuente": "Distrito_Go_CMS_corregido_v12.xlsx",
   "githubReady": true,
   "emergencyContact": {
     "label": "Contacto DM",

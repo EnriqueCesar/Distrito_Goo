@@ -21,7 +21,7 @@ export function chip(c, active){
 }
 
 export function categoryHub(c){
-  return `<button class="category-card" type="button" data-category="${escapeHtml(c.id)}" style="--cat-color:${c.color};--cat-accent:${c.accent}"><div class="cat-icon">${c.icono}</div><h4>${escapeHtml(c.nombre)}</h4><p>${escapeHtml(c.descripcion)}</p><span class="counter">${c.contador} herramientas</span></button>`;
+  return `<button class="category-card" type="button" data-category="${escapeHtml(c.id)}" aria-pressed="false"><span class="category-card-head"><span class="cat-icon" aria-hidden="true">${c.icono}</span><strong>${escapeHtml(c.nombre)}</strong></span><span class="category-description">${escapeHtml(c.descripcion)}</span><span class="counter">${c.contador} herramientas</span></button>`;
 }
 
 export function toolCard(tool, isFav, compact = false){

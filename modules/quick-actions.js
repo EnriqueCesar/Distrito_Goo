@@ -55,9 +55,15 @@ export function renderCategories(){
   categoryHubs.innerHTML = withCounts.map(categoryHub).join('');
   $$('.category-card').forEach(card => {
     card.classList.toggle('is-active', state.categoria === card.dataset.category);
+    card.setAttribute('aria-pressed', String(state.categoria === card.dataset.category));
     card.addEventListener('click', () => {
     revealWorkspace(false);
     state.categoria = card.dataset.category;
+    $$('.category-card').forEach(item => {
+      const active = item.dataset.category === state.categoria;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
     renderChips(); renderTools(true);
     document.querySelector('.tools-section').scrollIntoView({behavior:'smooth', block:'start'});
   });

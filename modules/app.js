@@ -50,8 +50,11 @@ function renderHeader(){
   const photo = state.config.emergencyContact?.photo;
   const dmPhoto = byId('dm-photo');
   if(photo && dmPhoto) dmPhoto.src = `./${photo}`;
+  const dmUrl = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
   const dmContact = byId('dm-contact');
-  if(dmContact) dmContact.href = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
+  const dmPhotoLink = byId('dm-photo-link');
+  if(dmContact) dmContact.href = dmUrl;
+  if(dmPhotoLink) dmPhotoLink.href = dmUrl;
   updateClock();
   setInterval(updateClock, 60000);
 }
