@@ -54,7 +54,10 @@ function renderHeader(){
   const dmContact = byId('dm-contact');
   const dmPhotoLink = byId('dm-photo-link');
   if(dmContact) dmContact.href = dmUrl;
-  if(dmPhotoLink) dmPhotoLink.href = dmUrl;
+  if(dmPhotoLink && photo){
+    dmPhotoLink.dataset.imageViewer = `./${photo}`;
+    dmPhotoLink.dataset.imageTitle = 'Kike DM';
+  }
   updateClock();
   setInterval(updateClock, 60000);
 }
@@ -83,17 +86,50 @@ function bindStaticEvents(){
     });
   }
 
-  byId('close-quick-modal')?.addEventListener('click', () => byId('quick-modal')?.close());
-  document.querySelectorAll('[data-campaign-modal]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const src = btn.dataset.campaignModal;
-      setText('quick-modal-title', '🌎 Radar Mundialista · ¿Y Si, Sí?');
-      setHtml('quick-modal-body', `<img class="modal-image campaign-modal-image" src="${src}" alt="Radar Mundialista ¿Y Si, Sí?" loading="lazy"/>`);
-      const modal = byId('quick-modal');
-      if(modal?.showModal) modal.showModal();
-    });
+  byId('close-quick-modal')?.addEventListener('click', closeQuickModal);
+  byId('quick-modal')?.addEventListener('click', event => {
+    if(event.target === byId('quick-modal')) closeQuickModal();
   });
+  document.addEventListener('click', handleImageViewerClick);
   window.addEventListener('dgx:filtersChanged', () => { renderChips(); renderTools(true); });
+}
+
+
+const IMAGE_LINK_PATTERN = /\.(?:avif|bmp|gif|jpe?g|png|svg|webp)(?:[?#].*)?$/i;
+
+function closeQuickModal(){
+  const modal = byId('quick-modal');
+  if(!modal) return;
+  modal.close();
+  modal.classList.remove('is-image-viewer');
+  setHtml('quick-modal-body', '');
+}
+
+function openImageViewer(title, src){
+  if(!src) return;
+  const modal = byId('quick-modal');
+  if(!modal?.showModal) return;
+  setText('quick-modal-title', title || 'Imagen');
+  setHtml('quick-modal-body', `<img class="modal-image image-viewer-media" src="${src}" alt="${title || 'Imagen'}" loading="eager"/>`);
+  modal.classList.add('is-image-viewer');
+  modal.showModal();
+}
+
+function handleImageViewerClick(event){
+  const trigger = event.target.closest('[data-image-viewer],[data-image],[data-campaign-modal],[data-bearista-modal],a[href]');
+  if(!trigger) return;
+  let src = trigger.dataset.imageViewer || trigger.dataset.image || trigger.dataset.campaignModal || trigger.dataset.bearistaModal || '';
+  if(!src && trigger.matches('a[href]')){
+    const href = trigger.getAttribute('href') || '';
+    if(!IMAGE_LINK_PATTERN.test(href)) return;
+    src = href;
+  }
+  if(!src) return;
+  event.preventDefault();
+  event.stopPropagation();
+  const nestedImage = trigger.querySelector('img');
+  const title = trigger.dataset.imageTitle || trigger.dataset.title || nestedImage?.alt || trigger.getAttribute('aria-label') || 'Imagen';
+  openImageViewer(title, src);
 }
 
 
@@ -109,7 +145,6 @@ function collapseFiltersByDefault(){
 function bindBearistaInformativo(){
   const card = $('#bearista-informativo');
   if(!card) return;
-  const imgSrc = 'assets/img/bearistahugger.jpeg';
   const now = new Date();
   const start = new Date('2026-07-05T00:00:00');
   const end = new Date('2026-07-07T00:00:00');
@@ -121,13 +156,6 @@ function bindBearistaInformativo(){
   }
   card.classList.remove('hidden');
   if(localStorage.getItem('dgx_bearista_hugger_closed') === '1') card.classList.add('is-collapsed');
-  const openBearista = () => {
-    setText('quick-modal-title', 'Desafío adicional ¿Y Si, 100%?');
-    setHtml('quick-modal-body', `<img class="modal-image bearista-modal-image" src="${imgSrc}" alt="Desafío adicional Bearista Hugger" loading="lazy"/>`);
-    const modal = byId('quick-modal');
-    if(modal?.showModal) modal.showModal();
-  };
-  document.querySelectorAll('[data-bearista-modal]').forEach(btn => btn.addEventListener('click', openBearista));
   const close = $('#bearista-close');
   if(close){
     close.addEventListener('click', () => {

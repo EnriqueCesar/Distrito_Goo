@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v16.2.0-visual-accessibility-refinement';
+const CACHE_NAME = 'distrito-go-v16.3.0-ux-image-viewer';
 const APP_SHELL = [
   "./",
   "./index.html",

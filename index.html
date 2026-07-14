@@ -9,8 +9,8 @@
   <link rel="manifest" href="./manifest.json" />
   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-180.png" />
-  <link rel="stylesheet" href="./styles/variables.css?v=16.1.0" />
-  <link rel="stylesheet" href="./styles/app.css?v=16.1.0" />
+  <link rel="stylesheet" href="./styles/variables.css?v=16.3.0" />
+  <link rel="stylesheet" href="./styles/app.css?v=16.3.0" />
 </head>
 <body class="v15-starbucks-contrast-experience v16-mobile-launcher-espresso-hub-optimization v16-2-visual-accessibility-refinement">
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -49,12 +49,14 @@
         </nav>
       </div>
       <aside class="dm-card support-card" aria-label="Contacto directo DM">
-        <a id="dm-photo-link" class="dm-photo-link" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contactar a Kike DM por WhatsApp">
+        <button id="dm-photo-link" class="dm-photo-link" type="button" data-image-viewer="./assets/photos/kike-dm.jpeg" data-image-title="Kike DM" aria-label="Ver fotografía de Kike DM en tamaño completo">
           <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Kike DM" loading="lazy" />
-        </a>
+        </button>
         <div class="dm-contact-copy">
           <strong>Kike DM</strong>
-          <a id="dm-contact" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener">WhatsApp</a>
+          <a id="dm-contact" class="dm-contact-button" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contacto directo con Kike DM" title="Contacto directo">
+            <span aria-hidden="true">↗</span><span class="sr-only">Contacto directo</span>
+          </a>
         </div>
       </aside>
     </section>
@@ -197,7 +199,10 @@
   </dialog>
 
   <dialog id="quick-modal" class="quick-modal" aria-label="Detalle">
-    <div class="quick-modal-head"><strong id="quick-modal-title">Detalle</strong><button id="close-quick-modal" type="button" aria-label="Cerrar">×</button></div>
+    <div class="quick-modal-head">
+      <button id="close-quick-modal" class="modal-back" type="button" aria-label="Regresar">← <span>Regresar</span></button>
+      <strong id="quick-modal-title">Detalle</strong>
+    </div>
     <div id="quick-modal-body" class="quick-modal-body"></div>
   </dialog>
 
@@ -211,6 +216,6 @@
     <button class="nav-item" data-view="events" type="button">📅<span>Eventos</span></button>
   </nav>
 
-  <script type="module" src="./modules/app.js?v=16.1.0"></script>
+  <script type="module" src="./modules/app.js?v=16.3.0"></script>
 </body>
 </html>

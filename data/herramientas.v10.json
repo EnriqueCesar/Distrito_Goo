@@ -392,6 +392,33 @@
     "estado": "activo"
   },
   {
+    "id": "compras",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "App",
+    "icono": "🛒",
+    "nombre": "Compras",
+    "tipo": "web",
+    "url": "https://enriquecesar.github.io/Compras/",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "Visualiza compras, tendencias e indicadores de la Región Centro Norte.",
+    "favorito": true,
+    "orden": 12.5,
+    "keywords": [
+      "compras",
+      "proveedores",
+      "ingredientes",
+      "tiendas",
+      "centro norte",
+      "operacion",
+      "dashboard"
+    ],
+    "estado": "activo"
+  },
+  {
     "id": "kpis-centro-norte",
     "categoriaId": "operacion",
     "categoria": "Operación",

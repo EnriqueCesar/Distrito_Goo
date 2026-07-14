@@ -553,3 +553,32 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .v16-2-visual-accessibility-refinement *::before,
   .v16-2-visual-accessibility-refinement *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important;}
 }
+
+/* === Distrito Go v16.3 · UX de contacto y visor de imágenes === */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+.v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:minmax(128px,156px) minmax(0,1fr)!important;align-items:center!important;gap:18px!important;padding:14px!important;}
+.v16-2-visual-accessibility-refinement .dm-photo-link{display:block;width:100%;border:0;padding:0;background:transparent;border-radius:24px;line-height:0;cursor:zoom-in;overflow:hidden;}
+.v16-2-visual-accessibility-refinement .dm-photo-link img{display:block;width:100%!important;height:auto!important;aspect-ratio:1/1;border-radius:24px!important;object-fit:cover;object-position:center 22%;transition:transform .18s ease;}
+.v16-2-visual-accessibility-refinement .dm-photo-link:hover img{transform:scale(1.025);}
+.v16-2-visual-accessibility-refinement .dm-contact-copy{align-content:center;justify-items:start;gap:12px;}
+.v16-2-visual-accessibility-refinement .dm-contact-copy strong{font-size:1.24rem;line-height:1.15;}
+.v16-2-visual-accessibility-refinement .dm-contact-copy .dm-contact-button{display:grid!important;place-items:center!important;width:44px!important;height:44px!important;min-height:44px!important;padding:0!important;border-radius:15px!important;background:#006241!important;color:#fff!important;text-decoration:none;font-size:1.18rem;font-weight:950;}
+
+.quick-modal-head .modal-back{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:auto!important;min-width:108px;height:42px!important;padding:0 14px!important;border-radius:999px!important;font-size:.9rem!important;font-weight:900;cursor:pointer;}
+.quick-modal-head strong{flex:1;min-width:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.quick-modal.is-image-viewer{width:min(98vw,1440px)!important;max-width:none;height:min(96vh,1080px);max-height:none;border-radius:24px!important;background:#f5f7f5!important;overflow:hidden;}
+.quick-modal.is-image-viewer .quick-modal-head{height:64px;padding:10px 14px;background:#fff;}
+.quick-modal.is-image-viewer .quick-modal-body{display:grid;place-items:center;height:calc(100% - 64px);max-height:none!important;overflow:auto;padding:12px;background:#edf2ef;}
+.quick-modal.is-image-viewer .image-viewer-media{display:block;width:auto;max-width:100%;height:auto;max-height:calc(96vh - 92px);object-fit:contain;border:0!important;border-radius:14px!important;padding:0!important;margin:auto;box-shadow:none!important;background:#fff!important;}
+.quick-modal.is-image-viewer::backdrop{background:rgba(4,20,14,.82);backdrop-filter:blur(8px);}
+
+@media(max-width:620px){
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:112px minmax(0,1fr)!important;gap:14px!important;}
+  .v16-2-visual-accessibility-refinement .dm-photo-link img{width:100%!important;height:auto!important;border-radius:20px!important;}
+  .quick-modal.is-image-viewer{width:100vw!important;height:100dvh!important;max-height:100dvh!important;border-radius:0!important;margin:0!important;}
+  .quick-modal.is-image-viewer .quick-modal-head{height:60px;padding:9px 10px;}
+  .quick-modal.is-image-viewer .quick-modal-body{height:calc(100dvh - 60px);padding:8px;}
+  .quick-modal.is-image-viewer .image-viewer-media{max-height:calc(100dvh - 76px);border-radius:10px!important;}
+  .quick-modal-head .modal-back{min-width:96px;padding:0 12px!important;}
+}
+

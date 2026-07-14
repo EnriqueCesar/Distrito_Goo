@@ -1,16 +1,15 @@
 {
-  "version": "16.1.0",
-  "releaseDate": "2026-07-09",
+  "version": "16.3.0",
+  "releaseDate": "2026-07-14",
   "changes": [
-    "Espresso Hub integrado como herramienta operativa con imagen y acceso seguro.",
-    "Launcher móvil corregido con cinco elementos iguales y soporte para safe area.",
-    "Resumen redundante de prioridades retirado del inicio sin eliminar los módulos operativos.",
-    "Contraste, espaciado y tarjetas refinados.",
-    "Assets duplicados no referenciados retirados y caché PWA actualizado."
+    "Fotografía del DM ampliada y contacto directo reducido a un icono discreto.",
+    "Visor de imágenes a pantalla completa con acción visible para regresar.",
+    "Acceso a Compras agregado al menú de herramientas.",
+    "Navegación y contraste refinados sin modificar la lógica operativa."
   ],
-  "notes": "Versión visual ligera enfocada en contraste, navegación y consumo correcto de Actividades_Diaria.",
-  "fecha": "2026-07-09",
-  "descripcion": "Mejora ligera de contraste, accesibilidad y experiencia ejecutiva.",
-  "updatedAt": "2026-07-10",
-  "runtimeFix": "v16.1.0"
+  "notes": "Actualización visual compatible con la estructura y el CMS actuales.",
+  "fecha": "2026-07-14",
+  "descripcion": "Mejora de experiencia visual, visor de imágenes y acceso a Compras.",
+  "updatedAt": "2026-07-14",
+  "runtimeFix": "v16.3.0"
 }
