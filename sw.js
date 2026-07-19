@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v16.3.0-ux-image-viewer';
+const CACHE_NAME = 'distrito-go-v16.4.0-juntemonos-mas';
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -11,6 +11,7 @@ const APP_SHELL = [
   "./data/favoritos.v10.json",
   "./data/dashboard.v10.json",
   "./data/config.v10.json",
+  "./data/identity.json",
   "./data/version.v10.json",
   "./data/operacional.v10.json",
   "./modules/utils.js",

@@ -457,7 +457,7 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
 }
 .v16-2-visual-accessibility-refinement :is(.category-card,.tool-card,.quick-card):hover{transform:translateY(-2px)!important;box-shadow:0 8px 22px rgba(0,61,43,.09)!important;}
 
-/* DM: una sola fotografía, nombre y acceso a WhatsApp */
+/* Coach: fotografía, identidad y acceso de contacto */
 .v16-2-visual-accessibility-refinement .dm-card.support-card{
   grid-template-columns:96px minmax(0,1fr)!important;
   gap:16px!important;
@@ -582,3 +582,31 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .quick-modal-head .modal-back{min-width:96px;padding:0 12px!important;}
 }
 
+
+
+/* === Distrito Go v16.4 · Juntémonos Más === */
+.v16-2-visual-accessibility-refinement .hero-copy{min-width:0;}
+.v16-2-visual-accessibility-refinement .hero-greeting{margin:0;color:#102A22;font-size:clamp(1.45rem,3vw,2.45rem);line-height:1.12;letter-spacing:-.035em;}
+.v16-2-visual-accessibility-refinement .hero-campaign{display:flex;align-items:baseline;flex-wrap:wrap;gap:.26em;margin:10px 0 6px;line-height:.92;}
+.v16-2-visual-accessibility-refinement .hero-campaign-primary{color:var(--campaign-primary,#006241);font-family:Inter,Aptos,"Segoe UI",sans-serif;font-size:clamp(2rem,5vw,4.4rem);font-weight:950;letter-spacing:-.065em;}
+.v16-2-visual-accessibility-refinement .hero-campaign-accent{color:var(--campaign-accent,#111);font-family:"Segoe Script","Brush Script MT","Segoe UI",cursive;font-size:clamp(2.3rem,5.6vw,5rem);font-weight:800;letter-spacing:-.06em;transform:rotate(-3deg);transform-origin:left center;}
+.v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:minmax(170px,220px) minmax(0,1fr)!important;gap:22px!important;padding:18px!important;}
+.v16-2-visual-accessibility-refinement .dm-photo-link{background:#F6F4EF!important;overflow:hidden!important;}
+.v16-2-visual-accessibility-refinement .dm-photo-link img{width:100%!important;height:auto!important;aspect-ratio:auto!important;max-height:300px!important;object-fit:contain!important;object-position:center!important;border-radius:22px!important;}
+.v16-2-visual-accessibility-refinement .dm-identity{display:grid;gap:5px;}
+.v16-2-visual-accessibility-refinement .dm-identity strong{font-size:clamp(1.25rem,2vw,1.65rem)!important;color:#102A22;line-height:1.08;}
+.v16-2-visual-accessibility-refinement .dm-identity span{color:#006241;font-size:.95rem;font-weight:850;letter-spacing:.01em;}
+@media(max-width:900px){
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:minmax(145px,190px) minmax(0,1fr)!important;}
+}
+@media(max-width:620px){
+  .v16-2-visual-accessibility-refinement .hero-campaign{gap:.2em;}
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:minmax(128px,42vw) minmax(0,1fr)!important;gap:14px!important;padding:14px!important;}
+  .v16-2-visual-accessibility-refinement .dm-photo-link img{max-height:230px!important;}
+  .v16-2-visual-accessibility-refinement .dm-contact-copy{gap:10px;}
+}
+@media(max-width:390px){
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{grid-template-columns:1fr!important;}
+  .v16-2-visual-accessibility-refinement .dm-photo-link{max-width:220px;margin-inline:auto;}
+  .v16-2-visual-accessibility-refinement .dm-contact-copy{justify-items:center;text-align:center;}
+}

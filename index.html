@@ -32,9 +32,11 @@
 <main id="main" class="app-shell" tabindex="-1">
     <section class="hero-card hero-partner" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p id="hero-greeting" class="eyebrow">#GreenApronService · #DistritoKike🚀</p>
-        <h2 id="hero-title">Buenos días Partner</h2>
-        <p id="hero-subtitle" class="hero-subtitle">Revisa tus prioridades, actividades críticas y accesos clave del día.</p>
+        <h2 id="hero-title" class="hero-greeting" aria-live="polite"></h2>
+        <p id="hero-campaign" class="hero-campaign" aria-label="Identidad de campaña">
+          <span id="hero-campaign-primary" class="hero-campaign-primary"></span>
+          <span id="hero-campaign-accent" class="hero-campaign-accent"></span>
+        </p>
         <p id="hero-date" class="hero-date">Cargando fecha...</p>
         <div class="hero-actions">
           <button id="start-day" class="primary-action" type="button">Revisar prioridades</button>
@@ -48,13 +50,13 @@
           <a href="#duty-roster">Duty Roster</a>
         </nav>
       </div>
-      <aside class="dm-card support-card" aria-label="Contacto directo DM">
-        <button id="dm-photo-link" class="dm-photo-link" type="button" data-image-viewer="./assets/photos/kike-dm.jpeg" data-image-title="Kike DM" aria-label="Ver fotografía de Kike DM en tamaño completo">
-          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Kike DM" loading="lazy" />
+      <aside class="dm-card support-card" aria-label="Contacto del Distrital Coach">
+        <button id="dm-photo-link" class="dm-photo-link" type="button" data-image-viewer="./assets/photos/kike-dm.jpeg" data-image-title="" aria-label="Ver fotografía del Distrital Coach en tamaño completo">
+          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="" loading="lazy" />
         </button>
         <div class="dm-contact-copy">
-          <strong>Kike DM</strong>
-          <a id="dm-contact" class="dm-contact-button" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Contacto directo con Kike DM" title="Contacto directo">
+          <div class="dm-identity"><strong id="dm-name"></strong><span id="dm-role"></span></div>
+          <a id="dm-contact" class="dm-contact-button" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Abrir contacto directo" title="Contacto directo">
             <span aria-hidden="true">↗</span><span class="sr-only">Contacto directo</span>
           </a>
         </div>

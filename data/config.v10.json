@@ -1,14 +1,14 @@
 {
   "appName": "Distrito Go",
-  "version": "16.2 Visual Accessibility Refinement",
+  "version": "16.4 Juntémonos Más",
   "tagline": "Dashboard operativo diario para priorizar actividades, Duty Roster y herramientas clave del Distrito.",
   "org": "Centro Norte",
   "modoVisual": "green_apron_dashboard",
-  "cmsFuente": "Distrito_Go_CMS_corregido_v12.xlsx",
+  "cmsFuente": "Distrito_Go_CMS.xlsx",
   "githubReady": true,
   "emergencyContact": {
-    "label": "Contacto DM",
-    "name": "Kike DM",
+    "label": "Contacto del Distrital Coach",
+    "name": "Enrique César",
     "url": "https://wa.me/message/ENKDSAHYHIGAN1",
     "photo": "assets/photos/kike-dm.jpeg"
   },

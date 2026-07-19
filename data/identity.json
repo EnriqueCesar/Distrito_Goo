@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "greeting": {
+      "morning": "Buenos días Partners.",
+      "afternoon": "Buenas tardes Partners.",
+      "evening": "Buenas noches Partners."
+    },
+    "campaign": {
+      "primary": "JUNTÉMONOS",
+      "accent": "más",
+      "display": "JUNTÉMONOS MÁS",
+      "primaryColor": "#006241",
+      "accentColor": "#111111",
+      "style": "corporativo-expresivo"
+    }
+  },
+  "coach": {
+    "name": "Enrique César",
+    "role": "Distrital Coach"
+  }
+}

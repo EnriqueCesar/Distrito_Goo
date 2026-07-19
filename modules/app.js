@@ -37,26 +37,41 @@ async function boot(){
 
 function getPartnerGreeting(now = new Date()){
   const hour = now.getHours();
-  if(hour < 12) return 'Buenos días Partner';
-  if(hour < 19) return 'Buenas tardes Partner';
-  return 'Buenas noches Partner';
+  const greeting = state.identity?.hero?.greeting || {};
+  if(hour < 12) return greeting.morning || '';
+  if(hour < 19) return greeting.afternoon || '';
+  return greeting.evening || '';
 }
 
 function renderHeader(){
   setText('app-title', state.config.appName);
-  setText('hero-greeting', '#GreenApronService · #DistritoKike🚀');
+
+  const campaign = state.identity?.hero?.campaign || {};
+  const coach = state.identity?.coach || {};
   setText('hero-title', getPartnerGreeting());
-  setText('hero-subtitle', 'Accede rápidamente a herramientas, eventos y recursos operativos del distrito.');
+  setText('hero-campaign-primary', campaign.primary || '');
+  setText('hero-campaign-accent', campaign.accent || '');
+  setText('dm-name', coach.name || '');
+  setText('dm-role', coach.role || '');
+
+  const campaignEl = byId('hero-campaign');
+  if(campaignEl){
+    campaignEl.style.setProperty('--campaign-primary', campaign.primaryColor || '#006241');
+    campaignEl.style.setProperty('--campaign-accent', campaign.accentColor || '#111111');
+  }
+
   const photo = state.config.emergencyContact?.photo;
   const dmPhoto = byId('dm-photo');
   if(photo && dmPhoto) dmPhoto.src = `./${photo}`;
-  const dmUrl = state.config.emergencyContact?.url || 'https://wa.me/message/ENKDSAHYHIGAN1';
+  if(dmPhoto) dmPhoto.alt = coach.name ? `Fotografía de ${coach.name}` : 'Fotografía del Distrital Coach';
+
+  const dmUrl = state.config.emergencyContact?.url || '';
   const dmContact = byId('dm-contact');
   const dmPhotoLink = byId('dm-photo-link');
-  if(dmContact) dmContact.href = dmUrl;
+  if(dmContact && dmUrl) dmContact.href = dmUrl;
   if(dmPhotoLink && photo){
     dmPhotoLink.dataset.imageViewer = `./${photo}`;
-    dmPhotoLink.dataset.imageTitle = 'Kike DM';
+    dmPhotoLink.dataset.imageTitle = coach.name || coach.role || '';
   }
   updateClock();
   setInterval(updateClock, 60000);

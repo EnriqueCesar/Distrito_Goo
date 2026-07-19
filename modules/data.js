@@ -24,6 +24,7 @@ export async function loadData(){
   );
   const loaded = Object.fromEntries(entries);
   state.config = loaded.config;
+  state.identity = loaded.identity;
   state.categorias = loaded.categorias;
   state.herramientas = loaded.herramientas.sort((a,b) => a.orden - b.orden);
   state.dashboard = loaded.dashboard;

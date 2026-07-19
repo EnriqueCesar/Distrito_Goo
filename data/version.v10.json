@@ -1,5 +1,5 @@
 {
-  "version": "16.3.0",
+  "version": "16.4.0",
   "releaseDate": "2026-07-14",
   "changes": [
     "Fotografía del DM ampliada y contacto directo reducido a un icono discreto.",
@@ -10,6 +10,7 @@
   "notes": "Actualización visual compatible con la estructura y el CMS actuales.",
   "fecha": "2026-07-14",
   "descripcion": "Mejora de experiencia visual, visor de imágenes y acceso a Compras.",
-  "updatedAt": "2026-07-14",
-  "runtimeFix": "v16.3.0"
+  "updatedAt": "2026-07-19",
+  "runtimeFix": "v16.3.0",
+  "name": "Juntémonos Más"
 }

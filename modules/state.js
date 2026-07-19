@@ -2,6 +2,7 @@ import { getJSON } from './storage.js';
 
 export const DATA = {
   config: './data/config.v10.json',
+  identity: './data/identity.json',
   categorias: './data/categorias.v10.json',
   herramientas: './data/herramientas.v10.json',
   dashboard: './data/dashboard.v10.json',

@@ -1225,5 +1225,63 @@
       "workvivo"
     ],
     "estado": "activo"
+  },
+  {
+    "id": "evidencia-antes-despues",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "App",
+    "icono": "↔️",
+    "nombre": "Evidencia Antes / Después",
+    "tipo": "web",
+    "url": "https://enriquecesar.github.io/Estandar_Max-Min/",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "Documenta y compara evidencias operativas antes y después de cada intervención.",
+    "favorito": true,
+    "orden": 12.6,
+    "keywords": [
+      "antes",
+      "app",
+      "comparar",
+      "despues",
+      "evidencia",
+      "estandar",
+      "operacion",
+      "seguimiento",
+      "web"
+    ],
+    "estado": "activo"
+  },
+  {
+    "id": "calculadora-ritmo",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "App",
+    "icono": "⏱️",
+    "nombre": "Calculadora de Ritmo",
+    "tipo": "web",
+    "url": "https://enriquecesar.github.io/Calculadora_Ritmo/",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "Mide el ritmo de producción de bebidas durante observaciones en tienda.",
+    "favorito": true,
+    "orden": 12.7,
+    "keywords": [
+      "app",
+      "bebidas",
+      "calculadora",
+      "observacion",
+      "operacion",
+      "produccion",
+      "ritmo",
+      "tienda",
+      "web"
+    ],
+    "estado": "activo"
   }
 ]
