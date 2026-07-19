@@ -18,12 +18,5 @@
       "#GreenApronService",
       "#DistritoKike"
     ]
-  },
-  "coach": {
-    "hoverName": "Enrique César",
-    "hoverRole": "Distrital Coach",
-    "showText": false,
-    "contactEnabled": true,
-    "contactUrl": "https://wa.me/message/ENKDSAHYHIGAN1"
   }
 }

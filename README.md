@@ -1,4 +1,4 @@
-# Distrito Goo · Fase 2 Web/PWA + Python
+# Distrito Goo — Fase 3
 
 Distrito Goo continúa siendo una PWA 100% estática para GitHub Pages. Python se utiliza únicamente durante auditoría y compilación para validar el CMS y generar JSON; no forma parte del runtime ni requiere servidor.
 
@@ -36,3 +36,7 @@ python tools/audit_static.py
 Publicar el contenido de la raíz de `main` mediante **Deploy from a branch**. Conservar `.nojekyll`, las rutas relativas `./` y todos los archivos incluidos en `APP_SHELL`.
 
 Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v18.0.0-python-phase-2`.
+
+
+## Fase 3
+Inicio consolidado sin tarjeta del District Coach, PWA v19 y depuración segura de recursos exclusivos. Consulta `reports/FASE_3_RESUMEN.md`.

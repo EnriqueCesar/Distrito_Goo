@@ -5,11 +5,5 @@
   "org": "Centro Norte",
   "modoVisual": "green_apron_dashboard",
   "cmsFuente": "Distrito_Go_CMS.xlsx",
-  "githubReady": true,
-  "emergencyContact": {
-    "label": "Contacto del Distrital Coach",
-    "url": "https://wa.me/message/ENKDSAHYHIGAN1",
-    "photo": "assets/photos/kike-dm.jpeg"
-  },
-  "supportVisual": "assets/photos/soporte-directo.jpg"
+  "githubReady": true
 }

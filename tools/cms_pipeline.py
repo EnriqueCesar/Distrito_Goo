@@ -244,14 +244,7 @@ def build(root: Path, sheets: dict[str, list[dict[str, Any]]]) -> list[Path]:
                 "featured": True,
             },
             "hashtags": old_identity.get("hero", {}).get("hashtags", ["#GreenApronService", "#DistritoKike"]),
-        },
-        "coach": {
-            "hoverName": identity_rows.get("coach.name", {}).get("Valor", ""),
-            "hoverRole": identity_rows.get("coach.role", {}).get("Valor", ""),
-            "showText": old_identity.get("coach", {}).get("showText", False),
-            "contactEnabled": old_identity.get("coach", {}).get("contactEnabled", True),
-            "contactUrl": old_identity.get("coach", {}).get("contactUrl", ""),
-        },
+        }
     }
 
     bt, ss, tbw = raw["BT"], raw["SS"], raw["TBW"]

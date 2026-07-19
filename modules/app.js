@@ -67,7 +67,6 @@ function renderHeader(){
   setText('app-title', state.config.appName);
 
   const campaign = state.identity?.hero?.campaign || {};
-  const coach = state.identity?.coach || {};
   setText('hero-title', getPartnerGreeting());
   setText('hero-campaign-primary', campaign.primary || '');
   setText('hero-campaign-accent', campaign.accent || '');
@@ -81,19 +80,6 @@ function renderHeader(){
     campaignEl.style.setProperty('--campaign-accent', campaign.accentColor || '#111111');
   }
 
-  const photo = state.config.emergencyContact?.photo;
-  const dmPhoto = byId('dm-photo');
-  const hoverName = coach.hoverName || 'District Manager';
-  const hoverRole = coach.hoverRole || 'DM';
-  if(photo && dmPhoto) dmPhoto.src = `./${photo}`;
-  if(dmPhoto) dmPhoto.alt = `Abrir contacto con ${hoverName}`;
-
-  const dmUrl = coach.contactEnabled === false ? '' : (coach.contactUrl || state.config.emergencyContact?.url || '');
-  const dmContact = byId('dm-contact');
-  if(dmContact){
-    if(dmUrl) dmContact.href = dmUrl;
-    dmContact.setAttribute('aria-label', `Abrir contacto directo con ${hoverName}, ${hoverRole}`);
-  }
   updateClock();
   setInterval(updateClock, 60000);
 }

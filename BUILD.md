@@ -1,4 +1,4 @@
-# Build y despliegue
+# Build y despliegue — Fase 3
 
 ```bash
 python -m pip install -r requirements.txt
@@ -10,4 +10,4 @@ find modules -name '*.js' -print0 | xargs -0 -n1 node --check
 node --check sw.js
 ```
 
-Publicar la raíz del repositorio desde `main` con **GitHub Pages · Deploy from a branch**. Conservar `.nojekyll`. La nueva versión del service worker se instala en espera y sólo se activa cuando el usuario selecciona **Actualizar**.
+Publicar la raíz del repositorio desde `main` con **GitHub Pages · Deploy from a branch** y conservar `.nojekyll`. El service worker instala la nueva versión en espera y sólo se activa cuando el usuario selecciona **Actualizar**.

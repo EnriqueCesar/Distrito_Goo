@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v18.0.0-python-phase-2';
+const CACHE_NAME = 'distrito-go-v19.0.0-phase-3';
 const APP_SHELL = [
   './',
   './index.html',
@@ -44,11 +44,9 @@ const APP_SHELL = [
   './assets/photos/concurso_venta_dona_julio.jpeg',
   './assets/photos/cortado_leche.jpeg',
   './assets/photos/hugo-barista-champion.jpeg',
-  './assets/photos/kike-dm.jpeg',
   './assets/photos/limpieza_back.jpeg',
   './assets/photos/maquila_abril.png',
   './assets/photos/pinpad-atb-cambios.png',
-  './assets/photos/soporte-directo.jpg',
   './assets/photos/store-walk.png',
   './assets/photos/verificacion-cafe-espresso.png',
   './assets/photos/y-si-si-inicio.jpeg',

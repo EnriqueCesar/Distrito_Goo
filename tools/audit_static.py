@@ -54,5 +54,15 @@ for path in ROOT.rglob("*"):
     if path.is_file() and path.stat().st_size == 0:
         WARNINGS.append(f"Archivo vacío: {path.relative_to(ROOT)}")
 
+
+# Fase 3: la vista principal no debe recuperar recursos o eventos exclusivos del perfil.
+for forbidden in (
+    'assets/photos/kike-dm.jpeg', 'dm-contact', 'dm-photo', 'dm-profile-strip',
+    'emergencyContact', 'identity?.coach',
+):
+    for path in [ROOT / 'index.html', ROOT / 'sw.js', ROOT / 'modules' / 'app.js', ROOT / 'data' / 'config.v10.json']:
+        if path.exists() and forbidden in path.read_text(encoding='utf-8'):
+            ERRORS.append(f'Referencia obsoleta de District Coach en {path.relative_to(ROOT)}: {forbidden}')
+
 print(json.dumps({"ok": not ERRORS, "errors": ERRORS, "warnings": WARNINGS}, ensure_ascii=False, indent=2))
 sys.exit(1 if ERRORS else 0)
