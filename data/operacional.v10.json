@@ -1,15 +1,6 @@
 {
   "eventos": [
     {
-      "Fecha Inicio": "2026-07-03",
-      "Fecha Fin": "2026-08-10",
-      "Actividad": "🏆 Concursos activos | Ranking de Venta",
-      "Contexto / Recordatorio": "Conoce nuestros dos concursos activos. Consulta el ranking diario de Dona Grab & Go y Concurso General para enfocar el resultado de tienda.",
-      "Link": "https://enriquecesar.github.io/concurso_venta/",
-      "Imagen": "🏆",
-      "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
-    },
-    {
       "Fecha Inicio": "2026-06-23",
       "Fecha Fin": "2026-07-15",
       "Actividad": "🧹 Limpieza Backs",
@@ -33,7 +24,7 @@
       "Actividad": "💰 Pagos Especiales 1ª Qna Julio",
       "Contexto / Recordatorio": "Envío de pagos 2 de Julio antes de 10:00 am",
       "Imagen": "📅",
-      "Link": "https://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_com_mx/IQAWlrDMvujoTLBa8bu_Ef8XAb-FA5lnqemXuxv1yGvbVVg?e=h0NGOH",
+      "Link": "https://grupovips-my.sharepoint.com/:x:/g/personal/enrique_cesar_starbucks_co...",
       "ImagenPath": ""
     },
     {
@@ -42,22 +33,22 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de junio.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-31",
       "Actividad": "🎓 Recertificación Shift Supervisor",
-      "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas aprox.).",
+      "Contexto / Recordatorio": "Recertificación obligatoria para SS, SMT, SM, DM y RDO en Attensi (4 horas ap...",
       "Imagen": "🎓",
-      "Link": "",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-07-10",
-      "Actividad": "💳 Inventario TPV y Pin Pads Q3",
+      "Actividad": "💳 Inventario Pin Pad y TPV Q3",
       "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
       "Imagen": "💳",
       "Link": "",
@@ -65,21 +56,30 @@
     },
     {
       "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-05",
+      "Actividad": "🛡️ AutoICA",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos...",
+      "Imagen": "🛡️",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-07-01",
       "Fecha Fin": "2026-08-02",
-      "Actividad": "📖 Conversaciones de Desempeño y Desarrollo Q3",
-      "Contexto / Recordatorio": "Seguimiento y/o impulso a los objetivos de PDP. Periodo del 1 de julio al 2 de agosto.",
+      "Actividad": "📖 CDD Q3",
+      "Contexto / Recordatorio": "Conversaciones de desempeño Q3",
       "Imagen": "📖",
       "Link": "",
       "ImagenPath": "assets/photos/cdd_3Q_2026.png"
     },
     {
       "Fecha Inicio": "2026-07-01",
-      "Fecha Fin": "2026-07-05",
-      "Actividad": "🛡️ AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
-      "Imagen": "🛡️",
-      "Link": "Abrir revisión AutoICA",
-      "ImagenPath": ""
+      "Fecha Fin": "2026-07-31",
+      "Actividad": "🍩 Dona Grab & Go",
+      "Contexto / Recordatorio": "Enfocar venta incremental vs Semana 26.",
+      "Imagen": "🍩",
+      "Link": "",
+      "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
     },
     {
       "Fecha Inicio": "2026-07-13",
@@ -105,7 +105,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de julio.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
@@ -120,45 +120,18 @@
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
+      "Actividad": "🥥 Coconut Ube Platform",
+      "Contexto / Recordatorio": "Lanzamiento de Coconut Ube Latte y Frappuccino.",
+      "Imagen": "🥥",
+      "Link": "",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "☕ Aerocano",
       "Contexto / Recordatorio": "Nueva plataforma de Espresso aireado.",
       "Imagen": "☕",
-      "Link": "",
-      "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-07-20",
-      "Fecha Fin": "2026-08-16",
-      "Actividad": "⭐ Starbucks Rewards Summer",
-      "Contexto / Recordatorio": "Promociones diferenciadas por día en Starbucks Rewards.",
-      "Imagen": "⭐",
-      "Link": "",
-      "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-07-20",
-      "Fecha Fin": "2026-08-30",
-      "Actividad": "🌍 Kati Kati Blend",
-      "Contexto / Recordatorio": "Café de temporada para Retail y Coffee Experience.",
-      "Imagen": "🌍",
-      "Link": "",
-      "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-07-20",
-      "Fecha Fin": "2026-08-30",
-      "Actividad": "🍩 Dona Ube",
-      "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-      "Imagen": "🍩",
-      "Link": "",
-      "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-07-20",
-      "Fecha Fin": "2026-08-30",
-      "Actividad": "🍰 Cheesecake Brulée de Limón",
-      "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
-      "Imagen": "🍰",
       "Link": "",
       "ImagenPath": ""
     },
@@ -183,15 +156,6 @@
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
-      "Actividad": "🥥 Coconut Ube Platform",
-      "Contexto / Recordatorio": "Lanzamiento de Coconut Ube Latte y Frappuccino.",
-      "Imagen": "🥥",
-      "Link": "",
-      "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-07-20",
-      "Fecha Fin": "2026-08-30",
       "Actividad": "🥪 Nueva Focaccia",
       "Contexto / Recordatorio": "Innovación Food. Revisar producción y disponibilidad.",
       "Imagen": "🥪",
@@ -201,9 +165,9 @@
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
-      "Actividad": "🥭 Mango Enchilado",
-      "Contexto / Recordatorio": "Innovación Retail Attach para incrementar ticket.",
-      "Imagen": "🥭",
+      "Actividad": "🍩 Dona Ube",
+      "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
+      "Imagen": "🍩",
       "Link": "",
       "ImagenPath": ""
     },
@@ -219,9 +183,45 @@
     {
       "Fecha Inicio": "2026-07-20",
       "Fecha Fin": "2026-08-30",
+      "Actividad": "🍰 Cheesecake Brulée de Limón",
+      "Contexto / Recordatorio": "Nuevo producto de temporada Food.",
+      "Imagen": "🍰",
+      "Link": "",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
+      "Actividad": "🥭 Mango Enchilado",
+      "Contexto / Recordatorio": "Innovación Retail Attach para incrementar ticket.",
+      "Imagen": "🥭",
+      "Link": "",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
       "Actividad": "🧀 Snack Box",
       "Contexto / Recordatorio": "Nueva opción Retail Lobby.",
       "Imagen": "🧀",
+      "Link": "",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-30",
+      "Actividad": "🌍 Kati Kati Blend",
+      "Contexto / Recordatorio": "Café de temporada para Retail y Coffee Experience.",
+      "Imagen": "🌍",
+      "Link": "",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-07-20",
+      "Fecha Fin": "2026-08-16",
+      "Actividad": "⭐ Starbucks Rewards Summer",
+      "Contexto / Recordatorio": "Promociones diferenciadas por día en Starbucks Rewards.",
+      "Imagen": "⭐",
       "Link": "",
       "ImagenPath": ""
     },
@@ -238,9 +238,9 @@
       "Fecha Inicio": "2026-08-01",
       "Fecha Fin": "2026-08-05",
       "Actividad": "🛡️ AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos...",
       "Imagen": "🛡️",
-      "Link": "Abrir revisión AutoICA",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "ImagenPath": ""
     },
     {
@@ -249,16 +249,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de julio.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
-      "ImagenPath": ""
-    },
-    {
-      "Fecha Inicio": "2026-08-03",
-      "Fecha Fin": "2026-08-09",
-      "Actividad": "⬆️ Upsize sin costo adicional",
-      "Contexto / Recordatorio": "Promoción para impulsar ADTs.",
-      "Imagen": "⬆️",
-      "Link": "",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
@@ -267,6 +258,15 @@
       "Actividad": "🌟 Best Talent - Cascada DM - SM",
       "Contexto / Recordatorio": "Inicio de calibraciones y desarrollo DM-SM.",
       "Imagen": "🌟",
+      "Link": "",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-08-03",
+      "Fecha Fin": "2026-08-09",
+      "Actividad": "⬆️ Upsize sin costo adicional",
+      "Contexto / Recordatorio": "Promoción para impulsar ADTs.",
+      "Imagen": "⬆️",
       "Link": "",
       "ImagenPath": ""
     },
@@ -285,7 +285,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de agosto.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
@@ -312,16 +312,16 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de agosto.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-09-01",
       "Fecha Fin": "2026-09-05",
       "Actividad": "🛡️ AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos...",
       "Imagen": "🛡️",
-      "Link": "Abrir revisión AutoICA",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "ImagenPath": ""
     },
     {
@@ -330,7 +330,16 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de septiembre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
+      "ImagenPath": ""
+    },
+    {
+      "Fecha Inicio": "2026-09-29",
+      "Fecha Fin": "2026-09-29",
+      "Actividad": "🎤 Mujeres que Inspiran - Voces que Inspiran",
+      "Contexto / Recordatorio": "Conversaciones con líderes y desarrollo profesional.",
+      "Imagen": "🎤",
+      "Link": "",
       "ImagenPath": ""
     },
     {
@@ -339,13 +348,13 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de septiembre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-10-01",
       "Fecha Fin": "2026-10-10",
-      "Actividad": "💳 Inventario TPV y Pin Pads Q4",
+      "Actividad": "💳 Inventario Pin Pad y TPV Q4",
       "Contexto / Recordatorio": "Realiza en WOE la actualización de Pin Pad y TPVs.",
       "Imagen": "💳",
       "Link": "",
@@ -355,9 +364,9 @@
       "Fecha Inicio": "2026-10-01",
       "Fecha Fin": "2026-10-05",
       "Actividad": "🛡️ AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos...",
       "Imagen": "🛡️",
-      "Link": "Abrir revisión AutoICA",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "ImagenPath": ""
     },
     {
@@ -366,7 +375,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de octubre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
@@ -382,9 +391,9 @@
       "Fecha Inicio": "2026-11-01",
       "Fecha Fin": "2026-11-05",
       "Actividad": "🛡️ AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos...",
       "Imagen": "🛡️",
-      "Link": "Abrir revisión AutoICA",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "ImagenPath": ""
     },
     {
@@ -393,7 +402,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 31 de octubre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
@@ -402,7 +411,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de noviembre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
@@ -411,16 +420,16 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 16 al 30 de noviembre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     },
     {
       "Fecha Inicio": "2026-12-01",
       "Fecha Fin": "2026-12-05",
       "Actividad": "🛡️ AutoICA",
-      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos y asegurar el cierre antes del día 5.",
+      "Contexto / Recordatorio": "Ejecutar AutoICA de todas las tiendas. Validar evidencias, corregir hallazgos...",
       "Imagen": "🛡️",
-      "Link": "Abrir revisión AutoICA",
+      "Link": "https://ica-stage.bw-globalsolutions.com/Login.php",
       "ImagenPath": ""
     },
     {
@@ -429,7 +438,7 @@
       "Actividad": "📅 Corte de Nómina",
       "Contexto / Recordatorio": "Ejecutar y validar incidencias del periodo del 1 al 15 de diciembre.",
       "Imagen": "📅",
-      "Link": "Abrir Oracle HCM",
+      "Link": "https://ejlw.login.us2.oraclecloud.com/oam/server/obrareq.cgi?encquery%3DLK1T...",
       "ImagenPath": ""
     }
   ],
@@ -437,7 +446,7 @@
     {
       "ID": 1,
       "Actividad": "Verificación Espresso y Calidad del Café",
-      "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios en cada turno.",
+      "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra resultados y comentarios en cada turno.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Calidad",
@@ -446,7 +455,7 @@
       "Visible": true,
       "Recurso": "assets/photos/verificacion-cafe-espresso.png",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios en…"
+      "DescripcionBreve": "Valida las verificaciones de Espresso y Calidad del Café, registra resultados y comentarios en cada turno."
     },
     {
       "ID": 2,
@@ -465,7 +474,7 @@
     {
       "ID": 3,
       "Actividad": "Store Walk",
-      "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
+      "Descripción": "Realiza el recorrido diario de los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
       "Frecuencia": "Diario",
       "Prioridad": 2,
       "Categoría": "Experiencia",
@@ -474,21 +483,21 @@
       "Visible": true,
       "Recurso": "assets/photos/store-walk.png",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en…"
+      "DescripcionBreve": "Realiza el recorrido diario de los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Boo…"
     },
     {
       "ID": 4,
       "Actividad": "Protocolo de Apertura",
-      "Descripción": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desviaciones detectadas.",
+      "Descripción": "Antes de las 09:00 a.m. envía al equipo de Excelencia únicamente incidencias o desviaciones detectadas.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
       "Icono": "🌅",
       "Color": "Azul",
       "Visible": true,
-      "Recurso": "assets/photos/Rutina_apertura.jpeg",
+      "Recurso": "assets/photos/rutina_apertura.jpeg",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desviaci…"
+      "DescripcionBreve": "Antes de las 09:00 a.m. envía al equipo de Excelencia únicamente incidencias o desviaciones detectadas."
     },
     {
       "ID": 5,
@@ -521,7 +530,7 @@
     {
       "ID": 7,
       "Actividad": "Corte de Leche",
-      "Descripción": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las bolsas para evitar contaminación y desperdicio, cuidando la calidad del producto.",
+      "Descripción": "Verifica que las estaciones CBS y Espresso cuenten con tijeras asignadas y que el corte de bolsas sea el correcto para evitar contaminación, desperdicio y asegurar la calidad del producto.",
       "Frecuencia": "Diario",
       "Prioridad": 1,
       "Categoría": "Operación",
@@ -530,7 +539,7 @@
       "Visible": true,
       "Recurso": "assets/photos/cortado_leche.jpeg",
       "TipoRecurso": "imagen",
-      "DescripcionBreve": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las bo…"
+      "DescripcionBreve": "Verifica que las estaciones CBS y Espresso cuenten con tijeras asignadas y que el corte de bolsas sea el correcto par…"
     }
   ],
   "actividadesSemanales": [
@@ -539,8 +548,10 @@
       "Actividad": "WFM - Pronóstico",
       "Descripción": "Revisa y ajusta el pronóstico de volumen de la semana que se planificará dentro de 15 días.",
       "Día": "Lunes",
+      "Hora / Corte": "",
       "Icono": "📈",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     },
     {
       "ID": 2,
@@ -567,6 +578,7 @@
       "Actividad": "Gastos Oracle",
       "Descripción": "Registra y valida gastos pendientes.",
       "Día": "Lunes",
+      "Hora / Corte": "",
       "Icono": "💳",
       "Color": "Azul",
       "Link": "https://enev.login.us2.oraclecloud.com/"
@@ -576,6 +588,7 @@
       "Actividad": "Pago Gastos",
       "Descripción": "Da seguimiento al pago de gastos.",
       "Día": "Lunes",
+      "Hora / Corte": "",
       "Icono": "💰",
       "Color": "Azul",
       "Link": "https://sso.edenred.com.mx/ssov280/Account/LogOn#smodal"
@@ -585,6 +598,7 @@
       "Actividad": "Workvivo",
       "Descripción": "Realiza la publicación semanal en Workvivo.",
       "Día": "Lunes",
+      "Hora / Corte": "",
       "Icono": "📱",
       "Color": "Azul",
       "Link": "https://alsea.workvivo.us/login"
@@ -594,6 +608,7 @@
       "Actividad": "Starbucks College",
       "Descripción": "Valida el avance de cursos en Ubits.",
       "Día": "Martes",
+      "Hora / Corte": "",
       "Icono": "🎓",
       "Color": "Morado",
       "Link": "https://login.ubitslearning.com/login"
@@ -603,38 +618,47 @@
       "Actividad": "Coffee Tuesday",
       "Descripción": "Participa con los clientes en degustaciones y genera una experiencia memorable.",
       "Día": "Martes",
+      "Hora / Corte": "",
       "Icono": "☕",
-      "Color": "Verde"
+      "Color": "Verde",
+      "Link": ""
     },
     {
       "ID": 9,
       "Actividad": "WFM - Carga Inicial",
       "Descripción": "Realiza la carga inicial de horarios de la semana que se planificará dentro de 15 días.",
       "Día": "Martes",
+      "Hora / Corte": "",
       "Icono": "📅",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     },
     {
       "ID": 10,
       "Actividad": "WFM - Disponibilidades",
       "Descripción": "Actualiza disponibilidades, vacaciones, permisos y restricciones de partners.",
       "Día": "Miércoles",
+      "Hora / Corte": "",
       "Icono": "👥",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     },
     {
       "ID": 11,
       "Actividad": "WFM - Ajustes",
       "Descripción": "Revisa los horarios generados por Kronos, realiza ajustes operativos y agrega actividades Non-Coverage.",
       "Día": "Jueves",
+      "Hora / Corte": "",
       "Icono": "⚙️",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     },
     {
       "ID": 12,
       "Actividad": "Comunicado Semanal",
       "Descripción": "Revisa el comunicado semanal y comparte los puntos relevantes con el equipo.",
       "Día": "Viernes",
+      "Hora / Corte": "",
       "Icono": "📢",
       "Color": "Naranja",
       "Link": "https://capacitacion.alsea.net/course/view.php?id=29227"
@@ -644,24 +668,30 @@
       "Actividad": "WFM - Revisión DM",
       "Descripción": "El DM revisa los horarios y comunica observaciones o ajustes requeridos.",
       "Día": "Viernes",
+      "Hora / Corte": "",
       "Icono": "✅",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     },
     {
       "ID": 14,
       "Actividad": "WFM - Publicación",
       "Descripción": "Realiza las correcciones finales y publica los horarios en Humanet antes del domingo.",
       "Día": "Sábado",
+      "Hora / Corte": "",
       "Icono": "🚀",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     },
     {
       "ID": 15,
       "Actividad": "WFM - Validación Final",
       "Descripción": "Verifica que los horarios publicados sean correctos y listos para iniciar la semana.",
       "Día": "Domingo",
+      "Hora / Corte": "",
       "Icono": "📤",
-      "Color": "Azul"
+      "Color": "Azul",
+      "Link": ""
     }
   ],
   "dutyRoster": [
@@ -768,7 +798,7 @@
       "Orden": 1,
       "Actividad": "Pisos y drenajes",
       "Icono": "🧹",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Lunes",
@@ -777,7 +807,7 @@
       "Orden": 2,
       "Actividad": "Horno",
       "Icono": "🔥",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Lunes",
@@ -786,7 +816,7 @@
       "Orden": 3,
       "Actividad": "Show Case",
       "Icono": "🥐",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Lunes",
@@ -795,7 +825,7 @@
       "Orden": 4,
       "Actividad": "Caducidades",
       "Icono": "📅",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Lunes",
@@ -804,7 +834,7 @@
       "Orden": 5,
       "Actividad": "Grab & Go (<7°C)",
       "Icono": "🥪",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Lunes",
@@ -813,7 +843,7 @@
       "Orden": 6,
       "Actividad": "Temperaturas",
       "Icono": "❄️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Lunes",
@@ -822,7 +852,7 @@
       "Orden": 7,
       "Actividad": "Mercadotecnia y Rótulos",
       "Icono": "🏷️",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Lunes",
@@ -831,7 +861,7 @@
       "Orden": 8,
       "Actividad": "Alérgenos",
       "Icono": "⚠️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Lunes",
@@ -840,7 +870,7 @@
       "Orden": 9,
       "Actividad": "Ventilas y Cristales",
       "Icono": "✨",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Martes",
@@ -849,7 +879,7 @@
       "Orden": 1,
       "Actividad": "Productos Químicos",
       "Icono": "🧴",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -858,7 +888,7 @@
       "Orden": 2,
       "Actividad": "Sanitizante (200-300 ppm)",
       "Icono": "🫧",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -867,7 +897,7 @@
       "Orden": 3,
       "Actividad": "Lavado de Manos",
       "Icono": "🖐️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -876,7 +906,7 @@
       "Orden": 4,
       "Actividad": "Duty Roster y Registros",
       "Icono": "📋",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -885,7 +915,7 @@
       "Orden": 5,
       "Actividad": "Control de Plagas",
       "Icono": "🐭",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -894,7 +924,7 @@
       "Orden": 6,
       "Actividad": "Caducidades y Temperaturas",
       "Icono": "🌡️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -903,7 +933,7 @@
       "Orden": 7,
       "Actividad": "Salud e Higiene",
       "Icono": "❤️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -912,7 +942,7 @@
       "Orden": 8,
       "Actividad": "Lobby",
       "Icono": "🪑",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Martes",
@@ -921,7 +951,7 @@
       "Orden": 9,
       "Actividad": "Sanitarios",
       "Icono": "🚻",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Martes",
@@ -930,7 +960,7 @@
       "Orden": 10,
       "Actividad": "Condiment Bar",
       "Icono": "🥛",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Martes",
@@ -939,7 +969,7 @@
       "Orden": 11,
       "Actividad": "Terraza y Acceso",
       "Icono": "🌳",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Miércoles",
@@ -948,7 +978,7 @@
       "Orden": 1,
       "Actividad": "Almacenaje",
       "Icono": "📦",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Miércoles",
@@ -957,7 +987,7 @@
       "Orden": 2,
       "Actividad": "Máquina de Hielo",
       "Icono": "🧊",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Miércoles",
@@ -966,7 +996,7 @@
       "Orden": 3,
       "Actividad": "Lavado de Platos",
       "Icono": "🍽️",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Miércoles",
@@ -975,7 +1005,7 @@
       "Orden": 4,
       "Actividad": "Sanitizadora",
       "Icono": "🫧",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Miércoles",
@@ -984,7 +1014,7 @@
       "Orden": 5,
       "Actividad": "Cubo Key",
       "Icono": "🪣",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Miércoles",
@@ -993,7 +1023,7 @@
       "Orden": 6,
       "Actividad": "Refrigeradores",
       "Icono": "❄️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Miércoles",
@@ -1002,7 +1032,7 @@
       "Orden": 7,
       "Actividad": "Congeladores",
       "Icono": "🧊",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Miércoles",
@@ -1011,7 +1041,7 @@
       "Orden": 8,
       "Actividad": "Hábitos Partners",
       "Icono": "👥",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Jueves",
@@ -1020,7 +1050,7 @@
       "Orden": 1,
       "Actividad": "Barra Espresso / Mastrena",
       "Icono": "☕",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Jueves",
@@ -1029,7 +1059,7 @@
       "Orden": 2,
       "Actividad": "Refrigerador Espresso",
       "Icono": "❄️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Jueves",
@@ -1038,7 +1068,7 @@
       "Orden": 3,
       "Actividad": "Jarras y Leches",
       "Icono": "🥛",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Jueves",
@@ -1047,7 +1077,7 @@
       "Orden": 4,
       "Actividad": "Jarabes y Toppings",
       "Icono": "🍯",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Jueves",
@@ -1056,7 +1086,7 @@
       "Orden": 5,
       "Actividad": "Toallas Sanitizantes",
       "Icono": "🧽",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Jueves",
@@ -1065,7 +1095,7 @@
       "Orden": 6,
       "Actividad": "Piso, Paredes y Techo",
       "Icono": "🧹",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Jueves",
@@ -1074,7 +1104,7 @@
       "Orden": 7,
       "Actividad": "Lobby",
       "Icono": "🪑",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Jueves",
@@ -1083,7 +1113,7 @@
       "Orden": 8,
       "Actividad": "Sanitarios",
       "Icono": "🚻",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Jueves",
@@ -1092,7 +1122,7 @@
       "Orden": 9,
       "Actividad": "Condiment Bar",
       "Icono": "🥛",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Jueves",
@@ -1101,7 +1131,7 @@
       "Orden": 10,
       "Actividad": "Drive Thru y Terraza",
       "Icono": "🚗",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Viernes",
@@ -1110,7 +1140,7 @@
       "Orden": 1,
       "Actividad": "Bunn / Clover",
       "Icono": "☕",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Viernes",
@@ -1119,7 +1149,7 @@
       "Orden": 2,
       "Actividad": "Café y Molienda",
       "Icono": "🌱",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Viernes",
@@ -1128,7 +1158,7 @@
       "Orden": 3,
       "Actividad": "Caducidades",
       "Icono": "📅",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Viernes",
@@ -1137,7 +1167,7 @@
       "Orden": 4,
       "Actividad": "Smallwares",
       "Icono": "🧼",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Viernes",
@@ -1146,7 +1176,7 @@
       "Orden": 5,
       "Actividad": "Barra Posterior",
       "Icono": "🧹",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Sábado",
@@ -1155,7 +1185,7 @@
       "Orden": 1,
       "Actividad": "Licuadoras",
       "Icono": "🥤",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Sábado",
@@ -1164,7 +1194,7 @@
       "Orden": 2,
       "Actividad": "Máquina de Hielo",
       "Icono": "🧊",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Sábado",
@@ -1173,7 +1203,7 @@
       "Orden": 3,
       "Actividad": "Bases y Toppings",
       "Icono": "🍓",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Sábado",
@@ -1182,7 +1212,7 @@
       "Orden": 4,
       "Actividad": "Temperaturas",
       "Icono": "❄️",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Sábado",
@@ -1191,7 +1221,7 @@
       "Orden": 5,
       "Actividad": "Barra CBS",
       "Icono": "🧽",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1200,7 +1230,7 @@
       "Orden": 1,
       "Actividad": "Exterior",
       "Icono": "🌳",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1209,7 +1239,7 @@
       "Orden": 2,
       "Actividad": "Terraza",
       "Icono": "🌿",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1218,7 +1248,7 @@
       "Orden": 3,
       "Actividad": "Entrada",
       "Icono": "🚪",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1227,7 +1257,7 @@
       "Orden": 4,
       "Actividad": "Lobby",
       "Icono": "🪑",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1236,7 +1266,7 @@
       "Orden": 5,
       "Actividad": "Sanitarios",
       "Icono": "🚻",
-      "Crítico": "TRUE"
+      "Crítico": true
     },
     {
       "Día": "Domingo",
@@ -1245,7 +1275,7 @@
       "Orden": 6,
       "Actividad": "Condiment Bar",
       "Icono": "🥛",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1254,7 +1284,7 @@
       "Orden": 7,
       "Actividad": "Menús y Bocina",
       "Icono": "📢",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1263,7 +1293,7 @@
       "Orden": 8,
       "Actividad": "Ventanilla",
       "Icono": "🚗",
-      "Crítico": "FALSE"
+      "Crítico": false
     },
     {
       "Día": "Domingo",
@@ -1272,7 +1302,7 @@
       "Orden": 9,
       "Actividad": "Presentación Exterior",
       "Icono": "🌟",
-      "Crítico": "FALSE"
+      "Crítico": false
     }
   ],
   "checklistApertura": [
@@ -1367,7 +1397,7 @@
         "HRBP": "Iván Macías Guido",
         "RD": "Jorge Antonio Alcantar Aguiar",
         "GB180": "Completo",
-        "ANTIGÜEDAD": 28.166666666666668,
+        "ANTIGÜEDAD": 28.16666666666667,
         "JORNADA": "32R",
         "ESTATUS ALTA": "Alta julio"
       },
@@ -1383,7 +1413,7 @@
         "HRBP": "Iván Macías Guido",
         "RD": "Jorge Antonio Alcantar Aguiar",
         "GB180": "Completo",
-        "ANTIGÜEDAD": 16.733333333333334,
+        "ANTIGÜEDAD": 16.73333333333333,
         "JORNADA": "32R",
         "ESTATUS ALTA": "Alta julio"
       },
@@ -1415,7 +1445,7 @@
         "HRBP": "Iván Macías Guido",
         "RD": "Jorge Antonio Alcantar Aguiar",
         "GB180": "Completo",
-        "ANTIGÜEDAD": 20.466666666666665,
+        "ANTIGÜEDAD": 20.46666666666667,
         "JORNADA": "32R",
         "ESTATUS ALTA": "Alta julio"
       },
@@ -1431,7 +1461,7 @@
         "HRBP": "Iván Macías Guido",
         "RD": "Jorge Antonio Alcantar Aguiar",
         "GB180": "Completo",
-        "ANTIGÜEDAD": 27.066666666666666,
+        "ANTIGÜEDAD": 27.06666666666667,
         "JORNADA": "40R",
         "ESTATUS ALTA": "Alta julio"
       }
@@ -1817,10 +1847,12 @@
       }
     ]
   },
-  "wfm": {
-    "regla": ""
-  },
-  "cmsFuente": "Distrito_Go_CMS(41).xlsx",
+  "wfm": [
+    {
+      "Regla WFM": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
+    }
+  ],
+  "cmsFuente": "Distrito_Go_CMS.xlsx",
   "informativo": [
     {
       "ID": 1,
@@ -1835,21 +1867,7 @@
       "Recurso": "assets/photos/maquila_abril.png",
       "TipoRecurso": "imagen",
       "DescripcionBreve": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)"
-    },
-    {
-      "ID": 2,
-      "Actividad": "Ubits",
-      "Descripción": "Accede y da Seguimiento a tu Kardex",
-      "Frecuencia": "Diario",
-      "Prioridad": 1,
-      "Categoría": "Capacitacion",
-      "Icono": "ℹ️",
-      "Color": "",
-      "Visible": false,
-      "Recurso": "",
-      "TipoRecurso": "",
-      "DescripcionBreve": "Accede y da Seguimiento a tu Kardex"
     }
   ],
-  "wfmRegla": ""
+  "wfmRegla": "📅 WFM | Planeación Inteligente\n\nLa programación de horarios se realiza con 15 días de anticipación respecto a la semana de operación.\n\n━━━━━━━━━━━━━━━━━━━━\n\n📆 Hoy\n{DIA_ACTUAL}, {FECHA_ACTUAL}\n\n🎯 Semana en Planeación\nSemana {SEMANA}\n\n📅 {FECHA_INICIO} al {FECHA_FIN}\n\n━━━━━━━━━━━━━━━━━━━━\n\n✅ Actividad de hoy\n\n{ICONO} {ACTIVIDAD}\n\n{DESCRIPCION}\n\n━━━━━━━━━━━━━━━━━━━━\n\n⏭️ Siguiente paso\n\n{ICONO_SIGUIENTE} {ACTIVIDAD_SIGUIENTE}\n\n━━━━━━━━━━━━━━━━━━━━\n\n💡 La información se actualiza automáticamente con base en la fecha actual, mostrando siempre la semana que se encuentra en planeación."
 }

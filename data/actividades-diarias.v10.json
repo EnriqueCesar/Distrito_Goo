@@ -2,7 +2,7 @@
   {
     "ID": 1,
     "Actividad": "Verificación Espresso y Calidad del Café",
-    "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios en cada turno.",
+    "Descripción": "Valida las verificaciones de Espresso y Calidad del Café, registra resultados y comentarios en cada turno.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Calidad",
@@ -11,7 +11,7 @@
     "Visible": true,
     "Recurso": "assets/photos/verificacion-cafe-espresso.png",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Valida las verificaciones de Espresso y Calidad del Café, registra los resultados y comparte comentarios …"
+    "DescripcionBreve": "Valida las verificaciones de Espresso y Calidad del Café, registra resultados y comentarios en cada turno."
   },
   {
     "ID": 2,
@@ -30,7 +30,7 @@
   {
     "ID": 3,
     "Actividad": "Store Walk",
-    "Descripción": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
+    "Descripción": "Realiza el recorrido diario de los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Book.",
     "Frecuencia": "Diario",
     "Prioridad": 2,
     "Categoría": "Experiencia",
@@ -39,21 +39,21 @@
     "Visible": true,
     "Recurso": "assets/photos/store-walk.png",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Realiza el recorrido diario enfocado en los 4 Estándares, identifica oportunidades y documenta acciones e…"
+    "DescripcionBreve": "Realiza el recorrido diario de los 4 Estándares, identifica oportunidades y documenta acciones en el Daily Record Boo…"
   },
   {
     "ID": 4,
     "Actividad": "Protocolo de Apertura",
-    "Descripción": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desviaciones detectadas.",
+    "Descripción": "Antes de las 09:00 a.m. envía al equipo de Excelencia únicamente incidencias o desviaciones detectadas.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Operación",
     "Icono": "🌅",
     "Color": "Azul",
     "Visible": true,
-    "Recurso": "assets/photos/Rutina_apertura.jpeg",
+    "Recurso": "assets/photos/rutina_apertura.jpeg",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Antes de las 09:00 a.m. envía el reporte al equipo de Excelencia. Reporta únicamente incidencias o desvia…"
+    "DescripcionBreve": "Antes de las 09:00 a.m. envía al equipo de Excelencia únicamente incidencias o desviaciones detectadas."
   },
   {
     "ID": 5,
@@ -86,7 +86,7 @@
   {
     "ID": 7,
     "Actividad": "Corte de Leche",
-    "Descripción": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las bolsas para evitar contaminación y desperdicio, cuidando la calidad del producto.",
+    "Descripción": "Verifica que las estaciones CBS y Espresso cuenten con tijeras asignadas y que el corte de bolsas sea el correcto para evitar contaminación, desperdicio y asegurar la calidad del producto.",
     "Frecuencia": "Diario",
     "Prioridad": 1,
     "Categoría": "Operación",
@@ -95,6 +95,6 @@
     "Visible": true,
     "Recurso": "assets/photos/cortado_leche.jpeg",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Verifica que cada estación CBS y Espresso cuente con tijeras asignadas. Realiza el corte correcto de las …"
+    "DescripcionBreve": "Verifica que las estaciones CBS y Espresso cuenten con tijeras asignadas y que el corte de bolsas sea el correcto par…"
   }
 ]

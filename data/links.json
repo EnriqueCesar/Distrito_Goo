@@ -10,7 +10,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta tu plan en tiempo real y mantén actualizado tu tablero de trabajo.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 1
   },
   {
@@ -24,7 +24,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Diseña, ajusta y valida layouts operativos.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 2
   },
   {
@@ -38,7 +38,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta estructura, tiendas e indicadores de la Región Centro Norte.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 3
   },
   {
@@ -52,7 +52,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Da seguimiento semanal a compromisos, avances y planes de acción.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 4
   },
   {
@@ -66,7 +66,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Optimiza inventarios ideales, estaciones y control de costo.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 5
   },
   {
@@ -80,7 +80,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta e imprime planes por WeekPart, DayPart y dotación.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 6
   },
   {
@@ -94,7 +94,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta aniversarios, cumpleaños e información de Partners.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 7
   },
   {
@@ -108,7 +108,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta históricos, tendencias y oportunidades por tienda.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 8
   },
   {
@@ -122,7 +122,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Busca artículos, códigos y mercancía de forma rápida.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 9
   },
   {
@@ -136,7 +136,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Analiza faltantes, sobrantes y variaciones semanales.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 10
   },
   {
@@ -150,7 +150,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Analiza WFM, productividad y códigos de pago.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 11
   },
   {
@@ -164,7 +164,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta el reporte regional de KPIs.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 12
   },
   {
@@ -178,7 +178,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Revisa hallazgos, System Check y seguimiento operativo.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 13
   },
   {
@@ -192,7 +192,7 @@
     "Package": "com.inzpiral.neofrogmi",
     "PlayStore": "https://play.google.com/store/apps/details?id=com.inzpiral.neofrogmi",
     "Notas": "Enfoca tus System Checks, corrige hallazgos y mejora la ejecución.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 14
   },
   {
@@ -206,7 +206,7 @@
     "Package": "com.alsea.appmanager",
     "PlayStore": "https://play.google.com/store/apps/details?id=com.alsea.appmanager",
     "Notas": "Abre el portal central de herramientas operativas.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 15
   },
   {
@@ -220,7 +220,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta tiempos operativos de tiendas Drive Thru.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 16
   },
   {
@@ -234,7 +234,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Realiza y da seguimiento a tu AutoICA mensual.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 17
   },
   {
@@ -248,7 +248,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Monitorea indicadores de Experiencia del Cliente.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 18
   },
   {
@@ -262,7 +262,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Accede a reportes e información estratégica.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 19
   },
   {
@@ -276,7 +276,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta avances de capacitación y pendientes del equipo.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 20
   },
   {
@@ -290,7 +290,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Plataforma de aprendizaje para Partners.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 21
   },
   {
@@ -304,7 +304,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Completa cursos pendientes y mantén actualizado tu Kardex.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 22
   },
   {
@@ -318,7 +318,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Coaching, desarrollo y conversaciones de desempeño.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 23
   },
   {
@@ -332,7 +332,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta desempeño y seguimiento de cédula de tienda.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 24
   },
   {
@@ -346,7 +346,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta campañas vigentes, materiales y comunicados.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 25
   },
   {
@@ -360,7 +360,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Accede a materiales POP y recursos visuales.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 26
   },
   {
@@ -374,7 +374,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Completa encuestas y escala riesgos operativos.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 27
   },
   {
@@ -388,7 +388,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Levanta tickets de soporte y da seguimiento.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 28
   },
   {
@@ -402,7 +402,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Registra incidencias críticas mediante ticket.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 29
   },
   {
@@ -416,7 +416,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Acceso seguro a plataformas.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 30
   },
   {
@@ -430,7 +430,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta información de Partners y cortes de nómina.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 31
   },
   {
@@ -444,7 +444,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta recibos y movimientos de nómina.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 32
   },
   {
@@ -458,7 +458,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Gestiona donaciones del programa Va por mi Cuenta.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 33
   },
   {
@@ -472,7 +472,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta información de Caja de Ahorro.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 34
   },
   {
@@ -486,7 +486,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta coberturas y beneficios SGMM.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 35
   },
   {
@@ -500,7 +500,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Administra la programación musical de tienda.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 36
   },
   {
@@ -514,7 +514,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Consulta y valida programación musical.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 37
   },
   {
@@ -528,7 +528,7 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Comunicación directa para apertura, riesgos y evidencias.",
-    "Favorito": true,
+    "Favorito": "Sí",
     "Orden": 38
   },
   {
@@ -542,7 +542,77 @@
     "Package": "",
     "PlayStore": "",
     "Notas": "Realiza publicaciones y comparte la cultura que vives en tienda.",
-    "Favorito": false,
+    "Favorito": "No",
     "Orden": 39
+  },
+  {
+    "Categoria": "Operación",
+    "Grupo": "App",
+    "Icono": "⇄",
+    "Nombre": "Transferencias",
+    "Tipo": "web",
+    "URL": "https://enriquecesar.github.io/Transferencia/",
+    "WebURL": "",
+    "Package": "",
+    "PlayStore": "",
+    "Notas": "Audita transferencias entre tiendas con foco operativo y conciliación rápida.",
+    "Favorito": "Sí",
+    "Orden": 12
+  },
+  {
+    "Categoria": "Operación",
+    "Grupo": "App",
+    "Icono": "🛒",
+    "Nombre": "Compras",
+    "Tipo": "web",
+    "URL": "https://enriquecesar.github.io/Compras/",
+    "WebURL": "",
+    "Package": "",
+    "PlayStore": "",
+    "Notas": "Visualiza compras, tendencias e indicadores de la Región Centro Norte.",
+    "Favorito": "Sí",
+    "Orden": 40
+  },
+  {
+    "Categoria": "Operación",
+    "Grupo": "Portal",
+    "Icono": "☕",
+    "Nombre": "Espresso Hub",
+    "Tipo": "web",
+    "URL": "https://grupovips.sharepoint.com/sites/espressohub/SitePages/CollabHome.aspx?CT=1783694337488&OR=OWA-NT-Mail&CID=10b10932-84a0-a90e-58c4-5e79588d125c&SI=NonSentItems&SLSync=F",
+    "WebURL": "",
+    "Package": "",
+    "PlayStore": "",
+    "Notas": "Consulta recursos, colaboración y contenidos operativos de Espresso Hub.",
+    "Favorito": "Sí",
+    "Orden": 4
+  },
+  {
+    "Categoria": "Operación",
+    "Grupo": "App",
+    "Icono": "↔️",
+    "Nombre": "Evidencia Antes / Después",
+    "Tipo": "web",
+    "URL": "https://enriquecesar.github.io/Estandar_Max-Min/",
+    "WebURL": "",
+    "Package": "",
+    "PlayStore": "",
+    "Notas": "Documenta y compara evidencias operativas antes y después de cada intervención.",
+    "Favorito": "Sí",
+    "Orden": 12.6
+  },
+  {
+    "Categoria": "Operación",
+    "Grupo": "App",
+    "Icono": "⏱️",
+    "Nombre": "Calculadora de Ritmo",
+    "Tipo": "web",
+    "URL": "https://enriquecesar.github.io/Calculadora_Ritmo/",
+    "WebURL": "",
+    "Package": "",
+    "PlayStore": "",
+    "Notas": "Mide el ritmo de producción de bebidas durante observaciones en tienda.",
+    "Favorito": "Sí",
+    "Orden": 12.7
   }
 ]

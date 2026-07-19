@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Auditoría estática reproducible para GitHub Pages/PWA."""
+from __future__ import annotations
+import json, re, sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+ERRORS: list[str] = []
+WARNINGS: list[str] = []
+
+for path in sorted((ROOT / "data").glob("*.json")) + [ROOT / "manifest.json"]:
+    try:
+        json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        ERRORS.append(f"JSON inválido {path.relative_to(ROOT)}: {exc}")
+
+html = (ROOT / "index.html").read_text(encoding="utf-8")
+ids = re.findall(r'\bid=["\']([^"\']+)', html)
+for value in sorted({x for x in ids if ids.count(x) > 1}):
+    ERRORS.append(f"ID HTML duplicado: {value}")
+
+# Sólo valida rutas estáticas literales. Las plantillas JS y las importaciones se
+# resuelven por archivo para evitar falsos positivos.
+def check_ref(ref: str, base: Path) -> None:
+    ref = ref.split("?", 1)[0].split("#", 1)[0]
+    if not ref or "${" in ref or ref.startswith(("http://", "https://", "data:", "#")):
+        return
+    candidate = (base / ref).resolve()
+    if ROOT not in candidate.parents and candidate != ROOT:
+        return
+    if ref.endswith("/"):
+        candidate = candidate / "index.html"
+    if not candidate.exists():
+        ERRORS.append(f"Ruta local inexistente: {ref} (desde {base.relative_to(ROOT) if base != ROOT else '.'})")
+
+for ref in re.findall(r'(?:src|href)=["\']([^"\']+)["\']', html):
+    check_ref(ref, ROOT)
+for path in sorted((ROOT / "styles").glob("*.css")):
+    for ref in re.findall(r'url\(["\']?([^"\')]+)', path.read_text(encoding="utf-8")):
+        check_ref(ref, path.parent)
+for path in sorted((ROOT / "modules").glob("*.js")):
+    text = path.read_text(encoding="utf-8")
+    for ref in re.findall(r'(?:from\s+|import\s*)["\']([^"\']+)["\']', text):
+        check_ref(ref, path.parent)
+
+shell_match = re.search(r"const APP_SHELL = \[(.*?)\];", (ROOT / "sw.js").read_text(encoding="utf-8"), re.S)
+if shell_match:
+    for ref in re.findall(r"['\"]([^'\"]+)['\"]", shell_match.group(1)):
+        check_ref(ref, ROOT)
+else:
+    ERRORS.append("No se encontró APP_SHELL en sw.js")
+
+for path in ROOT.rglob("*"):
+    if path.is_file() and path.stat().st_size == 0:
+        WARNINGS.append(f"Archivo vacío: {path.relative_to(ROOT)}")
+
+print(json.dumps({"ok": not ERRORS, "errors": ERRORS, "warnings": WARNINGS}, ensure_ascii=False, indent=2))
+sys.exit(1 if ERRORS else 0)

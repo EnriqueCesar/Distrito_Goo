@@ -4,11 +4,11 @@
     "Día": "Lunes",
     "Estaciones": "Food, Show Case",
     "Imágenes": "lunes_food.png",
+    "Color": "Naranja",
+    "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos.",
     "ImagenesPath": [
       "assets/premium/duty-roster/lunes_food.png"
     ],
-    "Color": "Naranja",
-    "Enfoque": "Seguridad alimentaria, caducidades, refrigeración y preparación de alimentos.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/lunes_food.png"
   },
@@ -17,12 +17,12 @@
     "Día": "Martes",
     "Estaciones": "PIC, Lobby",
     "Imágenes": "martes_pic.png, martes_lobby.png",
+    "Color": "Rojo / Verde",
+    "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente.",
     "ImagenesPath": [
       "assets/premium/duty-roster/martes_pic.png",
       "assets/premium/duty-roster/martes_lobby.png"
     ],
-    "Color": "Rojo / Verde",
-    "Enfoque": "Cumplimiento, seguridad alimentaria, limpieza y experiencia del cliente.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/martes_pic.png"
   },
@@ -31,11 +31,11 @@
     "Día": "Miércoles",
     "Estaciones": "BOH",
     "Imágenes": "miercoles_boh.png",
+    "Color": "Azul",
+    "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH.",
     "ImagenesPath": [
       "assets/premium/duty-roster/miercoles_boh.png"
     ],
-    "Color": "Azul",
-    "Enfoque": "Orden, limpieza profunda y seguridad alimentaria BOH.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/miercoles_boh.png"
   },
@@ -44,12 +44,12 @@
     "Día": "Jueves",
     "Estaciones": "Espresso, Lobby",
     "Imágenes": "jueves_espresso.png, jueves_lobby.png",
+    "Color": "Café / Verde",
+    "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente.",
     "ImagenesPath": [
       "assets/premium/duty-roster/jueves_espresso.png",
       "assets/premium/duty-roster/jueves_lobby.png"
     ],
-    "Color": "Café / Verde",
-    "Enfoque": "Calidad de bebidas, ejecución de barra y experiencia del cliente.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/jueves_espresso.png"
   },
@@ -58,11 +58,11 @@
     "Día": "Viernes",
     "Estaciones": "Café Filtrado",
     "Imágenes": "viernes_cafe_filtrado.png",
+    "Color": "Naranja",
+    "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food.",
     "ImagenesPath": [
       "assets/premium/duty-roster/viernes_cafe_filtrado.png"
     ],
-    "Color": "Naranja",
-    "Enfoque": "Seguimiento a seguridad alimentaria y condiciones Food.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/viernes_cafe_filtrado.png"
   },
@@ -71,11 +71,11 @@
     "Día": "Sábado",
     "Estaciones": "CBS",
     "Imágenes": "sabado_cbs.png",
+    "Color": "Azul",
+    "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa.",
     "ImagenesPath": [
       "assets/premium/duty-roster/sabado_cbs.png"
     ],
-    "Color": "Azul",
-    "Enfoque": "Equipos críticos, limpieza profunda y preparación operativa.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/sabado_cbs.png"
   },
@@ -84,12 +84,12 @@
     "Día": "Domingo",
     "Estaciones": "Lobby, Drive Thru",
     "Imágenes": "domingo_lobby.png, domingo_drive_thru.png",
+    "Color": "Verde",
+    "Enfoque": "Experiencia del cliente y apariencia general de la tienda.",
     "ImagenesPath": [
       "assets/premium/duty-roster/domingo_lobby.png",
       "assets/premium/duty-roster/domingo_drive_thru.png"
     ],
-    "Color": "Verde",
-    "Enfoque": "Experiencia del cliente y apariencia general de la tienda.",
     "Premium": true,
     "Link": "assets/premium/duty-roster/domingo_lobby.png"
   }

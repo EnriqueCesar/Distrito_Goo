@@ -5,7 +5,7 @@
     "icono": "⚙️",
     "color": "#006241",
     "descripcion": "Indicadores, reportes y herramientas para operar mejor.",
-    "contador": 20,
+    "contador": 24,
     "accent": "#00A862"
   },
   {
@@ -27,13 +27,13 @@
     "accent": "#FFB74D"
   },
   {
-    "id": "comunicacion",
-    "nombre": "Comunicación",
-    "icono": "💬",
-    "color": "#0077B6",
-    "descripcion": "Contacto directo y colaboración operativa.",
-    "contador": 2,
-    "accent": "#29B6F6"
+    "id": "soporte",
+    "nombre": "Soporte",
+    "icono": "🛡️",
+    "color": "#B3261E",
+    "descripcion": "Incidentes, accesos y soporte técnico.",
+    "contador": 4,
+    "accent": "#EF5350"
   },
   {
     "id": "servicios",
@@ -45,12 +45,12 @@
     "accent": "#A1887F"
   },
   {
-    "id": "soporte",
-    "nombre": "Soporte",
-    "icono": "🛡️",
-    "color": "#B3261E",
-    "descripcion": "Incidentes, accesos y soporte técnico.",
-    "contador": 4,
-    "accent": "#EF5350"
+    "id": "comunicacion",
+    "nombre": "Comunicación",
+    "icono": "💬",
+    "color": "#0077B6",
+    "descripcion": "Contacto directo y colaboración operativa.",
+    "contador": 2,
+    "accent": "#29B6F6"
   }
 ]

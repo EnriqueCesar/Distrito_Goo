@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "pipeline": "tools/cms_pipeline.py",
+  "source": "Distrito_Go_CMS.xlsx",
+  "generatedAt": "2026-07-19",
+  "mode": "static-build",
+  "runtimeBackendRequired": false
+}

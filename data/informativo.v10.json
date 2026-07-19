@@ -1,44 +1,16 @@
 [
   {
-    "ID": 2,
-    "Actividad": "Radar del día | ¿Y si, sí?",
-    "Descripción": "Campaña vigente. Consulta DO’S & DON’TS para escribir frases autorizadas en vasos y bolsas.",
+    "ID": 1,
+    "Actividad": "Maquila",
+    "Descripción": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)",
     "Frecuencia": "Diario",
     "Prioridad": 1,
-    "Categoría": "Informativo",
-    "Icono": "✍️",
-    "Color": "Verde",
-    "Visible": true,
-    "Recurso": "assets/photos/ysisi.jpeg",
-    "TipoRecurso": "imagen",
-    "DescripcionBreve": "Campaña vigente: frases autorizadas y cuidados de ejecución."
-  },
-  {
-    "ID": 1,
-    "Actividad": "Precio Maquila",
-    "Descripción": "Valida tus ingresos de maquila con el costo más actual (Abril-26). Consulta antes de cerrar seguimiento.",
-    "Frecuencia": "Diario",
-    "Prioridad": 2,
-    "Categoría": "Informativo",
+    "Categoría": "Operación",
     "Icono": "☕",
     "Color": "Marrón",
     "Visible": true,
     "Recurso": "assets/photos/maquila_abril.png",
     "TipoRecurso": "imagen",
-    "DescripcionBreve": "Valida ingresos de maquila con el costo Abril-26."
-  },
-  {
-    "ID": 2,
-    "Actividad": "Ubits",
-    "Descripción": "Accede y da Seguimiento a tu Kardex",
-    "Frecuencia": "Diario",
-    "Prioridad": 1,
-    "Categoría": "Capacitacion",
-    "Icono": "ℹ️",
-    "Color": "",
-    "Visible": false,
-    "Recurso": "",
-    "TipoRecurso": "",
-    "DescripcionBreve": "Accede y da Seguimiento a tu Kardex"
+    "DescripcionBreve": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)"
   }
 ]

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v16.7.0-hero-coach-refinement';
+const CACHE_NAME = 'distrito-go-v17.0.0-python-phase-1';
 const APP_SHELL = [
   './',
   './index.html',
@@ -14,6 +14,7 @@ const APP_SHELL = [
   './data/identity.json',
   './data/version.v10.json',
   './data/operacional.v10.json',
+  './data/cms-build.v1.json',
   './modules/utils.js',
   './modules/storage.js',
   './modules/state.js',

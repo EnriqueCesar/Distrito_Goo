@@ -1,16 +1,16 @@
 {
-  "version": "16.4.1",
+  "version": "17.0.0",
   "releaseDate": "2026-07-19",
   "changes": [
-    "Identidad JUNTÉMONOS MÁS y saludos dinámicos cargados desde data/identity.json.",
-    "Tarjeta del Distrital Coach ampliada, sin recorte y con contacto mediante icono discreto.",
-    "Evidencia Antes / Después y Calculadora de Ritmo integradas en herramientas.",
-    "Actualización PWA corregida con estrategia network-first y recarga automática al activar una nueva versión."
+    "Pipeline Python de compilación y validación del CMS sin backend en producción.",
+    "JSON operativos regenerados por nombre de pestaña y encabezado.",
+    "Auditoría automática de JSON, rutas, IDs HTML, JavaScript y APP_SHELL.",
+    "Caché PWA renovada manteniendo compatibilidad con GitHub Pages y modo offline."
   ],
-  "notes": "Corrección de caché para publicar cambios de forma inmediata sin alterar la lógica operativa.",
+  "notes": "Fase 1 de estabilización técnica. La experiencia, navegación, enlaces y lógica de runtime permanecen estáticos.",
   "fecha": "2026-07-19",
-  "descripcion": "Sincronización de identidad, herramientas, CMS y actualización segura de la PWA.",
+  "descripcion": "Auditoría, validación del CMS y automatización de compilación estática con Python.",
   "updatedAt": "2026-07-19",
-  "runtimeFix": "v16.4.1",
+  "runtimeFix": "v17.0.0",
   "name": "Juntémonos Más"
 }

@@ -1,35 +1,36 @@
-# Distrito Go · v16.2 Visual Accessibility Refinement
+# Distrito Goo · Fase 1 Python
 
-Versión funcional refinada sobre el proyecto existente, sin cambio de arquitectura ni eliminación de lógica.
+Distrito Goo continúa siendo una PWA 100% estática para GitHub Pages. Python se utiliza únicamente durante auditoría y compilación para validar el CMS y generar JSON; no forma parte del runtime ni requiere servidor.
 
-## Ajustes incluidos
+## Arquitectura
 
-- WFM con texto oscuro, superficies claras, jerarquía visual y cards internas legibles.
-- Categorías con contraste accesible, badge de herramientas, hover, selección activa y foco por teclado.
-- Portada simplificada: se ocultan los mensajes iniciales redundantes de herramientas y filtros, conservando Spotlight y la lógica de filtrado.
-- Card del DM reducida a fotografía, nombre y acceso a WhatsApp; la fotografía también abre el enlace configurado.
-- Navegación y tarjetas con estados de foco visibles, transiciones breves y soporte para `prefers-reduced-motion`.
-- Ajustes responsive para escritorio, tablet, Android, iPhone y modo standalone/PWA.
-- Corrección de un identificador HTML duplicado en el cierre del informativo Bearista.
-- Caché del service worker actualizado a `distrito-go-v16.2.0-visual-accessibility-refinement`.
+- `index.html`, `styles/` y `modules/`: interfaz existente.
+- `data/`: JSON estáticos consumidos por la aplicación.
+- `tools/cms_pipeline.py`: valida pestañas y encabezados del CMS y genera los JSON.
+- `tools/audit_static.py`: valida JSON, rutas locales, IDs HTML y APP_SHELL.
+- `.github/workflows/validate-static.yml`: control automático de sintaxis y estructura.
+- `sw.js`: caché offline compatible con rutas relativas de GitHub Pages.
 
-## Fuente CMS
+## Actualizar desde el CMS
 
-`Distrito_Go_CMS_corregido_v12.xlsx`
+```bash
+python -m pip install -r requirements.txt
+python tools/cms_pipeline.py /ruta/Distrito_Go_CMS.xlsx --project .
+python tools/audit_static.py
+```
 
-## Despliegue en GitHub Pages
+El pipeline lee por nombre de pestaña y encabezado. Detiene la generación cuando falta una pestaña o encabezado obligatorio y nunca depende de posiciones fijas de columnas.
 
-1. Publica el contenido de esta carpeta en la raíz de la rama configurada para Pages.
-2. Conserva `.nojekyll`.
-3. No cambies las rutas relativas `./` del manifest, módulos, datos o assets.
-4. Después de desplegar, abre la aplicación una vez con conexión para instalar la nueva caché v16.2.
+## Validación antes de publicar
 
-## Validaciones locales ejecutadas
+```bash
+find modules -name '*.js' -print0 | xargs -0 -n1 node --check
+node --check sw.js
+python tools/audit_static.py
+```
 
-- Sintaxis JavaScript de todos los módulos y `sw.js`.
-- JSON válido en `data/` y `manifest.json`.
-- Rutas locales referenciadas por HTML, CSS, JavaScript, manifest y service worker.
-- IDs HTML sin duplicados.
-- Estructura de manifest y service worker conservada para GitHub Pages/PWA.
+## GitHub Pages
 
-Las pruebas que requieren un navegador o dispositivo real deben repetirse en el entorno de despliegue para confirmar instalación PWA y comportamiento específico del sistema operativo.
+Publicar el contenido de la raíz de `main` mediante **Deploy from a branch**. Conservar `.nojekyll`, las rutas relativas `./` y todos los archivos incluidos en `APP_SHELL`.
+
+Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v17.0.0-python-phase-1`.
