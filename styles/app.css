@@ -783,3 +783,175 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
     border-radius:18px!important;
   }
 }
+
+/* === Distrito Go v16.6 · Distrital Coach profile strip below hero === */
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+  grid-template-columns:minmax(0,1fr)!important;
+  align-items:center!important;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:14px 0 20px!important;
+  padding:0!important;
+  overflow:hidden;
+  border:1px solid rgba(0,98,65,.16)!important;
+  border-radius:26px!important;
+  background:linear-gradient(90deg,#F1F8F5 0%,#FFFFFF 34%,#FFFFFF 100%)!important;
+  box-shadow:0 10px 28px rgba(16,42,34,.08)!important;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact{
+  display:grid!important;
+  grid-template-columns:clamp(128px,16vw,190px) minmax(0,1fr) auto;
+  align-items:center;
+  gap:clamp(18px,3vw,34px);
+  width:100%;
+  min-height:clamp(160px,19vw,220px);
+  padding:0 clamp(20px,4vw,42px) 0 0;
+  overflow:hidden;
+  border-radius:inherit;
+  background:transparent!important;
+  color:#102A22;
+  line-height:1.2;
+  text-decoration:none;
+  cursor:pointer;
+}
+.v16-2-visual-accessibility-refinement .dm-photo-frame{
+  display:block;
+  align-self:stretch;
+  min-height:100%;
+  overflow:hidden;
+  background:#DDEFE7;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact img{
+  display:block;
+  width:100%!important;
+  height:100%!important;
+  min-height:clamp(160px,19vw,220px);
+  max-height:none!important;
+  border-radius:0!important;
+  object-fit:cover!important;
+  object-position:center 22%!important;
+  transform:scale(1.02);
+  transition:transform .22s ease,filter .22s ease;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-copy{
+  display:flex!important;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px 16px;
+  min-width:0;
+  margin:0!important;
+  color:#102A22!important;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-copy strong{
+  color:#102A22!important;
+  font-size:clamp(1.35rem,2.5vw,2.15rem);
+  font-weight:950;
+  letter-spacing:-.045em;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-copy > span:last-child{
+  margin:0!important;
+  color:#39705C!important;
+  font-size:clamp(.9rem,1.5vw,1.08rem)!important;
+  font-weight:900;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-divider{
+  display:block!important;
+  width:1px;
+  height:34px;
+  margin:0!important;
+  background:rgba(0,98,65,.28);
+}
+.v16-2-visual-accessibility-refinement .dm-contact-cta{
+  display:inline-flex!important;
+  align-items:center;
+  gap:10px;
+  margin:0!important;
+  padding:12px 16px;
+  border:1px solid rgba(0,98,65,.22);
+  border-radius:999px;
+  background:#FFFFFF;
+  color:#006241!important;
+  font-size:.88rem!important;
+  font-weight:900;
+  white-space:nowrap;
+  transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.v16-2-visual-accessibility-refinement .dm-contact-icon{
+  display:grid!important;
+  place-items:center;
+  width:28px;
+  height:28px;
+  margin:0!important;
+  border-radius:50%;
+  background:#D7F4E7;
+  color:#006241!important;
+  font-size:1rem!important;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact:is(:hover,:focus-visible) img{
+  transform:scale(1.065);
+  filter:saturate(1.04) contrast(1.02);
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact:is(:hover,:focus-visible) .dm-contact-cta{
+  background:#006241;
+  color:#FFFFFF!important;
+  transform:translateX(3px);
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact:is(:hover,:focus-visible) .dm-contact-icon{
+  background:#FFFFFF;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact:focus-visible{
+  outline:3px solid #8FD6BB;
+  outline-offset:-3px;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-hover-label{display:none!important;}
+@media(max-width:760px){
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact{
+    grid-template-columns:118px minmax(0,1fr);
+    gap:18px;
+    min-height:170px;
+    padding-right:18px;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact img{min-height:170px;}
+  .v16-2-visual-accessibility-refinement .dm-contact-cta{
+    grid-column:2;
+    justify-self:start;
+    padding:9px 13px;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-copy{
+    align-self:end;
+    padding-top:18px;
+  }
+}
+@media(max-width:520px){
+  .v16-2-visual-accessibility-refinement .dm-profile-strip{
+    border-radius:22px!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact{
+    grid-template-columns:104px minmax(0,1fr);
+    gap:14px;
+    min-height:154px;
+    padding-right:14px;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact img{
+    min-height:154px;
+    object-position:center 20%!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-copy{
+    display:grid!important;
+    gap:5px;
+    padding-top:14px;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-copy strong{font-size:1.18rem;}
+  .v16-2-visual-accessibility-refinement .dm-profile-divider{display:none!important;}
+  .v16-2-visual-accessibility-refinement .dm-contact-cta{
+    grid-column:2;
+    padding:8px 11px;
+    font-size:.78rem!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-contact-icon{width:24px;height:24px;}
+}
