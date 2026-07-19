@@ -706,3 +706,80 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .v16-2-visual-accessibility-refinement .dm-card-contact:active .dm-hover-label,
   .v16-2-visual-accessibility-refinement .dm-card-contact:focus .dm-hover-label{opacity:1;transform:translateY(0);}
 }
+
+/* === District Coach hero card · portrait-led visual refinement === */
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+  grid-template-columns:minmax(0,1fr) clamp(248px,25vw,330px);
+  align-items:center;
+}
+.v16-2-visual-accessibility-refinement .dm-card.support-card{
+  width:100%;
+  max-width:330px;
+  min-width:0!important;
+  align-self:center!important;
+  justify-self:end;
+  padding:6px!important;
+  overflow:hidden;
+  border-radius:28px!important;
+  background:#FFFFFF!important;
+}
+.v16-2-visual-accessibility-refinement .dm-card-contact{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  aspect-ratio:auto;
+  overflow:hidden;
+  border-radius:22px;
+  background:#F6F4EF;
+  line-height:0;
+}
+.v16-2-visual-accessibility-refinement .dm-card-contact img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  border-radius:20px!important;
+}
+.v16-2-visual-accessibility-refinement .dm-hover-label{
+  inset:auto 10px 10px;
+  line-height:1.1;
+}
+.v16-2-visual-accessibility-refinement .dm-card-contact:focus-visible{
+  outline:3px solid #D7F4E7;
+  outline-offset:3px;
+}
+@media(max-width:1050px){
+  .v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+    grid-template-columns:minmax(0,1fr) clamp(230px,32vw,300px);
+  }
+}
+@media(max-width:820px){
+  .v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+    grid-template-columns:1fr;
+  }
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{
+    width:min(100%,360px);
+    max-width:360px;
+    justify-self:center;
+    padding:6px!important;
+  }
+}
+@media(max-width:620px){
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{
+    width:min(100%,330px);
+    padding:5px!important;
+    border-radius:24px!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-card-contact{
+    min-height:0;
+    border-radius:20px;
+  }
+  .v16-2-visual-accessibility-refinement .dm-card-contact img{
+    max-height:none!important;
+    border-radius:18px!important;
+  }
+}
