@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-180.png" />
   <link rel="stylesheet" href="./styles/variables.css?v=16.4.1" />
-  <link rel="stylesheet" href="./styles/app.css?v=16.4.1" />
+  <link rel="stylesheet" href="./styles/app.css?v=16.5.0" />
 </head>
 <body class="v15-starbucks-contrast-experience v16-mobile-launcher-espresso-hub-optimization v16-2-visual-accessibility-refinement">
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -37,6 +37,7 @@
           <span id="hero-campaign-primary" class="hero-campaign-primary"></span>
           <span id="hero-campaign-accent" class="hero-campaign-accent"></span>
         </p>
+        <p id="hero-hashtags" class="hero-hashtags" aria-label="Hashtags de campaña"></p>
         <p id="hero-date" class="hero-date">Cargando fecha...</p>
         <div class="hero-actions">
           <button id="start-day" class="primary-action" type="button">Revisar prioridades</button>
@@ -50,16 +51,15 @@
           <a href="#duty-roster">Duty Roster</a>
         </nav>
       </div>
-      <aside class="dm-card support-card" aria-label="Contacto del Distrital Coach">
-        <button id="dm-photo-link" class="dm-photo-link" type="button" data-image-viewer="./assets/photos/kike-dm.jpeg" data-image-title="" aria-label="Ver fotografía del Distrital Coach en tamaño completo">
+      <aside class="dm-card support-card" aria-label="Contacto del DM">
+        <a id="dm-contact" class="dm-card-contact" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-describedby="dm-contact-description">
           <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="" loading="lazy" />
-        </button>
-        <div class="dm-contact-copy">
-          <div class="dm-identity"><strong id="dm-name"></strong><span id="dm-role"></span></div>
-          <a id="dm-contact" class="dm-contact-button" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-label="Abrir contacto directo" title="Contacto directo">
-            <span aria-hidden="true">↗</span><span class="sr-only">Contacto directo</span>
-          </a>
-        </div>
+          <span class="dm-hover-label" aria-hidden="true">
+            <strong id="dm-hover-name"></strong>
+            <span id="dm-hover-role"></span>
+          </span>
+          <span id="dm-contact-description" class="sr-only">Abrir contacto directo con Enrique César, DM.</span>
+        </a>
       </aside>
     </section>
 
@@ -76,7 +76,7 @@
 
     <section id="tool-workspace" class="workspace-section launchpad-section" aria-labelledby="workspace-title">
       <div class="section-title">
-        <div><h3 id="workspace-title">Categorías</h3><p class="section-subtitle">Selecciona una categoría para ver únicamente las herramientas relacionadas.</p></div>
+        <div><h3 id="workspace-title">Categorías</h3><p class="section-subtitle">Selecciona una categoría para ver únicamente las herramientas relacionadas.</p><p id="workspace-campaign" class="workspace-campaign"></p></div>
         <button id="toggle-tools" class="text-button" type="button">Ir a herramientas</button>
       </div>
       <div id="workspace-body" class="workspace-body">
@@ -218,6 +218,6 @@
     <button class="nav-item" data-view="events" type="button">📅<span>Eventos</span></button>
   </nav>
 
-  <script type="module" src="./modules/app.js?v=16.4.1"></script>
+  <script type="module" src="./modules/app.js?v=16.5.0"></script>
 </body>
 </html>

@@ -9,13 +9,21 @@
       "primary": "JUNTÉMONOS",
       "accent": "más",
       "display": "JUNTÉMONOS MÁS",
-      "primaryColor": "#006241",
-      "accentColor": "#111111",
-      "style": "corporativo-expresivo"
-    }
+      "primaryColor": "#D7F4E7",
+      "accentColor": "#FFFFFF",
+      "style": "corporativo-expresivo",
+      "featured": true
+    },
+    "hashtags": [
+      "#GreenApronService",
+      "#DistritoKike"
+    ]
   },
   "coach": {
-    "name": "Enrique César",
-    "role": "Distrital Coach"
+    "hoverName": "Enrique César",
+    "hoverRole": "DM",
+    "showText": false,
+    "contactEnabled": true,
+    "contactUrl": "https://wa.me/message/ENKDSAHYHIGAN1"
   }
 }

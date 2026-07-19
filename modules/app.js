@@ -51,8 +51,11 @@ function renderHeader(){
   setText('hero-title', getPartnerGreeting());
   setText('hero-campaign-primary', campaign.primary || '');
   setText('hero-campaign-accent', campaign.accent || '');
-  setText('dm-name', coach.name || '');
-  setText('dm-role', coach.role || '');
+  const hashtags = Array.isArray(state.identity?.hero?.hashtags) ? state.identity.hero.hashtags : [];
+  setText('hero-hashtags', hashtags.join(' · '));
+  setText('workspace-campaign', campaign.display || [campaign.primary, campaign.accent].filter(Boolean).join(' '));
+  setText('dm-hover-name', coach.hoverName || '');
+  setText('dm-hover-role', coach.hoverRole || '');
 
   const campaignEl = byId('hero-campaign');
   if(campaignEl){
@@ -62,16 +65,16 @@ function renderHeader(){
 
   const photo = state.config.emergencyContact?.photo;
   const dmPhoto = byId('dm-photo');
+  const hoverName = coach.hoverName || 'District Manager';
+  const hoverRole = coach.hoverRole || 'DM';
   if(photo && dmPhoto) dmPhoto.src = `./${photo}`;
-  if(dmPhoto) dmPhoto.alt = coach.name ? `Fotografía de ${coach.name}` : 'Fotografía del Distrital Coach';
+  if(dmPhoto) dmPhoto.alt = `Fotografía de ${hoverName}, ${hoverRole}`;
 
-  const dmUrl = state.config.emergencyContact?.url || '';
+  const dmUrl = coach.contactEnabled === false ? '' : (coach.contactUrl || state.config.emergencyContact?.url || '');
   const dmContact = byId('dm-contact');
-  const dmPhotoLink = byId('dm-photo-link');
-  if(dmContact && dmUrl) dmContact.href = dmUrl;
-  if(dmPhotoLink && photo){
-    dmPhotoLink.dataset.imageViewer = `./${photo}`;
-    dmPhotoLink.dataset.imageTitle = coach.name || coach.role || '';
+  if(dmContact){
+    if(dmUrl) dmContact.href = dmUrl;
+    dmContact.setAttribute('aria-label', `Abrir contacto directo con ${hoverName}, ${hoverRole}`);
   }
   updateClock();
   setInterval(updateClock, 60000);

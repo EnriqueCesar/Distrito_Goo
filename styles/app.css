@@ -610,3 +610,99 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .v16-2-visual-accessibility-refinement .dm-photo-link{max-width:220px;margin-inline:auto;}
   .v16-2-visual-accessibility-refinement .dm-contact-copy{justify-items:center;text-align:center;}
 }
+
+
+/* === Distrito Go v16.5 · Campaign contrast and accessible DM contact card === */
+.v16-2-visual-accessibility-refinement .hero-campaign{
+  margin:12px 0 7px;
+  isolation:isolate;
+}
+.v16-2-visual-accessibility-refinement .hero-campaign-primary{
+  color:var(--campaign-primary,#D7F4E7)!important;
+  font-size:clamp(2.35rem,6.2vw,5.35rem)!important;
+  line-height:.88;
+}
+.v16-2-visual-accessibility-refinement .hero-campaign-accent{
+  color:var(--campaign-accent,#FFFFFF)!important;
+  font-size:clamp(2.65rem,6.8vw,5.9rem)!important;
+  line-height:.88;
+}
+.v16-2-visual-accessibility-refinement .hero-hashtags{
+  margin:7px 0 3px;
+  color:rgba(255,255,255,.9);
+  font-size:clamp(.82rem,1.5vw,.98rem);
+  font-weight:850;
+  letter-spacing:.015em;
+}
+.v16-2-visual-accessibility-refinement .workspace-campaign{
+  margin:5px 0 0;
+  color:#39705C;
+  font-size:.76rem;
+  font-weight:850;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.v16-2-visual-accessibility-refinement .dm-card.support-card{
+  display:block!important;
+  min-width:0;
+  padding:12px!important;
+  background:#FFFFFF!important;
+}
+.v16-2-visual-accessibility-refinement .dm-card-contact{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:100%;
+  height:100%;
+  min-height:240px;
+  overflow:hidden;
+  border:0;
+  border-radius:24px;
+  background:#FFFFFF;
+  text-decoration:none;
+  cursor:pointer;
+}
+.v16-2-visual-accessibility-refinement .dm-card-contact img{
+  display:block;
+  width:100%!important;
+  height:100%!important;
+  max-height:340px!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  border-radius:20px!important;
+  transform:none;
+  transition:transform .18s ease;
+}
+.v16-2-visual-accessibility-refinement .dm-hover-label{
+  position:absolute;
+  inset:auto 12px 12px;
+  display:grid;
+  gap:2px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:15px;
+  background:rgba(0,61,43,.88);
+  color:#FFFFFF;
+  line-height:1.1;
+  opacity:0;
+  transform:translateY(7px);
+  transition:opacity .16s ease,transform .16s ease;
+  pointer-events:none;
+}
+.v16-2-visual-accessibility-refinement .dm-hover-label strong{font-size:1rem;}
+.v16-2-visual-accessibility-refinement .dm-hover-label span{font-size:.78rem;font-weight:850;letter-spacing:.04em;}
+.v16-2-visual-accessibility-refinement .dm-card-contact:is(:hover,:focus-visible) img{transform:scale(1.018);}
+.v16-2-visual-accessibility-refinement .dm-card-contact:is(:hover,:focus-visible) .dm-hover-label{
+  opacity:1;
+  transform:translateY(0);
+}
+@media(max-width:620px){
+  .v16-2-visual-accessibility-refinement .hero-campaign-primary{font-size:clamp(2rem,12vw,3.7rem)!important;}
+  .v16-2-visual-accessibility-refinement .hero-campaign-accent{font-size:clamp(2.25rem,13vw,4.1rem)!important;}
+  .v16-2-visual-accessibility-refinement .dm-card.support-card{padding:10px!important;}
+  .v16-2-visual-accessibility-refinement .dm-card-contact{min-height:210px;}
+  .v16-2-visual-accessibility-refinement .dm-card-contact img{max-height:300px!important;}
+  .v16-2-visual-accessibility-refinement .dm-card-contact:active .dm-hover-label,
+  .v16-2-visual-accessibility-refinement .dm-card-contact:focus .dm-hover-label{opacity:1;transform:translateY(0);}
+}
