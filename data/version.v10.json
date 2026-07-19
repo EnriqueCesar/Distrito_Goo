@@ -1,16 +1,16 @@
 {
-  "version": "16.4.0",
-  "releaseDate": "2026-07-14",
+  "version": "16.4.1",
+  "releaseDate": "2026-07-19",
   "changes": [
-    "Fotografía del DM ampliada y contacto directo reducido a un icono discreto.",
-    "Visor de imágenes a pantalla completa con acción visible para regresar.",
-    "Acceso a Compras agregado al menú de herramientas.",
-    "Navegación y contraste refinados sin modificar la lógica operativa."
+    "Identidad JUNTÉMONOS MÁS y saludos dinámicos cargados desde data/identity.json.",
+    "Tarjeta del Distrital Coach ampliada, sin recorte y con contacto mediante icono discreto.",
+    "Evidencia Antes / Después y Calculadora de Ritmo integradas en herramientas.",
+    "Actualización PWA corregida con estrategia network-first y recarga automática al activar una nueva versión."
   ],
-  "notes": "Actualización visual compatible con la estructura y el CMS actuales.",
-  "fecha": "2026-07-14",
-  "descripcion": "Mejora de experiencia visual, visor de imágenes y acceso a Compras.",
+  "notes": "Corrección de caché para publicar cambios de forma inmediata sin alterar la lógica operativa.",
+  "fecha": "2026-07-19",
+  "descripcion": "Sincronización de identidad, herramientas, CMS y actualización segura de la PWA.",
   "updatedAt": "2026-07-19",
-  "runtimeFix": "v16.3.0",
+  "runtimeFix": "v16.4.1",
   "name": "Juntémonos Más"
 }

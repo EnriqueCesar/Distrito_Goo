@@ -8,8 +8,14 @@ export function bindPWA(){
   });
   window.addEventListener('dgx:install', installPWA);
   if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('./sw.js?v=16.1.0').then(reg => {
+    navigator.serviceWorker.register('./sw.js?v=16.4.1', { updateViaCache: 'none' }).then(reg => {
+      reg.update().catch(() => {});
       reg.addEventListener('updatefound', () => toast('Actualización preparada'));
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if(sessionStorage.getItem('dgx_sw_reloaded') === '1') return;
+        sessionStorage.setItem('dgx_sw_reloaded', '1');
+        location.reload();
+      });
     }).catch(console.warn);
   }
 }
