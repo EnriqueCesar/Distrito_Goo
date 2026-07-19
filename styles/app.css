@@ -1211,3 +1211,21 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   color:#006241!important;
   border-color:rgba(0,98,65,.24)!important;
 }
+
+/* Fase 2: experiencia adaptable, controles de herramientas y estados PWA */
+.dm-card.dm-profile-strip{min-height:0;padding:0;overflow:hidden}
+.dm-photo-only{display:block;min-height:220px;height:100%;padding:0}
+.dm-photo-only .dm-photo-frame{display:block;width:100%;height:100%;min-height:220px;border:0;border-radius:inherit;overflow:hidden}
+.dm-photo-only img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.tool-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:14px}
+.tool-mode-control{margin:0}
+.sort-control{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--text-muted,#5f6368)}
+.sort-control select{min-height:44px;border:1px solid var(--border,#d8dedb);border-radius:12px;background:var(--surface,#fff);color:inherit;padding:0 38px 0 12px;font:inherit}
+.connection-status,.update-banner{position:fixed;z-index:1200;left:50%;transform:translateX(-50%);bottom:88px;max-width:min(92vw,520px);border:1px solid #b8c8c1;border-radius:16px;background:#fff;color:#14332a;padding:12px 16px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.update-banner{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.update-banner[hidden],.connection-status[hidden]{display:none}
+.update-banner button{min-height:40px;border:0;border-radius:10px;background:#006241;color:#fff;padding:0 16px;font-weight:800;cursor:pointer}
+:focus-visible{outline:3px solid #00a862;outline-offset:3px}
+@media (min-width:1100px){.app-shell{max-width:1500px}.hero-card{min-height:360px}.workspace-section{padding:28px}.tools-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:720px){.tool-controls{align-items:stretch}.tool-mode-control{display:grid;grid-template-columns:repeat(3,1fr);width:100%}.sort-control{justify-content:space-between;width:100%}.sort-control select{flex:1;max-width:230px}.dm-photo-only,.dm-photo-only .dm-photo-frame{min-height:180px}.connection-status,.update-banner{bottom:82px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

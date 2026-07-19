@@ -27,12 +27,32 @@ async function boot(){
   renderTools(true);
   collapseFiltersByDefault();
   bindSearch();
+  bindToolControls();
   bindNavigation();
   bindPWA();
   bindPullToRefresh();
   bindLazyLoading();
   bindBearistaInformativo();
-  toast('Listo para operar');
+  document.body.classList.add('app-ready');
+}
+
+function bindToolControls(){
+  document.querySelectorAll('[data-tool-mode]').forEach(button => {
+    button.addEventListener('click', () => {
+      state.toolMode = button.dataset.toolMode || 'all';
+      document.querySelectorAll('[data-tool-mode]').forEach(item => item.classList.toggle('is-active', item === button));
+      renderTools(true);
+    });
+  });
+  const sort = byId('tool-sort');
+  if(sort){
+    sort.value = state.toolSort;
+    sort.addEventListener('change', () => {
+      state.toolSort = sort.value;
+      localStorage.setItem('dgx_tool_sort', state.toolSort);
+      renderTools(true);
+    });
+  }
 }
 
 function getPartnerGreeting(now = new Date()){
@@ -54,8 +74,6 @@ function renderHeader(){
   const hashtags = Array.isArray(state.identity?.hero?.hashtags) ? state.identity.hero.hashtags : [];
   setText('hero-hashtags', hashtags.join(' · '));
   setText('workspace-campaign', campaign.display || [campaign.primary, campaign.accent].filter(Boolean).join(' '));
-  setText('dm-hover-name', coach.hoverName || '');
-  setText('dm-hover-role', coach.hoverRole || '');
 
   const campaignEl = byId('hero-campaign');
   if(campaignEl){
@@ -68,7 +86,7 @@ function renderHeader(){
   const hoverName = coach.hoverName || 'District Manager';
   const hoverRole = coach.hoverRole || 'DM';
   if(photo && dmPhoto) dmPhoto.src = `./${photo}`;
-  if(dmPhoto) dmPhoto.alt = `Fotografía de ${hoverName}, ${hoverRole}`;
+  if(dmPhoto) dmPhoto.alt = `Abrir contacto con ${hoverName}`;
 
   const dmUrl = coach.contactEnabled === false ? '' : (coach.contactUrl || state.config.emergencyContact?.url || '');
   const dmContact = byId('dm-contact');
@@ -205,6 +223,16 @@ function applyTheme(){
   document.documentElement.dataset.theme = saved;
   setText('theme-toggle', saved === 'dark' ? '☀' : '☾');
 }
+
+window.addEventListener('online', () => updateConnectionState());
+window.addEventListener('offline', () => updateConnectionState());
+function updateConnectionState(){
+  const el = byId('connection-status');
+  if(!el) return;
+  el.hidden = navigator.onLine;
+  el.textContent = navigator.onLine ? '' : 'Sin conexión · usando contenido disponible';
+}
+updateConnectionState();
 
 boot().catch(error => {
   console.error('[Distrito Go] Falló el arranque de la aplicación:', error);

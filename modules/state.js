@@ -22,6 +22,8 @@ export const state = {
   query: '',
   categoria: 'all',
   visibleCount: 16,
+  toolMode: 'all',
+  toolSort: localStorage.getItem('dgx_tool_sort') || 'cms',
   deferredPrompt: null,
   recents: getJSON('dgx_recents', []),
   usage: getJSON('dgx_usage', {}),

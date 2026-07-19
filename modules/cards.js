@@ -10,19 +10,33 @@ import { setJSON } from './storage.js';
 
 export function getFilteredTools(){
   const q = normalize(state.query);
-  return state.herramientas.filter(tool => {
-    const inCategory = state.categoria === 'all' ||
-      tool.categoriaId === state.categoria;
+  let tools = state.herramientas.filter(tool => {
+    const inCategory = state.categoria === 'all' || tool.categoriaId === state.categoria;
     const haystack = normalize([tool.nombre, tool.notas, tool.categoria, tool.grupo, tool.tipo, tool.url, tool.webUrl, tool.alias, tool.etiquetas, tool.funcion, ...(tool.keywords || [])].join(' '));
-    return inCategory && (!q || haystack.includes(q));
+    const inMode = state.toolMode === 'favorites'
+      ? state.favorites.includes(tool.id)
+      : state.toolMode === 'recent'
+        ? state.recents.includes(tool.id)
+        : true;
+    return inCategory && inMode && (!q || haystack.includes(q));
   });
+  if(state.toolMode === 'recent'){
+    tools.sort((a,b) => state.recents.indexOf(a.id) - state.recents.indexOf(b.id));
+  }else if(state.toolSort === 'name'){
+    tools.sort((a,b) => a.nombre.localeCompare(b.nombre, 'es', {sensitivity:'base'}));
+  }else if(state.toolSort === 'used'){
+    tools.sort((a,b) => (state.usage[b.id] || 0) - (state.usage[a.id] || 0) || a.orden - b.orden);
+  }else{
+    tools.sort((a,b) => a.orden - b.orden);
+  }
+  return tools;
 }
 
 export function renderTools(reset = false){
   if(reset) state.visibleCount = 16;
   const all = getFilteredTools();
   const visible = all.slice(0, state.visibleCount);
-  const isAllWithoutQuery = state.categoria === 'all' && !state.query;
+  const isAllWithoutQuery = state.categoria === 'all' && !state.query && state.toolMode === 'all';
   const toolsSection = document.querySelector('.tools-section');
   if(isAllWithoutQuery){
     toolsSection?.classList.add('is-initially-hidden');
@@ -66,7 +80,8 @@ export function bindToolCards(scope){
 
 export function openTool(id){
   const tool = state.herramientas.find(t => t.id === id);
-  if(!tool) return;
+  if(!tool){ toast('Enlace no disponible'); return; }
+  if(!tool.url && !(tool.tipo === 'app' && tool.package)){ toast('Enlace no disponible'); return; }
   pushRecent(tool.id);
   state.usage[tool.id] = (state.usage[tool.id] || 0) + 1;
   setJSON('dgx_usage', state.usage);

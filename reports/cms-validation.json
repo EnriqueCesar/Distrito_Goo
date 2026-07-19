@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "cms": "Distrito_Go_CMS(6).xlsx",
+  "sheets": {
+    "Informativo": 1,
+    "WFM": 1,
+    "BT": 6,
+    "TBW": 19,
+    "SS": 1,
+    "Links": 44,
+    "Eventos": 49,
+    "Actividades_Semanales": 15,
+    "Actividades_Diaria": 7,
+    "Duty_Roster": 7,
+    "Duty_Detail": 57,
+    "Checklist_Apertura": 10,
+    "Identidad": 8
+  },
+  "errors": []
+}

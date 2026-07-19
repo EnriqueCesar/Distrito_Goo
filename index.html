@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
   <link rel="apple-touch-icon" href="./assets/icons/icon-180.png" />
   <link rel="stylesheet" href="./styles/variables.css?v=16.4.1" />
-  <link rel="stylesheet" href="./styles/app.css?v=16.7.0" />
+  <link rel="stylesheet" href="./styles/app.css?v=18.0.0" />
 </head>
 <body class="v15-starbucks-contrast-experience v16-mobile-launcher-espresso-hub-optimization v16-2-visual-accessibility-refinement">
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -54,20 +54,10 @@
     </section>
 
     <aside class="dm-card support-card dm-profile-strip" aria-label="Contacto del Distrital Coach">
-      <a id="dm-contact" class="dm-card-contact" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener" aria-describedby="dm-contact-description">
-        <span class="dm-photo-frame" aria-hidden="true">
-          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="" loading="lazy" />
+      <a id="dm-contact" class="dm-card-contact dm-photo-only" href="https://wa.me/message/ENKDSAHYHIGAN1" target="_blank" rel="noopener">
+        <span class="dm-photo-frame">
+          <img id="dm-photo" src="./assets/photos/kike-dm.jpeg" alt="Abrir contacto del District Coach" loading="lazy" />
         </span>
-        <span class="dm-profile-copy">
-          <strong id="dm-hover-name"></strong>
-          <span class="dm-profile-divider" aria-hidden="true"></span>
-          <span id="dm-hover-role"></span>
-        </span>
-        <span class="dm-contact-cta" aria-hidden="true">
-          <span class="dm-contact-icon">↗</span>
-          <span>Contacto directo</span>
-        </span>
-        <span id="dm-contact-description" class="sr-only">Abrir contacto directo con Enrique César Flores, Distrital Coach.</span>
       </a>
     </aside>
 
@@ -95,6 +85,20 @@
             <kbd>/</kbd>
           </label>
           <div id="active-chips" class="chip-row" aria-label="Filtros activos"></div>
+          <div class="tool-controls" aria-label="Organización de herramientas">
+            <div class="segmented-control tool-mode-control" role="group" aria-label="Vista de herramientas">
+              <button class="segment is-active" type="button" data-tool-mode="all">Todas</button>
+              <button class="segment" type="button" data-tool-mode="favorites">Favoritos</button>
+              <button class="segment" type="button" data-tool-mode="recent">Recientes</button>
+            </div>
+            <label class="sort-control">Orden
+              <select id="tool-sort" aria-label="Ordenar herramientas">
+                <option value="cms">Definido en CMS</option>
+                <option value="name">Nombre A-Z</option>
+                <option value="used">Más utilizadas</option>
+              </select>
+            </label>
+          </div>
         </section>
         <section class="categories-section" aria-labelledby="categories-title">
           <div class="section-title"><h3 id="categories-title">Categorías</h3><button id="show-all" class="text-button" type="button">Ver todo</button></div>
@@ -216,6 +220,11 @@
     <div id="quick-modal-body" class="quick-modal-body"></div>
   </dialog>
 
+  <div id="connection-status" class="connection-status" role="status" aria-live="polite" hidden></div>
+  <div id="update-banner" class="update-banner" role="status" aria-live="polite" hidden>
+    <span>Nueva versión disponible</span>
+    <button id="apply-update" type="button">Actualizar</button>
+  </div>
   <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
 
   <nav class="bottom-nav sidebar-nav" aria-label="Navegación principal">
@@ -226,6 +235,6 @@
     <button class="nav-item" data-view="events" type="button">📅<span>Eventos</span></button>
   </nav>
 
-  <script type="module" src="./modules/app.js?v=16.5.0"></script>
+  <script type="module" src="./modules/app.js?v=18.0.0"></script>
 </body>
 </html>

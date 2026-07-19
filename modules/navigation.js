@@ -3,8 +3,12 @@ import { $, $$ } from './utils.js';
 import { renderTools } from './cards.js';
 import { openSpotlight } from './search.js';
 
+const LAST_VIEW_KEY = 'dgx_last_view';
+
 export function bindNavigation(){
   $$('.nav-item').forEach(btn => btn.addEventListener('click', () => nav(btn.dataset.view)));
+  const savedView = sessionStorage.getItem(LAST_VIEW_KEY);
+  if(savedView && savedView !== 'home') requestAnimationFrame(() => nav(savedView, false));
   const showAll = $('#show-all');
   if(showAll) showAll.addEventListener('click', () => {
     revealWorkspace(false);
@@ -28,13 +32,14 @@ export function revealWorkspace(scroll = true){
   if(scroll && section) section.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
-export function nav(view){
+export function nav(view, smooth = true){
+  sessionStorage.setItem(LAST_VIEW_KEY, view);
   $$('.nav-item').forEach(b => b.classList.toggle('is-active', b.dataset.view === view));
-  if(view === 'home') window.scrollTo({top:0, behavior:'smooth'});
-  if(view === 'today') document.getElementById('dia-a-dia')?.scrollIntoView({behavior:'smooth', block:'start'});
-  if(view === 'events') document.getElementById('eventos-cms')?.scrollIntoView({behavior:'smooth', block:'start'});
-  if(view === 'duty') document.getElementById('duty-roster')?.scrollIntoView({behavior:'smooth', block:'start'});
-  if(view === 'altas') document.getElementById('altas-curso')?.scrollIntoView({behavior:'smooth', block:'start'});
+  if(view === 'home') window.scrollTo({top:0, behavior: smooth ? 'smooth' : 'auto'});
+  if(view === 'today') document.getElementById('dia-a-dia')?.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block:'start'});
+  if(view === 'events') document.getElementById('eventos-cms')?.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block:'start'});
+  if(view === 'duty') document.getElementById('duty-roster')?.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block:'start'});
+  if(view === 'altas') document.getElementById('altas-curso')?.scrollIntoView({behavior: smooth ? 'smooth' : 'auto', block:'start'});
   if(view === 'search') openSpotlight();
   if(view === 'all') revealWorkspace();
 }

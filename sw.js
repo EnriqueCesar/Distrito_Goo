@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v17.0.0-python-phase-1';
+const CACHE_NAME = 'distrito-go-v18.0.0-python-phase-2';
 const APP_SHELL = [
   './',
   './index.html',
@@ -72,7 +72,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(APP_SHELL))
-      .then(() => self.skipWaiting())
+      .then(() => undefined)
   );
 });
 
@@ -118,4 +118,8 @@ self.addEventListener('fetch', event => {
 
   const isRuntimeFile = /\.(?:html|css|js|json)$/i.test(url.pathname);
   event.respondWith(isRuntimeFile ? networkFirst(request) : cacheFirst(request));
+});
+
+self.addEventListener('message', event => {
+  if(event.data?.type === 'SKIP_WAITING') self.skipWaiting();
 });

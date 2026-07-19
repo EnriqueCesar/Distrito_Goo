@@ -1,4 +1,4 @@
-# Distrito Goo · Fase 1 Python
+# Distrito Goo · Fase 2 Web/PWA + Python
 
 Distrito Goo continúa siendo una PWA 100% estática para GitHub Pages. Python se utiliza únicamente durante auditoría y compilación para validar el CMS y generar JSON; no forma parte del runtime ni requiere servidor.
 
@@ -6,7 +6,7 @@ Distrito Goo continúa siendo una PWA 100% estática para GitHub Pages. Python s
 
 - `index.html`, `styles/` y `modules/`: interfaz existente.
 - `data/`: JSON estáticos consumidos por la aplicación.
-- `tools/cms_pipeline.py`: valida pestañas y encabezados del CMS y genera los JSON.
+- `tools/validate_cms.py`, `tools/build_data.py` y `tools/audit_links.py`: validan el CMS, generan JSON y producen auditorías reproducibles.
 - `tools/audit_static.py`: valida JSON, rutas locales, IDs HTML y APP_SHELL.
 - `.github/workflows/validate-static.yml`: control automático de sintaxis y estructura.
 - `sw.js`: caché offline compatible con rutas relativas de GitHub Pages.
@@ -15,7 +15,9 @@ Distrito Goo continúa siendo una PWA 100% estática para GitHub Pages. Python s
 
 ```bash
 python -m pip install -r requirements.txt
-python tools/cms_pipeline.py /ruta/Distrito_Go_CMS.xlsx --project .
+python tools/validate_cms.py /ruta/Distrito_Go_CMS.xlsx --report reports/cms-validation.json
+python tools/build_data.py /ruta/Distrito_Go_CMS.xlsx --project .
+python tools/audit_links.py /ruta/Distrito_Go_CMS.xlsx --report reports/link-audit.json
 python tools/audit_static.py
 ```
 
@@ -33,4 +35,4 @@ python tools/audit_static.py
 
 Publicar el contenido de la raíz de `main` mediante **Deploy from a branch**. Conservar `.nojekyll`, las rutas relativas `./` y todos los archivos incluidos en `APP_SHELL`.
 
-Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v17.0.0-python-phase-1`.
+Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v18.0.0-python-phase-2`.
