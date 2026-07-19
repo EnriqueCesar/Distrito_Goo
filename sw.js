@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v16.5.0-juntemonos-mas';
+const CACHE_NAME = 'distrito-go-v16.7.0-hero-coach-refinement';
 const APP_SHELL = [
   './',
   './index.html',

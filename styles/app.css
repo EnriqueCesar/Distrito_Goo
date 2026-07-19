@@ -955,3 +955,259 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   }
   .v16-2-visual-accessibility-refinement .dm-contact-icon{width:24px;height:24px;}
 }
+
+/* === Distrito Go v16.7 · Corporate landing hero and integrated coach portrait === */
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  place-items:center!important;
+  min-height:clamp(390px,48vw,560px);
+  padding:clamp(28px,5vw,58px)!important;
+  overflow:hidden;
+  text-align:center;
+}
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner::after{
+  width:min(42vw,430px);
+  height:min(42vw,430px);
+  right:-12%;
+  top:-30%;
+  opacity:.55;
+}
+.v16-2-visual-accessibility-refinement .hero-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:min(100%,900px);
+  min-height:100%;
+  margin-inline:auto;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.v16-2-visual-accessibility-refinement .hero-greeting{
+  order:1;
+  margin:0 0 clamp(12px,2vw,22px)!important;
+  color:#D7F4E7!important;
+  font-size:clamp(1rem,1.8vw,1.35rem)!important;
+  line-height:1.2!important;
+  font-weight:800!important;
+  letter-spacing:.015em!important;
+}
+.v16-2-visual-accessibility-refinement .hero-campaign{
+  order:2;
+  display:flex!important;
+  flex-direction:column;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  width:100%;
+  margin:0!important;
+  line-height:.78!important;
+  text-align:center;
+}
+.v16-2-visual-accessibility-refinement .hero-campaign-primary{
+  display:block;
+  color:var(--campaign-primary,#006241)!important;
+  font-family:Inter,Aptos,"Segoe UI",sans-serif!important;
+  font-size:clamp(3.35rem,8.7vw,7.25rem)!important;
+  font-weight:950!important;
+  letter-spacing:-.078em!important;
+  line-height:.82!important;
+  text-wrap:balance;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.15));
+}
+.v16-2-visual-accessibility-refinement .hero-campaign-accent{
+  display:block;
+  margin-top:clamp(8px,1.2vw,14px);
+  color:var(--campaign-accent,#111111)!important;
+  font-family:"Segoe Script","Brush Script MT","Lucida Handwriting",cursive!important;
+  font-size:clamp(3.7rem,9vw,7.7rem)!important;
+  font-weight:800!important;
+  letter-spacing:-.08em!important;
+  line-height:.78!important;
+  transform:rotate(-4deg) translateX(.05em)!important;
+  transform-origin:center!important;
+}
+.v16-2-visual-accessibility-refinement .hero-hashtags{
+  order:3;
+  margin:clamp(24px,3.5vw,36px) 0 0!important;
+  color:#E7F5EF!important;
+  font-size:clamp(.78rem,1.4vw,.98rem)!important;
+  font-weight:850!important;
+  letter-spacing:.035em!important;
+  line-height:1.45!important;
+  text-align:center;
+}
+.v16-2-visual-accessibility-refinement .hero-date{
+  order:4;
+  margin:clamp(14px,2vw,20px) 0 0!important;
+}
+.v16-2-visual-accessibility-refinement .hero-actions{
+  order:5;
+  justify-content:center!important;
+  margin-top:clamp(18px,2.5vw,26px)!important;
+}
+.v16-2-visual-accessibility-refinement .hero-shortcuts{
+  order:6;
+  justify-content:center!important;
+  margin-top:clamp(16px,2vw,22px)!important;
+}
+
+.v16-2-visual-accessibility-refinement .dm-profile-strip{
+  margin:clamp(12px,2vw,18px) 0 clamp(18px,3vw,28px)!important;
+  border-color:rgba(0,98,65,.13)!important;
+  background:#F4F8F6!important;
+  box-shadow:0 12px 32px rgba(16,42,34,.075)!important;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact{
+  grid-template-columns:clamp(170px,21vw,250px) minmax(0,1fr) auto!important;
+  gap:clamp(20px,3.5vw,42px)!important;
+  min-height:clamp(190px,23vw,260px)!important;
+  padding:0 clamp(22px,4vw,46px) 0 0!important;
+}
+.v16-2-visual-accessibility-refinement .dm-photo-frame{
+  position:relative;
+  align-self:stretch;
+  min-height:100%;
+  overflow:visible!important;
+  isolation:isolate;
+  background:#F4F8F6!important;
+}
+.v16-2-visual-accessibility-refinement .dm-photo-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent 58%,#F4F8F6 100%);
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact img{
+  width:112%!important;
+  height:100%!important;
+  min-height:clamp(190px,23vw,260px)!important;
+  margin-left:-4%;
+  border-radius:0!important;
+  object-fit:contain!important;
+  object-position:center bottom!important;
+  transform:none!important;
+  filter:saturate(1.015) contrast(1.015);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 10%,#000 76%,transparent 100%),linear-gradient(180deg,transparent 0,#000 9%,#000 92%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 0,#000 10%,#000 76%,transparent 100%),linear-gradient(180deg,transparent 0,#000 9%,#000 92%,transparent 100%);
+  mask-composite:intersect;
+  transition:filter .2s ease,transform .2s ease!important;
+}
+.v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact:is(:hover,:focus-visible) img{
+  transform:scale(1.018)!important;
+  filter:saturate(1.04) contrast(1.025);
+}
+.v16-2-visual-accessibility-refinement .dm-profile-copy{
+  justify-content:flex-start;
+  text-align:left;
+}
+
+@media(max-width:760px){
+  .v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+    min-height:clamp(410px,118vw,560px);
+    padding:clamp(28px,7vw,42px) clamp(18px,5vw,28px)!important;
+  }
+  .v16-2-visual-accessibility-refinement .hero-campaign-primary{
+    font-size:clamp(2.75rem,14.4vw,5.35rem)!important;
+  }
+  .v16-2-visual-accessibility-refinement .hero-campaign-accent{
+    font-size:clamp(3.15rem,15.5vw,5.8rem)!important;
+  }
+  .v16-2-visual-accessibility-refinement .hero-shortcuts{
+    width:100%;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact{
+    grid-template-columns:clamp(130px,35vw,178px) minmax(0,1fr)!important;
+    gap:clamp(12px,3vw,20px)!important;
+    min-height:190px!important;
+    padding-right:clamp(14px,4vw,22px)!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact img{
+    min-height:190px!important;
+    width:118%!important;
+    margin-left:-8%;
+  }
+  .v16-2-visual-accessibility-refinement .dm-contact-cta{
+    grid-column:2!important;
+  }
+}
+@media(max-width:520px){
+  .v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+    min-height:440px;
+  }
+  .v16-2-visual-accessibility-refinement .hero-campaign-primary{
+    font-size:clamp(2.35rem,13.8vw,4.1rem)!important;
+    letter-spacing:-.072em!important;
+  }
+  .v16-2-visual-accessibility-refinement .hero-campaign-accent{
+    font-size:clamp(2.85rem,15vw,4.55rem)!important;
+  }
+  .v16-2-visual-accessibility-refinement .hero-hashtags{
+    max-width:280px;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact{
+    grid-template-columns:116px minmax(0,1fr)!important;
+    min-height:172px!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-strip .dm-card-contact img{
+    min-height:172px!important;
+    width:124%!important;
+    margin-left:-12%;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-copy strong{
+    font-size:1.12rem!important;
+  }
+  .v16-2-visual-accessibility-refinement .dm-profile-copy > span:last-child{
+    font-size:.78rem!important;
+  }
+}
+
+/* Light campaign canvas keeps the green/black lockup faithful to the reference. */
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner{
+  background:linear-gradient(145deg,#FFFFFF 0%,#F4F8F6 100%)!important;
+  color:#102A22!important;
+  border:1px solid rgba(0,98,65,.13)!important;
+  box-shadow:0 18px 46px rgba(16,42,34,.09)!important;
+}
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner::before{
+  content:"";
+  position:absolute;
+  width:min(38vw,380px);
+  aspect-ratio:1;
+  left:-15%;
+  bottom:-52%;
+  border-radius:50%;
+  background:rgba(0,98,65,.055);
+  pointer-events:none;
+}
+.v16-2-visual-accessibility-refinement .hero-card.hero-partner::after{
+  content:""!important;
+  display:block!important;
+  background:rgba(0,98,65,.045)!important;
+}
+.v16-2-visual-accessibility-refinement .hero-greeting{
+  color:#39705C!important;
+}
+.v16-2-visual-accessibility-refinement .hero-hashtags{
+  color:#006241!important;
+}
+.v16-2-visual-accessibility-refinement .hero-date{
+  color:#39705C!important;
+  background:#FFFFFF!important;
+  border-color:rgba(0,98,65,.16)!important;
+}
+.v16-2-visual-accessibility-refinement .hero-actions .primary-action{
+  background:#006241!important;
+  color:#FFFFFF!important;
+  border-color:#006241!important;
+}
+.v16-2-visual-accessibility-refinement .hero-actions .secondary-action{
+  background:#FFFFFF!important;
+  color:#006241!important;
+  border-color:rgba(0,98,65,.24)!important;
+}
