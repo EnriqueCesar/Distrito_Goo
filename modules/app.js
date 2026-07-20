@@ -63,6 +63,37 @@ function getPartnerGreeting(now = new Date()){
   return greeting.evening || '';
 }
 
+const HERO_ICONS = {
+  goal: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 40V8m0 4h23l-7 8 7 8H12"/><path d="M7 40h10"/></svg>',
+  experience: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="27" cy="9" r="4"/><path d="m22 17 8 4 7 8m-14-11-6 10-8 3m14-3-3 11-9 2m14-12 8 10"/></svg>',
+  team: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="14" r="6"/><circle cx="10" cy="20" r="4"/><circle cx="38" cy="20" r="4"/><path d="M14 39c0-7 4-11 10-11s10 4 10 11M3 38c0-6 3-9 8-9 2 0 4 1 5 2m29 7c0-6-3-9-8-9-2 0-4 1-5 2"/></svg>',
+  results: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 30 9 33l5-8c1-7 7-14 21-17-1 14-8 20-15 21Z"/><path d="m19 29-5 10m8-14 7-7"/><circle cx="30" cy="17" r="2"/></svg>'
+};
+
+function escapeHeroText(value){
+  return String(value || '').replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+}
+
+function renderHeroContent(){
+  const hero = state.identity?.hero || {};
+  const journey = Array.isArray(hero.journey) ? hero.journey : [];
+  const journeyEl = byId('hero-journey');
+  if(journeyEl){
+    journeyEl.innerHTML = journey.map((step, index) => `<li class="hero-step">
+      <span class="hero-step-icon">${HERO_ICONS[step.icon] || HERO_ICONS.goal}</span>
+      <strong>${escapeHeroText(step.title)}</strong><span>${escapeHeroText(step.description)}</span>
+      ${index < journey.length - 1 ? '<i class="hero-step-arrow" aria-hidden="true">→</i>' : ''}
+    </li>`).join('');
+  }
+  const district = hero.districtMessage || {};
+  const districtEl = byId('hero-district-message');
+  if(districtEl){
+    districtEl.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg><span><strong>${escapeHeroText(district.title)}</strong>: ${escapeHeroText(district.message)}</span>`;
+  }
+  const targets = { priorities: 'start-day', tools: 'open-tools-panel' };
+  (Array.isArray(hero.actions) ? hero.actions : []).forEach(action => setText(targets[action.action], action.label || ''));
+}
+
 function renderHeader(){
   setText('app-title', state.config.appName);
 
@@ -80,6 +111,8 @@ function renderHeader(){
     campaignEl.style.setProperty('--campaign-accent', campaign.accentColor || '#111111');
   }
 
+  renderHeroContent();
+
   updateClock();
   setInterval(updateClock, 60000);
 }
@@ -87,7 +120,8 @@ function renderHeader(){
 function updateClock(){
   const now = new Date();
   const date = now.toLocaleDateString('es-MX', {weekday:'long', day:'2-digit', month:'long', year:'numeric'});
-  const time = now.toLocaleTimeString('es-MX', {hour:'2-digit', minute:'2-digit'});
+  const time = now.toLocaleTimeString('es-MX', {hour:'2-digit', minute:'2-digit', hour12:true})
+    .replace(/a\.\s?m\./i, 'a.m.').replace(/p\.\s?m\./i, 'p.m.');
   setText('hero-title', getPartnerGreeting(now));
   setText('hero-date', `${date} · ${time}`);
 }
