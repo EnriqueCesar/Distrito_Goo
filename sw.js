@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v19.2.0-celebraciones';
+const CACHE_NAME = 'distrito-go-v19.3.0-eventos-celebraciones';
 const APP_SHELL = [
   './',
   './index.html',

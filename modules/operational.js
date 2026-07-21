@@ -4,7 +4,7 @@ import { toast } from './toast.js';
 
 const today = new Date();
 const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
-let eventFilter = 'week';
+let periodFilter = 'week';
 let actionsBound = false;
 
 function setTextIfPresent(id, value){
@@ -26,8 +26,8 @@ function parseDate(value){
 }
 function startOfDay(d){ return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
 function endOfDay(d){ return new Date(d.getFullYear(), d.getMonth(), d.getDate(),23,59,59); }
-function startOfWeek(d){ const s=startOfDay(d); const diff=(s.getDay()+6)%7; s.setDate(s.getDate()-diff); return s; }
-function endOfWeek(d){ const e=startOfWeek(d); e.setDate(e.getDate()+6); return endOfDay(e); }
+export function startOfWeek(d){ const s=startOfDay(d); const diff=(s.getDay()+6)%7; s.setDate(s.getDate()-diff); return s; }
+export function endOfWeek(d){ const e=startOfWeek(d); e.setDate(e.getDate()+6); return endOfDay(e); }
 function addDays(d, days){ const x=new Date(d); x.setDate(x.getDate()+days); return x; }
 function inRange(evt, start, end){
   const a=parseDate(evt['Fecha Inicio']);
@@ -80,33 +80,26 @@ function eventCard(e){
 }
 function celebrationEvents(start, end){
   const output = [];
-  const labels = [
-    ['F_NAC', 'Cumpleaños', '🎂'],
-    ['F_INGRESO', 'Aniversario', '🎉']
-  ];
   for(const partner of state.operacional.celebraciones || []){
-    for(const [field, type, icon] of labels){
-      const source = parseDate(partner[field]);
-      if(!source) continue;
-      for(let year=start.getFullYear(); year<=end.getFullYear(); year++){
-        const occurrence = new Date(year, source.getMonth(), source.getDate());
-        if(occurrence < start || occurrence > end) continue;
-        const years = year - source.getFullYear();
-        if(type === 'Aniversario' && years < 1) continue;
-        output.push({
-          'Fecha Inicio': `${year}-${String(source.getMonth()+1).padStart(2,'0')}-${String(source.getDate()).padStart(2,'0')}`,
-          'Fecha Fin': '',
-          Actividad: `${icon} ${type}: ${partner.NOMBRE}`,
-          'Contexto / Recordatorio': `${partner.TIENDA}${type === 'Aniversario' ? ` · ${years} año${years === 1 ? '' : 's'}` : ''}`,
-          Imagen: icon,
-          Link: '',
-          ImagenPath: '',
-          TipoCelebracion: type
-        });
-      }
+    const source = parseDate(partner.Fecha);
+    if(!source || partner.Publicar === false) continue;
+    for(let year=start.getFullYear(); year<=end.getFullYear(); year++){
+      const occurrence = new Date(year, source.getMonth(), source.getDate());
+      if(occurrence < start || occurrence > end) continue;
+      if(partner.Tipo === 'Aniversario' && year - source.getFullYear() < 1) continue;
+      output.push({...partner, occurrence});
     }
   }
   return output;
+}
+function celebrationCard(item){
+  const icon = item.Tipo === 'Aniversario' ? '🎉' : '🎂';
+  const date = item.occurrence.toLocaleDateString('es-MX', { weekday:'short', day:'2-digit', month:'long' });
+  return `<article class="ops-card celebration-card"><div class="ops-icon">${icon}</div><div class="ops-content"><span class="event-date">${escapeHtml(date)}</span><h4>${escapeHtml(item.NOMBRE || 'Partner')}</h4><p>${escapeHtml(item.TIENDA || '')}${item.PUESTO ? ` · ${escapeHtml(item.PUESTO)}` : ''}</p><strong>${escapeHtml(item.Tipo || '')}</strong></div></article>`;
+}
+export function periodBounds(reference=today, mode=periodFilter){
+  if(mode === 'month') return {start:new Date(reference.getFullYear(), reference.getMonth(), 1), end:endOfDay(new Date(reference.getFullYear(), reference.getMonth()+1, 0))};
+  return {start:startOfWeek(reference), end:endOfWeek(reference)};
 }
 function personRow(p, tipo){
   const nombre = p.Partner || p['NOMBRE COMPLETO'] || p.NOMBRE || 'Partner';
@@ -193,16 +186,21 @@ export function renderInformativo(){
 }
 export function renderEvents(){
   const all = state.operacional.eventos || [];
-  const now = startOfDay(today);
-  let start, end;
-  if(eventFilter === 'week'){ start=startOfWeek(today); end=endOfWeek(today); }
-  else if(eventFilter === 'month'){ start=new Date(today.getFullYear(), today.getMonth(),1); end=endOfDay(new Date(today.getFullYear(), today.getMonth()+1,0)); }
-  else { start=now; end=new Date(today.getFullYear(),11,31,23,59,59); }
-  const celebrations = celebrationEvents(start, end);
-  const filtered = [...all.filter(e => inRange(e,start,end) && (parseDate(e['Fecha Fin']) || parseDate(e['Fecha Inicio']) || end) >= now), ...celebrations]
+  const {start, end} = periodBounds();
+  const filtered = all.filter(e => e.Publicar !== false && inRange(e,start,end))
     .sort((a,b)=>(parseDate(a['Fecha Inicio'])||0)-(parseDate(b['Fecha Inicio'])||0));
-  setTextIfPresent('events-count', `${filtered.length} ${eventFilter === 'week' ? 'esta semana' : eventFilter === 'month' ? 'este mes' : 'próximos'}`);
-  setHtmlIfPresent('events-grid', filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este filtro', 'Cambia a Mes o Todos para ver próximos recordatorios.', '📅'));
+  const label = periodFilter === 'week' ? 'esta semana' : 'este mes';
+  setTextIfPresent('period-label', `${start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'})} al ${end.toLocaleDateString('es-MX',{day:'2-digit',month:'short',year:'numeric'})}`);
+  setTextIfPresent('events-count', `${filtered.length} ${label}`);
+  setHtmlIfPresent('events-grid', filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este periodo', 'No hay eventos publicados para el periodo seleccionado.', '📅'));
+  renderCelebrations();
+}
+export function renderCelebrations(){
+  const {start, end} = periodBounds();
+  const filtered = celebrationEvents(start, end).sort((a,b)=>a.occurrence-b.occurrence || String(a.NOMBRE).localeCompare(String(b.NOMBRE)));
+  const label = periodFilter === 'week' ? 'esta semana' : 'este mes';
+  setTextIfPresent('celebrations-count', `${filtered.length} ${label}`);
+  setHtmlIfPresent('celebrations-grid', filtered.map(celebrationCard).join('') || opsCard('Sin aniversarios o cumpleaños', 'No hay celebraciones para el periodo seleccionado.', '🎂'));
 }
 export function renderAltas(){
   const a = state.operacional.altasCurso || {bt:[],ss:[],tbw:[]};
@@ -229,10 +227,10 @@ function bindOperationalActions(){
   if(actionsBound) return;
   actionsBound = true;
   document.body.addEventListener('click', e => {
-    const segment = e.target.closest('.segment');
+    const segment = e.target.closest('[data-period-filter]');
     if(segment){
-      eventFilter = segment.dataset.eventsFilter;
-      $$('.segment').forEach(b=>b.classList.toggle('is-active', b===segment));
+      periodFilter = segment.dataset.periodFilter;
+      $$('[data-period-filter]').forEach(b=>b.classList.toggle('is-active', b===segment));
       renderEvents();
     }
   });

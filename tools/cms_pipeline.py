@@ -22,14 +22,14 @@ REQUIRED_HEADERS = {
     "TBW": ["Corte", "SBX", "NOMBRE", "CeCo", "TIENDA", "PUESTO", "Región", "DM", "HRBP", "Fecha de ingreso", "Días de antigüedad", "To be Welcoming fundacional \nDía 36 al 60", "To be Welcoming Sesgo de edad\nDía 60 al 90", "To be Welcoming Discapacidad \nDía 60 al 90", "To be Welcoming Género\nDía 60 al 90", "To be Welcoming Sexualidad\ndía 90- 120", "Avance"],
     "SS": ["Mes", "SBX", "NO. EMPLEADO", "NOMBRE COMPLETO", "CECO", "TIENDA", "REGION", "DM", "HRBP", "RD", "mes de solicitud", "BT", "ESTATUS ALTA"],
     "Links": ["Categoria", "Grupo", "Icono", "Nombre", "Tipo", "URL", "WebURL", "Package", "PlayStore", "Notas", "Favorito", "Orden"],
-    "Eventos": ["Fecha Inicio", "Fecha Fin", "Actividad", "Contexto / Recordatorio", "Link/Imagen", "Imagen"],
+    "Eventos": ["ID", "Nombre Evento", "Descripción", "Fecha Inicio", "Fecha Fin", "Región", "Distrito", "Tienda", "Publicar", "Link/Imagen", "Imagen"],
     "Actividades_Semanales": ["ID", "Actividad", "Descripción", "Día", "Hora / Corte", "Icono", "Color", "Link"],
     "Actividades_Diaria": ["ID", "Actividad", "Descripción", "Link / Imagen", "Frecuencia", "Prioridad", "Categoría", "Icono", "Color", "Visible"],
     "Duty_Roster": ["Orden", "Día", "Estaciones", "Imágenes", "Color", "Enfoque"],
     "Duty_Detail": ["Día", "Estación", "Categoría", "Orden", "Actividad", "Icono", "Crítico"],
     "Checklist_Apertura": ["Actividad", "Orden", "Concepto", "Icono"],
     "Identidad": ["Identificador", "Sección", "Campo", "Valor", "Color", "Estilo", "Visible", "Notas"],
-    "Celebraciones": ["NUM_EMP", "NOMBRE", "TIENDA", "CECO", "PUESTO", "DM", "F_NAC", "F_INGRESO"],
+    "Aniversarios_Cumpleanos": ["ID", "Tipo", "Nombre Partner", "Fecha", "Puesto", "Tienda", "Distrito", "Región", "Publicar", "NUM_EMP", "CECO"],
 }
 
 CATEGORY_META = {
@@ -163,10 +163,19 @@ def build(root: Path, sheets: dict[str, list[dict[str, Any]]]) -> list[Path]:
 
     events = []
     for row in raw["Eventos"]:
+        if not truthy(row.get("Publicar")):
+            continue
         mixed = str(row.pop("Link/Imagen", "") or "").strip()
         link = mixed if re.match(r"^https?://", mixed, re.I) else ""
         img_candidate = "" if link else mixed
-        events.append({**row, "Link": link, "ImagenPath": image_path(img_candidate, root) if img_candidate else ""})
+        events.append({
+            "ID": row.get("ID", ""), "Actividad": row.get("Nombre Evento", ""),
+            "Contexto / Recordatorio": row.get("Descripción", ""),
+            "Fecha Inicio": row.get("Fecha Inicio", ""), "Fecha Fin": row.get("Fecha Fin", ""),
+            "Región": row.get("Región", ""), "Distrito": row.get("Distrito", ""),
+            "Tienda": row.get("Tienda", ""), "Publicar": True, "Imagen": row.get("Imagen", ""),
+            "Link": link, "ImagenPath": image_path(img_candidate, root) if img_candidate else ""
+        })
 
     duty_roster = []
     for row in raw["Duty_Roster"]:
@@ -252,12 +261,22 @@ def build(root: Path, sheets: dict[str, list[dict[str, Any]]]) -> list[Path]:
     }
 
     bt, ss, tbw = raw["BT"], raw["SS"], raw["TBW"]
-    celebrations = raw["Celebraciones"]
+    celebrations = []
+    for row in raw["Aniversarios_Cumpleanos"]:
+        if not truthy(row.get("Publicar")):
+            continue
+        celebrations.append({
+            "ID": row.get("ID", ""), "Tipo": row.get("Tipo", ""),
+            "NOMBRE": row.get("Nombre Partner", ""), "Fecha": row.get("Fecha", ""),
+            "PUESTO": row.get("Puesto", ""), "TIENDA": row.get("Tienda", ""),
+            "DM": row.get("Distrito", ""), "REGION": row.get("Región", ""),
+            "Publicar": True, "NUM_EMP": row.get("NUM_EMP", ""), "CECO": row.get("CECO", "")
+        })
     operational = {
         "eventos": events, "actividadesDiarias": daily, "actividadesSemanales": weekly,
         "dutyRoster": duty_roster, "dutyDetail": duty_detail, "checklistApertura": checklist,
         "altasCurso": {"bt": bt, "ss": ss, "tbw": tbw}, "wfm": raw["WFM"],
-        "cmsFuente": "Distrito_Go_CMS.xlsx", "informativo": info, "celebraciones": celebrations,
+        "cmsFuente": "Distrito_Go_CMS_v2.xlsx", "informativo": info, "celebraciones": celebrations,
         "wfmRegla": raw["WFM"][0].get("Regla WFM", "") if raw["WFM"] else "",
     }
 
