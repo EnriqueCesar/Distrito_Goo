@@ -1296,5 +1296,30 @@
       "web"
     ],
     "estado": "activo"
+  },
+  {
+    "id": "gastos-concur",
+    "categoriaId": "operacion",
+    "categoria": "Operación",
+    "categoriaIcono": "⚙️",
+    "grupo": "Trabajo",
+    "icono": "💵",
+    "nombre": "Gastos Concur",
+    "tipo": "web",
+    "url": "https://eu2.concursolutions.com/home",
+    "webUrl": "",
+    "package": "",
+    "playStore": "",
+    "notas": "",
+    "favorito": false,
+    "orden": 45,
+    "keywords": [
+      "concur",
+      "gastos",
+      "operacion",
+      "trabajo",
+      "web"
+    ],
+    "estado": "activo"
   }
 ]

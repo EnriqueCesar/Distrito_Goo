@@ -31,13 +31,13 @@
   },
   {
     "ID": 4,
-    "Actividad": "Gastos Oracle",
+    "Actividad": "Gastos Concur",
     "Descripción": "Registra y valida gastos pendientes.",
     "Día": "Lunes",
     "Hora / Corte": "",
     "Icono": "💳",
     "Color": "Azul",
-    "Link": "https://enev.login.us2.oraclecloud.com/"
+    "Link": "https://eu2.concursolutions.com/home"
   },
   {
     "ID": 5,

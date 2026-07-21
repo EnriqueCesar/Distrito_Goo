@@ -29,6 +29,7 @@ REQUIRED_HEADERS = {
     "Duty_Detail": ["Día", "Estación", "Categoría", "Orden", "Actividad", "Icono", "Crítico"],
     "Checklist_Apertura": ["Actividad", "Orden", "Concepto", "Icono"],
     "Identidad": ["Identificador", "Sección", "Campo", "Valor", "Color", "Estilo", "Visible", "Notas"],
+    "Celebraciones": ["NUM_EMP", "NOMBRE", "TIENDA", "CECO", "PUESTO", "DM", "F_NAC", "F_INGRESO"],
 }
 
 CATEGORY_META = {
@@ -203,11 +204,13 @@ def build(root: Path, sheets: dict[str, list[dict[str, Any]]]) -> list[Path]:
             CATEGORY_META.setdefault(cat_id, (str(row["Categoria"]), "🔗", "#5F6368"))
         keyword_source = " ".join(str(row.get(k, "")) for k in ("Categoria", "Grupo", "Nombre", "Tipo", "Notas"))
         keywords = sorted({slug(word) for word in re.findall(r"[\wÁÉÍÓÚÜÑáéíóúüñ]+", keyword_source) if len(word) > 2})
+        order_value = row.get("Orden")
+        order = int(order_value) if order_value not in (None, "") else int(previous.get("orden") or len(tools) + 1)
         tools.append({
             "id": item_id, "categoriaId": cat_id, "categoria": row["Categoria"], "categoriaIcono": previous.get("categoriaIcono") or old_categories_by_id.get(cat_id, {}).get("icono") or CATEGORY_META[cat_id][1],
             "grupo": row["Grupo"], "icono": row["Icono"], "nombre": row["Nombre"], "tipo": str(row["Tipo"]).casefold(),
-            "url": row["URL"], "webUrl": row["WebURL"], "package": row["Package"], "playStore": row["PlayStore"],
-            "notas": row["Notas"], "favorito": truthy(row["Favorito"]), "orden": int(row["Orden"]), "keywords": keywords, "estado": "activo"
+            "url": row.get("URL", ""), "webUrl": row.get("WebURL", ""), "package": row.get("Package", ""), "playStore": row.get("PlayStore", ""),
+            "notas": row.get("Notas", ""), "favorito": truthy(row.get("Favorito", "")), "orden": order, "keywords": keywords, "estado": "activo"
         })
     tools.sort(key=lambda x: (x["orden"], x["nombre"].casefold()))
     favorites = [t["id"] for t in tools if t["favorito"]]
@@ -229,6 +232,7 @@ def build(root: Path, sheets: dict[str, list[dict[str, Any]]]) -> list[Path]:
     old_identity = json.loads((data / "identity.json").read_text(encoding="utf-8")) if (data / "identity.json").exists() else {}
     identity = {
         "hero": {
+            **old_identity.get("hero", {}),
             "greeting": {
                 "morning": identity_rows.get("hero.greeting.morning", {}).get("Valor", "Buenos días Partners."),
                 "afternoon": identity_rows.get("hero.greeting.afternoon", {}).get("Valor", "Buenas tardes Partners."),
@@ -248,11 +252,12 @@ def build(root: Path, sheets: dict[str, list[dict[str, Any]]]) -> list[Path]:
     }
 
     bt, ss, tbw = raw["BT"], raw["SS"], raw["TBW"]
+    celebrations = raw["Celebraciones"]
     operational = {
         "eventos": events, "actividadesDiarias": daily, "actividadesSemanales": weekly,
         "dutyRoster": duty_roster, "dutyDetail": duty_detail, "checklistApertura": checklist,
         "altasCurso": {"bt": bt, "ss": ss, "tbw": tbw}, "wfm": raw["WFM"],
-        "cmsFuente": "Distrito_Go_CMS.xlsx", "informativo": info,
+        "cmsFuente": "Distrito_Go_CMS.xlsx", "informativo": info, "celebraciones": celebrations,
         "wfmRegla": raw["WFM"][0].get("Regla WFM", "") if raw["WFM"] else "",
     }
 

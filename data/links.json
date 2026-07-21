@@ -614,5 +614,19 @@
     "Notas": "Mide el ritmo de producción de bebidas durante observaciones en tienda.",
     "Favorito": "Sí",
     "Orden": 12.7
+  },
+  {
+    "Categoria": "Operación",
+    "Grupo": "Trabajo",
+    "Icono": "💵",
+    "Nombre": "Gastos Concur",
+    "Tipo": "web",
+    "URL": "https://eu2.concursolutions.com/home",
+    "WebURL": "",
+    "Package": "",
+    "PlayStore": "",
+    "Notas": "",
+    "Favorito": "",
+    "Orden": ""
   }
 ]

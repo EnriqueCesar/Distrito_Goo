@@ -78,6 +78,36 @@ function eventCard(e){
   const link = e.Link ? `<a class="mini-link" href="${escapeHtml(e.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '';
   return `<article class="ops-card event-card"><div class="ops-icon">${icon}</div><div class="ops-content"><span class="event-date">${escapeHtml(dateLine)}</span><h4>${escapeHtml(title)}</h4><p>${escapeHtml(briefText(e['Contexto / Recordatorio'], 145))}</p><div class="inline-actions">${link}${image}</div></div></article>`;
 }
+function celebrationEvents(start, end){
+  const output = [];
+  const labels = [
+    ['F_NAC', 'Cumpleaños', '🎂'],
+    ['F_INGRESO', 'Aniversario', '🎉']
+  ];
+  for(const partner of state.operacional.celebraciones || []){
+    for(const [field, type, icon] of labels){
+      const source = parseDate(partner[field]);
+      if(!source) continue;
+      for(let year=start.getFullYear(); year<=end.getFullYear(); year++){
+        const occurrence = new Date(year, source.getMonth(), source.getDate());
+        if(occurrence < start || occurrence > end) continue;
+        const years = year - source.getFullYear();
+        if(type === 'Aniversario' && years < 1) continue;
+        output.push({
+          'Fecha Inicio': `${year}-${String(source.getMonth()+1).padStart(2,'0')}-${String(source.getDate()).padStart(2,'0')}`,
+          'Fecha Fin': '',
+          Actividad: `${icon} ${type}: ${partner.NOMBRE}`,
+          'Contexto / Recordatorio': `${partner.TIENDA}${type === 'Aniversario' ? ` · ${years} año${years === 1 ? '' : 's'}` : ''}`,
+          Imagen: icon,
+          Link: '',
+          ImagenPath: '',
+          TipoCelebracion: type
+        });
+      }
+    }
+  }
+  return output;
+}
 function personRow(p, tipo){
   const nombre = p.Partner || p['NOMBRE COMPLETO'] || p.NOMBRE || 'Partner';
   const tienda = p.Tienda || p.TIENDA || '';
@@ -168,7 +198,8 @@ export function renderEvents(){
   if(eventFilter === 'week'){ start=startOfWeek(today); end=endOfWeek(today); }
   else if(eventFilter === 'month'){ start=new Date(today.getFullYear(), today.getMonth(),1); end=endOfDay(new Date(today.getFullYear(), today.getMonth()+1,0)); }
   else { start=now; end=new Date(today.getFullYear(),11,31,23,59,59); }
-  const filtered = all.filter(e => inRange(e,start,end) && (parseDate(e['Fecha Fin']) || parseDate(e['Fecha Inicio']) || end) >= now)
+  const celebrations = celebrationEvents(start, end);
+  const filtered = [...all.filter(e => inRange(e,start,end) && (parseDate(e['Fecha Fin']) || parseDate(e['Fecha Inicio']) || end) >= now), ...celebrations]
     .sort((a,b)=>(parseDate(a['Fecha Inicio'])||0)-(parseDate(b['Fecha Inicio'])||0));
   setTextIfPresent('events-count', `${filtered.length} ${eventFilter === 'week' ? 'esta semana' : eventFilter === 'month' ? 'este mes' : 'próximos'}`);
   setHtmlIfPresent('events-grid', filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este filtro', 'Cambia a Mes o Todos para ver próximos recordatorios.', '📅'));
