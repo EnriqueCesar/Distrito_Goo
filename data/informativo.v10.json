@@ -12,5 +12,19 @@
     "Recurso": "assets/photos/maquila_abril.png",
     "TipoRecurso": "imagen",
     "DescripcionBreve": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)"
+  },
+  {
+    "ID": 2,
+    "Actividad": "Dress Code",
+    "Descripción": "Consulta la alineación semanal de vestimenta e imagen personal.",
+    "Frecuencia": "Semanal",
+    "Prioridad": 2,
+    "Categoría": "Personas",
+    "Icono": "👔",
+    "Color": "Verde",
+    "Visible": true,
+    "Recurso": "assets/photos/dress_code.png",
+    "TipoRecurso": "imagen",
+    "DescripcionBreve": "Consulta la alineación semanal de vestimenta e imagen personal."
   }
 ]

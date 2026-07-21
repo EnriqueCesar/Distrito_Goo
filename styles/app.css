@@ -56,12 +56,13 @@
 .command-icon{background:rgba(0,98,65,.10)!important;color:var(--sb-green)}
 .section-subtitle{line-height:1.35}
 .event-card .event-date{letter-spacing:.02em}
+.event-date-group{grid-column:1/-1;border:1px solid rgba(0,98,65,.14);border-radius:24px;background:linear-gradient(145deg,var(--surface),rgba(212,233,226,.28));padding:14px;box-shadow:var(--shadow-soft)}.event-date-group>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.event-date-group>header div{display:flex;align-items:center;gap:8px}.event-date-group>header span{display:grid;place-items:center;width:34px;height:34px;border-radius:12px;background:var(--sb-green);color:#fff}.event-date-group>header strong{color:var(--sb-green);font-size:1rem}.event-date-group>header small{border-radius:999px;background:var(--sb-mint);color:var(--sb-green);padding:6px 9px;font-weight:900}.event-group-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.event-group-grid .event-card{height:100%;background:var(--surface)}
 .period-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0 8px;padding:14px 18px;border:1px solid var(--line);border-radius:22px;background:var(--surface);box-shadow:var(--shadow-soft)}
 .period-toolbar>div:first-child{display:grid;gap:3px}.period-toolbar #period-label{color:var(--muted);font-weight:800}.period-toolbar .segmented-control{margin:0}
 .celebrations-section{border:1px solid rgba(0,98,65,.16);background:linear-gradient(180deg,var(--surface),rgba(212,233,226,.28))}.celebration-card strong{color:var(--sb-green);font-size:.82rem}.partner-hub-note{margin:16px 0 0;color:var(--muted)}.partner-hub-note a{color:var(--sb-green);font-weight:900}
 .empty-state{background:var(--surface)!important;color:var(--ink)!important}
 .empty-state p{color:var(--muted)!important}
-@media(max-width:620px){.duty-link{width:100%;justify-content:space-between}.mini-link{font-size:.8rem}.period-toolbar{align-items:stretch;flex-direction:column}.period-toolbar .segmented-control{display:grid;grid-template-columns:1fr 1fr}}
+@media(max-width:1050px){.event-group-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.duty-link{width:100%;justify-content:space-between}.mini-link{font-size:.8rem}.period-toolbar{align-items:stretch;flex-direction:column}.period-toolbar .segmented-control{display:grid;grid-template-columns:1fr 1fr}.event-group-grid{grid-template-columns:1fr}.event-date-group>header{align-items:flex-start;flex-direction:column}}
 .dm-visuals{display:flex;align-items:center;gap:10px;position:relative;z-index:1}
 .dm-visuals img{display:block;object-fit:cover;border-radius:22px;border:2px solid rgba(255,255,255,.72);box-shadow:0 12px 32px rgba(0,0,0,.22)}
 #support-visual{width:86px!important;height:86px!important;background:#101820}

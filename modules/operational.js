@@ -78,6 +78,19 @@ function eventCard(e){
   const link = e.Link ? `<a class="mini-link" href="${escapeHtml(e.Link)}" target="_blank" rel="noopener">Abrir link</a>` : '';
   return `<article class="ops-card event-card"><div class="ops-icon">${icon}</div><div class="ops-content"><span class="event-date">${escapeHtml(dateLine)}</span><h4>${escapeHtml(title)}</h4><p>${escapeHtml(briefText(e['Contexto / Recordatorio'], 145))}</p><div class="inline-actions">${link}${image}</div></div></article>`;
 }
+function eventGroups(events){
+  const groups = new Map();
+  for(const event of events){
+    const key = `${event['Fecha Inicio'] || ''}|${event['Fecha Fin'] || event['Fecha Inicio'] || ''}`;
+    if(!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(event);
+  }
+  return [...groups.values()].map(group => {
+    const first = group[0];
+    const dateLine = `${fmtDDMM(first['Fecha Inicio'])}${first['Fecha Fin'] ? ' al ' + fmtDDMM(first['Fecha Fin']) : ''}`;
+    return `<section class="event-date-group"><header><div><span>📅</span><strong>${escapeHtml(dateLine)}</strong></div><small>${group.length} evento${group.length === 1 ? '' : 's'}</small></header><div class="event-group-grid">${group.map(eventCard).join('')}</div></section>`;
+  }).join('');
+}
 function celebrationEvents(start, end){
   const output = [];
   for(const partner of state.operacional.celebraciones || []){
@@ -192,7 +205,7 @@ export function renderEvents(){
   const label = periodFilter === 'week' ? 'esta semana' : 'este mes';
   setTextIfPresent('period-label', `${start.toLocaleDateString('es-MX',{day:'2-digit',month:'short'})} al ${end.toLocaleDateString('es-MX',{day:'2-digit',month:'short',year:'numeric'})}`);
   setTextIfPresent('events-count', `${filtered.length} ${label}`);
-  setHtmlIfPresent('events-grid', filtered.slice(0,18).map(eventCard).join('') || opsCard('Sin eventos en este periodo', 'No hay eventos publicados para el periodo seleccionado.', '📅'));
+  setHtmlIfPresent('events-grid', eventGroups(filtered.slice(0,18)) || opsCard('Sin eventos en este periodo', 'No hay eventos publicados para el periodo seleccionado.', '📅'));
   renderCelebrations();
 }
 export function renderCelebrations(){

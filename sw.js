@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v19.3.0-eventos-celebraciones';
+const CACHE_NAME = 'distrito-go-v20.0.0-dresscode-eventos';
 const APP_SHELL = [
   './',
   './index.html',
@@ -41,6 +41,7 @@ const APP_SHELL = [
   './assets/photos/10-pasos-turno.png',
   './assets/photos/Rutina_apertura.jpeg',
   './assets/photos/cdd_3Q_2026.png',
+  './assets/photos/dress_code.png',
   './assets/photos/concurso_venta_dona_julio.jpeg',
   './assets/photos/cortado_leche.jpeg',
   './assets/photos/hugo-barista-champion.jpeg',
@@ -50,7 +51,6 @@ const APP_SHELL = [
   './assets/photos/store-walk.png',
   './assets/photos/verificacion-cafe-espresso.png',
   './assets/photos/y-si-si-inicio.jpeg',
-  './assets/photos/ysisi.jpeg',
   './assets/img/bearistahugger.jpeg',
   './assets/tools/espresso-hub.jpeg',
   './assets/premium/duty-roster/domingo_drive_thru.png',
