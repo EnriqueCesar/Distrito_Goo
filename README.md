@@ -35,8 +35,18 @@ python tools/audit_static.py
 
 Publicar el contenido de la raíz de `main` mediante **Deploy from a branch**. Conservar `.nojekyll`, las rutas relativas `./` y todos los archivos incluidos en `APP_SHELL`.
 
-Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v20.1.0-coffee-master`.
+Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v20.1.0-felicitaciones-pdf`.
 
 
-## Versión actual
-Inicio consolidado sin tarjeta del District Coach, informativos vigentes y reconocimiento Coffee Master 2026. PWA v20.1 con funcionamiento offline actualizado.
+## Fase 3
+Inicio consolidado sin tarjeta del District Coach, PWA v19 y depuración segura de recursos exclusivos. Consulta `reports/FASE_3_RESUMEN.md`.
+
+## Felicitaciones PDF
+
+En **Aniversarios y cumpleaños**, cada tarjeta genera un PDF personalizado al seleccionarla. Cumpleaños y aniversarios usan composiciones visuales diferentes; el proceso se ejecuta en el navegador y conserva el funcionamiento estático y sin conexión de la PWA.
+
+Para revisar el machote sin abrir la aplicación:
+
+```bash
+python tools/generate_celebration_machote.py --type birthday --name "Nombre Partner" --store "Tienda" --role "Barista" --date 2026-07-20 --output felicitacion.pdf
+```

@@ -1,6 +1,7 @@
 import { state } from './state.js';
 import { $, $$, escapeHtml } from './utils.js';
 import { toast } from './toast.js';
+import { generateCelebrationPdf } from './celebration-pdf.js';
 
 const today = new Date();
 const dayNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
@@ -106,9 +107,15 @@ function celebrationEvents(start, end){
   return output;
 }
 function celebrationCard(item){
-  const icon = item.Tipo === 'Aniversario' ? '🎉' : '🎂';
+  const isAnniversary = item.Tipo === 'Aniversario';
+  const icon = isAnniversary ? '🏅' : '🎂';
   const date = item.occurrence.toLocaleDateString('es-MX', { weekday:'short', day:'2-digit', month:'long' });
-  return `<article class="ops-card celebration-card"><div class="ops-icon">${icon}</div><div class="ops-content"><span class="event-date">${escapeHtml(date)}</span><h4>${escapeHtml(item.NOMBRE || 'Partner')}</h4><p>${escapeHtml(item.TIENDA || '')}${item.PUESTO ? ` · ${escapeHtml(item.PUESTO)}` : ''}</p><strong>${escapeHtml(item.Tipo || '')}</strong></div></article>`;
+  const occurrence = `${item.occurrence.getFullYear()}-${String(item.occurrence.getMonth()+1).padStart(2,'0')}-${String(item.occurrence.getDate()).padStart(2,'0')}`;
+  const source = parseDate(item.Fecha);
+  const years = isAnniversary && source ? Math.max(1, item.occurrence.getFullYear() - source.getFullYear()) : 0;
+  const celebrationLabel = isAnniversary ? `${years} año${years === 1 ? '' : 's'} de trayectoria` : 'Cumpleaños';
+  const person = item.NOMBRE || 'Partner';
+  return `<button class="ops-card celebration-card ${isAnniversary ? 'is-anniversary' : 'is-birthday'}" type="button" data-celebration-id="${escapeHtml(item.ID || '')}" data-celebration-date="${occurrence}" aria-label="Crear felicitación PDF para ${escapeHtml(person)}"><div class="ops-icon" aria-hidden="true">${icon}</div><div class="ops-content"><span class="event-date">${escapeHtml(date)}</span><h4>${escapeHtml(person)}</h4><p>${escapeHtml(item.TIENDA || '')}${item.PUESTO ? ` · ${escapeHtml(item.PUESTO)}` : ''}</p><strong>${escapeHtml(celebrationLabel)}</strong><span class="celebration-cta"><span>Crear felicitación</span><b>PDF ↓</b></span></div></button>`;
 }
 export function periodBounds(reference=today, mode=periodFilter){
   if(mode === 'month') return {start:new Date(reference.getFullYear(), reference.getMonth(), 1), end:endOfDay(new Date(reference.getFullYear(), reference.getMonth()+1, 0))};
@@ -239,7 +246,31 @@ export function renderDuty(){
 function bindOperationalActions(){
   if(actionsBound) return;
   actionsBound = true;
-  document.body.addEventListener('click', e => {
+  document.body.addEventListener('click', async e => {
+    const celebration = e.target.closest('[data-celebration-id]');
+    if(celebration){
+      e.preventDefault();
+      const source = (state.operacional.celebraciones || []).find(item => item.ID === celebration.dataset.celebrationId);
+      if(!source){
+        toast('No se encontró la información del partner');
+        return;
+      }
+      celebration.disabled = true;
+      celebration.classList.add('is-generating');
+      celebration.setAttribute('aria-busy', 'true');
+      try{
+        await generateCelebrationPdf({...source, occurrence:parseDate(celebration.dataset.celebrationDate)});
+        toast(`Felicitación de ${source.Tipo.toLowerCase()} lista`);
+      }catch(error){
+        console.error('[Distrito Go] No se pudo generar la felicitación:', error);
+        toast('No se pudo generar el PDF. Intenta nuevamente.');
+      }finally{
+        celebration.disabled = false;
+        celebration.classList.remove('is-generating');
+        celebration.removeAttribute('aria-busy');
+      }
+      return;
+    }
     const segment = e.target.closest('[data-period-filter]');
     if(segment){
       periodFilter = segment.dataset.periodFilter;

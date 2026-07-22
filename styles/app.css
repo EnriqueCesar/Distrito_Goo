@@ -765,7 +765,7 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   border-color:rgba(0,98,65,.24)!important;
 }
 
-/* Fase 2: experiencia adaptable{min-height:0;padding:0;overflow:hidden}
+/* Fase 2: experiencia adaptable */
 .tool-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:14px}
 .tool-mode-control{margin:0}
 .sort-control{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--text-muted,#5f6368)}
@@ -901,72 +901,123 @@ body{background:linear-gradient(180deg,#f7fbf8 0%,#eef7f2 100%);}
   .v16-2-visual-accessibility-refinement .hero-campaign-accent{font-size:clamp(2.8rem,14vw,4.7rem)!important;}
 }
 
-/* v20.1 · Reconocimiento Coffee Master 2026 */
-.recognition-section{
-  display:grid;
-  grid-template-columns:minmax(250px,.72fr) minmax(0,1.45fr);
-  gap:clamp(20px,3vw,38px);
-  align-items:center;
-  margin:18px 0;
-  padding:clamp(20px,3vw,36px);
-  border:1px solid rgba(0,98,65,.2);
-  border-radius:var(--radius-xl);
-  background:linear-gradient(135deg,#f3faf6 0%,#fff 62%);
-  box-shadow:var(--shadow-soft);
-  scroll-margin-top:90px;
+/* v20.1: reconocimientos descargables para cumpleaños y aniversarios. */
+.celebrations-section{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,#fff 0%,#f5faf7 100%)!important;
+  border-color:rgba(0,98,65,.18)!important;
 }
-.recognition-copy{display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
-.recognition-badge{
+.celebrations-section::before{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  right:-130px;
+  top:-130px;
+  border-radius:50%;
+  background:rgba(0,98,65,.045);
+  pointer-events:none;
+}
+.celebrations-section>.section-title,.celebrations-section>#celebrations-grid,.celebrations-section>.partner-hub-note{position:relative;z-index:1}
+.celebrations-section #celebrations-grid{grid-template-columns:repeat(auto-fit,minmax(285px,1fr));}
+button.celebration-card{
+  appearance:none;
+  width:100%;
+  min-height:196px!important;
+  grid-template-columns:auto minmax(0,1fr)!important;
+  padding:18px!important;
+  border-width:1px!important;
+  font:inherit;
+  color:#17372d!important;
+  text-align:left;
+  cursor:pointer;
+  overflow:hidden;
+  isolation:isolate;
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease!important;
+}
+button.celebration-card::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:120px;
+  height:120px;
+  right:-54px;
+  top:-56px;
+  border-radius:50%;
+  opacity:.72;
+}
+button.celebration-card.is-birthday{
+  background:linear-gradient(145deg,#fff 0%,#fff7ef 100%)!important;
+  border-color:rgba(216,92,74,.23)!important;
+}
+button.celebration-card.is-birthday::before{background:#fce2d7}
+button.celebration-card.is-anniversary{
+  background:linear-gradient(145deg,#fff 0%,#f0f7f3 100%)!important;
+  border-color:rgba(0,98,65,.22)!important;
+}
+button.celebration-card.is-anniversary::before{background:#d9ece3}
+button.celebration-card .ops-icon{
+  width:50px;
+  height:50px;
+  border-radius:18px;
+  box-shadow:inset 0 0 0 1px rgba(0,98,65,.10);
+}
+button.celebration-card.is-birthday .ops-icon{background:#fce2d7}
+button.celebration-card.is-anniversary .ops-icon{background:#d9ece3}
+button.celebration-card .event-date{
   display:inline-flex;
-  align-items:center;
-  gap:7px;
-  padding:7px 12px;
+  margin:0 0 8px;
+  padding:5px 9px;
   border-radius:999px;
-  background:#e5f3ec;
+  background:rgba(0,98,65,.08);
   color:#006241;
   font-size:.78rem;
-  font-weight:850;
-  letter-spacing:.04em;
-  text-transform:uppercase;
+  font-weight:900;
 }
-.recognition-copy h3{margin:0;color:#063f2d;font-size:clamp(1.65rem,3vw,2.7rem);line-height:1.05;}
-.recognition-copy p{margin:0;color:var(--muted);font-size:clamp(.98rem,1.4vw,1.12rem);line-height:1.65;}
-.recognition-action{
-  min-height:46px;
-  margin-top:4px;
-  padding:10px 18px;
-  border:0;
+button.celebration-card h4{margin:0 0 5px!important;font-size:1.02rem;line-height:1.22;color:#102a22!important}
+button.celebration-card p{margin:0 0 9px!important;color:#456158!important}
+button.celebration-card strong{
+  display:inline-flex;
+  width:max-content;
+  max-width:100%;
+  padding:5px 9px;
+  border-radius:999px;
+  font-size:.76rem;
+  color:#006241;
+  background:rgba(0,98,65,.08);
+}
+button.celebration-card.is-birthday strong{color:#a33d31;background:rgba(216,92,74,.10)}
+.celebration-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(0,98,65,.12);
+  color:#006241;
+  font-size:.82rem;
+  font-weight:900;
+}
+.celebration-cta b{
+  display:inline-flex;
+  padding:6px 9px;
   border-radius:999px;
   background:#006241;
   color:#fff;
-  font:inherit;
-  font-weight:850;
-  cursor:pointer;
+  font-size:.72rem;
+  letter-spacing:.03em;
 }
-.recognition-action:hover{background:#004f35;transform:translateY(-1px);}
-.recognition-action:focus-visible,.recognition-preview:focus-visible{outline:3px solid rgba(0,168,98,.32);outline-offset:3px;}
-.recognition-preview{
-  display:block;
-  width:100%;
-  padding:0;
-  border:1px solid rgba(0,98,65,.16);
-  border-radius:18px;
-  background:#fff;
-  box-shadow:0 16px 34px rgba(8,66,47,.12);
-  overflow:hidden;
-  cursor:zoom-in;
-}
-.recognition-preview img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;}
-[data-theme="dark"] .recognition-section{background:linear-gradient(135deg,#10271f 0%,var(--surface) 62%);}
-[data-theme="dark"] .recognition-copy h3{color:#d4e9e2;}
-[data-theme="dark"] .recognition-badge{background:#173c2f;color:#71d3a5;}
-[data-theme="dark"] .recognition-preview{background:#101a16;}
-@media(max-width:820px){
-  .recognition-section{grid-template-columns:1fr;}
-  .recognition-copy{align-items:stretch;}
-  .recognition-action{width:100%;}
-}
-@media(prefers-reduced-motion:no-preference){
-  .recognition-action,.recognition-preview{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease;}
-  .recognition-preview:hover{transform:translateY(-2px);box-shadow:0 20px 38px rgba(8,66,47,.16);}
+button.celebration-card:hover{transform:translateY(-3px)!important;box-shadow:0 16px 32px rgba(16,42,34,.11)!important}
+button.celebration-card.is-birthday:hover{border-color:rgba(216,92,74,.50)!important}
+button.celebration-card.is-anniversary:hover{border-color:rgba(0,98,65,.48)!important}
+button.celebration-card:focus-visible{outline:3px solid #00a862;outline-offset:3px}
+button.celebration-card:disabled{cursor:progress;opacity:.72;transform:none!important}
+button.celebration-card.is-generating .celebration-cta span::after{content:" PDF…"}
+[data-theme="dark"] .celebrations-section{background:linear-gradient(145deg,#14251f,#10201a)!important}
+[data-theme="dark"] button.celebration-card{color:#17372d!important}
+@media(max-width:620px){
+  .celebrations-section #celebrations-grid{grid-template-columns:1fr}
+  button.celebration-card{min-height:184px!important;padding:16px!important}
 }

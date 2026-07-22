@@ -2,18 +2,15 @@
   "version": "20.1.0",
   "releaseDate": "2026-07-22",
   "changes": [
-    "Nuevo apartado de reconocimiento Coffee Master 2026 con vista previa y visor completo.",
-    "Diseño adaptable, accesible y compatible con modo oscuro para el mensaje de reconocimiento.",
-    "Recurso Coffee Master incluido en la caché offline de la PWA.",
-    "Apartado del District Coach retirado por completo del Inicio.",
-    "Hero de JUNTÉMONOS MÁS consolidado para escritorio y móvil.",
-    "Configuración, eventos, estilos y caché exclusivos del perfil eliminados.",
-    "CMS sincronizado con los registros de Coach desactivados.",
-    "Auditoría estática y PWA actualizadas sin modificar herramientas ni enlaces."
+    "Tarjetas de cumpleaños y aniversarios convertidas en acciones accesibles.",
+    "Generación local de felicitaciones PDF personalizadas por partner.",
+    "Diseños cálidos y diferenciados para cumpleaños y aniversario.",
+    "Marca JUNTÉMONOS MÁS y Distrito Kike integrada en cada reconocimiento.",
+    "Corrección de una declaración CSS incompleta y actualización de caché offline."
   ],
-  "notes": "Actualización visual no disruptiva. Se conservan la lógica operativa, el contenido vigente, las herramientas, los enlaces y el funcionamiento offline.",
+  "notes": "La PWA conserva su arquitectura estática; los PDF se crean en el navegador y quedan disponibles sin conexión después de instalar la nueva caché.",
   "fecha": "2026-07-22",
-  "descripcion": "Reconocimiento Coffee Master 2026 integrado al Inicio.",
+  "descripcion": "Reconocimientos dinámicos y descargables para celebraciones de partners.",
   "updatedAt": "2026-07-22",
   "runtimeFix": "v20.1.0",
   "name": "Juntémonos Más"
