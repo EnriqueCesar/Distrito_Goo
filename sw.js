@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v20.0.0-dresscode-eventos';
+const CACHE_NAME = 'distrito-go-v20.1.0-coffee-master';
 const APP_SHELL = [
   './',
   './index.html',
@@ -41,6 +41,7 @@ const APP_SHELL = [
   './assets/photos/10-pasos-turno.png',
   './assets/photos/Rutina_apertura.jpeg',
   './assets/photos/cdd_3Q_2026.png',
+  './assets/photos/coffemaster26.png',
   './assets/photos/dress_code.png',
   './assets/photos/concurso_venta_dona_julio.jpeg',
   './assets/photos/cortado_leche.jpeg',

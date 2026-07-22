@@ -35,8 +35,8 @@ python tools/audit_static.py
 
 Publicar el contenido de la raíz de `main` mediante **Deploy from a branch**. Conservar `.nojekyll`, las rutas relativas `./` y todos los archivos incluidos en `APP_SHELL`.
 
-Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v18.0.0-python-phase-2`.
+Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v20.1.0-coffee-master`.
 
 
-## Fase 3
-Inicio consolidado sin tarjeta del District Coach, PWA v19 y depuración segura de recursos exclusivos. Consulta `reports/FASE_3_RESUMEN.md`.
+## Versión actual
+Inicio consolidado sin tarjeta del District Coach, informativos vigentes y reconocimiento Coffee Master 2026. PWA v20.1 con funcionamiento offline actualizado.

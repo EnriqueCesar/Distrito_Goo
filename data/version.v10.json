@@ -1,17 +1,20 @@
 {
-  "version": "19.0.0",
-  "releaseDate": "2026-07-19",
+  "version": "20.1.0",
+  "releaseDate": "2026-07-22",
   "changes": [
+    "Nuevo apartado de reconocimiento Coffee Master 2026 con vista previa y visor completo.",
+    "Diseño adaptable, accesible y compatible con modo oscuro para el mensaje de reconocimiento.",
+    "Recurso Coffee Master incluido en la caché offline de la PWA.",
     "Apartado del District Coach retirado por completo del Inicio.",
     "Hero de JUNTÉMONOS MÁS consolidado para escritorio y móvil.",
     "Configuración, eventos, estilos y caché exclusivos del perfil eliminados.",
     "CMS sincronizado con los registros de Coach desactivados.",
     "Auditoría estática y PWA actualizadas sin modificar herramientas ni enlaces."
   ],
-  "notes": "Fase 3 de depuración y consolidación. Se conservan la lógica operativa, las herramientas, los enlaces y el funcionamiento offline.",
-  "fecha": "2026-07-19",
-  "descripcion": "Depuración final, consolidación de arquitectura y experiencia Web/App.",
-  "updatedAt": "2026-07-19",
-  "runtimeFix": "v19.0.0",
+  "notes": "Actualización visual no disruptiva. Se conservan la lógica operativa, el contenido vigente, las herramientas, los enlaces y el funcionamiento offline.",
+  "fecha": "2026-07-22",
+  "descripcion": "Reconocimiento Coffee Master 2026 integrado al Inicio.",
+  "updatedAt": "2026-07-22",
+  "runtimeFix": "v20.1.0",
   "name": "Juntémonos Más"
 }
