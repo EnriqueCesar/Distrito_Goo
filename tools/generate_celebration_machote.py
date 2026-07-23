@@ -1,52 +1,43 @@
 #!/usr/bin/env python3
-"""Genera machotes PDF de cumpleaños o aniversario para revisión visual."""
+"""Genera machotes cuadrados de cumpleaños y aniversario para Distrito Kike."""
 
 from __future__ import annotations
 
 import argparse
-import re
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
 from reportlab.lib.colors import HexColor
-from reportlab.lib.pagesizes import A4, landscape
 from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfgen import canvas
 
 
-THEMES = {
-    "birthday": {
-        "background": "#FFF7EF",
-        "accent": "#D85C4A",
-        "secondary": "#F3B43F",
-        "soft": "#FCE6DC",
-        "ink": "#19352C",
-        "eyebrow": "HOY CELEBRAMOS CONTIGO",
-        "title": "¡FELIZ CUMPLEAÑOS!",
-        "subtitle": "QUE SEA UN DÍA TAN ESPECIAL COMO TÚ",
-        "message": (
-            "Que este nuevo año de vida llegue con momentos memorables, aprendizajes "
-            "y muchas razones para sonreír. Gracias por compartir tu energía con nuestro distrito."
-        ),
-    },
-    "anniversary": {
-        "background": "#F2F7F3",
-        "accent": "#006241",
-        "secondary": "#B8862B",
-        "soft": "#DDEDE5",
-        "ink": "#17372D",
-        "eyebrow": "UN GRAN RECONOCIMIENTO",
-        "title": "CELEBRAMOS TU ANIVERSARIO",
-        "message": (
-            "Gracias por construir experiencias, acompañar al equipo y dejar tu huella cada día. "
-            "Tu compromiso hace más fuerte a nuestro distrito."
-        ),
-    },
-}
-
-
-def parse_date(value: str) -> date:
-    return datetime.strptime(value, "%Y-%m-%d").date()
+PAGE_SIZE = (612, 612)
+GREEN = "#006241"
+WARM_GREEN = "#00754A"
+DARK_GREEN = "#003B2A"
+DEEP_GREEN = "#004C35"
+MINT = "#D4E9E2"
+CREAM = "#FFF8EE"
+INK = "#162F27"
+GOLD = "#F2C14E"
+ORANGE = "#F26B38"
+PINK = "#E98BCB"
+BLUE = "#72AFE5"
+WHITE = "#FFFFFF"
+HASHTAGS = ("#DistritoKike", "#OrgulloCN", "#GreenApronService")
+BIRTHDAY_MESSAGE = (
+    "Hoy celebramos la alegría de compartir este camino contigo. Gracias por poner el corazón "
+    "en cada momento y por hacer especial la experiencia de quienes te rodean. Que este nuevo año "
+    "esté lleno de grandes aprendizajes, nuevas oportunidades y muchos motivos para sonreír. "
+    "¡Feliz cumpleaños!"
+)
+ANNIVERSARY_MESSAGE = (
+    "Hoy celebramos tu historia y el camino que has construido con nosotros. Gracias por compartir "
+    "tu talento, compromiso y corazón en cada experiencia. Tu dedicación deja huella e inspira a "
+    "quienes tienen la oportunidad de caminar a tu lado. Que sigamos creando grandes momentos y "
+    "celebrando muchos años más juntos. ¡Feliz aniversario!"
+)
 
 
 def fit_size(text: str, font: str, preferred: float, minimum: float, max_width: float) -> float:
@@ -56,194 +47,368 @@ def fit_size(text: str, font: str, preferred: float, minimum: float, max_width: 
     return size
 
 
-def draw_centered(pdf: canvas.Canvas, text: str, x: float, y: float, font: str, size: float, color: str) -> None:
-    pdf.setFont(font, size)
+def centered(
+    pdf: canvas.Canvas,
+    text: str,
+    center_x: float,
+    y: float,
+    font: str,
+    size: float,
+    color: str,
+    max_width: float | None = None,
+) -> float:
+    actual = fit_size(text, font, size, max(10, size * 0.5), max_width) if max_width else size
+    pdf.setFont(font, actual)
     pdf.setFillColor(HexColor(color))
-    pdf.drawCentredString(x, y, text)
+    pdf.drawCentredString(center_x, y, text)
+    return actual
 
 
-def wrap_text(text: str, font: str, size: float, max_width: float) -> list[str]:
+def wrap_lines(text: str, font: str, size: float, max_width: float) -> list[str]:
     lines: list[str] = []
-    current = ""
+    line = ""
     for word in text.split():
-        candidate = f"{current} {word}".strip()
-        if not current or stringWidth(candidate, font, size) <= max_width:
-            current = candidate
+        candidate = f"{line} {word}".strip()
+        if not line or stringWidth(candidate, font, size) <= max_width:
+            line = candidate
         else:
-            lines.append(current)
-            current = word
-    if current:
-        lines.append(current)
+            lines.append(line)
+            line = word
+    if line:
+        lines.append(line)
     return lines
 
 
-def draw_rocket(pdf: canvas.Canvas, x: float, y: float) -> None:
+def balanced_name_lines(text: str, font: str, size: float, max_width: float) -> list[str]:
+    if stringWidth(text, font, size) <= max_width:
+        return [text]
+    words = text.split()
+    choices: list[tuple[float, list[str]]] = []
+    for index in range(1, len(words)):
+        first = " ".join(words[:index])
+        second = " ".join(words[index:])
+        widest = max(stringWidth(first, font, size), stringWidth(second, font, size))
+        if widest <= max_width:
+            choices.append((widest, [first, second]))
+    return min(choices, default=(float("inf"), [text]), key=lambda item: item[0])[1]
+
+
+def draw_centered_name(
+    pdf: canvas.Canvas,
+    text: str,
+    center_x: float,
+    center_y: float,
+    max_width: float,
+    preferred: float,
+    minimum: float,
+    color: str,
+) -> None:
+    size = preferred
+    lines = balanced_name_lines(text, "Helvetica-Bold", size, max_width)
+    if len(lines) == 2:
+        size = max(minimum, preferred * 0.88)
+        lines = balanced_name_lines(text, "Helvetica-Bold", size, max_width)
+    while size > minimum and any(stringWidth(line, "Helvetica-Bold", size) > max_width for line in lines):
+        size -= 0.5
+        lines = balanced_name_lines(text, "Helvetica-Bold", size, max_width)
+    pdf.setFillColor(HexColor(color))
+    if len(lines) == 1:
+        centered(pdf, lines[0], center_x, center_y - size * 0.34, "Helvetica-Bold", size, color, max_width)
+        return
+    gap = size * 1.04
+    centered(pdf, lines[0], center_x, center_y + gap * 0.16, "Helvetica-Bold", size, color, max_width)
+    centered(pdf, lines[1], center_x, center_y - gap * 0.84, "Helvetica-Bold", size, color, max_width)
+
+
+def draw_text_block(
+    pdf: canvas.Canvas,
+    text: str,
+    x: float,
+    top_y: float,
+    max_width: float,
+    font: str,
+    size: float,
+    line_height: float,
+    color: str,
+    max_lines: int = 8,
+) -> None:
+    pdf.setFont(font, size)
+    pdf.setFillColor(HexColor(color))
+    for index, line in enumerate(wrap_lines(text, font, size, max_width)[:max_lines]):
+        pdf.drawString(x, top_y - index * line_height, line)
+
+
+def draw_juntemonos(pdf: canvas.Canvas, x: float, y: float, reverse: bool = False, scale: float = 1) -> None:
+    primary = WHITE if reverse else GREEN
+    accent = CREAM if reverse else "#111111"
+    primary_size = 24 * scale
+    accent_size = 22 * scale
+    pdf.setFillColor(HexColor(primary))
+    pdf.setFont("Helvetica-Bold", primary_size)
+    pdf.drawString(x, y, "JUNTÉMONOS")
+    offset = stringWidth("JUNTÉMONOS", "Helvetica-Bold", primary_size) + 7 * scale
+    pdf.setFillColor(HexColor(accent))
+    pdf.setFont("Times-BoldItalic", accent_size)
+    pdf.drawString(x + offset, y - scale, "más")
+    start = x + offset + 2 * scale
+    end = start + stringWidth("más", "Times-BoldItalic", accent_size)
+    pdf.setStrokeColor(HexColor(primary))
+    pdf.setLineWidth(2.2 * scale)
+    pdf.setLineCap(1)
+    path = pdf.beginPath()
+    path.moveTo(start, y - 5 * scale)
+    path.curveTo(start + 16 * scale, y - 8 * scale, end - 16 * scale, y - 2 * scale, end, y - 4 * scale)
+    pdf.drawPath(path, stroke=1, fill=0)
+
+
+def draw_spark(pdf: canvas.Canvas, x: float, y: float, radius: float, color: str, width: float = 2) -> None:
+    pdf.setStrokeColor(HexColor(color))
+    pdf.setLineWidth(width)
+    pdf.setLineCap(1)
+    pdf.line(x - radius, y, x + radius, y)
+    pdf.line(x, y - radius, x, y + radius)
+    pdf.line(x - radius * 0.68, y - radius * 0.68, x + radius * 0.68, y + radius * 0.68)
+    pdf.line(x - radius * 0.68, y + radius * 0.68, x + radius * 0.68, y - radius * 0.68)
+
+
+def draw_coffee_bean(pdf: canvas.Canvas, x: float, y: float, width: float, height: float, color: str) -> None:
     pdf.saveState()
     pdf.translate(x, y)
-    pdf.rotate(42)
-    pdf.setFillColor(HexColor("#006241"))
-    pdf.ellipse(0, 0, 19, 39, fill=1, stroke=0)
-    pdf.setFillColor(HexColor("#D4E9E2"))
-    pdf.circle(9.5, 25, 4.2, fill=1, stroke=0)
-    pdf.setFillColor(HexColor("#D85C4A"))
-    pdf.rect(-5, 5, 11, 6, fill=1, stroke=0)
-    pdf.setFillColor(HexColor("#F3B43F"))
-    pdf.rect(-8, 6.5, 7, 3.5, fill=1, stroke=0)
+    pdf.rotate(-24)
+    pdf.setFillColor(HexColor(color))
+    pdf.ellipse(-width / 2, -height / 2, width / 2, height / 2, fill=1, stroke=0)
+    path = pdf.beginPath()
+    path.moveTo(-width * 0.12, -height * 0.34)
+    path.curveTo(width * 0.2, -height * 0.1, -width * 0.2, height * 0.1, width * 0.12, height * 0.34)
+    pdf.setStrokeColor(HexColor(CREAM))
+    pdf.setLineWidth(max(1.2, width * 0.06))
+    pdf.drawPath(path, stroke=1, fill=0)
     pdf.restoreState()
 
 
-def draw_birthday_mark(pdf: canvas.Canvas, x: float, y: float, theme: dict[str, str]) -> None:
-    pdf.setFillColor(HexColor(theme["soft"]))
-    pdf.setStrokeColor(HexColor(theme["accent"]))
-    pdf.setLineWidth(2)
-    pdf.roundRect(x, y, 88, 54, 8, fill=1, stroke=1)
-    pdf.setFillColor(HexColor(theme["accent"]))
-    pdf.rect(x + 8, y + 22, 72, 9, fill=1, stroke=0)
-    for offset in (21, 41, 61):
-        pdf.setFillColor(HexColor(theme["secondary"]))
-        pdf.rect(x + offset, y + 54, 6, 17, fill=1, stroke=0)
-        pdf.setFillColor(HexColor(theme["accent"]))
-        pdf.circle(x + offset + 3, y + 75, 3.3, fill=1, stroke=0)
+def draw_smile(pdf: canvas.Canvas, x: float, y: float, size: float, color: str) -> None:
+    pdf.setStrokeColor(HexColor(color))
+    pdf.setLineWidth(2.2)
+    pdf.circle(x, y, size, fill=0, stroke=1)
+    pdf.setFillColor(HexColor(color))
+    pdf.circle(x - size * 0.36, y + size * 0.2, 1.5, fill=1, stroke=0)
+    pdf.circle(x + size * 0.36, y + size * 0.2, 1.5, fill=1, stroke=0)
+    path = pdf.beginPath()
+    path.moveTo(x - size * 0.48, y - size * 0.12)
+    path.curveTo(x - size * 0.2, y - size * 0.52, x + size * 0.2, y - size * 0.52, x + size * 0.48, y - size * 0.12)
+    pdf.drawPath(path, stroke=1, fill=0)
 
 
-def draw_anniversary_mark(
-    pdf: canvas.Canvas, x: float, y: float, theme: dict[str, str], years: int
-) -> None:
-    pdf.setFillColor(HexColor(theme["soft"]))
-    pdf.setStrokeColor(HexColor(theme["secondary"]))
-    pdf.setLineWidth(2)
-    pdf.circle(x + 44, y + 44, 39, fill=1, stroke=1)
-    pdf.setFillColor(HexColor(theme["soft"]))
-    pdf.setStrokeColor(HexColor(theme["accent"]))
-    pdf.circle(x + 44, y + 44, 28, fill=1, stroke=1)
-    draw_centered(pdf, str(years), x + 44, y + 33, "Helvetica-Bold", 30, theme["accent"])
-    pdf.setStrokeColor(HexColor(theme["secondary"]))
-    pdf.setLineWidth(8)
-    pdf.line(x + 19, y + 10, x + 10, y - 8)
-    pdf.line(x + 69, y + 10, x + 78, y - 8)
+def draw_cake_cup(pdf: canvas.Canvas, x: float, y: float) -> None:
+    pdf.setFillColor(HexColor(WHITE))
+    pdf.roundRect(x, y, 74, 58, 13, fill=1, stroke=0)
+    pdf.setStrokeColor(HexColor(GREEN))
+    pdf.setLineWidth(5)
+    pdf.circle(x + 75, y + 29, 16, fill=0, stroke=1)
+    pdf.setFillColor(HexColor(PINK))
+    pdf.roundRect(x + 8, y + 44, 58, 10, 5, fill=1, stroke=0)
+    for offset, candle_color in ((18, ORANGE), (36, BLUE), (54, GOLD)):
+        pdf.setFillColor(HexColor(candle_color))
+        pdf.roundRect(x + offset, y + 54, 5, 18, 2.5, fill=1, stroke=0)
+        pdf.setFillColor(HexColor(candle_color))
+        pdf.circle(x + offset + 2.5, y + 77, 3.2, fill=1, stroke=0)
+    draw_coffee_bean(pdf, x + 37, y + 25, 14, 22, GREEN)
 
 
-def draw_confetti(pdf: canvas.Canvas, theme: dict[str, str]) -> None:
-    colors = (theme["accent"], theme["secondary"], "#006241")
-    points = ((34, 510), (66, 548), (111, 520), (750, 82), (792, 119), (731, 505), (788, 476), (45, 102), (104, 70))
-    for index, (x, y) in enumerate(points):
-        pdf.setFillColor(HexColor(colors[index % len(colors)]), alpha=0.72)
-        if index % 2:
-            pdf.circle(x, y, 4 + index % 3, fill=1, stroke=0)
-        else:
-            pdf.saveState()
-            pdf.translate(x, y)
-            pdf.rotate(index * 13 + 18)
-            pdf.rect(0, 0, 5, 18, fill=1, stroke=0)
-            pdf.restoreState()
+def draw_hashtags(pdf: canvas.Canvas, center_x: float, y: float, color: str, dot: str) -> None:
+    size = 10.0
+    widths = [stringWidth(tag, "Helvetica-Bold", size) for tag in HASHTAGS]
+    total = sum(widths) + 30
+    while total > 520 and size > 8:
+        size -= 0.5
+        widths = [stringWidth(tag, "Helvetica-Bold", size) for tag in HASHTAGS]
+        total = sum(widths) + 30
+    x = center_x - total / 2
+    pdf.setFont("Helvetica-Bold", size)
+    pdf.setFillColor(HexColor(color))
+    for index, tag in enumerate(HASHTAGS):
+        pdf.drawString(x, y, tag)
+        x += widths[index]
+        if index < len(HASHTAGS) - 1:
+            pdf.setFillColor(HexColor(dot))
+            pdf.circle(x + 7.5, y + 3.2, 2, fill=1, stroke=0)
+            x += 15
+            pdf.setFillColor(HexColor(color))
+
+
+def draw_birthday(pdf: canvas.Canvas, width: float, height: float, name: str, store: str) -> None:
+    pdf.setFillColor(HexColor(GREEN))
+    pdf.rect(0, 0, width, height, fill=1, stroke=0)
+    pdf.setFillColor(HexColor(CREAM))
+    pdf.roundRect(22, 22, width - 44, height - 44, 27, fill=1, stroke=0)
+    pdf.setFillColor(HexColor(MINT), alpha=0.48)
+    pdf.circle(42, height - 42, 67, fill=1, stroke=0)
+    pdf.setFillColor(HexColor(PINK), alpha=0.20)
+    pdf.circle(width - 30, 31, 82, fill=1, stroke=0)
+    pdf.setFillAlpha(1)
+
+    draw_juntemonos(pdf, 48, height - 56, reverse=False, scale=0.78)
+    pdf.setFont("Helvetica-Bold", 8.2)
+    pdf.setFillColor(HexColor(GREEN))
+    pdf.drawString(353, height - 49, "CELEBRACIÓN PARTNER · DISTRITO KIKE")
+    pdf.setFont("Helvetica-Bold", 13)
+    pdf.drawString(49, height - 105, "HOY CELEBRAMOS")
+    pdf.setFont("Times-BoldItalic", 31)
+    pdf.setFillColor(HexColor(INK))
+    pdf.drawString(48, height - 149, "¡TU CUMPLEAÑOS!")
+    pdf.setStrokeColor(HexColor(GREEN))
+    pdf.setLineWidth(3)
+    pdf.setLineCap(1)
+    path = pdf.beginPath()
+    path.moveTo(50, height - 158)
+    path.curveTo(135, height - 168, 250, height - 150, 340, height - 157)
+    pdf.drawPath(path, stroke=1, fill=0)
+    draw_cake_cup(pdf, 476, height - 151)
+    draw_spark(pdf, 445, height - 91, 8, ORANGE, 2)
+    draw_spark(pdf, 568, height - 168, 7, BLUE, 2)
+
+    pdf.setFillColor(HexColor(GREEN))
+    pdf.roundRect(46, 304, 520, 136, 22, fill=1, stroke=0)
+    pdf.setFillColor(HexColor(WHITE), alpha=0.10)
+    pdf.circle(68, 421, 38, fill=1, stroke=0)
+    pdf.setFillAlpha(1)
+    draw_centered_name(pdf, name, width / 2, 390, 472, 37, 24, WHITE)
+    pdf.setFillColor(HexColor(MINT))
+    pdf.roundRect(164, 313, 284, 24, 12, fill=1, stroke=0)
+    centered(pdf, store, width / 2, 320, "Helvetica-Bold", 12, DARK_GREEN, 252)
+
+    pdf.setFillColor(HexColor(WHITE))
+    pdf.roundRect(46, 108, 520, 174, 20, fill=1, stroke=0)
+    pdf.setFillColor(HexColor(ORANGE))
+    pdf.rect(46, 108, 7, 174, fill=1, stroke=0)
+    draw_text_block(pdf, BIRTHDAY_MESSAGE, 74, 249, 462, "Helvetica", 12.25, 18.4, INK, 8)
+    draw_smile(pdf, 532, 133, 17, GREEN)
+    for x, y, radius, accent in ((52, 83, 7, ORANGE), (96, 75, 5, PINK), (520, 84, 6, BLUE), (558, 93, 8, GOLD)):
+        draw_spark(pdf, x, y, radius, accent, 1.8)
+    draw_hashtags(pdf, width / 2, 55, GREEN, ORANGE)
+
+
+def draw_years_badge(pdf: canvas.Canvas, center_x: float, center_y: float, years: int | None) -> None:
+    pdf.setFillColor(HexColor(DEEP_GREEN))
+    pdf.setStrokeColor(HexColor(GOLD))
+    pdf.setLineWidth(3)
+    pdf.circle(center_x, center_y, 56, fill=1, stroke=1)
+    pdf.setStrokeColor(HexColor(MINT), alpha=0.55)
+    pdf.setLineWidth(1.2)
+    pdf.circle(center_x, center_y, 46, fill=0, stroke=1)
+    if years is None:
+        centered(pdf, "[NÚMERO]", center_x, center_y + 8, "Helvetica-Bold", 13, GOLD, 84)
+        centered(pdf, "DE AÑOS", center_x, center_y - 11, "Helvetica-Bold", 9.5, WHITE, 78)
+    else:
+        centered(pdf, str(years), center_x, center_y + 1, "Helvetica-Bold", 36, GOLD, 72)
+        centered(pdf, "AÑO JUNTOS" if years == 1 else "AÑOS JUNTOS", center_x, center_y - 25, "Helvetica-Bold", 9.5, WHITE, 88)
+
+
+def draw_anniversary(pdf: canvas.Canvas, width: float, height: float, name: str, store: str, years: int | None) -> None:
+    pdf.setFillColor(HexColor(DARK_GREEN))
+    pdf.rect(0, 0, width, height, fill=1, stroke=0)
+    for index, radius in enumerate((96, 145, 196)):
+        pdf.setStrokeColor(HexColor(GOLD if index % 2 else MINT), alpha=0.14 if index % 2 else 0.10)
+        pdf.setLineWidth(1.7)
+        pdf.circle(width - 10, height + 8, radius, fill=0, stroke=1)
+    pdf.setStrokeColor(HexColor(MINT), alpha=0.28)
+    pdf.setLineWidth(1.1)
+    pdf.rect(24, 24, width - 48, height - 48, fill=0, stroke=1)
+    pdf.setStrokeAlpha(1)
+    draw_coffee_bean(pdf, 49, 515, 26, 42, GOLD)
+    draw_coffee_bean(pdf, 568, 72, 22, 35, MINT)
+
+    draw_juntemonos(pdf, 48, height - 56, reverse=True, scale=0.78)
+    pdf.setFillColor(HexColor(MINT))
+    pdf.setFont("Helvetica-Bold", 8.2)
+    pdf.drawString(337, height - 49, "RECONOCIMIENTO PARTNER · DISTRITO KIKE")
+    pdf.setFillColor(HexColor(GOLD))
+    pdf.setFont("Helvetica-Bold", 12.5)
+    pdf.drawString(48, height - 105, "CELEBRAMOS TU HISTORIA")
+    pdf.setFillColor(HexColor(WHITE))
+    pdf.setFont("Helvetica-Bold", 30)
+    pdf.drawString(47, height - 149, "¡FELIZ ANIVERSARIO!")
+
+    pdf.setFillColor(HexColor(CREAM))
+    pdf.roundRect(45, 333, 522, 110, 20, fill=1, stroke=0)
+    draw_centered_name(pdf, name, width / 2, 400, 474, 36, 23, DARK_GREEN)
+    pdf.setFillColor(HexColor(GOLD))
+    pdf.roundRect(163, 340, 286, 25, 12.5, fill=1, stroke=0)
+    centered(pdf, store, width / 2, 347, "Helvetica-Bold", 12, DARK_GREEN, 254)
+
+    draw_years_badge(pdf, 111, 261, years)
+    pdf.setFont("Times-BoldItalic", 22)
+    pdf.setFillColor(HexColor(MINT))
+    pdf.drawString(188, 282, "Dejar huella")
+    pdf.drawString(188, 252, "también es inspirar.")
+    pdf.setStrokeColor(HexColor(GOLD))
+    pdf.setLineWidth(2.6)
+    path = pdf.beginPath()
+    path.moveTo(190, 243)
+    path.curveTo(265, 235, 380, 249, 455, 243)
+    pdf.drawPath(path, stroke=1, fill=0)
+    draw_spark(pdf, 525, 270, 12, GOLD, 2.1)
+    draw_spark(pdf, 527, 225, 6, MINT, 1.7)
+
+    pdf.setFillColor(HexColor(DEEP_GREEN))
+    pdf.roundRect(45, 82, 522, 130, 18, fill=1, stroke=0)
+    pdf.setFillColor(HexColor(GOLD))
+    pdf.rect(45, 82, 6, 130, fill=1, stroke=0)
+    draw_text_block(pdf, ANNIVERSARY_MESSAGE, 69, 185, 468, "Helvetica", 10.6, 15.1, WHITE, 8)
+    draw_hashtags(pdf, width / 2, 49, WHITE, GOLD)
+
+
+def parse_date(value: str | None) -> date | None:
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(value[:10])
+    except ValueError:
+        return None
+
+
+def resolved_years(args: argparse.Namespace) -> int | None:
+    if args.years is not None:
+        return args.years if args.years >= 1 else None
+    source = parse_date(args.source_date)
+    event = parse_date(args.date)
+    if not source or not event:
+        return None
+    years = event.year - source.year
+    return years if years >= 1 else None
 
 
 def generate(args: argparse.Namespace) -> Path:
     output = Path(args.output).expanduser().resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
-    theme = THEMES[args.type]
-    event_date = parse_date(args.date)
-    years = max(1, event_date.year - parse_date(args.source_date).year) if args.type == "anniversary" else 0
-    width, height = landscape(A4)
-    pdf = canvas.Canvas(str(output), pagesize=(width, height), pageCompression=1)
-    pdf.setTitle(f"{theme['title']} · {args.name}")
+    width, height = PAGE_SIZE
+    pdf = canvas.Canvas(str(output), pagesize=PAGE_SIZE, pageCompression=1)
+    kind_label = "Aniversario" if args.type == "anniversary" else "Cumpleaños"
+    pdf.setTitle(f"{kind_label} · {args.name}")
     pdf.setAuthor("Distrito Kike · JUNTÉMONOS MÁS")
-    pdf.setSubject("Reconocimiento para partners")
-
-    pdf.setFillColor(HexColor(theme["background"]))
-    pdf.rect(0, 0, width, height, fill=1, stroke=0)
-    pdf.setFillColor(HexColor(theme["soft"]), alpha=0.9)
-    pdf.circle(-30, height + 10, 150, fill=1, stroke=0)
-    pdf.circle(width + 10, -15, 170, fill=1, stroke=0)
-    draw_confetti(pdf, theme)
-
-    pdf.setFont("Helvetica-Bold", 31)
-    pdf.setFillColor(HexColor("#006241"))
-    pdf.drawString(54, height - 62, "JUNTÉMONOS")
-    pdf.setFont("Helvetica-Oblique", 25)
-    pdf.setFillColor(HexColor("#111111"))
-    pdf.drawString(286, height - 62, "MÁS")
-    pdf.setFont("Helvetica-Bold", 13)
-    pdf.setFillColor(HexColor("#006241"))
-    pdf.drawString(width - 188, height - 57, "DISTRITO KIKE")
-    draw_rocket(pdf, width - 57, height - 73)
-
-    panel_x, panel_y, panel_w, panel_h = 54, 86, width - 108, 410
-    pdf.setFillColor(HexColor("#C9D9D1"), alpha=0.42)
-    pdf.roundRect(panel_x + 6, panel_y - 7, panel_w, panel_h, 18, fill=1, stroke=0)
-    pdf.setFillColor(HexColor("#FFFFFF"))
-    pdf.setStrokeColor(HexColor(theme["soft"]))
-    pdf.setLineWidth(1.5)
-    pdf.roundRect(panel_x, panel_y, panel_w, panel_h, 18, fill=1, stroke=1)
-    pdf.setFillColor(HexColor(theme["accent"]))
-    pdf.roundRect(panel_x, panel_y, 190, panel_h, 18, fill=1, stroke=0)
-    pdf.rect(panel_x + 170, panel_y, 20, panel_h, fill=1, stroke=0)
-
-    mark_x, mark_y = panel_x + 51, panel_y + 230
-    if args.type == "birthday":
-        draw_birthday_mark(pdf, mark_x, mark_y, theme)
+    pdf.setSubject("Reconocimiento Partner")
+    pdf.setKeywords("Green Apron Service, Orgullo CN, Distrito Kike")
+    if args.type == "anniversary":
+        draw_anniversary(pdf, width, height, args.name, args.store, resolved_years(args))
     else:
-        draw_anniversary_mark(pdf, mark_x, mark_y, theme, years)
-
-    event_label = event_date.strftime("%d/%m/%Y")
-    draw_centered(pdf, theme["eyebrow"], panel_x + 95, panel_y + 188, "Helvetica-Bold", 12, "#FFFFFF")
-    draw_centered(pdf, event_label, panel_x + 95, panel_y + 156, "Helvetica", 11, "#FFFFFF")
-    pdf.setStrokeColor(HexColor("#FFFFFF"), alpha=0.65)
-    pdf.setLineWidth(1)
-    pdf.line(panel_x + 35, panel_y + 137, panel_x + 155, panel_y + 137)
-    draw_centered(pdf, "DISTRITO KIKE", panel_x + 95, panel_y + 107, "Helvetica-Bold", 12, "#FFFFFF")
-    draw_centered(pdf, "JUNTÉMONOS MÁS", panel_x + 95, panel_y + 83, "Helvetica", 10, "#FFFFFF")
-
-    content_x = panel_x + 226
-    content_w = panel_w - 258
-    pdf.setFont("Helvetica-Bold", 11)
-    pdf.setFillColor(HexColor(theme["secondary"]))
-    pdf.drawString(content_x, panel_y + 344, theme["eyebrow"])
-    title_size = fit_size(theme["title"], "Helvetica-Bold", 29, 21, content_w)
-    pdf.setFont("Helvetica-Bold", title_size)
-    pdf.setFillColor(HexColor(theme["accent"]))
-    pdf.drawString(content_x, panel_y + 303, theme["title"])
-
-    subtitle = theme.get("subtitle") or ("1 AÑO HACIENDO EQUIPO" if years == 1 else f"{years} AÑOS HACIENDO EQUIPO")
-    pdf.setFont("Helvetica-Bold", 12.5)
-    pdf.setFillColor(HexColor(theme["ink"]))
-    pdf.drawString(content_x, panel_y + 271, subtitle)
-    name_size = fit_size(args.name, "Helvetica-Bold", 28, 17, content_w)
-    pdf.setFont("Helvetica-Bold", name_size)
-    pdf.drawString(content_x, panel_y + 218, args.name)
-    pdf.setFont("Helvetica", 12)
-    pdf.setFillColor(HexColor("#4D655C"))
-    pdf.drawString(content_x, panel_y + 190, f"{args.store}  ·  {args.role}")
-    pdf.setStrokeColor(HexColor(theme["soft"]))
-    pdf.setLineWidth(1.2)
-    pdf.line(content_x, panel_y + 170, content_x + content_w, panel_y + 170)
-
-    pdf.setFont("Helvetica", 13)
-    pdf.setFillColor(HexColor(theme["ink"]))
-    for index, line in enumerate(wrap_text(theme["message"], "Helvetica", 13, content_w)[:4]):
-        pdf.drawString(content_x, panel_y + 139 - index * 20, line)
-    pdf.setFont("Helvetica-Oblique", 11)
-    pdf.setFillColor(HexColor(theme["accent"]))
-    pdf.drawString(content_x, panel_y + 44, "Gracias por ser parte de lo que construimos juntos.")
-    pdf.setFont("Helvetica-Bold", 11)
-    pdf.setFillColor(HexColor("#006241"))
-    pdf.drawRightString(width - 54, 40, "#DistritoKike")
+        draw_birthday(pdf, width, height, args.name, args.store)
+    pdf.showPage()
     pdf.save()
     return output
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--type", choices=sorted(THEMES), required=True)
+    parser.add_argument("--type", choices=("birthday", "anniversary"), required=True)
     parser.add_argument("--name", required=True)
     parser.add_argument("--store", required=True)
-    parser.add_argument("--role", default="Partner")
-    parser.add_argument("--date", required=True, help="Fecha de la celebración en AAAA-MM-DD")
-    parser.add_argument("--source-date", default="2025-01-01", help="Fecha de ingreso para calcular antigüedad")
     parser.add_argument("--output", required=True)
+    parser.add_argument("--years", type=int, default=None)
+    parser.add_argument("--date", default=None, help="Fecha de celebración AAAA-MM-DD")
+    parser.add_argument("--source-date", default=None, help="Fecha de ingreso AAAA-MM-DD")
+    parser.add_argument("--role", default=None, help=argparse.SUPPRESS)
     args = parser.parse_args()
-    output = generate(args)
-    print(f"PDF generado: {output}")
+    print(f"PDF generado: {generate(args)}")
     return 0
 
 

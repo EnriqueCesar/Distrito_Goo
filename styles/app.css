@@ -1021,3 +1021,85 @@ button.celebration-card.is-generating .celebration-cta span::after{content:" PDF
   .celebrations-section #celebrations-grid{grid-template-columns:1fr}
   button.celebration-card{min-height:184px!important;padding:16px!important}
 }
+
+/* v20.2: lenguaje visual Partner alineado a los nuevos reconocimientos PDF. */
+button.celebration-card.is-birthday{
+  background:radial-gradient(circle at 92% 12%,rgba(242,193,78,.24),transparent 28%),linear-gradient(145deg,#fff 0%,#fff8ee 100%)!important;
+  border-color:rgba(242,107,56,.30)!important;
+}
+button.celebration-card.is-birthday::before{background:#f8d9eb!important}
+button.celebration-card.is-birthday .ops-icon{background:#fff0ca!important;box-shadow:inset 0 0 0 1px rgba(242,107,56,.18)}
+button.celebration-card.is-birthday strong{color:#9a3e20!important;background:rgba(242,107,56,.11)!important}
+button.celebration-card.is-birthday .celebration-cta b{background:#f26b38!important}
+button.celebration-card.is-anniversary{
+  background:radial-gradient(circle at 92% 12%,rgba(242,193,78,.18),transparent 28%),linear-gradient(145deg,#fff 0%,#edf6f1 100%)!important;
+  border-color:rgba(0,98,65,.30)!important;
+}
+button.celebration-card.is-anniversary::before{background:#d4e9e2!important}
+button.celebration-card.is-anniversary .ops-icon{background:#d4e9e2!important;box-shadow:inset 0 0 0 1px rgba(0,98,65,.18)}
+button.celebration-card.is-anniversary strong{color:#006241!important;background:rgba(0,98,65,.10)!important}
+button.celebration-card.is-anniversary .celebration-cta b{background:#006241!important;color:#fff!important}
+
+/* v20.3: tarjetas Partner con mayor jerarquía y PDF cuadrado de alto impacto. */
+.celebrations-section{
+  background:#f7faf8!important;
+}
+.celebrations-section #celebrations-grid{
+  gap:18px!important;
+}
+button.celebration-card{
+  position:relative;
+  min-height:220px!important;
+  padding:21px!important;
+  border-radius:24px!important;
+  box-shadow:0 8px 24px rgba(16,42,34,.06)!important;
+}
+button.celebration-card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:24px;
+  bottom:24px;
+  width:5px;
+  border-radius:0 999px 999px 0;
+}
+button.celebration-card.is-birthday{
+  background:#fff8ee!important;
+  border-color:rgba(242,107,56,.34)!important;
+}
+button.celebration-card.is-birthday::after{background:#f26b38}
+button.celebration-card.is-anniversary{
+  background:#eef6f2!important;
+  border-color:rgba(0,98,65,.34)!important;
+}
+button.celebration-card.is-anniversary::after{background:#006241}
+button.celebration-card .ops-icon{
+  width:58px!important;
+  height:58px!important;
+  border-radius:20px!important;
+  font-size:1.55rem!important;
+}
+button.celebration-card h4{
+  margin:1px 0 7px!important;
+  font-size:clamp(1.08rem,1.8vw,1.24rem)!important;
+  line-height:1.15!important;
+}
+button.celebration-card p{
+  margin-bottom:11px!important;
+  font-weight:650;
+}
+button.celebration-card strong{
+  padding:6px 11px!important;
+  font-size:.8rem!important;
+}
+button.celebration-card .celebration-cta{
+  margin-top:16px;
+  padding-top:14px;
+}
+button.celebration-card .celebration-cta b{
+  padding:7px 11px;
+  font-size:.76rem;
+}
+@media(max-width:620px){
+  button.celebration-card{min-height:208px!important;padding:18px!important}
+}

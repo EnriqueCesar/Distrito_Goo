@@ -35,7 +35,7 @@ python tools/audit_static.py
 
 Publicar el contenido de la raíz de `main` mediante **Deploy from a branch**. Conservar `.nojekyll`, las rutas relativas `./` y todos los archivos incluidos en `APP_SHELL`.
 
-Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v20.1.0-felicitaciones-pdf`.
+Después de publicar una nueva versión, abrir la PWA una vez con conexión para instalar la caché `distrito-go-v20.3.0-felicitaciones-cuadradas`.
 
 
 ## Fase 3
@@ -43,10 +43,12 @@ Inicio consolidado sin tarjeta del District Coach, PWA v19 y depuración segura 
 
 ## Felicitaciones PDF
 
-En **Aniversarios y cumpleaños**, cada tarjeta genera un PDF personalizado al seleccionarla. Cumpleaños y aniversarios usan composiciones visuales diferentes; el proceso se ejecuta en el navegador y conserva el funcionamiento estático y sin conexión de la PWA.
+En **Aniversarios y cumpleaños**, cada tarjeta genera un PDF cuadrado al seleccionarla. Cumpleaños utiliza una composición cálida y festiva; aniversario emplea verde profundo, dorado y un sello de antigüedad calculado desde la fecha de ingreso. Ambos formatos ajustan automáticamente nombres largos y funcionan con las celebraciones de la semana o mes que corresponda al abrir la PWA.
 
 Para revisar el machote sin abrir la aplicación:
 
 ```bash
-python tools/generate_celebration_machote.py --type birthday --name "Nombre Partner" --store "Tienda" --role "Barista" --date 2026-07-20 --output felicitacion.pdf
+python tools/generate_celebration_machote.py --type birthday --name "Nombre Partner" --store "Tienda" --output felicitacion.pdf
+
+python tools/generate_celebration_machote.py --type anniversary --name "Nombre Partner" --store "Tienda" --source-date 2022-07-27 --date 2026-07-27 --output aniversario.pdf
 ```

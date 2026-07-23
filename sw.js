@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v20.1.0-felicitaciones-pdf';
+const CACHE_NAME = 'distrito-go-v20.3.0-felicitaciones-cuadradas';
 const APP_SHELL = [
   './',
   './index.html',

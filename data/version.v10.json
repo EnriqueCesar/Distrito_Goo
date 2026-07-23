@@ -1,17 +1,17 @@
 {
-  "version": "20.1.0",
+  "version": "20.3.0",
   "releaseDate": "2026-07-22",
   "changes": [
-    "Tarjetas de cumpleaños y aniversarios convertidas en acciones accesibles.",
-    "Generación local de felicitaciones PDF personalizadas por partner.",
-    "Diseños cálidos y diferenciados para cumpleaños y aniversario.",
-    "Marca JUNTÉMONOS MÁS y Distrito Kike integrada en cada reconocimiento.",
-    "Corrección de una declaración CSS incompleta y actualización de caché offline."
+    "Felicitaciones PDF rediseñadas en formato cuadrado y listas para compartir.",
+    "Nombre del partner convertido en el elemento visual protagonista.",
+    "Mensajes cálidos completos y tres hashtags institucionales integrados.",
+    "Aniversario con antigüedad dinámica, singular y plural correctos.",
+    "Tarjetas de selección con mayor contraste, jerarquía y accesibilidad."
   ],
-  "notes": "La PWA conserva su arquitectura estática; los PDF se crean en el navegador y quedan disponibles sin conexión después de instalar la nueva caché.",
+  "notes": "La PWA conserva su arquitectura estática. Cumpleaños y aniversario se generan dinámicamente para el partner seleccionado; la antigüedad se calcula desde la fecha de ingreso y la celebración elegida.",
   "fecha": "2026-07-22",
-  "descripcion": "Reconocimientos dinámicos y descargables para celebraciones de partners.",
+  "descripcion": "Reconocimientos Partner cuadrados, cálidos y diferenciados para cumpleaños y aniversario.",
   "updatedAt": "2026-07-22",
-  "runtimeFix": "v20.1.0",
+  "runtimeFix": "v20.3.0",
   "name": "Juntémonos Más"
 }
