@@ -23,7 +23,7 @@
     "Icono": "🛡️",
     "Color": "Rojo",
     "Visible": true,
-    "Recurso": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
+    "Recurso": "https://sbx-mx.github.io/checklist-rsa-semaforo/",
     "TipoRecurso": "link",
     "DescripcionBreve": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas."
   },
@@ -51,7 +51,7 @@
     "Icono": "🌅",
     "Color": "Azul",
     "Visible": true,
-    "Recurso": "assets/photos/rutina_apertura.jpeg",
+    "Recurso": "assets/photos/Rutina_apertura.jpeg",
     "TipoRecurso": "imagen",
     "DescripcionBreve": "Antes de las 09:00 a.m. envía al equipo de Excelencia únicamente incidencias o desviaciones detectadas."
   },

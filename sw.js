@@ -1,4 +1,4 @@
-const CACHE_NAME = 'distrito-go-v20.3.0-felicitaciones-cuadradas';
+const CACHE_NAME = 'distrito-go-v20.3.1-enlaces-sbx-mx';
 const APP_SHELL = [
   './',
   './index.html',

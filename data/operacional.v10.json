@@ -15,6 +15,20 @@
       "ImagenPath": "assets/photos/cdd_3Q_2026.png"
     },
     {
+      "ID": "EVT-002",
+      "Actividad": "🍩 Dona Grab & Go",
+      "Contexto / Recordatorio": "Enfocar venta incremental vs Semana 26.",
+      "Fecha Inicio": "2026-07-01",
+      "Fecha Fin": "2026-07-31",
+      "Región": "Centro Norte",
+      "Distrito": "Enrique Cesar Flores",
+      "Tienda": "Todas",
+      "Publicar": true,
+      "Imagen": "🍩",
+      "Link": "",
+      "ImagenPath": "assets/photos/concurso_venta_dona_julio.jpeg"
+    },
+    {
       "ID": "EVT-003",
       "Actividad": "✅ Validación Summer Attensi",
       "Contexto / Recordatorio": "Validación de conocimientos Summer antes del lanzamiento.",
@@ -600,7 +614,7 @@
       "Icono": "🛡️",
       "Color": "Rojo",
       "Visible": true,
-      "Recurso": "https://enriquecesar.github.io/checklist-rsa-semaforo/",
+      "Recurso": "https://sbx-mx.github.io/checklist-rsa-semaforo/",
       "TipoRecurso": "link",
       "DescripcionBreve": "Completa el RSA Checklist antes de las 10:00 a.m. y comparte evidencia de las correcciones realizadas."
     },
@@ -628,7 +642,7 @@
       "Icono": "🌅",
       "Color": "Azul",
       "Visible": true,
-      "Recurso": "assets/photos/rutina_apertura.jpeg",
+      "Recurso": "assets/photos/Rutina_apertura.jpeg",
       "TipoRecurso": "imagen",
       "DescripcionBreve": "Antes de las 09:00 a.m. envía al equipo de Excelencia únicamente incidencias o desviaciones detectadas."
     },
@@ -1905,20 +1919,6 @@
       "Recurso": "assets/photos/maquila_abril.png",
       "TipoRecurso": "imagen",
       "DescripcionBreve": "Valida tus ingresos de maquila con el costo mas actual (Abril-26)"
-    },
-    {
-      "ID": 2,
-      "Actividad": "Dress Code",
-      "Descripción": "Consulta la alineación semanal de vestimenta e imagen personal.",
-      "Frecuencia": "Semanal",
-      "Prioridad": 2,
-      "Categoría": "Personas",
-      "Icono": "👔",
-      "Color": "Verde",
-      "Visible": true,
-      "Recurso": "assets/photos/dress_code.png",
-      "TipoRecurso": "imagen",
-      "DescripcionBreve": "Consulta la alineación semanal de vestimenta e imagen personal."
     }
   ],
   "celebraciones": [
